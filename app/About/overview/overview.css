@@ -1,0 +1,218 @@
+/* =============================================================================
+   overview.css — signature element: numbered "pillar" ledger + gold timeline
+   rail. Distinct from Infrastructure's grid and Messages' editorial layout.
+   ============================================================================= */
+
+/* ---- Hero ---- */
+.plrct-overview-hero {
+  position: relative;
+  min-height: clamp(420px, 62vh, 620px);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 !important;
+  background: linear-gradient(160deg, #14181f 0%, #2a1420 55%, #3a0f1c 100%);
+  overflow: hidden;
+}
+
+.plrct-overview-hero__media { position: absolute; inset: 0; }
+
+.plrct-overview-hero__campus-mark {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.18), transparent 40%),
+    radial-gradient(circle at 80% 15%, rgba(200, 16, 46, 0.35), transparent 45%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 64px);
+}
+
+.plrct-overview-hero__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 10vw, 6rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 7vw, 4.5rem);
+  width: 100%;
+}
+
+.plrct-overview-hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--plrct-white);
+  font-size: clamp(2.1rem, 5.5vw, 3.6rem);
+  line-height: 1.08;
+  margin: 0 0 1rem;
+  max-width: 16ch;
+}
+
+.plrct-overview-hero__sub {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  max-width: 52ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---- Stat strip ---- */
+.plrct-overview-stats { padding-top: clamp(2.5rem, 5vw, 3.5rem) !important; padding-bottom: 1rem !important; }
+
+.plrct-overview-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--plrct-hairline);
+  border: 1px solid var(--plrct-hairline);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.plrct-overview-stat {
+  background: var(--plrct-white);
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.plrct-overview-stat__value {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  color: var(--plrct-red);
+  margin: 0 0 0.35rem;
+}
+
+.plrct-overview-stat__label {
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  color: var(--plrct-slate);
+  margin: 0;
+}
+
+.plrct-overview-stats__note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--plrct-slate);
+  opacity: 0.75;
+  margin: 0.9rem 0 0;
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  .plrct-overview-stats__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- Pillars: numbered ledger, not cards ---- */
+.plrct-overview-pillars { background: var(--plrct-light-gray); }
+
+.plrct-overview-pillars__list {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--plrct-hairline);
+}
+
+.plrct-overview-pillar {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--plrct-hairline);
+}
+
+.plrct-overview-pillar__index {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--plrct-gold);
+  line-height: 1;
+}
+
+.plrct-overview-pillar h3 {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--plrct-ink);
+  margin: 0 0 0.5rem;
+}
+
+.plrct-overview-pillar p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--plrct-slate);
+  margin: 0;
+  max-width: 68ch;
+}
+
+@media (max-width: 640px) {
+  .plrct-overview-pillar { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+
+/* ---- Timeline: gold vertical rail ---- */
+.plrct-overview-timeline__rail {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0 0 0 1.75rem;
+  border-left: 2px solid var(--plrct-hairline);
+  position: relative;
+}
+
+.plrct-overview-timeline__rail li {
+  position: relative;
+  padding-bottom: 2.25rem;
+}
+.plrct-overview-timeline__rail li:last-child { padding-bottom: 0; }
+
+.plrct-overview-timeline__node {
+  position: absolute;
+  left: -1.75rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--plrct-gold);
+  box-shadow: 0 0 0 4px var(--plrct-white), 0 0 0 5px var(--plrct-hairline);
+}
+
+.plrct-overview-timeline__year {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--plrct-red);
+  margin: 0 0 0.35rem;
+}
+
+.plrct-overview-timeline__text {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--plrct-charcoal);
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* ---- Gallery ---- */
+.plrct-overview-gallery__grid {
+  margin-top: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.plrct-overview-gallery__tile {
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eef0f4, #e2e5ec);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast);
+}
+.plrct-overview-gallery__tile:hover { transform: translateY(-4px); }
+.plrct-overview-gallery__tile span {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--plrct-charcoal);
+}
+
+@media (max-width: 720px) {
+  .plrct-overview-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+}

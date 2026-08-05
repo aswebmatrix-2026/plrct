@@ -1,0 +1,88 @@
+.fu-wrapper {
+  display: block;
+}
+
+.fu-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151; /* gray-700 */
+  margin-bottom: 0.375rem;
+}
+
+.fu-required {
+  color: var(--brand-color, #ef4444);
+}
+
+.fu-dropzone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: dashed;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  border-color: #d1d5db; /* gray-300 */
+}
+
+.fu-dropzone:hover {
+  border-color: rgba(var(--brand-color-rgb, 239, 68, 68), 0.5);
+  background-color: rgba(var(--brand-color-rgb, 239, 68, 68), 0.04);
+}
+
+.fu-dropzone--filled {
+  border-color: #86efac; /* green-300 */
+  background-color: #f0fdf4; /* green-50 */
+}
+
+.fu-dropzone--filled:hover {
+  border-color: #86efac;
+  background-color: #f0fdf4;
+}
+
+.fu-icon-spin {
+  color: var(--brand-color, #ef4444);
+  animation: fu-spin 1s linear infinite;
+}
+
+@keyframes fu-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fu-icon-success {
+  color: #16a34a; /* green-600 */
+}
+
+.fu-icon-idle {
+  color: #9ca3af; /* gray-400 */
+}
+
+.fu-text {
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.fu-remove-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #9ca3af; /* gray-400 */
+  display: flex;
+  align-items: center;
+}
+
+.fu-remove-btn:hover {
+  color: var(--rejected-color, #dc2626);
+}
+
+.fu-hidden-input {
+  display: none;
+}
