@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import { redirect, notFound } from "next/navigation";
-import { authOptions } from "@/lib/auth";
+import { authOptions } from "@/lib/authOptions.js";
 import { dbConnect } from "@/lib/mongodb";
 import GalleryEvent from "@/models/GalleryEvent";
 import AlbumForm from "@/components/gallery/AlbumForm";
