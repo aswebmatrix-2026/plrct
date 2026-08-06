@@ -548,7 +548,7 @@ function MobileDrawer({ open, onClose, activeHref }) {
         <div className="plrct-mobile-drawer__header">
           <div className="plrct-mobile-drawer__brand">
             <BrandCrest className="plrct-brand__crest" size={34} />
-            <span>PLRCT</span>
+            <span>Pt. L.R. College of Technology</span>
           </div>
           <button type="button" className="plrct-icon-btn" aria-label="Close menu" onClick={onClose} tabIndex={open ? 0 : -1}>
             <Icon name="close" />
@@ -607,7 +607,7 @@ export default function Navbar() {
                 admissions@plrct.edu.in
               </a>
               <span className="plrct-topbar__divider" aria-hidden="true" />
-              <Link href="/faculty-login" className="plrct-topbar__item">
+              <Link href="/admin/login" className="plrct-topbar__item">
                 <Icon name="login" />
                 Faculty Login
               </Link>

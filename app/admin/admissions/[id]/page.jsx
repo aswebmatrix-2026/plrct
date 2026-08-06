@@ -1,5 +1,6 @@
 "use client";
-
+// AdmissionDetailPage.jsx ke top pe
+import "./admission-detail.css";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import toast from "react-hot-toast";

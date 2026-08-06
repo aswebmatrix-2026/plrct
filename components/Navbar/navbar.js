@@ -16,6 +16,8 @@
  *    for non-engineering programs) but B.Tech/Diploma were removed from it
  *    since those now live under the Academics mega-menu — see note at the
  *    bottom of this file if you want a literal "Courses" nav item too.
+ * 4. NEW: Added a "Gallery" flat nav item (href: '/gallery') pointing at
+ *    the PLRCT Digital Gallery — no mega-menu needed, single link.
  * Everything else (About mega-menu, Admissions mega-menu, hooks) is
  * UNCHANGED from the previous version.
  * ---------------------------------------------------------------------------
@@ -267,12 +269,13 @@ export const ADMISSIONS_MENU = [
 ];
 
 /* CHANGE: "Courses" -> "Academics", now pointing at the new mega-menu and
- * the redesigned /academics page. */
+ * the redesigned /academics page. NEW: added flat "Gallery" link. */
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about', mega: 'about' },
   { label: 'Academics', href: '/academics', mega: 'academics' },
   { label: 'Admissions', href: '/admissions', mega: 'admissions' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Placements', href: '/placements' },
   { label: 'Campus Life', href: '/campus-life' },
   { label: 'Notice Board', href: '/notices', badge: 'NEW' },

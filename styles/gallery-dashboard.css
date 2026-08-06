@@ -1,0 +1,205 @@
+/* ==========================================================================
+   PLRCT Digital Gallery — gallery-dashboard.css
+   Admin dashboard: overview cards, management table, login screen
+   ========================================================================== */
+
+.admin-gallery-page {
+  --plrct-red: #c8102e;
+  --plrct-gold: #d4af37;
+  --plrct-dark: #1a1a1a;
+  --plrct-gray: #55575c;
+  --plrct-border: #e6e6e9;
+  font-family: "Inter", "Poppins", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 1.8rem 5rem;
+  color: var(--plrct-dark);
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+.admin-page-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin: 0 0 0.3rem;
+}
+.admin-page-header p { color: var(--plrct-gray); margin: 0; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--plrct-red), #970c22);
+  color: white;
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.28);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  border-color: var(--plrct-red);
+  color: var(--plrct-red);
+}
+
+/* ---------- Stat cards ---------- */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.admin-stat-card {
+  background: white;
+  border: 1px solid var(--plrct-border);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  border-color: var(--plrct-gold);
+}
+.admin-stat-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--plrct-red);
+  font-family: "Playfair Display", serif;
+}
+.admin-stat-label {
+  font-size: 0.82rem;
+  color: var(--plrct-gray);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Table ---------- */
+.admin-table-wrap {
+  background: white;
+  border: 1px solid var(--plrct-border);
+  border-radius: 16px;
+  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 980px;
+}
+.admin-table thead {
+  background: var(--plrct-light-gray, #faf7f2);
+  border-bottom: 2px solid var(--plrct-border);
+}
+.admin-table th {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--plrct-gray);
+}
+.admin-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--plrct-border);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover { background: #fbf7f1; }
+.row-busy { opacity: 0.5; pointer-events: none; }
+.cell-title { font-weight: 700; }
+.empty-row { text-align: center; color: var(--plrct-gray); padding: 3rem 0 !important; }
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.status-published { background: #e3f7e9; color: #1c7a3d; }
+.status-draft { background: #fdf1de; color: #9a6412; }
+.status-archived { background: #eee; color: #666; }
+
+.cell-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.cell-actions a,
+.cell-actions button {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--plrct-border);
+  background: white;
+  cursor: pointer;
+  color: var(--plrct-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.cell-actions a:hover,
+.cell-actions button:hover {
+  border-color: var(--plrct-red);
+  color: var(--plrct-red);
+}
+.cell-actions button.danger {
+  color: #b3261e;
+  border-color: #f3d3d0;
+}
+.cell-actions button.danger:hover { background: #b3261e; color: white; }
+
+/* ---------- Login ---------- */
+.admin-login-wrap {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fff 0%, #f4f0ea 100%);
+  padding: 1.5rem;
+}
+.admin-login-card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--plrct-red);
+}
+.admin-login-card h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.3rem;
+}
+.admin-login-card p { color: var(--plrct-gray); margin: 0 0 1.5rem; font-size: 0.9rem; }
+.admin-login-card button { width: 100%; margin-top: 0.6rem; }
+
+@media (max-width: 1100px) {
+  .admin-stats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,9 +1,3 @@
-/**
- * data.js — structured content for the PLRCT Academics / Courses page.
- * Kept separate from markup so copy can be edited without touching JSX,
- * and so the same records can later feed JSON-LD / API routes.
- */
-
 export const PROGRAMS = [
   {
     id: 'btech',

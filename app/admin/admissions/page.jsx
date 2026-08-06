@@ -1,4 +1,5 @@
 "use client";
+import "./admissions-list.css";
 
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
