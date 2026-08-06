@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import mongoose from "mongoose";
 import { authOptions } from "@/lib/authOptions.js";
 import { dbConnect } from "@/lib/mongodb";
-import { deleteImageFromCloudinary } from "@/lib/cloudinary";
+import { uploadToCloudinary } from "@/lib/cloudinary";
 import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
 
 async function findEvent(idOrSlug) {
