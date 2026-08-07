@@ -978,3 +978,94 @@ a.plrct-topbar__item:focus-visible {
   .plrct-mega--grouped { min-width: 560px; }
   .plrct-mega__grid--grouped { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+/* =============================================================================
+   480px RESPONSIVE FIX — brand name, tagline, buttons
+   ============================================================================= */
+
+@media (max-width: 480px) {
+
+  /* Brand name — wrap allow karo, overflow mat karo */
+  .plrct-brand__name {
+    font-size: 0.88rem;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  /* Tagline — 480px pe bhi dikhao (was hidden only at 1200px) */
+  .plrct-brand__tagline {
+    display: block;
+    font-size: 0.6rem;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Brand crest thoda chhota */
+  .plrct-brand__crest {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  /* Brand gap tight karo */
+  .plrct-brand {
+    gap: 0.5rem;
+  }
+
+  /* Apply button — "Apply Now" → "Apply" on very small screens */
+  .plrct-btn--primary {
+    font-size: 0.76rem;
+    padding: 0.52rem 0.9rem;
+  }
+
+  /* Actions gap */
+  .plrct-actions {
+    gap: 0.4rem;
+  }
+
+  /* Icon button thoda chhota */
+  .plrct-icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Mainbar padding tight */
+  .plrct-mainbar__inner {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  /* Topbar bhi adjust */
+  .plrct-topbar__inner {
+    padding: 0 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  /* Search overlay input font size */
+  .plrct-search-input {
+    font-size: 1.1rem;
+  }
+
+  /* Mobile drawer brand text */
+  .plrct-mobile-drawer__brand span {
+    font-size: 0.88rem;
+  }
+}
+
+/* Extra-small: 360px aur neeche */
+@media (max-width: 360px) {
+  .plrct-brand__name {
+    font-size: 0.8rem;
+  }
+
+  .plrct-brand__tagline {
+    display: none;
+  }
+
+  .plrct-btn--primary {
+    font-size: 0.72rem;
+    padding: 0.48rem 0.7rem;
+  }
+}
