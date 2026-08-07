@@ -278,7 +278,7 @@ export const NAV_ITEMS = [
   { label: 'Gallery', href: '/gallery' },
   { label: 'Placements', href: '/placements' },
   { label: 'Campus Life', href: '/campus-life' },
-  { label: 'Notice Board', href: '/notices', badge: 'NEW' },
+ { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
   { label: 'Research', href: '/research' },
   { label: 'Contact', href: '/contact' },
 ];

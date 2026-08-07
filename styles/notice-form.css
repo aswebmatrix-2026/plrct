@@ -1,0 +1,199 @@
+@import "./variables.css";
+
+.notice-form {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+}
+
+.notice-form__header {
+  margin-bottom: var(--space-lg);
+}
+
+.notice-form__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--plrct-ink);
+}
+
+.form-section {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--plrct-white);
+  border: 1px solid var(--plrct-gray-300);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--space-md);
+}
+
+.form-section__title {
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--plrct-red);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field--full { grid-column: 1 / -1; }
+
+.form-field label {
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  color: var(--plrct-gray-700);
+  font-weight: 600;
+}
+
+.form-field input[type="text"],
+.form-field input[type="date"],
+.form-field input[type="datetime-local"],
+.form-field select,
+.form-field textarea {
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--plrct-gray-300);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--plrct-ink);
+  background: var(--plrct-white);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--plrct-red);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200,16,46,0.1);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--font-body);
+}
+
+.form-field__hint {
+  font-size: 0.76rem;
+  color: var(--plrct-gray-500);
+}
+
+/* --- toggle switches for display options --- */
+.form-toggles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.form-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--plrct-gray-300);
+  background: var(--plrct-gray-50);
+  cursor: pointer;
+}
+
+.form-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--plrct-red);
+}
+
+.form-toggle span {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--plrct-ink);
+}
+
+/* --- PDF upload dropzone --- */
+.pdf-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--space-lg);
+  border: 2px dashed var(--plrct-gray-300);
+  border-radius: var(--radius-md);
+  background: var(--plrct-gray-50);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.pdf-dropzone:hover,
+.pdf-dropzone--active {
+  border-color: var(--plrct-red);
+  background: var(--plrct-red-tint);
+}
+
+.pdf-dropzone__icon { color: var(--plrct-red); }
+
+.pdf-dropzone__label {
+  font-family: var(--font-utility);
+  font-weight: 600;
+  color: var(--plrct-ink);
+}
+
+.pdf-dropzone__hint {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--plrct-gray-500);
+}
+
+.pdf-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--plrct-gray-300);
+  background: var(--plrct-white);
+}
+
+.pdf-preview__name {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--plrct-ink);
+  word-break: break-all;
+}
+
+.notice-form__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2xs);
+  position: sticky;
+  bottom: 0;
+  padding: var(--space-sm) 0;
+  background: linear-gradient(0deg, var(--plrct-white) 60%, transparent);
+}
+
+.form-error {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--plrct-red-tint);
+  color: var(--plrct-red-dark);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 640px) {
+  .form-grid,
+  .form-toggles { grid-template-columns: 1fr; }
+}

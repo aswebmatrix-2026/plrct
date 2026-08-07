@@ -1,0 +1,74 @@
+/* ==========================================================================
+   PLRCT Notice Board — shared design tokens
+   Import this file first in every notice-board stylesheet.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --plrct-red: #c8102e;
+  --plrct-red-dark: #970c22;
+  --plrct-red-tint: #fdeef0;
+  --plrct-gold: #cda434;
+  --plrct-gold-light: #f4e6bd;
+  --plrct-white: #ffffff;
+  --plrct-ink: #1c1c1e;
+  --plrct-gray-900: #232326;
+  --plrct-gray-700: #4c4c52;
+  --plrct-gray-500: #7a7a83;
+  --plrct-gray-300: #d8d8dd;
+  --plrct-gray-100: #f4f4f6;
+  --plrct-gray-50: #fafafb;
+
+  /* Priority accents */
+  --priority-urgent: #c8102e;
+  --priority-important: #b8791e;
+  --priority-featured: #7a4fb5;
+  --priority-normal: #4c4c52;
+
+  /* Typography */
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-utility: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Radius & elevation */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 8px 30px rgba(28, 28, 30, 0.06);
+  --shadow-card: 0 12px 40px rgba(28, 28, 30, 0.08);
+  --shadow-hover: 0 20px 48px rgba(200, 16, 46, 0.14);
+
+  /* Glass surface */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-blur: blur(18px);
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 180ms var(--ease-premium);
+  --transition-med: 320ms var(--ease-premium);
+
+  /* Layout */
+  --container-max: 1240px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

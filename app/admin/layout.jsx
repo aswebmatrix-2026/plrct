@@ -20,6 +20,7 @@ const NAV_ITEMS = [
   { href: "/admin/admissions", label: "Admissions", icon: ClipboardList },
   { href: "/admin/inquiries", label: "Inquiries", icon: Mail },
   { href: "/admin/gallery", label: "Gallery", icon: Images },
+   { href: "/admin/notices", label: "Notices", icon: Bell },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 

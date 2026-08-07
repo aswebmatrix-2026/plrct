@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import mongoose from "mongoose";
-import { authOptions } from "@/lib/authOptions.js";
-import { dbConnect } from "@/lib/mongodb";
-import { uploadToCloudinary } from "@/lib/cloudinary";
+import { authOptions } from "@/lib/authOptions";
+import { dbConnect as connectDB } from "@/lib/mongodb";
+import { deleteFromCloudinary } from "@/lib/cloudinary";
 import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
 
 async function findEvent(idOrSlug) {
@@ -16,8 +16,9 @@ async function findEvent(idOrSlug) {
 
 /** GET /api/gallery/[slug] — public detail view, increments views for published albums. */
 export async function GET(request, { params }) {
-  await dbConnect();
-  const event = await findEvent(params.slug);
+  const { slug } = await params;
+  await connectDB();
+  const event = await findEvent(slug);
 
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 
@@ -36,11 +37,12 @@ export async function GET(request, { params }) {
 
 /** PUT /api/gallery/[slug] — full update. Admin only. */
 export async function PUT(request, { params }) {
+  const { slug } = await params;
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await dbConnect();
-  const event = await findEvent(params.slug);
+  await connectDB();
+  const event = await findEvent(slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 
   const body = await request.json();
@@ -85,12 +87,19 @@ export async function DELETE(request, { params }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await dbConnect();
+  await connectDB();
   const event = await findEvent(params.slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 
   const publicIds = [event.coverImage?.publicId, ...event.images.map((i) => i.publicId)].filter(Boolean);
-  await Promise.allSettled(publicIds.map((id) => deleteImageFromCloudinary(id)));
+  const results = await Promise.allSettled(publicIds.map((id) => deleteFromCloudinary(id, "image")));
+
+  const failed = results
+    .map((r, i) => (r.status === "rejected" ? publicIds[i] : null))
+    .filter(Boolean);
+  if (failed.length) {
+    console.error("Cloudinary delete failed for:", failed);
+  }
 
   await event.deleteOne();
   return NextResponse.json({ success: true });
@@ -104,7 +113,7 @@ export async function PATCH(request, { params }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await dbConnect();
+  await connectDB();
   const event = await findEvent(params.slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 

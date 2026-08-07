@@ -18,7 +18,7 @@ export const metadata = {
 };
 
 export default async function GalleryPage({ searchParams }) {
-  const { category, year, q, sort } = await searchParams;
+  const { category, year, q, sort } = (await searchParams) || {};
 
   const [events, featured, years] = await Promise.all([
     getPublishedEvents({ category, year, q, sort }),

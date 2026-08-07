@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "@/lib/authOptions.js";
+import { authOptions } from "@/lib/authOptions";
 import AlbumForm from "@/components/gallery/AlbumForm";
 import "@/styles/gallery-dashboard.css";
 

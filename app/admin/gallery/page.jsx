@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "@/lib/authOptions.js";
-import { dbConnect } from "@/lib/mongodb.js";
+import { authOptions } from "@/lib/authOptions";
+import { dbConnect as connectDB } from "@/lib/mongodb";
 import GalleryEvent from "@/models/GalleryEvent";
 import GalleryTable from "./GalleryTable";
 import "@/styles/gallery-dashboard.css";
@@ -13,7 +13,7 @@ export default async function AdminGalleryPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/admin/login?callbackUrl=/admin/gallery");
 
-  await dbConnect();
+  await connectDB();
 
   const [totalAlbums, featuredAlbums, publishedAlbums, draftAlbums, photoAgg, viewAgg, events] = await Promise.all([
     GalleryEvent.countDocuments({}),

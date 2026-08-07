@@ -20,7 +20,7 @@ export default async function LatestGallerySection() {
       </div>
 
       {featured && (
-        <Link href={`/gallery/${featured.slug}`} className="home-featured-strip">
+        <Link href={`/gallery/${featured.id}`} className="home-featured-strip">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={featured.coverImage?.url} alt={featured.eventName} />
           <div className="home-featured-strip-info">

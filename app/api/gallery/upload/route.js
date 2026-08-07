@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions.js";
-import { uploadToCloudinary } from "@/lib/cloudinary.js";
+import { authOptions } from "@/lib/authOptions";
+import { uploadToCloudinary } from "@/lib/cloudinary";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
+
+const GALLERY_FOLDER = "plrct/gallery";
 
 /**
  * POST /api/gallery/upload
@@ -41,7 +43,8 @@ export async function POST(request) {
         const arrayBuffer = await file.arrayBuffer();
         const base64 = Buffer.from(arrayBuffer).toString("base64");
         const dataUri = `data:${file.type};base64,${base64}`;
-        const result = await uploadToCloudinary(dataUri);
+        // publicIdSuffix left undefined so Cloudinary auto-generates a unique id per file
+        const result = await uploadToCloudinary(dataUri, GALLERY_FOLDER, undefined);
         return { ...result, originalName: file.name };
       })
     );
