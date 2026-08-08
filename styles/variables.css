@@ -5,19 +5,19 @@
 
 :root {
   /* Brand palette */
-  --plrct-red: #c8102e;
-  --plrct-red-dark: #970c22;
-  --plrct-red-tint: #fdeef0;
-  --plrct-gold: #cda434;
-  --plrct-gold-light: #f4e6bd;
-  --plrct-white: #ffffff;
-  --plrct-ink: #1c1c1e;
-  --plrct-gray-900: #232326;
-  --plrct-gray-700: #4c4c52;
-  --plrct-gray-500: #7a7a83;
-  --plrct-gray-300: #d8d8dd;
-  --plrct-gray-100: #f4f4f6;
-  --plrct-gray-50: #fafafb;
+  --PLRCT-red: #c8102e;
+  --PLRCT-red-dark: #970c22;
+  --PLRCT-red-tint: #fdeef0;
+  --PLRCT-gold: #cda434;
+  --PLRCT-gold-light: #f4e6bd;
+  --PLRCT-white: #ffffff;
+  --PLRCT-ink: #1c1c1e;
+  --PLRCT-gray-900: #232326;
+  --PLRCT-gray-700: #4c4c52;
+  --PLRCT-gray-500: #7a7a83;
+  --PLRCT-gray-300: #d8d8dd;
+  --PLRCT-gray-100: #f4f4f6;
+  --PLRCT-gray-50: #fafafb;
 
   /* Priority accents */
   --priority-urgent: #c8102e;

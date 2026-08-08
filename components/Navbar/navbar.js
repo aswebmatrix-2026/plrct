@@ -1,36 +1,8 @@
 'use client';
 
-/**
- * navbar.js
- * ---------------------------------------------------------------------------
- * All interactive logic for the PLRCT navigation bar, isolated from markup.
- * Exposes small, single-purpose React hooks that Navbar.jsx composes together.
- *
- * CHANGE FROM PREVIOUS VERSION:
- * 1. Added ACADEMICS_MENU — a GROUPED mega-menu (4 columns: Undergraduate
- *    Programs, Postgraduate Programs, Engineering Departments, Academic
- *    Resources) matching the Academics/Courses page redesign brief.
- * 2. NAV_ITEMS: replaced the old flat "Courses" entry with "Academics"
- *    (mega: 'academics', href: '/academics'), pointing at the new page.
- * 3. COURSES_MENU is kept (still used if you want a separate "Courses" link
- *    for non-engineering programs) but B.Tech/Diploma were removed from it
- *    since those now live under the Academics mega-menu — see note at the
- *    bottom of this file if you want a literal "Courses" nav item too.
- * 4. NEW: Added a "Gallery" flat nav item (href: '/gallery') pointing at
- *    the PLRCT Digital Gallery — no mega-menu needed, single link.
- * Everything else (About mega-menu, Admissions mega-menu, hooks) is
- * UNCHANGED from the previous version.
- * ---------------------------------------------------------------------------
- */
-
 import { useEffect, useRef, useState, useCallback } from 'react';
 
-/* -------------------------------------------------------------------------
- * useStickyScroll / useOutsideClick / useEscapeKey / useLockBodyScroll /
- * useActiveLink / useDropdownMenu / useSearchOverlay — UNCHANGED, copy as-is
- * from the existing navbar.js. Omitted here only to keep this diff focused;
- * do not delete them when merging this file in.
- * ---------------------------------------------------------------------- */
+
 export function useStickyScroll(threshold = 24) {
   const [scrolled, setScrolled] = useState(false);
 
@@ -143,24 +115,6 @@ export function useDropdownMenu(closeDelay = 150) {
   return { open, openMenu, closeMenu, closeMenuImmediately, toggleMenu };
 }
 
-export function useSearchOverlay() {
-  const [open, setOpen] = useState(false);
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    if (open && inputRef.current) {
-      const id = setTimeout(() => inputRef.current?.focus(), 60);
-      return () => clearTimeout(id);
-    }
-    return undefined;
-  }, [open]);
-
-  const openOverlay = useCallback(() => setOpen(true), []);
-  const closeOverlay = useCallback(() => setOpen(false), []);
-
-  return { open, openOverlay, closeOverlay, inputRef };
-}
-
 /* -------------------------------------------------------------------------
  * About mega-menu data — UNCHANGED
  * ---------------------------------------------------------------------- */
@@ -224,10 +178,8 @@ export const ACADEMICS_MENU = [
       { title: 'Mechanical Engineering', href: '/academics/departments/me', icon: 'gear', description: 'Manufacturing, CAD/CAM & robotics' },
       { title: 'Civil Engineering', href: '/academics/departments/ce', icon: 'building', description: 'Structures, construction & transportation' },
       { title: 'Electronics & Communication Engineering', href: '/academics/departments/ece', icon: 'chip', description: 'Embedded systems, IoT & VLSI' },
-      { title: 'Artificial Intelligence & Machine Learning', href: '/academics/departments/aiml', icon: 'ai', description: 'AI, ML & intelligent systems' },
-      { title: 'Data Science', href: '/academics/departments/data-science', icon: 'chart', description: 'Analytics, statistics & data engineering' },
-      { title: 'Information Technology', href: '/academics/departments/it', icon: 'network', description: 'Systems, networks & applications' },
-    ],
+      { title: 'Applied Science', href: '/academics/departments/applied-science', icon: 'ai', description: 'Applied Science' },
+   ],
   },
   {
     group: 'Academic Resources',
@@ -239,18 +191,11 @@ export const ACADEMICS_MENU = [
       { title: 'Laboratories', href: '/academics/resources/laboratories', icon: 'lab', description: 'Department laboratories & equipment' },
       { title: 'Workshops', href: '/academics/resources/workshops', icon: 'workshop', description: 'Manufacturing & practical workshops' },
       { title: 'Industrial Training', href: '/academics/resources/industrial-training', icon: 'training', description: 'Internships & industrial exposure' },
-      { title: 'Research & Innovation', href: '/academics/resources/research', icon: 'flask', description: 'Faculty research & innovation cell' },
     ],
   },
 ];
 
-/* -------------------------------------------------------------------------
- * Static data used by Navbar.jsx.
- * COURSES_MENU: trimmed — B.Tech / Diploma moved into ACADEMICS_MENU above,
- * so this now covers only the non-engineering programs. If you'd rather
- * keep a literal "Courses" nav item pointing at this, add it back into
- * NAV_ITEMS with `mega: 'courses'` alongside "Academics".
- * ---------------------------------------------------------------------- */
+
 export const COURSES_MENU = [
   { title: 'BCA', href: '/courses/bca', icon: 'code', description: 'Bachelor of Computer Applications' },
   { title: 'BBA', href: '/courses/bba', icon: 'briefcase', description: 'Bachelor of Business Administration' },
@@ -278,16 +223,6 @@ export const NAV_ITEMS = [
   { label: 'Gallery', href: '/gallery' },
   { label: 'Placements', href: '/placements' },
   { label: 'Campus Life', href: '/campus-life' },
- { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
-  { label: 'Research', href: '/research' },
+  { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
   { label: 'Contact', href: '/contact' },
-];
-
-export const POPULAR_SEARCHES = [
-  'B.Tech Admission 2026',
-  'Fee Structure',
-  'Scholarships',
-  'Placement Report',
-  'Hostel Facilities',
-  'Contact Admissions Office',
 ];

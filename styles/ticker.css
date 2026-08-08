@@ -9,8 +9,8 @@
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: linear-gradient(90deg, var(--plrct-red-dark) 0%, var(--plrct-red) 55%, var(--plrct-red-dark) 100%);
-  color: var(--plrct-white);
+  background: linear-gradient(90deg, var(--PLRCT-red-dark) 0%, var(--PLRCT-red) 55%, var(--PLRCT-red-dark) 100%);
+  color: var(--PLRCT-white);
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(151, 12, 34, 0.25);
 }
@@ -22,7 +22,7 @@
   gap: var(--space-2xs);
   flex-shrink: 0;
   padding: 0.85rem 1.25rem;
-  background: var(--plrct-ink);
+  background: var(--PLRCT-ink);
   font-family: var(--font-utility);
   font-weight: 600;
   font-size: 0.78rem;
@@ -36,7 +36,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--plrct-gold);
+  background: var(--PLRCT-gold);
   animation: ticker-flash 1.4s ease-in-out infinite;
 }
 
@@ -65,11 +65,11 @@
 }
 .ticker__viewport::before {
   left: 0;
-  background: linear-gradient(90deg, var(--plrct-red) 0%, transparent 100%);
+  background: linear-gradient(90deg, var(--PLRCT-red) 0%, transparent 100%);
 }
 .ticker__viewport::after {
   right: 0;
-  background: linear-gradient(270deg, var(--plrct-red) 0%, transparent 100%);
+  background: linear-gradient(270deg, var(--PLRCT-red) 0%, transparent 100%);
 }
 
 .ticker__track {
@@ -98,7 +98,7 @@
   font-family: var(--font-body);
   font-size: 0.92rem;
   white-space: nowrap;
-  color: var(--plrct-white);
+  color: var(--PLRCT-white);
   text-decoration: none;
   border-right: 1px solid rgba(255, 255, 255, 0.18);
   transition: color var(--transition-fast), background var(--transition-fast);
@@ -111,7 +111,7 @@
 }
 
 .ticker__item:focus-visible {
-  box-shadow: inset 0 0 0 2px var(--plrct-gold);
+  box-shadow: inset 0 0 0 2px var(--PLRCT-gold);
 }
 
 .ticker__item-icon {
@@ -140,12 +140,12 @@
 
 /* Urgent notices highlighted in gold */
 .ticker__item--urgent .ticker__item-title {
-  color: var(--plrct-gold-light);
+  color: var(--PLRCT-gold-light);
   font-weight: 700;
 }
 .ticker__item--urgent .ticker__item-category {
-  background: var(--plrct-gold);
-  color: var(--plrct-ink);
+  background: var(--PLRCT-gold);
+  color: var(--PLRCT-ink);
 }
 
 /* --- Mobile: compact + faster loop feels natural at narrower widths --- */

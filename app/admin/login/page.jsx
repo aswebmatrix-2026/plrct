@@ -163,7 +163,7 @@ export default function AdminLoginPage() {
           />
 
           <div className="branding-content">
-            <span className="branding-eyebrow">Pt. L.R. College of Technology · Faridabad</span>
+            <span className="branding-eyebrow">PLRCT · Faridabad</span>
             <h1 className="branding-title">PLRCT Administration Portal</h1>
             <p className="branding-subtitle">
               Secure access to admissions, academics, notice board, gallery, placements, and
@@ -223,7 +223,7 @@ export default function AdminLoginPage() {
                     type="email"
                     required
                     autoComplete="username"
-                    placeholder="you@plrct.ac.in"
+                    placeholder="you@PLRCT.ac.in"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="input-field"

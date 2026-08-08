@@ -1,0 +1,126 @@
+/* =============================================================================
+   affiliations.css — signature element: official "seal" badge grid + trust
+   chip row, reinforcing regulatory credibility as the page's core job.
+   ============================================================================= */
+
+.PLRCT-affil-hero {
+  background: linear-gradient(135deg, #1f2937, #0f1720);
+  text-align: center;
+  padding: clamp(3.5rem, 9vw, 5rem) clamp(1.25rem, 5vw, 3rem) !important;
+}
+.PLRCT-affil-hero__inner { max-width: 760px; margin: 0 auto; }
+.PLRCT-affil-hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--PLRCT-white);
+  font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+  margin: 0 0 1rem;
+}
+.PLRCT-affil-hero p { color: rgba(255, 255, 255, 0.75); margin: 0; line-height: 1.7; }
+
+.PLRCT-affil-badges {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+.PLRCT-affil-badge {
+  background: var(--PLRCT-light-gray);
+  border: 1px solid var(--PLRCT-hairline);
+  border-radius: 18px;
+  padding: 1.6rem;
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+.PLRCT-affil-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--PLRCT-gold);
+}
+.PLRCT-affil-badge__seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--PLRCT-white);
+  border: 2px solid var(--PLRCT-gold);
+  color: var(--PLRCT-red);
+  margin-bottom: 1rem;
+}
+.PLRCT-affil-badge__seal svg { width: 24px; height: 24px; }
+.PLRCT-affil-badge h3 {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--PLRCT-ink);
+  margin: 0 0 0.5rem;
+}
+.PLRCT-affil-badge p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--PLRCT-slate);
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 980px) { .PLRCT-affil-badges { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .PLRCT-affil-badges { grid-template-columns: 1fr; } }
+
+/* ---- Trust chips ---- */
+.PLRCT-affil-trust { padding-top: 0 !important; padding-bottom: 0 !important; }
+.PLRCT-affil-trust__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+.PLRCT-affil-trust__chip {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--PLRCT-red);
+  background: rgba(200, 16, 46, 0.06);
+  border: 1px solid rgba(200, 16, 46, 0.18);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+}
+
+/* ---- Document downloads ---- */
+.PLRCT-affil-docs { background: var(--PLRCT-light-gray); }
+.PLRCT-affil-docs__grid {
+  margin-top: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.PLRCT-affil-doc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--PLRCT-white);
+  border-radius: 16px;
+  padding: 1.1rem 1.35rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast);
+}
+.PLRCT-affil-doc:hover { transform: translateY(-3px); }
+.PLRCT-affil-doc__icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--PLRCT-light-gray);
+  color: var(--PLRCT-red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.PLRCT-affil-doc__icon svg { width: 20px; height: 20px; }
+.PLRCT-affil-doc__label { font-family: var(--font-nav); font-weight: 600; font-size: 0.9rem; color: var(--PLRCT-ink); margin: 0 0 0.2rem; }
+.PLRCT-affil-doc__note { font-size: 0.78rem; color: var(--PLRCT-slate); margin: 0; }
+
+@media (max-width: 640px) { .PLRCT-affil-docs__grid { grid-template-columns: 1fr; } }

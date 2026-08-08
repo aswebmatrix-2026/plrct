@@ -19,7 +19,7 @@ export default function Home() {
           <img
             className="hero__img"
             loading="eager"
-            src="https://picsum.photos/seed/plrct-campus/1920/1080"
+            src="https://picsum.photos/seed/PLRCT-campus/1920/1080"
             alt=""
           />
           <div className="hero__overlay"></div>
@@ -186,20 +186,20 @@ export default function Home() {
       <section className="about" id="about" aria-label="About PLRCT">
         <div className="about__gallery" aria-hidden="true">
           <figure className="about__img about__img--a">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-lab/900/1100" alt="Engineering laboratory at PLRCT with students working on technology projects" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-lab/900/1100" alt="Engineering laboratory at PLRCT with students working on technology projects" />
           </figure>
           <figure className="about__img about__img--b">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-library/700/560" alt="Central library at PLRCT campus" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-library/700/560" alt="Central library at PLRCT campus" />
           </figure>
           <figure className="about__img about__img--c">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-innovation/700/560" alt="Students presenting an innovation project at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-innovation/700/560" alt="Students presenting an innovation project at PLRCT" />
           </figure>
         </div>
         <div className="about__content">
           <p className="eyebrow eyebrow--dark">About PLRCT</p>
           <h2 className="h2">Fifteen years of building engineers Faridabad is proud of</h2>
           <p>
-            Pt. L.R. College of Technology has grown into one of Faridabad&apos;s most trusted names
+            PLRCT has grown into one of Faridabad&apos;s most trusted names
             in technical education by pairing rigorous academics with an industry-first mindset.
             Every B.Tech, Diploma, BCA, BBA, MBA and Pharmacy curriculum is reviewed against what
             recruiters in Delhi NCR are actually hiring for, so classroom learning translates
@@ -398,43 +398,43 @@ export default function Home() {
         </div>
         <div className="facilities-grid">
           <figure className="facility-tile facility-tile--lg">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-library2/900/700" alt="Central Library at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-library2/900/700" alt="Central Library at PLRCT" />
             <figcaption>Central Library</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-computerlab/700/560" alt="Computer laboratories at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-computerlab/700/560" alt="Computer laboratories at PLRCT" />
             <figcaption>Computer Laboratories</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-workshop/700/560" alt="Engineering workshops at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-workshop/700/560" alt="Engineering workshops at PLRCT" />
             <figcaption>Engineering Workshops</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-classroom/700/560" alt="Smart classrooms at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-classroom/700/560" alt="Smart classrooms at PLRCT" />
             <figcaption>Smart Classrooms</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-auditorium/700/560" alt="Auditorium at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-auditorium/700/560" alt="Auditorium at PLRCT" />
             <figcaption>Auditorium</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-hostel/700/560" alt="Hostel facilities at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-hostel/700/560" alt="Hostel facilities at PLRCT" />
             <figcaption>Hostel</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-sports/700/560" alt="Sports complex at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-sports/700/560" alt="Sports complex at PLRCT" />
             <figcaption>Sports Complex</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-cafeteria/700/560" alt="Cafeteria at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-cafeteria/700/560" alt="Cafeteria at PLRCT" />
             <figcaption>Cafeteria</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-medical/700/560" alt="Medical facilities at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-medical/700/560" alt="Medical facilities at PLRCT" />
             <figcaption>Medical Facilities</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/plrct-transport/700/560" alt="Transportation at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-transport/700/560" alt="Transportation at PLRCT" />
             <figcaption>Transportation</figcaption>
           </figure>
         </div>
@@ -500,19 +500,19 @@ export default function Home() {
         </div>
         <div className="testimonial-grid">
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/plrct-student1/160/160" alt="Photo of Ritika Sharma" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student1/160/160" alt="Photo of Ritika Sharma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;The lab access and faculty support at PLRCT gave me real project experience before I even graduated.&quot;</p>
             <p className="testimonial-card__name">Ritika Sharma <span>&middot; B.Tech CSE, 2025</span></p>
           </article>
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/plrct-student2/160/160" alt="Photo of Aman Verma" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student2/160/160" alt="Photo of Aman Verma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;The placement cell prepared me thoroughly &mdash; mock interviews made the real ones far less nerve-wracking.&quot;</p>
             <p className="testimonial-card__name">Aman Verma <span>&middot; BBA, 2024</span></p>
           </article>
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/plrct-student3/160/160" alt="Photo of Sneha Yadav" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student3/160/160" alt="Photo of Sneha Yadav" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;Small class sizes meant every professor actually knew my work. That mentorship made all the difference.&quot;</p>
             <p className="testimonial-card__name">Sneha Yadav <span>&middot; MBA, 2023</span></p>
@@ -529,7 +529,7 @@ export default function Home() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Is PLRCT AICTE approved?</summary>
-            <p>Yes. Pt. L.R. College of Technology is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.</p>
+            <p>Yes. PLRCT is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.</p>
           </details>
           <details className="faq-item">
             <summary>What courses are offered at PLRCT?</summary>

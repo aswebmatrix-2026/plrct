@@ -18,12 +18,12 @@
 .dashboard__title {
   font-family: var(--font-display);
   font-size: 1.9rem;
-  color: var(--plrct-ink);
+  color: var(--PLRCT-ink);
 }
 
 .dashboard__subtitle {
   font-family: var(--font-body);
-  color: var(--plrct-gray-500);
+  color: var(--PLRCT-gray-500);
   margin-top: 0.2rem;
 }
 
@@ -38,8 +38,8 @@
 .stat-card {
   padding: var(--space-md);
   border-radius: var(--radius-md);
-  background: var(--plrct-white);
-  border: 1px solid var(--plrct-gray-300);
+  background: var(--PLRCT-white);
+  border: 1px solid var(--PLRCT-gray-300);
   box-shadow: var(--shadow-soft);
 }
 
@@ -48,17 +48,17 @@
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--plrct-gray-500);
+  color: var(--PLRCT-gray-500);
 }
 
 .stat-card__value {
   font-family: var(--font-display);
   font-size: 2rem;
-  color: var(--plrct-ink);
+  color: var(--PLRCT-ink);
   margin-top: var(--space-3xs);
 }
 
-.stat-card--accent .stat-card__value { color: var(--plrct-red); }
+.stat-card--accent .stat-card__value { color: var(--PLRCT-red); }
 
 /* --- Table toolbar --- */
 .table-toolbar {
@@ -80,7 +80,7 @@
 .table-toolbar__filters input {
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--plrct-gray-300);
+  border: 1px solid var(--PLRCT-gray-300);
   font-family: var(--font-body);
   font-size: 0.85rem;
 }
@@ -89,14 +89,14 @@
 .notice-table-wrap {
   overflow-x: auto;
   border-radius: var(--radius-md);
-  border: 1px solid var(--plrct-gray-300);
+  border: 1px solid var(--PLRCT-gray-300);
   box-shadow: var(--shadow-soft);
 }
 
 .notice-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--plrct-white);
+  background: var(--PLRCT-white);
   font-family: var(--font-body);
   font-size: 0.88rem;
 }
@@ -104,8 +104,8 @@
 .notice-table th {
   text-align: left;
   padding: 0.85rem 1rem;
-  background: var(--plrct-gray-900);
-  color: var(--plrct-white);
+  background: var(--PLRCT-gray-900);
+  color: var(--PLRCT-white);
   font-family: var(--font-utility);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
@@ -115,12 +115,12 @@
 
 .notice-table td {
   padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--plrct-gray-100);
+  border-bottom: 1px solid var(--PLRCT-gray-100);
   vertical-align: middle;
 }
 
 .notice-table tr:last-child td { border-bottom: none; }
-.notice-table tr:hover td { background: var(--plrct-gray-50); }
+.notice-table tr:hover td { background: var(--PLRCT-gray-50); }
 
 .status-pill {
   display: inline-block;
@@ -133,9 +133,9 @@
   letter-spacing: 0.04em;
 }
 .status-pill--published { background: rgba(46,163,90,0.12); color: #2ea35a; }
-.status-pill--draft { background: var(--plrct-gray-100); color: var(--plrct-gray-500); }
+.status-pill--draft { background: var(--PLRCT-gray-100); color: var(--PLRCT-gray-500); }
 .status-pill--scheduled { background: rgba(122,79,181,0.12); color: var(--priority-featured); }
-.status-pill--archived { background: rgba(200,16,46,0.08); color: var(--plrct-gray-500); }
+.status-pill--archived { background: rgba(200,16,46,0.08); color: var(--PLRCT-gray-500); }
 
 .table-actions {
   display: flex;
@@ -147,23 +147,23 @@
 .table-actions a {
   padding: 0.35rem 0.65rem;
   border-radius: 6px;
-  border: 1px solid var(--plrct-gray-300);
-  background: var(--plrct-white);
+  border: 1px solid var(--PLRCT-gray-300);
+  background: var(--PLRCT-white);
   font-family: var(--font-utility);
   font-size: 0.72rem;
   cursor: pointer;
   text-decoration: none;
-  color: var(--plrct-gray-900);
+  color: var(--PLRCT-gray-900);
   transition: border-color var(--transition-fast), color var(--transition-fast);
 }
 .table-actions button:hover,
-.table-actions a:hover { border-color: var(--plrct-red); color: var(--plrct-red); }
+.table-actions a:hover { border-color: var(--PLRCT-red); color: var(--PLRCT-red); }
 .table-actions .danger:hover { border-color: var(--priority-urgent); color: var(--priority-urgent); }
 
 .dashboard-empty {
   padding: var(--space-xl);
   text-align: center;
-  color: var(--plrct-gray-500);
+  color: var(--PLRCT-gray-500);
   font-family: var(--font-body);
 }
 

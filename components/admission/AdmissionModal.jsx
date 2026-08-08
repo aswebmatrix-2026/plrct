@@ -36,7 +36,7 @@ const STEPS = [
   { key: "declaration", title: "Declaration", schema: declarationStepSchema, fields: ["declarationAccepted"] },
 ];
 
-const DRAFT_STORAGE_KEY = "plrct_admission_draft_id";
+const DRAFT_STORAGE_KEY = "PLRCT_admission_draft_id";
 
 export default function AdmissionModal({ isOpen, onClose }) {
   const [stepIndex, setStepIndex] = useState(0);

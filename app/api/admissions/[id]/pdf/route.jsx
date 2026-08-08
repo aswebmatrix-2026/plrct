@@ -157,7 +157,7 @@ function ApplicationPDF({ a }) {
       {/* Page 1 — application summary + document index */}
       <Page size="A4" style={styles.page}>
         <View style={styles.header}>
-          <Text style={styles.title}>Pt. L.R. College of Technology</Text>
+          <Text style={styles.title}>PLRCT</Text>
           <Text style={styles.subtitle}>Admission Application — {a.admissionSession}</Text>
           <Text style={styles.subtitle}>Application No: {a.applicationNumber}</Text>
         </View>

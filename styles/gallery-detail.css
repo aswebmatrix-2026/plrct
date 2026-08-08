@@ -4,10 +4,10 @@
    ========================================================================== */
 
 .album-detail {
-  --plrct-red: #c8102e;
-  --plrct-gold: #d4af37;
-  --plrct-dark: #1a1a1a;
-  --plrct-gray: #4a4a4a;
+  --PLRCT-red: #c8102e;
+  --PLRCT-gold: #d4af37;
+  --PLRCT-dark: #1a1a1a;
+  --PLRCT-gray: #4a4a4a;
   font-family: "Inter", "Poppins", sans-serif;
 }
 
@@ -48,7 +48,7 @@
   display: inline-block;
   margin-bottom: 1rem;
 }
-.album-back-link:hover { color: var(--plrct-gold); }
+.album-back-link:hover { color: var(--PLRCT-gold); }
 .album-hero-content h1 {
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 5vw, 3.4rem);
@@ -68,7 +68,7 @@
 }
 .album-description {
   max-width: 850px;
-  color: var(--plrct-gray);
+  color: var(--PLRCT-gray);
   line-height: 1.8;
   font-size: 1.05rem;
   margin-bottom: 2rem;
@@ -89,12 +89,12 @@
 }
 .album-actions .btn-outline {
   background: transparent;
-  border-color: var(--plrct-red);
-  color: var(--plrct-red);
+  border-color: var(--PLRCT-red);
+  color: var(--PLRCT-red);
 }
-.album-actions .btn-outline:hover { background: var(--plrct-red); color: white; }
+.album-actions .btn-outline:hover { background: var(--PLRCT-red); color: white; }
 .album-actions .btn-primary {
-  background: linear-gradient(135deg, var(--plrct-red), #970c22);
+  background: linear-gradient(135deg, var(--PLRCT-red), #970c22);
   color: white;
   box-shadow: 0 10px 24px rgba(200, 16, 46, 0.3);
 }
@@ -191,7 +191,7 @@
   cursor: pointer;
   z-index: 5;
 }
-.lightbox-close:hover { background: var(--plrct-red); }
+.lightbox-close:hover { background: var(--PLRCT-red); }
 .lightbox-counter {
   position: absolute;
   top: 1.8rem;
@@ -214,14 +214,14 @@
   cursor: pointer;
   z-index: 5;
 }
-.lightbox-nav:hover { background: var(--plrct-gold); color: var(--plrct-dark); }
+.lightbox-nav:hover { background: var(--PLRCT-gold); color: var(--PLRCT-dark); }
 .lightbox-prev { left: 1.5rem; }
 .lightbox-next { right: 1.5rem; }
 .lightbox-download {
   position: absolute;
   bottom: 1.8rem;
   right: 1.8rem;
-  background: var(--plrct-red);
+  background: var(--PLRCT-red);
   color: white;
   padding: 0.6rem 1.3rem;
   border-radius: 999px;

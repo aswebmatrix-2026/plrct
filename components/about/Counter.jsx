@@ -43,7 +43,7 @@ export default function Counter({ value, suffix = '', duration = 1400 }) {
   }, [value, duration]);
 
   return (
-    <span ref={ref} className="plrct-counter">
+    <span ref={ref} className="PLRCT-counter">
       {display}
       {suffix}
     </span>

@@ -6,7 +6,7 @@ import { uploadToCloudinary } from "@/lib/cloudinary";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-const GALLERY_FOLDER = "plrct/gallery";
+const GALLERY_FOLDER = "PLRCT/gallery";
 
 /**
  * POST /api/gallery/upload

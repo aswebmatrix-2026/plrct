@@ -51,7 +51,7 @@ export async function GET(request) {
         bufferFormat === "csv"
           ? "text/csv"
           : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "Content-Disposition": `attachment; filename="plrct-admissions.${bufferFormat}"`,
+      "Content-Disposition": `attachment; filename="PLRCT-admissions.${bufferFormat}"`,
     },
   });
 }
