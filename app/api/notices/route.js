@@ -1,15 +1,12 @@
 import { NextResponse } from "next/server";
 
 import { nanoid } from "nanoid";
+import slugify from "slugify";
 import { dbConnect
  } from "@/lib/mongodb";
 import Notice from "@/models/Notice";
 import { requireAdmin } from "@/lib/requireAdmin";
 
-// GET /api/notices
-// Public endpoint powering the ticker, homepage section, and notice board page.
-// Query params: category, priority, year, month, search, sort (latest|oldest),
-// scope (published|archive|all — "all" requires admin), page, limit
 export async function GET(request) {
   await dbConnect
 ();
@@ -89,7 +86,9 @@ export async function POST(request) {
     );
   }
 
-  let id = body.id ? idify(body.id, { lower: true, strict: true }) : idify(body.title, { lower: true, strict: true });
+  let id = body.id
+    ? slugify(body.id, { lower: true, strict: true })
+    : slugify(body.title, { lower: true, strict: true });
 
   const existing = await Notice.findOne({ id });
   if (existing) id = `${id}-${nanoid(6)}`;
