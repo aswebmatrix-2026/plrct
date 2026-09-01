@@ -1,0 +1,81 @@
+.placements-hero {
+  background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+  color: var(--white);
+  padding: 64px 0;
+  text-align: center;
+}
+.placements-hero h1 { font-size: 36px; margin-bottom: 12px; }
+.placements-hero p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+.placement-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 32px 0 24px;
+}
+.placement-toolbar input, .placement-toolbar select { max-width: 220px; }
+
+.placement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.placement-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.placement-card.featured::before {
+  content: "Featured";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gold);
+  color: var(--dark-text);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.placement-card .logo-wrap {
+  width: 56px; height: 56px;
+  border-radius: 10px;
+  background: #F1F5F9;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.placement-card .logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+.placement-card h3 { margin: 0; font-size: 18px; }
+.placement-card .role { color: var(--primary-red); font-weight: 600; font-size: 14px; }
+.placement-card .meta-row { display: flex; justify-content: space-between; font-size: 13px; color: #64748B; }
+.placement-card .package { font-weight: 700; color: var(--dark-text); }
+
+.pagination { display: flex; justify-content: center; gap: 8px; margin: 24px 0; }
+.pagination button {
+  border: 1.5px solid #E2E8F0;
+  background: var(--white);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pagination button.active { background: var(--primary-red); color: var(--white); border-color: var(--primary-red); }
+
+.placement-detail-banner {
+  background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+  color: var(--white);
+  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.placement-detail-banner img { width: 80px; height: 80px; border-radius: 12px; background: var(--white); object-fit: contain; padding: 8px; }
+.placement-detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; margin: 32px 0; }
+.placement-detail-card { padding: 24px; margin-bottom: 20px; }
+.related-placements { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+
+@media (max-width: 992px) { .placement-detail-grid { grid-template-columns: 1fr; } }

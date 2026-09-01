@@ -397,6 +397,16 @@ a.PLRCT-topbar__item:focus-visible {
   transition: opacity var(--transition-fast), transform var(--transition-fast),
     visibility var(--transition-fast);
   z-index: 999;
+  /* Any mega-menu (flat or grouped) can overflow the viewport on shorter
+     screens — cap its height and let the content scroll internally rather
+     than spilling off-screen or getting clipped. */
+  max-height: calc(100vh - var(--navbar-height) - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.PLRCT-header.is-scrolled .PLRCT-mega {
+  max-height: calc(100vh - var(--navbar-height-shrunk) - 32px);
 }
 
 .PLRCT-mega.is-open {
@@ -928,6 +938,28 @@ a.PLRCT-topbar__item:focus-visible {
 
 .PLRCT-mega--grouped {
   min-width: 780px; /* wider than the flat mega-menus to fit 4 columns */
+  /* Height cap + scroll now live on the shared .PLRCT-mega rule above, so
+     both the flat and grouped mega-menus behave consistently. Only the
+     scrollbar styling is kept here since it's specific to this menu. */
+}
+
+/* Thin, on-brand scrollbar so it doesn't look like a generic browser bar */
+.PLRCT-mega--grouped::-webkit-scrollbar {
+  width: 6px;
+}
+.PLRCT-mega--grouped::-webkit-scrollbar-track {
+  background: transparent;
+}
+.PLRCT-mega--grouped::-webkit-scrollbar-thumb {
+  background: rgba(200, 16, 46, 0.25);
+  border-radius: 999px;
+}
+.PLRCT-mega--grouped::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 16, 46, 0.45);
+}
+.PLRCT-mega--grouped {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 16, 46, 0.3) transparent;
 }
 
 .PLRCT-mega__grid--grouped {
@@ -1067,5 +1099,40 @@ a.PLRCT-topbar__item:focus-visible {
   .PLRCT-btn--primary {
     font-size: 0.72rem;
     padding: 0.48rem 0.7rem;
+  }
+}
+
+/* =============================================================================
+   EXTRA RESPONSIVE IMPROVEMENTS
+   ============================================================================= */
+
+/* Tablet range — mainbar aur mega-menu thoda tight ho jaaye */
+@media (max-width: 992px) {
+  .PLRCT-mainbar__inner {
+    padding: 0 1rem;
+  }
+  .PLRCT-mega--grouped {
+    min-width: min(560px, 90vw);
+  }
+}
+
+/* Bahut chhoti height wali screens (short laptop viewport, landscape
+   mobile) — navbar khud compact ho jaaye aur mega-menu ke liye zyada
+   vertical room bache. */
+@media (max-height: 700px) {
+  :root {
+    --navbar-height: 72px;
+    --navbar-height-shrunk: 60px;
+  }
+  .PLRCT-mega,
+  .PLRCT-mega--grouped {
+    max-height: calc(100vh - 90px);
+  }
+}
+
+/* Chhoti-width mobile pe drawer full-width ho jaaye */
+@media (max-width: 380px) {
+  .PLRCT-mobile-drawer {
+    width: 100vw;
   }
 }

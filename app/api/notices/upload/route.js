@@ -31,7 +31,7 @@ export async function POST(request) {
       );
     }
 
-    const MAX_SIZE = 15 * 1024 * 1024;
+    const MAX_SIZE = 1* 1024 * 1024;
 
     if (file.size > MAX_SIZE) {
       return NextResponse.json(

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import mongoose from "mongoose";
 import { authOptions } from "@/lib/authOptions";
-import { dbConnect as connectDB } from "@/lib/mongodb";
+import { dbConnect as dbConnect } from "@/lib/mongodb";
 import { deleteFromCloudinary } from "@/lib/cloudinary";
 import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
 
@@ -17,7 +17,7 @@ async function findEvent(idOrSlug) {
 /** GET /api/gallery/[slug] — public detail view, increments views for published albums. */
 export async function GET(request, { params }) {
   const { slug } = await params;
-  await connectDB();
+  await dbConnect();
   const event = await findEvent(slug);
 
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
@@ -41,7 +41,7 @@ export async function PUT(request, { params }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await connectDB();
+  await dbConnect();
   const event = await findEvent(slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 
@@ -87,7 +87,7 @@ export async function DELETE(request, { params }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await connectDB();
+  await dbConnect();
   const event = await findEvent(params.slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 
@@ -113,7 +113,7 @@ export async function PATCH(request, { params }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await connectDB();
+  await dbConnect();
   const event = await findEvent(params.slug);
   if (!event) return NextResponse.json({ error: "Album not found" }, { status: 404 });
 

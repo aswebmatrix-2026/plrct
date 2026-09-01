@@ -1,0 +1,235 @@
+.sav-page {
+  padding: 24px;
+  max-width: 1100px;
+}
+
+.sav-back {
+  border: none;
+  background: none;
+  color: #12318f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+.sav-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .sav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sav-details {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sav-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sav-header h1 {
+  font-size: 20px;
+  color: #12318f;
+  margin: 0;
+}
+
+.sav-badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sav-badge--pending {
+  background: #fff4d6;
+  color: #8a6300;
+}
+
+.sav-badge--verified {
+  background: #e1f6e6;
+  color: #1a7d3a;
+}
+
+.sav-badge--rejected {
+  background: #fdecec;
+  color: #c8102e;
+}
+
+.sav-error {
+  background: #fdecec;
+  color: #c8102e;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.sav-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sav-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.sav-field__label {
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.sav-field__value {
+  color: #222;
+  font-weight: 600;
+}
+
+.sav-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.sav-edit-field input,
+.sav-edit-field textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.sav-edit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.sav-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.sav-section h2 {
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.sav-roll-row {
+  display: flex;
+  gap: 10px;
+}
+
+.sav-roll-row input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.sav-action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sav-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #12318f;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sav-btn--secondary {
+  background: #eef0f8;
+  color: #12318f;
+}
+
+.sav-btn--danger {
+  background: #c8102e;
+}
+
+.sav-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 24px;
+}
+
+.sav-preview__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.sav-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.sav-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.sav-modal h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #c8102e;
+}
+
+.sav-modal textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.sav-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}

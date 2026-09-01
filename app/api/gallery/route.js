@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import slugify from "slugify";
 import { authOptions } from "@/lib/authOptions";
-import { dbConnect as connectDB } from "@/lib/mongodb";
+import { dbConnect as dbConnect } from "@/lib/mongodb";
 import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
 
 /**
@@ -13,7 +13,7 @@ import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
  *   category, year, q (search), sort (latest|oldest), featured, homepage, limit, page
  */
 export async function GET(request) {
-  await connectDB();
+  await dbConnect();
   const { searchParams } = new URL(request.url);
 
   const session = await getServerSession(authOptions);
@@ -78,7 +78,7 @@ export async function POST(request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  await connectDB();
+  await dbConnect();
   const body = await request.json();
 
   const required = ["eventName", "year", "eventDate", "category", "shortDescription", "coverImage"];

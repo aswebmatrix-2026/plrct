@@ -1,0 +1,91 @@
+/* app/academics/resources/syllabus/[id]/syllabus-detail.css */
+
+.syllabus-detail {
+  --plrct-primary: #c8102e;
+  --plrct-primary-dark: #8b0f24;
+  --plrct-white: #ffffff;
+  --plrct-bg: #f8fafc;
+  --plrct-dark: #111827;
+  --plrct-text-muted: #64748b;
+  font-family: "Inter", sans-serif;
+  color: var(--plrct-dark);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.syllabus-detail__breadcrumb {
+  font-size: 13.5px;
+  color: var(--plrct-text-muted);
+  margin-bottom: 18px;
+}
+.syllabus-detail__breadcrumb a { color: var(--plrct-text-muted); text-decoration: none; }
+.syllabus-detail__breadcrumb a:hover { color: var(--plrct-primary); }
+
+.syllabus-detail__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.syllabus-detail__title {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+.syllabus-detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.syllabus-detail__badge {
+  background: rgba(200, 16, 46, 0.08);
+  color: var(--plrct-primary);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.syllabus-detail__download {
+  background: var(--plrct-primary);
+  color: var(--plrct-white);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.syllabus-detail__download:hover { background: var(--plrct-primary-dark); }
+
+.syllabus-detail__viewer {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--plrct-bg);
+}
+.syllabus-detail__viewer iframe { width: 100%; height: 100%; border: none; }
+
+.syllabus-detail__back {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--plrct-primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+.syllabus-detail__back:hover { text-decoration: underline; }
+
+.syllabus-detail__fallback {
+  padding: 40px;
+  text-align: center;
+  color: var(--plrct-text-muted);
+}
+
+@media (max-width: 768px) {
+  .syllabus-detail__viewer { height: 65vh; }
+}

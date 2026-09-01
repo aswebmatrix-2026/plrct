@@ -13,14 +13,19 @@ import {
   Menu,
   X,
   Bell,
+  Briefcase,
+  BookOpen,
 } from "lucide-react";
 
 const NAV_ITEMS = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/admissions", label: "Admissions", icon: ClipboardList },
+  { href: "/admin/placements", label: "Placements", icon: Briefcase },
+  { href: "/admin/syllabus", label: "Syllabus", icon: BookOpen },
   { href: "/admin/inquiries", label: "Inquiries", icon: Mail },
   { href: "/admin/gallery", label: "Gallery", icon: Images },
   { href: "/admin/notices", label: "Notices", icon: Bell },
+  { href: "/admin/student-applications", label: "Student Applications", icon: Bell },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
 

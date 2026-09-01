@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdmissionModal from "@/components/admission/AdmissionModal";
+import NoticeTicker from "@/components/NoticeTicker";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Home() {
           <img
             className="hero__img"
             loading="eager"
-            src="https://picsum.photos/seed/PLRCT-campus/1920/1080"
+            src="/images/college.webp"
             alt=""
           />
           <div className="hero__overlay"></div>
@@ -43,7 +44,7 @@ export default function Home() {
             </p>
             <div className="hero__ctas">
               <button type="button" onClick={openModal} className="btn btn--primary">
-                Apply for 2026 Admissions
+                Online Admissions
               </button>
               <a href="#brochure" className="btn btn--ghost">Download Brochure</a>
               <a href="#visit" className="btn btn--text">Schedule Campus Visit &rarr;</a>
@@ -67,80 +68,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ NOTICE BOARD ============ */}
-      <section className="notices" aria-label="Latest notices">
-        <div className="notices__head">
-          <div>
-            <p className="eyebrow eyebrow--dark">Notice Board</p>
-            <h2 className="h2">What&apos;s happening at PLRCT</h2>
-          </div>
-          <div className="notices__tools">
-            <label className="notices__search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="7" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-              <input type="text" placeholder="Search notices" aria-label="Search notices" />
-            </label>
-            <a href="#all-notices" className="btn btn--outline-sm">View all notices</a>
-          </div>
-        </div>
 
-        <div className="notices__marquee" role="list">
-          <ul className="notices__track">
-            <li className="notice-card">
-              <span className="badge badge--urgent">Urgent</span>
-              <span className="notice-card__tag">Admissions</span>
-              <h3>2026 admission window now open for B.Tech &amp; Diploma</h3>
-              <p className="notice-card__date">04 Aug 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Scholarship</span>
-              <h3>Merit scholarship applications for 2026-27 batch</h3>
-              <p className="notice-card__date">02 Aug 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Examination</span>
-              <h3>Odd-semester examination schedule released</h3>
-              <p className="notice-card__date">30 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="badge badge--urgent">Urgent</span>
-              <span className="notice-card__tag">Placements</span>
-              <h3>Campus placement drive &mdash; core engineering recruiters</h3>
-              <p className="notice-card__date">28 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Internships</span>
-              <h3>Summer internship opportunities with industry partners</h3>
-              <p className="notice-card__date">24 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Workshop</span>
-              <h3>AI &amp; robotics workshop registrations open</h3>
-              <p className="notice-card__date">21 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Academic Calendar</span>
-              <h3>Academic calendar 2026-27 published</h3>
-              <p className="notice-card__date">15 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-            <li className="notice-card">
-              <span className="notice-card__tag">Holiday</span>
-              <h3>Institute closed for Independence Day</h3>
-              <p className="notice-card__date">10 Jul 2026</p>
-              <a href="#" className="notice-card__dl" aria-label="Download PDF">PDF ⬇</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* ============ NOTICE BOARD ============ */}
+<section className="notices" aria-label="Latest notices">
+  <div className="notices__head">
+    <div>
+      <p className="eyebrow eyebrow--dark">Notice Board</p>
+      <h2 className="h2">What&apos;s happening at PLRCT</h2>
+    </div>
+    <div className="notices__tools">
+      <label className="notices__search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" placeholder="Search notices" aria-label="Search notices" />
+      </label>
+      <a href="/notice-board" className="btn btn--outline-sm">View all notices</a>
+    </div>
+  </div>
+
+  <NoticeTicker />
+</section>
 
       {/* ============ QUICK ACTIONS ============ */}
       <section className="quick-actions" aria-label="Quick actions">

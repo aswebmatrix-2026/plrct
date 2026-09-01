@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import './contact.css';
+import { color } from 'framer-motion';
+import AdmissionModal from "../../../components/admission/AdmissionModal";
 
 // Icon Components
 const PhoneIcon = () => (
@@ -79,16 +81,6 @@ const QuickContactCard = ({ title, phone, email, hours, icon }) => (
   </div>
 );
 
-const DepartmentCard = ({ title, hod, email, phone }) => (
-  <div className="dept-card">
-    <h4>{title}</h4>
-    <p><strong>HOD:</strong> {hod}</p>
-    <p><MailIcon className="inline-icon" /> {email}</p>
-    <p><PhoneIcon className="inline-icon" /> {phone}</p>
-    <button className="btn btn-outline">Contact Department</button>
-  </div>
-);
-
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -116,6 +108,7 @@ export default function ContactPage() {
   });
   const [formStatus, setFormStatus] = useState({ submitted: false, error: false, message: '' });
   const [submitting, setSubmitting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -158,6 +151,13 @@ export default function ContactPage() {
     }
   };
 
+  const openModal = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="contact-page">
       {/* Hero Section */}
@@ -165,54 +165,18 @@ export default function ContactPage() {
         <div className="hero-overlay">
           <div className="container">
             <nav className="breadcrumb" aria-label="Breadcrumb">
-              <span>Home</span> / <span>Contact Us</span>
+              <span>Home</span> / <span>Enquiry Now</span>
             </nav>
-            <h1 className="hero-title">Contact PLRCT</h1>
+            <h1 className="hero-title" style={{color:"#fcfdff"}} > <span style={{color:"#C8102E"}} > Pt. L.R. College </span> of Technology </h1>
             <p className="hero-subtitle">
               Get in touch with our admissions team, academic departments, and student support services.
               We are here to help you with admissions, courses, placements, and campus visits.
             </p>
             <div className="hero-buttons">
-              <button className="btn btn-primary">Apply Now</button>
-              <button className="btn btn-secondary">Schedule Campus Visit</button>
+              <button type="button" onClick={openModal} className="btn btn-primary">
+                Online Admissions
+              </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Contact Cards */}
-      <section className="quick-contact">
-        <div className="container">
-          <SectionTitle title="Quick Connect" subtitle="Reach out to the right department instantly" />
-          <div className="quick-grid">
-            <QuickContactCard
-              title="Admissions Office"
-              phone="+91 129 123 4567"
-              email="admissions@PLRCT.edu.in"
-              hours="Mon-Fri 9 AM - 5 PM"
-              icon={<PhoneIcon />}
-            />
-            <QuickContactCard
-              title="Academic Office"
-              phone="+91 129 123 4568"
-              email="academics@PLRCT.edu.in"
-              hours="Mon-Fri 9 AM - 5 PM"
-              icon={<MailIcon />}
-            />
-            <QuickContactCard
-              title="Placement Cell"
-              phone="+91 129 123 4569"
-              email="placement@PLRCT.edu.in"
-              hours="Mon-Fri 9 AM - 5 PM"
-              icon={<MapPinIcon />}
-            />
-            <QuickContactCard
-              title="Student Support"
-              phone="+91 129 123 4570"
-              email="support@PLRCT.edu.in"
-              hours="Mon-Fri 9 AM - 5 PM"
-              icon={<ClockIcon />}
-            />
           </div>
         </div>
       </section>
@@ -332,7 +296,7 @@ export default function ContactPage() {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="PLRCT Campus Map"
+                  title="Pt. L.R. College of Technology Campus Map"
                 ></iframe>
               </div>
               <div className="map-actions">
@@ -345,35 +309,18 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Department Contacts */}
-      <section className="departments">
-        <div className="container">
-          <SectionTitle title="Department Contacts" subtitle="Connect directly with our academic departments" />
-          <div className="dept-grid">
-            <DepartmentCard title="Computer Science Engineering" hod="Dr. A. Sharma" email="cse@PLRCT.edu.in" phone="+91 129 123 4571" />
-            <DepartmentCard title="Electrical Engineering" hod="Dr. B. Verma" email="ee@PLRCT.edu.in" phone="+91 129 123 4572" />
-            <DepartmentCard title="Mechanical Engineering" hod="Dr. C. Singh" email="me@PLRCT.edu.in" phone="+91 129 123 4573" />
-            <DepartmentCard title="Civil Engineering" hod="Dr. D. Gupta" email="ce@PLRCT.edu.in" phone="+91 129 123 4574" />
-            <DepartmentCard title="Electronics & Communication" hod="Dr. E. Kumar" email="ece@PLRCT.edu.in" phone="+91 129 123 4575" />
-            <DepartmentCard title="AI & Machine Learning" hod="Dr. F. Reddy" email="aiml@PLRCT.edu.in" phone="+91 129 123 4576" />
-            <DepartmentCard title="Diploma Engineering" hod="Dr. G. Singh" email="diploma@PLRCT.edu.in" phone="+91 129 123 4577" />
-            <DepartmentCard title="M.Tech Coordination" hod="Dr. H. Mehta" email="mtech@PLRCT.edu.in" phone="+91 129 123 4578" />
-          </div>
-        </div>
-      </section>
-
       {/* Admission Helpline */}
       <section className="admission-helpline">
         <div className="container">
           <div className="helpline-content">
-            <h2>Admissions Open for 2026</h2>
+            <h2 style={{color:'white'}}>Admissions Open for 2026</h2>
             <p>Connect with our admission helpline for personalized counseling and application support.</p>
             <div className="helpline-details">
-              <p><PhoneIcon className="inline-icon" /> Admission Helpline: +91 129 123 4500</p>
-              <p><MailIcon className="inline-icon" /> Email: admissions@PLRCT.edu.in</p>
-              <p><ClockIcon className="inline-icon" /> Campus Counseling: Mon-Sat 9 AM - 5 PM</p>
+              <p><PhoneIcon className="inline-icon" /> Admission Helpline:+91-9540028828,+91-9540028827</p>
+              <p><MailIcon className="inline-icon" /> Email: ptlr.admission@gmail.com</p>
+              <p><ClockIcon className="inline-icon" /> Campus Counseling: Mon-Sat 10 AM - 3 PM</p>
             </div>
-            <button className="btn btn-whatsapp">WhatsApp Inquiry</button>
+             <a  href="https://wa.me/919540028828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">WhatsApp Inquiry</a>
           </div>
         </div>
       </section>
@@ -381,16 +328,13 @@ export default function ContactPage() {
       {/* Visit Campus */}
       <section className="visit-campus">
         <div className="container">
-          <SectionTitle title="Visit Our Campus" subtitle="Experience PLRCT first-hand" />
+          <SectionTitle title="Visit Our Campus" subtitle="Experience Pt. L.R. College of Technology Campus" />
           <div className="visit-grid">
             <div className="visit-item"><span>🏛️</span> Schedule Campus Tour</div>
             <div className="visit-item"><span>👨‍🏫</span> Meet Faculty</div>
             <div className="visit-item"><span>🔬</span> Visit Laboratories</div>
             <div className="visit-item"><span>🏠</span> Hostel Tour</div>
             <div className="visit-item"><span>📋</span> Admission Counseling</div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <button className="btn btn-primary">Book a Campus Visit</button>
           </div>
         </div>
       </section>
@@ -400,7 +344,7 @@ export default function ContactPage() {
         <div className="container">
           <SectionTitle title="Office Hours" subtitle="When we are available to assist you" />
           <div className="hours-grid">
-            <div className="hour-card"><h4>Monday – Friday</h4><p>9:00 AM – 5:00 PM</p></div>
+            <div className="hour-card"><h4>Monday – Friday</h4><p>9:00 AM – 4:00 PM</p></div>
             <div className="hour-card"><h4>Saturday</h4><p>9:00 AM – 2:00 PM</p></div>
             <div className="hour-card"><h4>Sunday</h4><p>Closed</p></div>
             <div className="hour-card"><h4>Admission Support</h4><p>Available Online</p></div>
@@ -413,11 +357,11 @@ export default function ContactPage() {
         <div className="container">
           <SectionTitle title="Follow Us" subtitle="Stay connected on social media" />
           <div className="social-icons">
-            <a href="#" aria-label="Facebook"><FacebookIcon /></a>
-            <a href="#" aria-label="Instagram"><InstagramIcon /></a>
-            <a href="#" aria-label="LinkedIn"><LinkedInIcon /></a>
-            <a href="#" aria-label="YouTube"><YouTubeIcon /></a>
-            <a href="#" aria-label="Twitter"><TwitterIcon /></a>
+            <a href="https://www.facebook.com/ptlrct" aria-label="Facebook"><FacebookIcon /></a>
+            <a href="https://www.instagram.com/ptlrcollege" aria-label="Instagram"><InstagramIcon /></a>
+            <a href="https://www.linkedin.com/school/ptlrct" aria-label="LinkedIn"><LinkedInIcon /></a>
+            <a href="https://www.youtube.com/@ptlrgroupofinstitutionsfar7153" aria-label="YouTube"><YouTubeIcon /></a>
+            <a href="https://x.com/PTLRGROUP" aria-label="Twitter"><TwitterIcon /></a>
           </div>
         </div>
       </section>
@@ -430,11 +374,11 @@ export default function ContactPage() {
             <FAQItem question="How can I apply for admission?" answer="You can apply online through our admissions portal or visit the campus for offline application. The process includes filling the application form, submitting documents, and appearing for counseling." />
             <FAQItem question="What documents are required?" answer="Typical documents include 10th and 12th mark sheets, transfer certificate, migration certificate, character certificate, passport size photographs, and ID proof." />
             <FAQItem question="Is campus visit available?" answer="Yes, we offer campus visits on all working days. You can schedule a visit by calling our admissions office or booking online." />
-            <FAQItem question="How can I contact the admissions office?" answer="You can call our admission helpline at +91 129 123 4500, email at admissions@PLRCT.edu.in, or visit the campus in person." />
+            <FAQItem question="How can I contact the admissions office?" answer="You can call our admission helpline at +91 9540028828, 9540028827 email at ptlr.admission@gmail.com, or visit the campus in person." />
             <FAQItem question="Are scholarships available?" answer="Yes, we offer merit-based and need-based scholarships. Please contact the scholarship office for detailed information." />
             <FAQItem question="Is hostel accommodation available?" answer="Yes, we have separate hostels for boys and girls with all modern amenities. Limited seats are available." />
-            <FAQItem question="How can I reach the college from Delhi NCR?" answer="PLRCT is located in Faridabad, easily accessible via NH-44, Delhi-Mathura Road, and local transport from Delhi NCR." />
-            <FAQItem question="Can I submit inquiries online?" answer="Absolutely! You can use the contact form on this page or email us directly at support@PLRCT.edu.in." />
+            <FAQItem question="How can I reach the college from Delhi NCR?" answer="Pt. L.R. College of Technology is located in Kaboolpur Banger,Sector -56,Faridabad, easily accessible Sohna-Samaypur Road, and local transport from Faridabad" />
+            <FAQItem question="Can I submit inquiries online?" answer="Absolutely! You can use the contact form on this page or email us directly at ptlr.admission@gmail.com" />
           </div>
         </div>
       </section>
@@ -442,17 +386,16 @@ export default function ContactPage() {
       {/* Final CTA */}
       <section className="final-cta">
         <div className="container">
-          <h2>Start Your Engineering Journey with PLRCT</h2>
+          <h2 style={{color:'white'}}>Start Your Engineering Journey with  Pt. L.R. College of Technology</h2>
           <p>Connect with our admissions team today and take the first step toward a successful engineering career in Faridabad, Haryana.</p>
           <div className="cta-buttons">
-            <button className="btn btn-primary">Apply Now</button>
-            <button className="btn btn-secondary">Call Admissions</button>
-            <button className="btn btn-whatsapp">WhatsApp Us</button>
+            <a href="tel:9540028828" className="btn btn-secondary" >Call Admissions</a>
+            <a href="https://wa.me/919540028828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">WhatsApp Us</a>
           </div>
         </div>
       </section>
 
-    
+      <AdmissionModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

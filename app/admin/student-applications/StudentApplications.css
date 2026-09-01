@@ -1,0 +1,112 @@
+.sap-page {
+  padding: 24px;
+}
+
+.sap-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #12318f;
+}
+
+.sap-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.sap-filters input,
+.sap-filters select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.sap-search {
+  flex: 1;
+  min-width: 240px;
+}
+
+.sap-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.sap-table th,
+.sap-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.sap-table th {
+  background: #f7f8fc;
+  font-weight: 700;
+  color: #444;
+}
+
+.sap-empty {
+  text-align: center;
+  padding: 24px;
+  color: #888;
+}
+
+.sap-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sap-badge--pending {
+  background: #fff4d6;
+  color: #8a6300;
+}
+
+.sap-badge--verified {
+  background: #e1f6e6;
+  color: #1a7d3a;
+}
+
+.sap-badge--rejected {
+  background: #fdecec;
+  color: #c8102e;
+}
+
+.sap-link {
+  color: #12318f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sap-pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.sap-pagination button {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.sap-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

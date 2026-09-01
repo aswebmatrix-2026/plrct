@@ -183,7 +183,7 @@
 .plrf-mini-notices li:last-child{ border-bottom:none; padding-bottom:0; }
 .plrf-mini-notice__meta{ display:flex; flex-direction:column; gap:2px; }
 .plrf-mini-notice__date{ font-size:0.72rem; color:var(--plrf-text-faint); }
-.plrf-mini-notice__title{ font-family:var(--plrf-font-links); font-size:0.9rem; color:var(--plrf-white); }
+.plrf-mini-notice__title{ font-family:var(--plrf-font-links); font-size:0.9rem; color:var(--plrf-white);margin-top:50px; transition:color var(--plrf-transition); }
 .plrf-mini-notice__link{
   font-family:var(--plrf-font-links); font-size:0.78rem; font-weight:600; color:var(--plrf-gold);
   white-space:nowrap;

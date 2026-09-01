@@ -1,0 +1,189 @@
+/*
+  All colors/sizes are CSS variables so the card can be tuned to match
+  your exact reference image without touching the component markup.
+*/
+.id-card {
+  --card-width: 320px;
+  --card-blue: #12318f;
+  --card-blue-dark: #0c2266;
+  --card-yellow: #ffcc29;
+  --card-white: #ffffff;
+  --card-beige: #f3e6c8;
+  --card-red: #c8102e;
+  --card-text-dark: #1a1a1a;
+
+  width: var(--card-width);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--card-white);
+  position: relative;
+}
+
+.id-card__header {
+  background: var(--card-blue);
+  color: var(--card-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+
+.id-card__logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--card-white);
+}
+
+.id-card__logo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--card-blue);
+}
+
+.id-card__college-name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.id-card__yellow-band {
+  height: 22px;
+  background: var(--card-yellow);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  margin-top: -1px;
+}
+
+.id-card__photo-section {
+  display: flex;
+  justify-content: center;
+  margin-top: -34px;
+  position: relative;
+  z-index: 2;
+}
+
+.id-card__photo-frame {
+  width: 96px;
+  height: 116px;
+  background: var(--card-white);
+  border: 3px solid var(--card-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.id-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.id-card__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  background: #eee;
+}
+
+.id-card__name {
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--card-text-dark);
+  margin-top: 10px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.id-card__info {
+  padding: 8px 18px 4px;
+}
+
+.id-card__info-row {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--card-red);
+  padding: 2px 0;
+}
+
+.id-card__info-row--address {
+  align-items: flex-start;
+}
+
+.id-card__label {
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 82px;
+}
+
+.id-card__value {
+  color: var(--card-red);
+  word-break: break-word;
+}
+
+.id-card__value--roll {
+  font-weight: 700;
+}
+
+.id-card__lower-section {
+  background: var(--card-beige);
+  border-radius: 40% 40% 0 0 / 60% 60% 0 0;
+  margin-top: 10px;
+  padding: 14px 18px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.id-card__signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.id-card__signature-img {
+  height: 26px;
+  object-fit: contain;
+}
+
+.id-card__signature-line {
+  width: 90px;
+  border-bottom: 1px solid #555;
+  height: 20px;
+}
+
+.id-card__signature-label {
+  font-size: 10px;
+  color: #444;
+}
+
+.id-card__app-id {
+  font-size: 9px;
+  color: #666;
+  align-self: flex-end;
+}
+
+.id-card__yellow-separator {
+  height: 6px;
+  background: var(--card-yellow);
+}
+
+.id-card__footer {
+  background: var(--card-blue-dark);
+  color: var(--card-white);
+  text-align: center;
+  font-size: 10px;
+  padding: 6px;
+  letter-spacing: 0.3px;
+}

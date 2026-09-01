@@ -2,7 +2,7 @@
 // POST  -> save a new inquiry from the public contact form
 // GET   -> list inquiries for the admin dashboard (paginated + filterable)
 //
-// ⚠️ Adjust the "@/lib/dbConnect" import below to match whatever your
+// ⚠️ Adjust the "@/lib/mongodb.jsConnect" import below to match whatever your
 // existing Mongo connection helper is actually called (the one your
 // /api/admissions routes already use).
 

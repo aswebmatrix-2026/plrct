@@ -151,11 +151,6 @@ export const ABOUT_MENU = [
   },
 ];
 
-/* -------------------------------------------------------------------------
- * NEW: Academics mega-menu data — GROUPED (4 columns), per the redesign
- * brief. Each group has a title + its own list of links, unlike the flat
- * ABOUT_MENU / COURSES_MENU / ADMISSIONS_MENU arrays below.
- * ---------------------------------------------------------------------- */
 export const ACADEMICS_MENU = [
   {
     group: 'Undergraduate Programs',
@@ -184,9 +179,9 @@ export const ACADEMICS_MENU = [
   {
     group: 'Academic Resources',
     items: [
-      { title: 'Syllabus', href: '/academics/resources/syllabus', icon: 'doc', description: 'Department-wise semester syllabus' },
+      { title: 'Syllabus', href: '/admin/syllabus', icon: 'doc', description: 'Department-wise semester syllabus' },
       { title: 'Curriculum', href: '/academics/resources/curriculum', icon: 'curriculum', description: 'Outcome-based curriculum structure' },
-      { title: 'Academic Calendar', href: '/academics/resources/calendar', icon: 'calendar', description: 'Semester dates, holidays & exam schedule' },
+      { title: 'Academic Calendar', href: '/academic-calendar', icon: 'calendar', description: 'Semester dates, holidays & exam schedule' },
       { title: 'Examination Cell', href: '/academics/resources/examination-cell', icon: 'exam', description: 'Exam forms, results & re-evaluation' },
       { title: 'Laboratories', href: '/academics/resources/laboratories', icon: 'lab', description: 'Department laboratories & equipment' },
       { title: 'Workshops', href: '/academics/resources/workshops', icon: 'workshop', description: 'Manufacturing & practical workshops' },
@@ -213,8 +208,6 @@ export const ADMISSIONS_MENU = [
   { title: 'Admission Helpline', href: 'tel:+919876543210', icon: 'phone', description: '+91-98765-43210 — 9 AM to 6 PM, all days' },
 ];
 
-/* CHANGE: "Courses" -> "Academics", now pointing at the new mega-menu and
- * the redesigned /academics page. NEW: added flat "Gallery" link. */
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about', mega: 'about' },
@@ -222,7 +215,9 @@ export const NAV_ITEMS = [
   { label: 'Admissions', href: '/admissions', mega: 'admissions' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Placements', href: '/placements' },
+  { label: 'NAAC', href: '/naac' },
   { label: 'Campus Life', href: '/campus-life' },
   { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'ID Card', href: '/student-application', badge: 'NEW' },
+  
 ];

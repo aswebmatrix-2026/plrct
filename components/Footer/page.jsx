@@ -1,8 +1,22 @@
+"use client";
+
+import React from "react";
+import { useState } from "react";
 import "./footer.css"
+import AdmissionModal from "../admission/AdmissionModal"
+import NoticeTicker from "../NoticeTicker";
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="plrf-root">
-     
+      <AdmissionModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* ============ FOOTER ============ */}
       <footer className="plrf-site-footer">
@@ -16,14 +30,13 @@ export default function Footer() {
               <span className="plrf-footer-brand__name">Pt. L.R. Group of Institutions</span>
             </div>
             <p className="plrf-footer-about-text">
-              Pt. L.R. Group of Institutions is a trusted name in technical, pharmaceutical and
-              management education in Faridabad, Haryana. AICTE and PCI approved, the group
+              Pt. L.R. Group of Institutions is a trusted name in technical,management education in Faridabad, Haryana. AICTE and HSBTE approved, the group
               focuses on industry-oriented learning, modern infrastructure, and career-ready
               graduates serving students across Faridabad and the wider Delhi NCR region.
             </p>
             <ul className="plrf-accreditation-badges" aria-label="Accreditations">
               <li>AICTE Approved</li>
-              <li>PCI Approved</li>
+              <li>HSBTE Approved</li>
               <li>ISO Certified</li>
             </ul>
           </div>
@@ -32,7 +45,7 @@ export default function Footer() {
           <div className="plrf-footer-col">
             <h3 className="plrf-footer-col__title">Our Institutions</h3>
             <ul className="plrf-footer-links">
-              <li><a href="#PLRCT">PLRCT</a></li>
+              <li><a href="#PLRCT">Pt. L.R. College of Technology</a></li>
               <li><a href="#plrcp">Pt. L.R. College of Pharmacy</a></li>
               <li><a href="#plrcm">Pt. L.R. College of Management</a></li>
               <li><a href="#plrsp">Pt. L.R. School of Pharmacy</a></li>
@@ -43,16 +56,12 @@ export default function Footer() {
           <div className="plrf-footer-col">
             <h3 className="plrf-footer-col__title">Quick Links</h3>
             <ul className="plrf-footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#admissions">Admissions</a></li>
-              <li><a href="#placements">Placements</a></li>
-              <li><a href="#faculty">Faculty</a></li>
-              <li><a href="#facilities">Campus Facilities</a></li>
-              <li><a href="#notices">Notice Board</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/placements">Placements</a></li>
+             <li><a href="/notice-board">Notice Board</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contact">Enquiry Now</a></li>
             </ul>
           </div>
 
@@ -60,16 +69,17 @@ export default function Footer() {
           <div className="plrf-footer-col">
             <h3 className="plrf-footer-col__title">Student Services</h3>
             <ul className="plrf-footer-links">
-              <li><a href="#apply-online">Online Admission</a></li>
-              <li><a href="#inquiry">Admission Inquiry</a></li>
+              <li>
+                <a type="button" onClick={openModal}>
+                  Online Admissions
+                </a>
+              </li>
+              <li><a href="/contact">Admission Inquiry</a></li>
               <li><a href="#prospectus">Download Prospectus</a></li>
               <li><a href="#fees">Fee Structure</a></li>
               <li><a href="#scholarships">Scholarships</a></li>
               <li><a href="#calendar">Academic Calendar</a></li>
-              <li><a href="#exam-notices">Examination Notices</a></li>
-              <li><a href="#results">Results</a></li>
-              <li><a href="#erp">Student ERP</a></li>
-              <li><a href="#faculty-portal">Faculty Portal</a></li>
+             
             </ul>
           </div>
 
@@ -81,21 +91,29 @@ export default function Footer() {
                 <span className="plrf-contact-list__icon" aria-hidden="true">📍</span>
                 <span>Faridabad, Haryana, India</span>
               </li>
-              <li>
-                <span className="plrf-contact-list__icon" aria-hidden="true">📞</span>
-                <a href="tel:+919876543210">+91-95400-28828</a>
-              </li>
+              
+  <li><span className="plrf-contact-list__icon" aria-hidden="true">
+    📞
+  </span>
+
+  <div className="plrf-contact-list__numbers">
+    <a href="tel:+919540028828">+91-9540028828</a> <br />
+    <a href="tel:+919540028827">+91-9540028827</a>
+  </div>
+</li>
+
               <li>
                 <span className="plrf-contact-list__icon" aria-hidden="true">✉️</span>
-                <a href="mailto:admissions@PLRCT.edu.in">admissions@PLRCT.edu.in</a>
+                <a href="mailto:admissions@PLRCT.edu.in">ptlr.admission@gmail.com
+</a>
               </li>
               <li>
                 <span className="plrf-contact-list__icon" aria-hidden="true">🌐</span>
-                <a href="http://www.PLRCT.edu.in">www.PLRCT.edu.in</a>
+                <a href="https://plrct.com/">https://www.plrct.com/</a>
               </li>
             </ul>
             <a
-              href="https://maps.google.com/?q=Faridabad+Haryana"
+              href="https://www.google.com/maps/place/Pt.+L+R+Group+of+Institutions+Faridabad+Delhi+NCR/@28.2947688,77.2375318,18z/data=!4m10!1m2!2m1!1spt+lr+college!3m6!1s0x390cd852dae7e85b:0x5817b9b9542ec60e!8m2!3d28.2947687!4d77.2399135!15sCg1wdCBsciBjb2xsZWdlWg8iDXB0IGxyIGNvbGxlZ2WSAQdjb2xsZWdl4AEA!16s%2Fg%2F11xbt1w08?entry=ttu&g_ep=EgoyMDI2MDgzMC4wIKXMDSoASAFQAw%3D%3D"
               className="plrf-btn plrf-btn--map"
               target="_blank"
               rel="noopener noreferrer"
@@ -110,36 +128,8 @@ export default function Footer() {
 
           <div className="plrf-widget-card plrf-notice-widget" aria-label="Latest notices">
             <h3 className="plrf-footer-col__title">Notice Board</h3>
-            <ul className="plrf-mini-notices">
-              <li>
-                <div className="plrf-mini-notice__meta">
-                  <span className="plrf-mini-notice__date">04 Aug 2026</span>
-                  <span className="plrf-mini-notice__title">Latest Admission Notice</span>
-                </div>
-                <a href="#" className="plrf-mini-notice__link" aria-label="View PDF">PDF <span aria-hidden="true">⬇</span></a>
-              </li>
-              <li>
-                <div className="plrf-mini-notice__meta">
-                  <span className="plrf-mini-notice__date">02 Aug 2026</span>
-                  <span className="plrf-mini-notice__title">Scholarship Notification</span>
-                </div>
-                <a href="#" className="plrf-mini-notice__link" aria-label="View PDF">PDF <span aria-hidden="true">⬇</span></a>
-              </li>
-              <li>
-                <div className="plrf-mini-notice__meta">
-                  <span className="plrf-mini-notice__date">28 Jul 2026</span>
-                  <span className="plrf-mini-notice__title">Placement Drive</span>
-                </div>
-                <a href="#" className="plrf-mini-notice__link" aria-label="View PDF">PDF <span aria-hidden="true">⬇</span></a>
-              </li>
-              <li>
-                <div className="plrf-mini-notice__meta">
-                  <span className="plrf-mini-notice__date">30 Jul 2026</span>
-                  <span className="plrf-mini-notice__title">Examination Schedule</span>
-                </div>
-                <a href="#" className="plrf-mini-notice__link" aria-label="View PDF">PDF <span aria-hidden="true">⬇</span></a>
-              </li>
-            </ul>
+            <p className="plrf-newsletter-widget__text">All important notices will be displayed here.</p>
+            <NoticeTicker />
           </div>
 
           <div className="plrf-widget-card plrf-newsletter-widget" aria-label="Newsletter subscription">
@@ -159,29 +149,29 @@ export default function Footer() {
 
         {/* ============ SOCIAL ============ */}
         <div className="plrf-social-row" aria-label="Social media links">
-          <a href="#" className="plrf-social-icon" aria-label="Facebook">
+          <a href="https://www.facebook.com/ptlrct" className="plrf-social-icon" aria-label="Facebook">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M13.5 22v-8.4h2.8l.4-3.3h-3.2V8.2c0-.95.26-1.6 1.63-1.6H17V3.6C16.7 3.55 15.7 3.46 14.5 3.46c-2.4 0-4.05 1.47-4.05 4.16v2.7H7.7v3.3h2.75V22h3.05z" />
             </svg>
           </a>
-          <a href="#" className="plrf-social-icon" aria-label="Instagram">
+          <a href="https://www.instagram.com/ptlrcollege" className="plrf-social-icon" aria-label="Instagram">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
               <rect x="3" y="3" width="18" height="18" rx="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.2" cy="6.8" r="1" />
             </svg>
           </a>
-          <a href="#" className="plrf-social-icon" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/school/ptlrct" className="plrf-social-icon" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M6.94 8.4H3.56V20H6.94V8.4zM5.25 3.4a2 2 0 100 4 2 2 0 000-4zM20.45 20h-3.38v-6.03c0-1.44-.03-3.28-2-3.28-2 0-2.31 1.56-2.31 3.18V20h-3.38V8.4h3.24v1.58h.05c.45-.86 1.56-1.76 3.2-1.76 3.42 0 4.05 2.25 4.05 5.18V20z" />
             </svg>
           </a>
-          <a href="#" className="plrf-social-icon" aria-label="YouTube">
+          <a href="https://www.youtube.com/@ptlrgroupofinstitutionsfar7153" className="plrf-social-icon" aria-label="YouTube">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M22 12s0-3.2-.4-4.7a2.6 2.6 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.5A2.6 2.6 0 002.4 7.3C2 8.8 2 12 2 12s0 3.2.4 4.7a2.6 2.6 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.5a2.6 2.6 0 001.8-1.8c.4-1.5.4-4.7.4-4.7zM10 15.2V8.8L15.5 12 10 15.2z" />
             </svg>
           </a>
-          <a href="#" className="plrf-social-icon" aria-label="X (Twitter)">
+          <a href="https://x.com/PTLRGROUP" className="plrf-social-icon" aria-label="X (Twitter)">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M18.9 3H21.7l-6.1 7 7.2 9.9h-5.6l-4.4-5.8-5 5.8H4.8l6.5-7.5L4.4 3H10l4 5.3L18.9 3z" />
             </svg>
@@ -191,7 +181,7 @@ export default function Footer() {
         {/* ============ TRUST / RECOGNITION ============ */}
         <div className="plrf-trust-strip" aria-label="Recognition and accreditation">
           <span>AICTE Approved</span>
-          <span>PCI Approved</span>
+          <span>HSBTE Approved</span>
           <span>Industry Connected</span>
           <span>Placement Support</span>
           <span>Modern Infrastructure</span>
@@ -201,7 +191,7 @@ export default function Footer() {
         {/* ============ SEO PARAGRAPH ============ */}
         <p className="plrf-seo-text">
           Pt. L.R. Group of Institutions is recognised as one of the best engineering colleges in
-          Faridabad, offering AICTE approved engineering, PCI approved pharmacy, and management
+          Faridabad, offering AICTE approved engineering, HSBTE approved Technical Education, and management
           programs in Haryana. Serving students from Faridabad, Ballabgarh, Palwal, Gurugram and
           the wider Delhi NCR region, the group is a trusted destination for professional
           education, combining industry-connected engineering, pharmacy and management colleges
@@ -218,7 +208,7 @@ export default function Footer() {
             <li><a href="#disclaimer">Disclaimer</a></li>
             <li><a href="#sitemap">Sitemap</a></li>
           </ul>
-          <p className="plrf-footer-bottom__credit">Designed with excellence for education and innovation.</p>
+          <p className="plrf-footer-bottom__credit">Designed and Developed by <a href="https://www.aswebmatrix.com/" target="_blank" rel="noopener noreferrer">AS Web Matrix</a></p>
         </div>
 
       </footer>

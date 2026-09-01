@@ -513,7 +513,7 @@ export default function Navbar() {
         <div className={`PLRCT-topbar${scrolled ? ' is-collapsed' : ''}`}>
           <div className="PLRCT-topbar__inner">
             <div className="PLRCT-topbar__left">
-              <span className="PLRCT-topbar__item">AICTE Approved</span>
+              <span className="PLRCT-topbar__item">AICTE & HSBTE Approved</span>
               <span className="PLRCT-topbar__divider" aria-hidden="true" />
               <span className="PLRCT-topbar__item">
                 <Icon name="pin" />
@@ -523,13 +523,13 @@ export default function Navbar() {
 
             <div className="PLRCT-topbar__center">
               <Icon name="phone" />
-              <span>Admission Helpline: +91-98765-43210</span>
+              <span>Admission Helpline: +91-9540028828,+91-9540028827</span>
             </div>
 
             <div className="PLRCT-topbar__right">
               <a href="mailto:admissions@PLRCT.edu.in" className="PLRCT-topbar__item">
                 <Icon name="mail" />
-                admissions@PLRCT.edu.in
+                ptlr.admission@gmail.com
               </a>
               <span className="PLRCT-topbar__divider" aria-hidden="true" />
               <Link href="/admin/login" className="PLRCT-topbar__item">
@@ -561,8 +561,8 @@ export default function Navbar() {
             </nav>
 
             <div className="PLRCT-actions">
-              <Link href="/apply" className="PLRCT-btn PLRCT-btn--primary">
-                Apply Now
+              <Link href="/contact" className="PLRCT-btn PLRCT-btn--primary">
+                Enquiry Now
               </Link>
               <button type="button" className="PLRCT-hamburger" aria-label="Open menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(true)}>
                 <Icon name="menu" />
