@@ -1,12 +1,4 @@
-/**
- * Minimal in-memory rate limiter, keyed by an arbitrary string (usually IP+route).
- *
- * NOTE: this resets per server instance/cold-start. It is sufficient for a
- * single-instance deployment or as defense-in-depth alongside the OTP
- * resend-cooldown (which IS persisted in Mongo). If you deploy on multiple
- * serverless instances and need strict global rate limiting, swap this for
- * a Redis-backed limiter (e.g. Upstash) — the call sites don't need to change.
- */
+
 const store = new Map<string, { count: number; resetAt: number }>();
 
 export function rateLimit(key: string, limit: number, windowMs: number) {

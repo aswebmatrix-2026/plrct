@@ -1,11 +1,5 @@
 import mongoose, { Schema, models, model } from "mongoose";
 
-/**
- * A single Student I-Card application.
- * This is intentionally a separate collection from any existing
- * general "Admission" model — it captures only the fields needed
- * for the Digital I-Card, not the full admissions workflow.
- */
 const StudentApplicationSchema = new Schema(
   {
     applicationId: { type: String, required: true, unique: true, index: true }, // PTLR-2026-000001

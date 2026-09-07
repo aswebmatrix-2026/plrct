@@ -1,10 +1,4 @@
-/* ===================================================================
-   PLRCT — Premium Homepage Stylesheet
-   Tokens: Red #C8102E · White · Charcoal #1F2937 · Light Gray #F8F9FB
-           Soft Red #FDECEC · Gold #D4AF37 · Green #16A34A
-   Type:   Playfair Display (headings) · Poppins (subheads/buttons)
-           Inter (body) · Space Grotesk (stats)
-=================================================================== */
+
 
 :root{
   --red:#C8102E;
@@ -290,20 +284,382 @@ section{ padding:var(--space-7) clamp(20px, 5vw, 96px); }
 /* =========================================================
    ABOUT
 ========================================================= */
-.about{
-  display:grid; grid-template-columns:0.9fr 1.1fr; gap:var(--space-6);
-  max-width:var(--container); margin:0 auto; align-items:center;
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about {
+  width: min(1400px, calc(100% - 60px));
+  margin: 0 auto;
+  padding: 100px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
 }
-.about__gallery{
-  display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:var(--space-2);
+
+
+/* =====================================================
+   IMAGE GALLERY
+===================================================== */
+
+.about__gallery {
+  width: 100%;
+  height: 680px;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 18px;
 }
-.about__img{ margin:0; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-card); }
-.about__img img{ width:100%; height:100%; object-fit:cover; }
-.about__img--a{ grid-row:1 / 3; }
-.about__content p{ color:#374151; margin-bottom:var(--space-3); }
-.about__stats{ display:flex; gap:var(--space-4); margin:var(--space-3) 0 var(--space-4); flex-wrap:wrap; }
-.about__stats strong{ display:block; font-family:var(--font-stat); font-size:1.4rem; color:var(--red); }
-.about__stats li{ font-size:0.85rem; color:#6B7280; }
+
+
+.about__img {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+
+  border-radius: 22px;
+  background: #f3f4f6;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.10);
+
+  isolation: isolate;
+}
+
+
+.about__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.18),
+    transparent 45%
+  );
+
+  pointer-events: none;
+}
+
+
+.about__img img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+
+.about__img:hover img {
+  transform: scale(1.06);
+}
+
+
+/* Large Chairman Image */
+
+.about__img--a {
+  grid-row: 1 / 3;
+}
+
+
+/* Right Side Images */
+
+.about__img--b,
+.about__img--c {
+  min-height: 0;
+}
+
+
+/* =====================================================
+   ABOUT CONTENT
+===================================================== */
+
+.about__content {
+  max-width: 650px;
+}
+
+
+.about__content .eyebrow {
+  margin-bottom: 16px;
+}
+
+
+/* Heading */
+
+.about__content .h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+
+  color: #111827;
+}
+
+
+/* First / Intro Paragraph */
+
+.about__intro {
+  font-size: 1.12rem !important;
+  line-height: 1.8 !important;
+
+  color: #1f2937 !important;
+  font-weight: 500;
+}
+
+
+/* Normal Paragraph */
+
+.about__content p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.8;
+
+  margin: 0 0 18px;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.about__stats {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 0;
+  margin: 35px 0 35px;
+}
+
+
+.about__stats li {
+  padding: 20px 18px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.about__stats strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-family: var(--font-stat);
+  font-size: 1.8rem;
+  line-height: 1;
+
+  color: var(--red);
+}
+
+
+.about__stats span {
+  display: block;
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+
+  color: #6b7280;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.about__actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+
+.about__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+.about__actions .btn--primary {
+  background: var(--red);
+  color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.about__actions .btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+.about__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #111827;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+
+.about__link:hover {
+  color: var(--red);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .about {
+    width: min(94%, 1000px);
+
+    grid-template-columns: 1fr;
+    gap: 55px;
+
+    padding: 80px 0;
+  }
+
+  .about__gallery {
+    height: 620px;
+  }
+
+  .about__content {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .about {
+    width: calc(100% - 30px);
+
+    padding: 60px 0;
+
+    gap: 40px;
+  }
+
+
+  .about__gallery {
+    height: 500px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+
+  .about__img {
+    border-radius: 14px;
+  }
+
+
+  .about__content .h2 {
+    font-size: 2.2rem;
+  }
+
+
+  .about__content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+
+  .about__stats {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .about__stats li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+
+  .about__stats strong {
+    min-width: 70px;
+    margin: 0;
+  }
+
+
+  .about__actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+  .about__gallery {
+    height: 430px;
+  }
+
+  .about__content .h2 {
+    font-size: 1.9rem;
+  }
+
+  .about__intro {
+    font-size: 1rem !important;
+  }
+
+}
 
 /* =========================================================
    PROGRAMS
@@ -543,12 +899,6 @@ section{ padding:var(--space-7) clamp(20px, 5vw, 96px); }
 
 
 
-/* ===================================================================
-   Admission Modal — PLRCT
-   Built entirely on the site's own tokens (--red, --gold, --charcoal,
-   --space-*, --radius, --shadow-soft, --transition, --font-*) so it
-   reads as part of the same design system, not a bolted-on popup.
-=================================================================== */
 
 .am-overlay{
   position:fixed;

@@ -208,6 +208,42 @@ export const ADMISSIONS_MENU = [
   { title: 'Admission Helpline', href: 'tel:+919876543210', icon: 'phone', description: '+91-98765-43210 — 9 AM to 6 PM, all days' },
 ];
 
+/* -------------------------------------------------------------------------
+ * IQAC (NAAC) dropdown menu
+ * ---------------------------------------------------------------------- */
+export const IQAC = [
+  {
+    title: 'About IQAC',
+    href: '/IQAC(NAAC)/about-iqac',
+    icon: 'edit',
+    description: 'What IQAC is, and why the college established it',
+  },
+  {
+    title: 'Executive Summary',
+    href: '/IQAC(NAAC)/executive-summary',
+    icon: 'doc',
+    description: 'A summary of IQAC activities and outcomes',
+  },
+  {
+    title: 'Profile of the College',
+    href: '/IQAC(NAAC)/profile-of-the-college',
+    icon: 'overview',
+    description: 'Institutional profile submitted for NAAC assessment',
+  },
+  {
+    title: 'Activity Report/Form',
+    href: '/IQAC(NAAC)/activity-report',
+    icon: 'flow',
+    description: 'IQAC activity reports and downloadable forms',
+  },
+  {
+    title: 'Notice',
+    href: '/IQAC(NAAC)/notice',
+    icon: 'calendar',
+    description: 'Latest IQAC notices and circulars',
+  },
+];
+
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about', mega: 'about' },
@@ -215,9 +251,8 @@ export const NAV_ITEMS = [
   { label: 'Admissions', href: '/admissions', mega: 'admissions' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Placements', href: '/placements' },
-  { label: 'NAAC', href: '/naac' },
+  { label: 'IQAC (NAAC)', href: '/naac', mega: 'iqac' },
   { label: 'Campus Life', href: '/campus-life' },
   { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
-  { label: 'ID Card', href: '/student-application', badge: 'NEW' },
   
 ];

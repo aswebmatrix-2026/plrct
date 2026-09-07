@@ -15,6 +15,7 @@ import {
   ADMISSIONS_MENU,
   ABOUT_MENU,
   ACADEMICS_MENU, // CHANGE: new import
+  IQAC, // CHANGE: IQAC (NAAC) dropdown data
 } from './navbar';
 
 const HIDDEN_NAV_LABELS = ['Campus Life', 'Research'];
@@ -24,12 +25,14 @@ const VISIBLE_NAV_ITEMS = NAV_ITEMS.filter((item) => !HIDDEN_NAV_LABELS.includes
  * Mega-menu lookup — items array + footer CTA, keyed by item.mega.
  * CHANGE: added 'academics', marked `grouped: true` since its `items` is
  * an array of { group, items } instead of a flat array of link objects.
+ * CHANGE: added 'iqac' — flat menu, same shape as about/courses/admissions.
  * -------------------------------------------------------------------- */
 const MEGA_MENUS = {
   about: { items: ABOUT_MENU, ctaHref: '/about/overview', ctaLabel: 'Read full institutional overview' },
   academics: { items: ACADEMICS_MENU, ctaHref: '/academics', ctaLabel: 'View all academic programs', grouped: true },
   courses: { items: COURSES_MENU, ctaHref: '/courses', ctaLabel: 'View all programs' },
   admissions: { items: ADMISSIONS_MENU, ctaHref: '/admissions', ctaLabel: 'Full admissions guide' },
+  iqac: { items: IQAC, ctaHref: '/IQAC(NAAC)/about-iqac', ctaLabel: 'View all IQAC & NAAC documents' },
 };
 
 const ICONS = {
@@ -282,7 +285,7 @@ function BrandCrest({ className, style, size = 52 }) {
   );
 }
 
-/* Flat mega-menu — used by About / Courses / Admissions (single list). */
+/* Flat mega-menu — used by About / Courses / Admissions / IQAC (single list). */
 function MegaMenu({ id, items, isOpen, ctaHref, ctaLabel }) {
   return (
     <div id={id} role="menu" className={`PLRCT-mega${isOpen ? ' is-open' : ''}`} aria-hidden={!isOpen}>

@@ -47,7 +47,7 @@ export default function Home() {
                 Online Admissions
               </button>
               <a href="#brochure" className="btn btn--ghost">Download Brochure</a>
-              <a href="#visit" className="btn btn--text">Schedule Campus Visit &rarr;</a>
+              <a href="/student-application" className="btn btn--text">ID Card Registration &rarr;</a>
             </div>
           </div>
 
@@ -103,77 +103,136 @@ export default function Home() {
             <h3>Apply Online</h3>
             <p>Start your 2026 admission application in minutes.</p>
           </a>
-          <a className="qa-card" href="#inquiry">
+          <a className="qa-card" href="/contact" target="_blank" rel="noopener noreferrer">
             <span className="qa-card__icon" aria-hidden="true">💬</span>
-            <h3>Admission Inquiry</h3>
+            <h3>Admission Enquiry</h3>
             <p>Talk to our counsellors about programs &amp; eligibility.</p>
           </a>
-          <a className="qa-card" href="#fees">
-            <span className="qa-card__icon" aria-hidden="true">💳</span>
-            <h3>Fee Structure</h3>
-            <p>Transparent, program-wise fee &amp; payment options.</p>
-          </a>
+        
           <a className="qa-card" href="#prospectus">
             <span className="qa-card__icon" aria-hidden="true">📘</span>
             <h3>Download Prospectus</h3>
             <p>Full course catalogue, faculty &amp; facilities in one PDF.</p>
           </a>
-          <a className="qa-card" href="#placement-cell">
-            <span className="qa-card__icon" aria-hidden="true">🤝</span>
-            <h3>Placement Cell</h3>
-            <p>Recruiter network, drives &amp; training resources.</p>
-          </a>
-          <a className="qa-card" href="#support">
-            <span className="qa-card__icon" aria-hidden="true">🧭</span>
-            <h3>Student Support</h3>
-            <p>Academic, hostel &amp; wellbeing support desks.</p>
-          </a>
+          
         </div>
       </section>
 
       {/* ============ ABOUT ============ */}
-      <section className="about" id="about" aria-label="About PLRCT">
-        <div className="about__gallery" aria-hidden="true">
-          <figure className="about__img about__img--a">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-lab/900/1100" alt="Engineering laboratory at PLRCT with students working on technology projects" />
-          </figure>
-          <figure className="about__img about__img--b">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-library/700/560" alt="Central library at PLRCT campus" />
-          </figure>
-          <figure className="about__img about__img--c">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-innovation/700/560" alt="Students presenting an innovation project at PLRCT" />
-          </figure>
-        </div>
-        <div className="about__content">
-          <p className="eyebrow eyebrow--dark">About PLRCT</p>
-          <h2 className="h2">Fifteen years of building engineers Faridabad is proud of</h2>
-          <p>
-            PLRCT has grown into one of Faridabad&apos;s most trusted names
-            in technical education by pairing rigorous academics with an industry-first mindset.
-            Every B.Tech, Diploma, BCA, BBA, MBA and Pharmacy curriculum is reviewed against what
-            recruiters in Delhi NCR are actually hiring for, so classroom learning translates
-            directly into workplace readiness.
-          </p>
-          <p>
-            Our faculty bring both doctoral research depth and real industry experience into the
-            lab and lecture hall alike, running project-based courses, sponsored research, and a
-            live innovation cell where student teams build products with real corporate mentors.
-            This research culture keeps the curriculum current instead of textbook-bound.
-          </p>
-          <p>
-            Beyond the syllabus, PLRCT invests deliberately in leadership development &mdash;
-            through technical societies, hackathons, entrepreneurship cells and structured
-            soft-skills training &mdash; so graduates leave with the judgment and confidence
-            employers look for, not just a degree.
-          </p>
-          <ul className="about__stats">
-            <li><strong>15+</strong> academic programs</li>
-            <li><strong>AICTE</strong> approved since 2011</li>
-            <li><strong>92%</strong> placement support rate</li>
-          </ul>
-          <a href="#more" className="btn btn--outline">Read More About PLRCT</a>
-        </div>
-      </section>
+     {/* ============ ABOUT ============ */}
+<section className="about" id="about" aria-label="About Pt. L.R. College of Technology">
+
+  {/* Image Gallery */}
+  <div className="about__gallery" aria-hidden="true">
+
+    <figure className="about__img about__img--a">
+      <img
+        loading="lazy"
+        src="/images/chairman sir.webp"
+        alt=""
+      />
+    </figure>
+
+    <figure className="about__img about__img--b">
+      <img
+        loading="lazy"
+        src="/images/library_image.webp"
+        alt=""
+      />
+    </figure>
+
+    <figure className="about__img about__img--c">
+      <img
+        loading="lazy"
+        src="/images/auditorium.webp"
+        alt=""
+      />
+    </figure>
+
+  </div>
+
+
+  {/* About Content */}
+  <div className="about__content">
+
+    <p className="eyebrow eyebrow--dark">
+      About Pt. L.R. College of Technology
+    </p>
+
+    <h2 className="h2">
+      Fifteen Years of Excellence in Technical Education
+    </h2>
+
+    <p className="about__intro">
+      Pt. L.R. College of Technology has grown into one of Faridabad&apos;s
+      trusted names in technical education by combining academic excellence,
+      practical learning, and an industry-focused approach.
+    </p>
+
+    <p>
+      Our B.Tech, Diploma, BCA, BBA, MBA, and Pharmacy programs are designed
+      to help students build the technical knowledge, professional skills,
+      and practical experience required to succeed in today&apos;s competitive
+      workplace. We continuously focus on modern learning methods and
+      industry-relevant education to prepare students for opportunities
+      across Delhi NCR and beyond.
+    </p>
+
+    <p>
+      Our experienced faculty bring together academic knowledge, research
+      expertise, and practical industry experience. Through project-based
+      learning, laboratory sessions, technical activities, research
+      initiatives, and mentorship, students get opportunities to apply
+      classroom concepts to real-world challenges.
+    </p>
+
+    <p>
+      Beyond academics, Pt. L.R. College of Technology encourages students
+      to develop leadership, communication, creativity, and entrepreneurial
+      skills through technical societies, hackathons, workshops,
+      entrepreneurship activities, and structured soft-skills training.
+    </p>
+
+
+    {/* Stats */}
+    <ul className="about__stats" aria-label="College highlights">
+
+      <li>
+        <strong>15+</strong>
+        <span>Academic Programs</span>
+      </li>
+
+      <li>
+        <strong>2011</strong>
+        <span>AICTE Approved Since</span>
+      </li>
+
+      <li>
+        <strong>92%</strong>
+        <span>Placement Support Rate</span>
+      </li>
+
+    </ul>
+
+
+    {/* CTA */}
+    <div className="about__actions">
+
+      <a href="#more" className="btn btn--primary">
+        Discover Our College
+        <span aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" className="about__link">
+        Talk to Admissions
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ============ ACADEMIC PROGRAMS ============ */}
       <section className="programs" id="programs" aria-label="Academic programs">
@@ -253,7 +312,7 @@ export default function Home() {
       {/* ============ WHY CHOOSE PLRCT ============ */}
       <section className="why" aria-label="Why choose PLRCT">
         <div className="section-head section-head--center">
-          <p className="eyebrow">Why Choose PLRCT</p>
+          <p className="eyebrow">Why Choose Pt. L.R. College of Technology</p>
           <h2 className="h2 h2--light">Six reasons students choose us over VIT, SRM &amp; Manipal</h2>
         </div>
         <div className="why-grid">
@@ -347,11 +406,11 @@ export default function Home() {
         </div>
         <div className="facilities-grid">
           <figure className="facility-tile facility-tile--lg">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-library2/900/700" alt="Central Library at PLRCT" />
+            <img loading="lazy" src="/images/library_image.webp" alt="Central Library at PLRCT" />
             <figcaption>Central Library</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-computerlab/700/560" alt="Computer laboratories at PLRCT" />
+            <img loading="lazy" src="/images/computerlab_image.webp" alt="Computer laboratories at PLRCT" />
             <figcaption>Computer Laboratories</figcaption>
           </figure>
           <figure className="facility-tile">
@@ -411,7 +470,7 @@ export default function Home() {
       <section className="admission" id="admissions" aria-label="Admission process">
         <div className="section-head section-head--center">
           <p className="eyebrow eyebrow--dark">Admission Process</p>
-          <h2 className="h2">Four steps to your seat at PLRCT</h2>
+          <h2 className="h2">Four steps to your seat at Pt. L.R. College of Technology</h2>
         </div>
         <ol className="timeline timeline--h timeline--steps">
           <li><span className="timeline__num">1</span><h3>Apply Online</h3><p>Complete the application form with basic academic details.</p></li>
@@ -430,7 +489,7 @@ export default function Home() {
       <section className="scholarships" aria-label="Scholarships">
         <div className="section-head section-head--center">
           <p className="eyebrow eyebrow--dark">Scholarships &amp; Financial Support</p>
-          <h2 className="h2">Making PLRCT possible for every serious student</h2>
+          <h2 className="h2">Making Pt. L.R. College of Technology possible for every serious student</h2>
         </div>
         <div className="scholarship-grid">
           <article className="scholarship-card"><h3>Merit Scholarships</h3><p>Tuition support for top-scoring entrants each academic year.</p></article>
@@ -451,7 +510,7 @@ export default function Home() {
           <article className="testimonial-card">
             <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student1/160/160" alt="Photo of Ritika Sharma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p>&quot;The lab access and faculty support at PLRCT gave me real project experience before I even graduated.&quot;</p>
+            <p>&quot;The lab access and faculty support at Pt. L.R. College of Technology gave me real project experience before I even graduated.&quot;</p>
             <p className="testimonial-card__name">Ritika Sharma <span>&middot; B.Tech CSE, 2025</span></p>
           </article>
           <article className="testimonial-card">
@@ -477,20 +536,20 @@ export default function Home() {
         </div>
         <div className="faq-list">
           <details className="faq-item">
-            <summary>Is PLRCT AICTE approved?</summary>
-            <p>Yes. PLRCT is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.</p>
+            <summary>Is Pt. L.R. College of Technology AICTE approved?</summary>
+            <p>Yes. Pt. L.R. College of Technology is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.</p>
           </details>
           <details className="faq-item">
-            <summary>What courses are offered at PLRCT?</summary>
-            <p>PLRCT offers B.Tech (CSE, Mechanical, Civil), Diploma Engineering, BCA, BBA, MBA and Pharmacy, each designed around current industry hiring needs in Delhi NCR.</p>
+            <summary>What courses are offered at Pt. L.R. College of Technology?</summary>
+            <p>Pt. L.R. College of Technology offers B.Tech (CSE, Mechanical, Civil), Diploma Engineering, BCA, BBA, MBA and Pharmacy, each designed around current industry hiring needs in Delhi NCR.</p>
           </details>
           <details className="faq-item">
             <summary>How can I apply for admission?</summary>
             <p>Apply online through the admissions portal, upload your academic documents, complete counseling and verification, then confirm your seat with fee payment.</p>
           </details>
           <details className="faq-item">
-            <summary>What are the placement opportunities at PLRCT?</summary>
-            <p>PLRCT&apos;s placement cell runs year-round drives with recruiters across IT, manufacturing and core engineering, alongside resume building, mock interviews and career counseling.</p>
+            <summary>What are the placement opportunities at Pt. L.R. College of Technology?</summary>
+            <p>Pt. L.R. College of Technology&apos;s placement cell runs year-round drives with recruiters across IT, manufacturing and core engineering, alongside resume building, mock interviews and career counseling.</p>
           </details>
           <details className="faq-item">
             <summary>Are internships available for students?</summary>
@@ -498,15 +557,15 @@ export default function Home() {
           </details>
           <details className="faq-item">
             <summary>Is hostel accommodation provided?</summary>
-            <p>PLRCT offers on-campus hostel accommodation with mess facilities, security and access to sports and medical facilities.</p>
+            <p>Pt. L.R. College of Technology offers on-campus hostel accommodation with mess facilities, security and access to sports and medical facilities.</p>
           </details>
           <details className="faq-item">
-            <summary>Does PLRCT offer practical, hands-on training?</summary>
+            <summary>Does Pt. L.R. College of Technology offer practical, hands-on training?</summary>
             <p>Every program includes lab-based and project-based learning, supplemented by industry workshops, live projects and corporate mentoring.</p>
           </details>
           <details className="faq-item">
-            <summary>Why choose PLRCT in Faridabad?</summary>
-            <p>PLRCT combines AICTE-approved academics, modern smart-campus infrastructure, experienced faculty and a strong placement track record, serving students across Faridabad, Ballabgarh, Palwal and the wider Delhi NCR region.</p>
+            <summary>Why choose Pt. L.R. College of Technology in Faridabad?</summary>
+            <p>Pt. L.R. College of Technology combines AICTE-approved academics, modern smart-campus infrastructure, experienced faculty and a strong placement track record, serving students across Faridabad, Ballabgarh, Palwal and the wider Delhi NCR region.</p>
           </details>
         </div>
       </section>
@@ -515,7 +574,7 @@ export default function Home() {
       <section className="final-cta" aria-label="Start your admission journey">
         <div className="final-cta__shapes" aria-hidden="true"></div>
         <div className="final-cta__inner">
-          <h2 className="h2 h2--light">Start Your Journey with PLRCT</h2>
+          <h2 className="h2 h2--light">Start Your Journey with Pt. L.R. College of Technology</h2>
           <p>
             Join one of the leading engineering and professional colleges in Faridabad and build a
             successful career with industry-focused education, modern infrastructure, experienced
@@ -532,4 +591,4 @@ export default function Home() {
       <AdmissionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
-}
+}     
