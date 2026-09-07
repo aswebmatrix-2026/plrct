@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import slugify from "slugify";
 import { nanoid } from "nanoid";
-import { dbConnect } from "@/lib/mongodb";
-import Notice from "@/models/Notice";
-import { deleteFromCloudinary } from "@/lib/cloudinary";
-import { requireAdmin } from "@/lib/requireAdmin";
+import { dbConnect } from "../../../../lib/mongodb";
+import Notice from "../../../../models/Notice";
+import { deleteFromCloudinary } from "../../../../lib/cloudinary";
+import { requireAdmin } from "../../../../lib/requireAdmin";
 
 // GET /api/notices/:id
 export async function GET(_request, { params }) {

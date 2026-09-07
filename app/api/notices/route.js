@@ -2,10 +2,9 @@ import { NextResponse } from "next/server";
 
 import { nanoid } from "nanoid";
 import slugify from "slugify";
-import { dbConnect
- } from "@/lib/mongodb";
-import Notice from "@/models/Notice";
-import { requireAdmin } from "@/lib/requireAdmin";
+import { dbConnect} from "../../../lib/mongodb";
+import Notice from "../../../models/Notice";
+import { requireAdmin } from "../../../lib/requireAdmin";
 
 export async function GET(request) {
   await dbConnect

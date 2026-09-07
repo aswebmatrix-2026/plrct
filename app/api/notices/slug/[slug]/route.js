@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { dbConnect } from "@/lib/mongodb";
-import Notice from "@/models/Notice";
+import { dbConnect } from "../../../../lib/mongodb";
+import Notice from "../../../../models/Notice";
 
 // GET /api/notices/id/:id — powers the public notice detail page.
 export async function GET(_request, { params }) {

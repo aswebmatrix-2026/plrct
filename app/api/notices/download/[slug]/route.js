@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { dbConnect
- } from "@/lib/mongodb";
-import Notice from "@/models/Notice";
+ } from "../../../../lib/mongodb";
+import Notice from "../../../../models/Notice";
 
 // GET /api/notices/download/:id
 // Increments the download counter, then redirects the browser straight to

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { uploadToCloudinary } from "@/lib/cloudinary";
-import { requireAdmin } from "@/lib/requireAdmin";
+import { uploadToCloudinary } from "../../../../lib/cloudinary";
+import { requireAdmin } from "../../../../lib/requireAdmin";
 
 export const runtime = "nodejs";
 
