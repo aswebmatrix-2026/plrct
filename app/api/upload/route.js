@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { uploadToCloudinary } from "@/lib/cloudinary";
-import { FILE_CONSTRAINTS } from "@/lib/validation/admissionSchema";
-import { checkRateLimit, getClientIp } from "@/lib/rateLimit";
+import { uploadToCloudinary } from "../../../lib/cloudinary";
+import { FILE_CONSTRAINTS } from "../../../lib/validation/admissionSchema";
+import { checkRateLimit, getClientIp } from "../../../lib/rateLimit";
 
 // POST /api/upload
 // multipart/form-data: file, docType (e.g. "photo"), applicationDraftId
