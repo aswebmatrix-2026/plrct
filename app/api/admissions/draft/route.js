@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongodb";
-import Admission from "@/models/Admission";
-import { generateApplicationNumber } from "@/lib/generateApplicationNumber";
-import { checkRateLimit, getClientIp } from "@/lib/rateLimit";
+import dbConnect from "../../../../lib/mongodb";
+import Admission from "../../../../models/Admission";
+import { generateApplicationNumber } from "../../../../lib/generateApplicationNumber";
+import { checkRateLimit, getClientIp } from "../../../../lib/rateLimit";
 
 // POST /api/admissions/draft
 // body: { draftId?: string, data: {...partial form data...}, programType?: string }

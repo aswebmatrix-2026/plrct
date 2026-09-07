@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongodb";
-import StudentApplication from "@/models/StudentApplication";
-import { requireAdmin } from "@/lib/requireAdmin";
-import { sendIdCardRejectedEmail } from "@/lib/studentEmail";
+import dbConnect from "../../../../../../lib/mongodb";
+import StudentApplication from "../../../../../../models/StudentApplication";
+import { requireAdmin } from "../../../../../../lib/requireAdmin";
+import { sendIdCardRejectedEmail } from "../../../../../../lib/mail";
 
 export async function POST(req: Request, { params }: { params: { id: string } }) {
   const { authorized } = await requireAdmin();
