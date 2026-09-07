@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { renderToBuffer } from "@react-pdf/renderer";
 import { Document, Page, Text, View, StyleSheet, Image } from "@react-pdf/renderer";
-import dbConnect from "@/lib/mongodb";
-import Admission from "@/models/Admission";
+import dbConnect from "../../../../lib/mongodb";
+import Admission from "../../../../models/Admission";
 
 const styles = StyleSheet.create({
   page: { padding: 32, fontSize: 10, fontFamily: "Helvetica" },

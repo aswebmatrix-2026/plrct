@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import mongoose from "mongoose";
-import { authOptions } from "@/lib/authOptions";
-import { dbConnect as dbConnect } from "@/lib/mongodb";
-import { deleteFromCloudinary } from "@/lib/cloudinary";
-import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
+import { authOptions } from "../../../../lib/authOptions";
+import { dbConnect as dbConnect } from "../../../../lib/mongodb";
+import { deleteFromCloudinary } from "../../../../lib/cloudinary";
+import GalleryEvent, { GALLERY_CATEGORIES } from "../../../../models/GalleryEvent";
 
 async function findEvent(idOrSlug) {
   if (mongoose.isValidObjectId(idOrSlug)) {

@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
-import dbConnect from "@/lib/mongodb";
-import Admission from "@/models/Admission";
-import { authOptions } from "@/lib/authOptions";
-import { fullAdmissionSchema } from "@/lib/validation/admissionSchema";
-import { generateApplicationNumber } from "@/lib/generateApplicationNumber";
-import { checkRateLimit, getClientIp } from "@/lib/rateLimit";
-import { sendConfirmationEmail } from "@/lib/mail";
+import dbConnect from "../../../../lib/mongodb";
+import Admission from "../../../../models/Admission";
+import { authOptions } from "../../../../lib/authOptions";
+import { fullAdmissionSchema } from "../../../../lib/validation/admissionSchema";
+import { generateApplicationNumber } from "../../../../lib/generateApplicationNumber";
+import { checkRateLimit, getClientIp } from "../../../../lib/rateLimit";
+import { sendConfirmationEmail } from "../../../../lib/mail";
 
 // POST /api/admissions — public submission endpoint (called from the Apply Now modal)
 export async function POST(request) {

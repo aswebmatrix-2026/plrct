@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import slugify from "slugify";
-import { authOptions } from "@/lib/authOptions";
-import { dbConnect as dbConnect } from "@/lib/mongodb";
-import GalleryEvent, { GALLERY_CATEGORIES } from "@/models/GalleryEvent";
+import { authOptions } from "../../../lib/authOptions";
+import { dbConnect as dbConnect } from "../../../lib/mongodb";
+import GalleryEvent, { GALLERY_CATEGORIES } from "../../../models/GalleryEvent";
 
 /**
  * GET /api/gallery

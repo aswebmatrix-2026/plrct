@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import * as XLSX from "xlsx";
-import dbConnect from "@/lib/mongodb";
-import Admission from "@/models/Admission";
-import { authOptions } from "@/lib/authOptions";
+import dbConnect from "../../../../lib/mongodb";
+import Admission from "../../../../models/Admission";
+import { authOptions } from "../../../../lib/authOptions";
 
 // GET /api/admissions/export?format=xlsx|csv&...same filters as list route
 export async function GET(request) {

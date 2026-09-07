@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
-import dbConnect from "@/lib/mongodb";
-import Admission from "@/models/Admission";
-import { authOptions } from "@/lib/authOptions";
-import { sendStatusUpdateEmail } from "@/lib/mail";
+import dbConnect from "../../../../lib/mongodb";
+import Admission from "../../../../models/Admission";
+import { authOptions } from "../../../../lib/authOptions";
+import { sendStatusUpdateEmail } from "../../../../lib/mail";
 
 async function requireAdmin() {
   const session = await getServerSession(authOptions);
