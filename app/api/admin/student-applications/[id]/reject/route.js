@@ -4,7 +4,7 @@ import StudentApplication from "@/models/StudentApplication";
 import { requireAdmin } from "@/lib/requireAdmin";
 import { sendIdCardRejectedEmail } from "@/lib/mail";
 
-export async function POST(req: Request, { params }: { params: { id: string } }) {
+export async function POST(req, { params }) {
   const { authorized } = await requireAdmin();
   if (!authorized) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 

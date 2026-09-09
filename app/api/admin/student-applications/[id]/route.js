@@ -13,18 +13,9 @@ const EDITABLE_FIELDS = [
   "mobile",
   "address",
   "email",
-] as const;
+];
 
-type RouteContext = {
-  params: Promise<{
-    id: string;
-  }>;
-};
-
-export async function GET(
-  _req: Request,
-  { params }: RouteContext
-) {
+export async function GET(_req, { params }) {
   try {
     const authResponse = await requireAdmin();
 
@@ -62,10 +53,7 @@ export async function GET(
   }
 }
 
-export async function PATCH(
-  req: Request,
-  { params }: RouteContext
-) {
+export async function PATCH(req, { params }) {
   try {
     const authResponse = await requireAdmin();
 
@@ -80,7 +68,7 @@ export async function PATCH(
 
     const body = await req.json();
 
-    const updates: Record<string, any> = {};
+    const updates = {};
 
     for (const field of EDITABLE_FIELDS) {
       if (field in body) {

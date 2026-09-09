@@ -6,7 +6,7 @@ import { sendIdCardVerifiedEmail, sendIdCardRejectedEmail } from "@/lib/mail";
 import { generateIdCardPdf } from "@/lib/pdf";
 import { rateLimit } from "@/lib/rateLimit";
 
-export async function POST(req: Request, { params }: { params: { id: string } }) {
+export async function POST(req, { params }) {
   const { authResponse } = await requireAdmin();
   if (authResponse) return authResponse;
 

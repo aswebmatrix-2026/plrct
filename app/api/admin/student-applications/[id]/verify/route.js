@@ -10,16 +10,7 @@ import { generateIdCardPdf } from "@/lib/pdf";
 import { uploadToCloudinary } from "@/lib/cloudinary";
 import { sendIdCardVerifiedEmail } from "@/lib/mail";
 
-type RouteContext = {
-  params: Promise<{
-    id: string;
-  }>;
-};
-
-export async function POST(
-  req: Request,
-  { params }: RouteContext
-) {
+export async function POST(req, { params }) {
   try {
     // --------------------------------------------------
     // 1. Admin authentication

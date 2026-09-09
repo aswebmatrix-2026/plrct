@@ -3,7 +3,7 @@ import dbConnect from "@/lib/mongodb";
 import StudentApplication from "@/models/StudentApplication";
 import { requireAdmin } from "@/lib/requireAdmin";
 
-export async function GET(req: Request) {
+export async function GET(req) {
   try {
     // Admin authentication
     const authResponse = await requireAdmin();
@@ -36,7 +36,7 @@ export async function GET(req: Request) {
       )
     );
 
-    const query: Record<string, any> = {};
+    const query = {};
 
     if (status) {
       query.status = status;

@@ -5,16 +5,7 @@ import { requireAdmin } from "@/lib/requireAdmin";
 import { generateIdCardPdf } from "@/lib/pdf";
 import { uploadToCloudinary } from "@/lib/cloudinary";
 
-type RouteContext = {
-  params: Promise<{
-    id: string;
-  }>;
-};
-
-export async function POST(
-  req: Request,
-  { params }: RouteContext
-) {
+export async function POST(req, { params }) {
   try {
     // Admin authentication
     const authResponse = await requireAdmin();
