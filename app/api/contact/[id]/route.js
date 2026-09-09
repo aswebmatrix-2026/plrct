@@ -2,8 +2,8 @@
 // PATCH -> update an inquiry's status (new / contacted / resolved) from the dashboard
 
 import { NextResponse } from "next/server";
-import dbConnect from "../../../../lib/mongodb";
-import ContactInquiry from "../../../../models/ContactInquiry";
+import dbConnect from "@/lib/mongodb";
+import ContactInquiry from "@/models/ContactInquiry";
 
 export async function PATCH(req, { params }) {
   try {
