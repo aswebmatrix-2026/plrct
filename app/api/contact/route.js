@@ -7,8 +7,8 @@
 // /api/admissions routes already use).
 
 import { NextResponse } from "next/server";
-import dbConnect from "../../../lib/mongodb";
-import ContactInquiry from "../../../models/ContactInquiry";
+import dbConnect from "@/lib/mongodb";
+import ContactInquiry from "@/models/ContactInquiry";
 
 export async function POST(req) {
   try {
