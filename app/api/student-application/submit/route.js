@@ -16,9 +16,9 @@ const REQUIRED_FIELDS = [
   "address",
   "email",
   "photoUrl",
-] as const;
+];
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const body = await req.json();
 
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
       session: application.session,
       status: application.status,
     });
-  } catch (err: any) {
+  } catch (err) {
     console.error("submit application error", err);
     if (err?.code === 11000) {
       return NextResponse.json({ error: "Duplicate application, please try again" }, { status: 409 });

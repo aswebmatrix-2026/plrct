@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { verifyOtpCode } from "@/lib/otp";
 import { rateLimit, getClientIp } from "@/lib/rateLimit";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const { email, otp } = await req.json();
     if (!email || !otp) {
@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     const result = await verifyOtpCode(email, otp);
     if (!result.ok) {
-      const messages: Record<string, string> = {
+      const messages = {
         NOT_FOUND: "No code was requested for this email.",
         EXPIRED: "This code has expired. Please request a new one.",
         TOO_MANY_ATTEMPTS: "Too many incorrect attempts. Please request a new code.",

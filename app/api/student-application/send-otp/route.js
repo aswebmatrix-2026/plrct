@@ -3,7 +3,7 @@ import { issueOtp } from "@/lib/otp";
 import { sendStudentOtpEmail } from "@/lib/mail";
 import { rateLimit, getClientIp } from "@/lib/rateLimit";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const { email } = await req.json();
 

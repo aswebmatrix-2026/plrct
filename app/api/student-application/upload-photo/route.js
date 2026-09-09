@@ -4,7 +4,7 @@ import { rateLimit, getClientIp } from "@/lib/rateLimit";
 
 const MAX_BASE64_BYTES = 2.8 * 1024 * 1024; // ~2MB image as base64 is larger than raw bytes
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const { imageBase64 } = await req.json();
     if (!imageBase64 || typeof imageBase64 !== "string" || !imageBase64.startsWith("data:image/")) {
