@@ -7,7 +7,7 @@ import Notice from "@/models/Notice";
 import NoticeForm from "@/components/admin/NoticeForm";
 
 export const metadata = {
-  title: "Edit Notice | PLRCT Admin",
+  title: "Edit Notice | Pt. L.R. College of Technology Admin",
   robots: { index: false, follow: false },
 };
 

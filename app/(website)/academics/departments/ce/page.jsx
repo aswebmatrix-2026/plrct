@@ -4,24 +4,24 @@ import "./ce.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "Civil Engineering College Faridabad | Best CE College PLRCT Haryana",
+  title: "Civil Engineering College Faridabad | Best CE College Pt. L.R. College of Technology Haryana",
   description:
-    "Civil Engineering (CE) at PLRCT, Faridabad — AICTE approved structural, construction, transportation, geotechnical and surveying engineering course with modern labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
+    "Civil Engineering (CE) at Pt. L.R. College of Technology, Faridabad — AICTE approved structural, construction, transportation, geotechnical and surveying engineering course with modern labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/departments/ce",
   },
   openGraph: {
-    title: "Civil Engineering (CE) at PLRCT Faridabad",
+    title: "Civil Engineering (CE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved Civil Engineering department at PLRCT, Faridabad, with dedicated structural, concrete technology, geotechnical, transportation, surveying and environmental engineering laboratories.",
+      "AICTE approved Civil Engineering department at Pt. L.R. College of Technology, Faridabad, with dedicated structural, concrete technology, geotechnical, transportation, surveying and environmental engineering laboratories.",
     url: "https://ptlrct.com/academics/departments/ce",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/ce-department.jpg",
         width: 1200,
         height: 630,
-        alt: "Civil Engineering Department at PLRCT Faridabad",
+        alt: "Civil Engineering Department at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Civil Engineering (CE) at PLRCT Faridabad",
+    title: "Civil Engineering (CE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved Civil Engineering department at PLRCT, Faridabad, with structural, geotechnical, transportation, surveying and environmental engineering laboratories and strong placement support.",
+      "AICTE approved Civil Engineering department at Pt. L.R. College of Technology, Faridabad, with structural, geotechnical, transportation, surveying and environmental engineering laboratories and strong placement support.",
     images: ["https://ptlrct.com/og/ce-department.jpg"],
   },
 };
@@ -56,10 +56,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is Civil Engineering available at PLRCT?",
+      name: "Is Civil Engineering available at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. PLRCT offers an AICTE approved B.Tech in Civil Engineering in Faridabad covering structural engineering, construction technology, transportation engineering, geotechnical engineering, surveying and environmental engineering, supported by six dedicated laboratories.",
+        text: "Yes. Pt. L.R. College of Technology offers an AICTE approved B.Tech in Civil Engineering in Faridabad covering structural engineering, construction technology, transportation engineering, geotechnical engineering, surveying and environmental engineering, supported by six dedicated laboratories.",
       },
     },
     {
@@ -80,10 +80,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What are the placement opportunities after Civil Engineering at PLRCT?",
+      name: "What are the placement opportunities after Civil Engineering at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Graduates are placed as structural, site, project and highway engineers with construction and infrastructure companies, alongside opportunities in government departments, PSUs and consultancy firms, supported by PLRCT's Training and Placement Cell.",
+        text: "Graduates are placed as structural, site, project and highway engineers with construction and infrastructure companies, alongside opportunities in government departments, PSUs and consultancy firms, supported by Pt. L.R. College of Technology's Training and Placement Cell.",
       },
     },
     {
@@ -120,10 +120,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What is the average placement support provided by PLRCT?",
+      name: "What is the average placement support provided by Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's Training and Placement Cell provides AutoCAD and Civil 3D training, structural design preparation, government exam guidance, resume building, mock interviews and industry mentoring ahead of recruitment drives.",
+        text: "Pt. L.R. College of Technology's Training and Placement Cell provides AutoCAD and Civil 3D training, structural design preparation, government exam guidance, resume building, mock interviews and industry mentoring ahead of recruitment drives.",
       },
     },
     {
@@ -140,8 +140,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -213,7 +213,7 @@ export default function CEPage() {
                 </p>
                 <div className="ce-hero__cta">
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
-                  <a href="/downloads/PLRCT-brochure-ce.pdf" className="btn btn--ghost">Download Brochure</a>
+                  <a href="/downloads/Pt. L.R. College of Technology-brochure-ce.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
 
@@ -231,16 +231,16 @@ export default function CEPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="Civil Engineering Department Building — PLRCT Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="Civil Engineering Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">DEPARTMENT OVERVIEW</p>
-            <h2 id="overview-h">What is Civil Engineering at PLRCT?</h2>
+            <h2 id="overview-h">What is Civil Engineering at Pt. L.R. College of Technology?</h2>
             <p>
-              The Department of Civil Engineering at PLRCT has grown alongside Faridabad's own
+              The Department of Civil Engineering at Pt. L.R. College of Technology has grown alongside Faridabad's own
               evolution as a fast-developing infrastructure and construction hub within Delhi
               NCR. What began as a foundational program in structural design and surveying has
               expanded into a full civil engineering course covering structural analysis,
@@ -255,7 +255,7 @@ export default function CEPage() {
               not just learn what a compaction test measures; they run one. This industry
               relevance is deliberate — as one of the AICTE approved civil engineering colleges
               serving Faridabad, Ballabgarh, Gurugram, Noida, Palwal and the wider Haryana
-              region, PLRCT's CE department is positioned to place graduates directly into the
+              region, Pt. L.R. College of Technology's CE department is positioned to place graduates directly into the
               construction, infrastructure and government engineering ecosystem that surrounds
               the campus in Delhi NCR.
             </p>
@@ -300,7 +300,7 @@ export default function CEPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE CIVIL ENGINEERING AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE CIVIL ENGINEERING AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">Built for graduates who can actually build</h2>
             <div className="card-grid">
               {[
@@ -450,7 +450,7 @@ export default function CEPage() {
                 Faculty-guided research spans sustainable infrastructure, smart cities, green
                 buildings, earthquake-resistant structures, transportation planning, water
                 resource management, environmental sustainability and construction automation,
-                with pathways into publication or further study through PLRCT's{" "}
+                with pathways into publication or further study through Pt. L.R. College of Technology's{" "}
                 <a href="/academics/mtech">M.Tech program</a>.
               </p>
             </div>
@@ -616,15 +616,15 @@ export default function CEPage() {
         <section className="section" aria-labelledby="answers-h">
           <div className="container">
             <p className="eyebrow">QUICK ANSWERS</p>
-            <h2 id="answers-h">Civil Engineering at PLRCT — direct answers</h2>
+            <h2 id="answers-h">Civil Engineering at Pt. L.R. College of Technology — direct answers</h2>
             <div className="card-grid">
               <div className="card">
                 <h3>What is Civil Engineering?</h3>
                 <p>Civil Engineering is the branch of engineering focused on designing, constructing and maintaining buildings, roads, bridges, water systems and other infrastructure that society depends on.</p>
               </div>
               <div className="card">
-                <h3>Why choose PLRCT for Civil Engineering?</h3>
-                <p>PLRCT offers an AICTE approved curriculum, six dedicated laboratories, structured industrial training and a focused placement cell, positioned within Delhi NCR's active construction and infrastructure market.</p>
+                <h3>Why choose Pt. L.R. College of Technology for Civil Engineering?</h3>
+                <p>Pt. L.R. College of Technology offers an AICTE approved curriculum, six dedicated laboratories, structured industrial training and a focused placement cell, positioned within Delhi NCR's active construction and infrastructure market.</p>
               </div>
               <div className="card">
                 <h3>What careers are available after Civil Engineering?</h3>
@@ -638,11 +638,11 @@ export default function CEPage() {
         <section className="section section--tint" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">Civil Engineering at PLRCT — quick answers</h2>
+            <h2 id="faq-h">Civil Engineering at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>Is Civil Engineering available at PLRCT?</summary>
-                <p>Yes, PLRCT offers an AICTE approved B.Tech in Civil Engineering in Faridabad covering structural, construction, transportation, geotechnical and environmental engineering.</p>
+                <summary>Is Civil Engineering available at Pt. L.R. College of Technology?</summary>
+                <p>Yes, Pt. L.R. College of Technology offers an AICTE approved B.Tech in Civil Engineering in Faridabad covering structural, construction, transportation, geotechnical and environmental engineering.</p>
               </details>
               <details className="faq-item">
                 <summary>What laboratories are available?</summary>
@@ -678,7 +678,7 @@ export default function CEPage() {
               </details>
               <details className="faq-item">
                 <summary>Can students pursue M.Tech after graduation?</summary>
-                <p>Yes, through PLRCT's M.Tech program in structural, geotechnical, transportation or environmental engineering, or external postgraduate programs.</p>
+                <p>Yes, through Pt. L.R. College of Technology's M.Tech program in structural, geotechnical, transportation or environmental engineering, or external postgraduate programs.</p>
               </details>
             </div>
           </div>

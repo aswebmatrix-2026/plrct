@@ -6,16 +6,16 @@ import Counter from '@/components/about/Counter';
 import { OVERVIEW_STATS, OVERVIEW_PILLARS, OVERVIEW_TIMELINE, AEO_BLOCKS, SITE } from '@/lib/aboutData';
 
 export const metadata = {
-  title: 'About PLRCT | Institutional Overview — PLRCT, Faridabad',
+  title: 'About Pt. L.R. College of Technology | Institutional Overview — Pt. L.R. College of Technology, Faridabad',
   description:
-    'Discover PLRCT (PLRCT), Ballabgarh, Faridabad — an AICTE-approved engineering, management, and pharmacy campus serving Faridabad, Delhi NCR, Ballabgarh, and Palwal with industry-oriented technical education.',
+    'Discover Pt. L.R. College of Technology (Pt. L.R. College of Technology), Ballabgarh, Faridabad — an AICTE-approved engineering, management, and pharmacy campus serving Faridabad, Delhi NCR, Ballabgarh, and Palwal with industry-oriented technical education.',
   alternates: { canonical: 'https://ptlrct.com/about/overview' },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'Institutional Overview — PLRCT',
+  name: 'Institutional Overview — Pt. L.R. College of Technology',
   about: {
     '@type': 'CollegeOrUniversity',
     name: SITE.name,
@@ -28,9 +28,36 @@ const jsonLd = {
   },
 };
 
+const GALLERY = [
+  {
+    label: 'Academic Block',
+    image: '/images/about/academic-block.webp',
+  },
+  {
+    label: 'Central Library',
+    image: '/images/library_image.webp',
+  },
+  {
+    label: 'Engineering Labs',
+    image: '/images/about/engineering-lab.webp',
+  },
+  {
+    label: 'Sports Complex',
+    image: '/images/about/sports.webp',
+  },
+  {
+    label: 'Auditorium',
+    image: '/images/about/auditorium.webp',
+  },
+  {
+    label: 'Campus Grounds',
+    image: '/images/about/campus.webp',
+  },
+];
+
 export default function OverviewPage() {
   return (
-    <main className="PLRCT-about PLRCT-overview">
+    <main className="plrct-about plrct-overview">
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -43,14 +70,14 @@ export default function OverviewPage() {
       />
 
       {/* ---- Hero ---- */}
-      <section className="PLRCT-overview-hero">
-        <div className="PLRCT-overview-hero__media" aria-hidden="true">
-          <div className="PLRCT-overview-hero__campus-mark" />
+      <section className="plrct-overview-hero">
+        <div className="plrct-overview-hero__media" aria-hidden="true">
+          <div className="plrct-overview-hero__campus-mark" />
         </div>
-        <div className="PLRCT-overview-hero__inner">
-          <p className="PLRCT-eyebrow" style={{ color: 'var(--PLRCT-gold-soft)' }}>Institutional Overview</p>
-          <h1>About PLRCT</h1>
-          <p className="PLRCT-overview-hero__sub">
+        <div className="plrct-overview-hero__inner">
+          <p className="plrct-eyebrow" style={{ color: 'var(--plrct-gold-soft)' }}>Institutional Overview</p>
+          <h1>About</h1>
+          <p className="plrct-overview-hero__sub">
             Excellence in Technical and Professional Education in Faridabad — an AICTE-approved campus
             in Ballabgarh serving students across Faridabad, Delhi NCR, Ballabgarh, and Palwal.
           </p>
@@ -58,38 +85,38 @@ export default function OverviewPage() {
       </section>
 
       {/* ---- Stat strip ---- */}
-      <section className="PLRCT-overview-stats">
-        <div className="PLRCT-about__inner PLRCT-overview-stats__grid">
+      <section className="plrct-overview-stats">
+        <div className="plrct-about__inner plrct-overview-stats__grid">
           {OVERVIEW_STATS.map((stat, i) => (
-            <Reveal as="div" delay={i * 90} className="PLRCT-overview-stat" key={stat.label}>
-              <p className="PLRCT-overview-stat__value">
+            <Reveal as="div" delay={i * 90} className="plrct-overview-stat" key={stat.label}>
+              <p className="plrct-overview-stat__value">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="PLRCT-overview-stat__label">{stat.label}</p>
+              <p className="plrct-overview-stat__label">{stat.label}</p>
             </Reveal>
           ))}
         </div>
-        <p className="PLRCT-overview-stats__note">
-          Figures shown are illustrative placeholders for this redesign — replace with PLRCT&rsquo;s latest verified figures before publishing.
+        <p className="plrct-overview-stats__note">
+          Figures shown are illustrative placeholders for this redesign — replace with Pt. L.R. College of Technology&rsquo;s latest verified figures before publishing.
         </p>
       </section>
 
       {/* ---- Pillars — two-column editorial layout ---- */}
-      <section className="PLRCT-overview-pillars">
-        <div className="PLRCT-about__inner">
+      <section className="plrct-overview-pillars">
+        <div className="plrct-about__inner">
           <Reveal as="div">
-            <p className="PLRCT-eyebrow">What Defines PLRCT</p>
-            <h2 className="PLRCT-section-title">Seven pillars of the institution</h2>
-            <p className="PLRCT-section-lede">
+            <p className="plrct-eyebrow">What Defines Pt. L.R. College of Technology</p>
+            <h2 className="plrct-section-title">Seven pillars of the institution</h2>
+            <p className="plrct-section-lede">
               From governance to future planning, these are the threads that run through every
-              department, program, and decision at PLRCT.
+              department, program, and decision at Pt. L.R. College of Technology.
             </p>
           </Reveal>
 
-          <div className="PLRCT-overview-pillars__list">
+          <div className="plrct-overview-pillars__list">
             {OVERVIEW_PILLARS.map((pillar, i) => (
-              <Reveal as="article" delay={(i % 2) * 80} className="PLRCT-overview-pillar" key={pillar.title}>
-                <span className="PLRCT-overview-pillar__index">{String(i + 1).padStart(2, '0')}</span>
+              <Reveal as="article" delay={(i % 2) * 80} className="plrct-overview-pillar" key={pillar.title}>
+                <span className="plrct-overview-pillar__index">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <h3>{pillar.title}</h3>
                   <p>{pillar.body}</p>
@@ -101,18 +128,18 @@ export default function OverviewPage() {
       </section>
 
       {/* ---- Timeline ---- */}
-      <section className="PLRCT-overview-timeline">
-        <div className="PLRCT-about__inner">
+      <section className="plrct-overview-timeline">
+        <div className="plrct-about__inner">
           <Reveal as="div">
-            <p className="PLRCT-eyebrow">Since Founding</p>
-            <h2 className="PLRCT-section-title">How the campus has grown</h2>
+            <p className="plrct-eyebrow">Since Founding</p>
+            <h2 className="plrct-section-title">How the campus has grown</h2>
           </Reveal>
-          <ol className="PLRCT-overview-timeline__rail">
+          <ol className="plrct-overview-timeline__rail">
             {OVERVIEW_TIMELINE.map((entry, i) => (
               <Reveal as="li" delay={i * 100} key={entry.year}>
-                <span className="PLRCT-overview-timeline__node" aria-hidden="true" />
-                <p className="PLRCT-overview-timeline__year">{entry.year}</p>
-                <p className="PLRCT-overview-timeline__text">{entry.text}</p>
+                <span className="plrct-overview-timeline__node" aria-hidden="true" />
+                <p className="plrct-overview-timeline__year">{entry.year}</p>
+                <p className="plrct-overview-timeline__text">{entry.text}</p>
               </Reveal>
             ))}
           </ol>
@@ -120,21 +147,43 @@ export default function OverviewPage() {
       </section>
 
       {/* ---- Gallery strip ---- */}
-      <section className="PLRCT-overview-gallery">
-        <div className="PLRCT-about__inner">
-          <Reveal as="div">
-            <p className="PLRCT-eyebrow">Campus Life</p>
-            <h2 className="PLRCT-section-title">A campus built for daily use, not just photographs</h2>
-          </Reveal>
-          <div className="PLRCT-overview-gallery__grid" role="list" aria-label="Campus gallery placeholders">
-            {['Academic Block', 'Central Library', 'Engineering Labs', 'Sports Complex', 'Auditorium', 'Campus Grounds'].map((label) => (
-              <div className="PLRCT-overview-gallery__tile" role="listitem" key={label}>
-                <span>{label}</span>
-              </div>
-            ))}
+      <section className="plrct-overview-gallery">
+  <div className="plrct-about__inner">
+
+    <Reveal as="div">
+      <p className="plrct-eyebrow">Campus Life</p>
+
+      <h2 className="plrct-section-title">
+        A campus built for daily use, not just photographs
+      </h2>
+    </Reveal>
+
+    <div
+      className="plrct-overview-gallery__grid"
+      role="list"
+      aria-label="Pt. L.R. College of Technology campus gallery"
+    >
+      {GALLERY.map((item) => (
+        <div
+          className="plrct-overview-gallery__tile"
+          role="listitem"
+          key={item.label}
+        >
+          <img
+            src={item.image}
+            alt={`${item.label} at Pt. L.R. College of Technology`}
+            loading="lazy"
+          />
+
+          <div className="plrct-overview-gallery__overlay">
+            <span>{item.label}</span>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       <AeoBlock items={AEO_BLOCKS} />
       <AboutCta />

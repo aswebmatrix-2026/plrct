@@ -37,7 +37,7 @@ export default function Home() {
               in Faridabad
             </h1>
             <p className="hero__sub">
-              PLRCT provides industry-focused B.Tech, Diploma, BCA, BBA, MBA, and professional
+              Pt. L.R. College of Technology provides industry-focused B.Tech, Diploma, BCA, BBA, MBA, and professional
               education with modern infrastructure, experienced faculty, practical learning,
               research opportunities, and career-oriented placement support across Faridabad,
               Haryana, and Delhi NCR.
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="hero__plaque" aria-label="PLRCT at a glance">
+          <aside className="hero__plaque" aria-label="Pt. L.R. College of Technology at a glance">
             <div className="plaque__seal">
               AICTE
               <br />
@@ -74,7 +74,7 @@ export default function Home() {
   <div className="notices__head">
     <div>
       <p className="eyebrow eyebrow--dark">Notice Board</p>
-      <h2 className="h2">What&apos;s happening at PLRCT</h2>
+      <h2 className="h2">What&apos;s happening at Pt. L.R. College of Technology</h2>
     </div>
     <div className="notices__tools">
       <label className="notices__search">
@@ -309,8 +309,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ WHY CHOOSE PLRCT ============ */}
-      <section className="why" aria-label="Why choose PLRCT">
+      {/* ============ WHY CHOOSE Pt. L.R. College of Technology ============ */}
+      <section className="why" aria-label="Why choose Pt. L.R. College of Technology">
         <div className="section-head section-head--center">
           <p className="eyebrow">Why Choose Pt. L.R. College of Technology</p>
           <h2 className="h2 h2--light">Six reasons students choose us over VIT, SRM &amp; Manipal</h2>
@@ -406,43 +406,41 @@ export default function Home() {
         </div>
         <div className="facilities-grid">
           <figure className="facility-tile facility-tile--lg">
-            <img loading="lazy" src="/images/library_image.webp" alt="Central Library at PLRCT" />
+            <img loading="lazy" src="/images/library_image.webp" alt="Central Library at Pt. L.R. College of Technology" />
             <figcaption>Central Library</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="/images/computerlab_image.webp" alt="Computer laboratories at PLRCT" />
+            <img loading="lazy" src="/images/computerlab.webp" alt="Computer laboratories at Pt. L.R. College of Technology" />
             <figcaption>Computer Laboratories</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-workshop/700/560" alt="Engineering workshops at PLRCT" />
+            <img loading="lazy" src="/images/workshop.webp" alt="Engineering workshops at Pt. L.R. College of Technology" />
             <figcaption>Engineering Workshops</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-classroom/700/560" alt="Smart classrooms at PLRCT" />
-            <figcaption>Smart Classrooms</figcaption>
+            <img loading="lazy" src="/images/student.webp" alt="Smart classrooms at Pt. L.R. College of Technology" />
+            <figcaption>Classrooms</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-auditorium/700/560" alt="Auditorium at PLRCT" />
+            <img loading="lazy" src="/images/auditorium.webp" alt="Auditorium at Pt. L.R. College of Technology" />
             <figcaption>Auditorium</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-hostel/700/560" alt="Hostel facilities at PLRCT" />
+            <img loading="lazy" src="/images/hostel.webp" alt="Hostel facilities at Pt. L.R. College of Technology" />
             <figcaption>Hostel</figcaption>
           </figure>
+        
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-sports/700/560" alt="Sports complex at PLRCT" />
-            <figcaption>Sports Complex</figcaption>
-          </figure>
-          <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-cafeteria/700/560" alt="Cafeteria at PLRCT" />
+            <img loading="lazy" src="/images/cafetria.webp" alt="Cafeteria at Pt. L.R. College of Technology" />
             <figcaption>Cafeteria</figcaption>
           </figure>
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-medical/700/560" alt="Medical facilities at PLRCT" />
-            <figcaption>Medical Facilities</figcaption>
+            <img loading="lazy" src="/images/imageslider.png" alt="Cafeteria at Pt. L.R. College of Technology" />
+            <figcaption>Campus</figcaption>
           </figure>
+          
           <figure className="facility-tile">
-            <img loading="lazy" src="https://picsum.photos/seed/PLRCT-transport/700/560" alt="Transportation at PLRCT" />
+            <img loading="lazy" src="https://picsum.photos/seed/Pt. L.R. College of Technology-transport/700/560" alt="Transportation at Pt. L.R. College of Technology" />
             <figcaption>Transportation</figcaption>
           </figure>
         </div>
@@ -508,19 +506,19 @@ export default function Home() {
         </div>
         <div className="testimonial-grid">
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student1/160/160" alt="Photo of Ritika Sharma" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/Pt. L.R. College of Technology-student1/160/160" alt="Photo of Ritika Sharma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;The lab access and faculty support at Pt. L.R. College of Technology gave me real project experience before I even graduated.&quot;</p>
             <p className="testimonial-card__name">Ritika Sharma <span>&middot; B.Tech CSE, 2025</span></p>
           </article>
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student2/160/160" alt="Photo of Aman Verma" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/Pt. L.R. College of Technology-student2/160/160" alt="Photo of Aman Verma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;The placement cell prepared me thoroughly &mdash; mock interviews made the real ones far less nerve-wracking.&quot;</p>
             <p className="testimonial-card__name">Aman Verma <span>&middot; BBA, 2024</span></p>
           </article>
           <article className="testimonial-card">
-            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/PLRCT-student3/160/160" alt="Photo of Sneha Yadav" />
+            <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/Pt. L.R. College of Technology-student3/160/160" alt="Photo of Sneha Yadav" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
             <p>&quot;Small class sizes meant every professor actually knew my work. That mentorship made all the difference.&quot;</p>
             <p className="testimonial-card__name">Sneha Yadav <span>&middot; MBA, 2023</span></p>

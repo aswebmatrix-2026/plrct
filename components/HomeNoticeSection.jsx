@@ -23,7 +23,7 @@ export default async function HomeNoticeSection() {
     <section className="home-notices">
       <div className="home-notices__inner">
         <div className="section-heading">
-          <div className="section-heading__eyebrow">PLRCT Notice Board</div>
+          <div className="section-heading__eyebrow">Pt. L.R. College of Technology Notice Board</div>
           <h2 className="section-heading__title">Latest Announcements</h2>
         </div>
 

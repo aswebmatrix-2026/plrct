@@ -21,16 +21,16 @@ async function getSyllabus(id) {
 export async function generateMetadata({ params }) {
   const doc = await getSyllabus(params.id);
   if (!doc) {
-    return { title: "Syllabus Not Found | PLRCT" };
+    return { title: "Syllabus Not Found | Pt. L.R. College of Technology" };
   }
 
   const pageUrl = `${SITE_URL}/academics/resources/syllabus/${doc._id}`;
   const description =
     doc.description?.trim() ||
-    `${doc.title} — ${doc.department}, ${doc.semester}, Academic Year ${doc.academicYear}. View or download the official PLRCT syllabus PDF.`;
+    `${doc.title} — ${doc.department}, ${doc.semester}, Academic Year ${doc.academicYear}. View or download the official Pt. L.R. College of Technology syllabus PDF.`;
 
   return {
-    title: `${doc.title} | PLRCT Syllabus`,
+    title: `${doc.title} | Pt. L.R. College of Technology Syllabus`,
     description,
     alternates: { canonical: pageUrl },
     openGraph: {

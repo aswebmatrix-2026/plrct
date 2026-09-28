@@ -163,8 +163,8 @@ export default function AdminLoginPage() {
           />
 
           <div className="branding-content">
-            <span className="branding-eyebrow">PLRCT · Faridabad</span>
-            <h1 className="branding-title">PLRCT Administration Portal</h1>
+            <span className="branding-eyebrow">Pt. L.R. College of Technology · Faridabad</span>
+            <h1 className="branding-title">Pt. L.R. College of Technology Administration Portal</h1>
             <p className="branding-subtitle">
               Secure access to admissions, academics, notice board, gallery, placements, and
               institutional management.
@@ -187,7 +187,7 @@ export default function AdminLoginPage() {
               </svg>
               <div className="campus-illustration-text">
                 <strong>Est. institutional trust</strong>
-                Built for the administrators who keep PLRCT running.
+                Built for the administrators who keep Pt. L.R. College of Technology running.
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function AdminLoginPage() {
           <div className="login-card">
             <div className="logo-wrap">
               <div className="logo-circle">P</div>
-              <h2 className="login-title">PLRCT Admin</h2>
+              <h2 className="login-title">Pt. L.R. College of Technology Admin</h2>
               <p className="login-subtitle">Sign in to access the administration dashboard</p>
             </div>
 
@@ -223,7 +223,7 @@ export default function AdminLoginPage() {
                     type="email"
                     required
                     autoComplete="username"
-                    placeholder="you@PLRCT.ac.in"
+                    placeholder="you@Pt. L.R. College of Technology.ac.in"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="input-field"

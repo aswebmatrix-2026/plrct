@@ -1,19 +1,19 @@
 /* =============================================================================
-   navbar.css — PLRCT premium navigation bar
-   PLRCT, Faridabad
+   navbar.css — Pt. L.R. College of Technology premium navigation bar
+   Pt. L.R. College of Technology, Faridabad
    ============================================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@500;600&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   /* ---- Brand palette ---- */
-  --PLRCT-red: #c8102e;
-  --PLRCT-red-dark: #a30d25;
-  --PLRCT-white: #ffffff;
-  --PLRCT-charcoal: #1f2937;
-  --PLRCT-light-gray: #f8f9fb;
-  --PLRCT-gold: #d4af37;
-  --PLRCT-gold-soft: #e6c765;
+  --plrct-red: #c8102e;
+  --plrct-red-dark: #a30d25;
+  --plrct-white: #ffffff;
+  --plrct-charcoal: #1f2937;
+  --plrct-light-gray: #f8f9fb;
+  --plrct-gold: #d4af37;
+  --plrct-gold-soft: #e6c765;
 
   /* ---- Type ---- */
   --font-heading: 'Playfair Display', serif;
@@ -38,23 +38,23 @@
 /* ---------------------------------------------------------------------------
    Reset scoped to navbar
    ------------------------------------------------------------------------- */
-.PLRCT-header * {
+.plrct-header * {
   box-sizing: border-box;
 }
 
-.PLRCT-header a {
+.plrct-header a {
   text-decoration: none;
   color: inherit;
 }
 
-.PLRCT-header button {
+.plrct-header button {
   font-family: inherit;
   cursor: pointer;
   border: none;
   background: none;
 }
 
-.PLRCT-header ul {
+.plrct-header ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@
 /* ---------------------------------------------------------------------------
    Header wrapper — sits fixed at top, contains both bars
    ------------------------------------------------------------------------- */
-.PLRCT-header {
+.plrct-header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -74,24 +74,24 @@
 /* =============================================================================
    TOP INFO BAR
    ============================================================================= */
-.PLRCT-topbar {
+.plrct-topbar {
   height: var(--topbar-height);
-  background: var(--PLRCT-red);
-  color: var(--PLRCT-white);
+  background: var(--plrct-red);
+  color: var(--plrct-white);
   display: flex;
   align-items: center;
   overflow: hidden;
   transition: max-height var(--transition-medium), opacity var(--transition-medium);
 }
 
-.PLRCT-topbar.is-collapsed {
+.plrct-topbar.is-collapsed {
   max-height: 0;
   height: 0;
   opacity: 0;
   pointer-events: none;
 }
 
-.PLRCT-topbar__inner {
+.plrct-topbar__inner {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -99,20 +99,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.8rem;
   font-size: clamp(0.7rem, 0.9vw, 0.8rem);
   font-weight: 400;
 }
 
-.PLRCT-topbar__left,
-.PLRCT-topbar__right {
+.plrct-topbar__left,
+.plrct-topbar__right {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   white-space: nowrap;
 }
 
-.PLRCT-topbar__center {
+.plrct-topbar__center {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -120,7 +120,7 @@
   letter-spacing: 0.01em;
 }
 
-.PLRCT-topbar__item {
+.plrct-topbar__item {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -128,33 +128,33 @@
   transition: opacity var(--transition-fast);
 }
 
-.PLRCT-topbar__item svg {
+.plrct-topbar__item svg {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
 }
 
-a.PLRCT-topbar__item:hover,
-a.PLRCT-topbar__item:focus-visible {
+a.plrct-topbar__item:hover,
+a.plrct-topbar__item:focus-visible {
   opacity: 1;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.PLRCT-topbar__divider {
+.plrct-topbar__divider {
   width: 1px;
   height: 12px;
   background: rgba(255, 255, 255, 0.35);
 }
 
 @media (max-width: 992px) {
-  .PLRCT-topbar__center {
+  .plrct-topbar__center {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
-  .PLRCT-topbar {
+  .plrct-topbar {
     display: none;
   }
 }
@@ -162,8 +162,8 @@ a.PLRCT-topbar__item:focus-visible {
 /* =============================================================================
    MAIN NAVBAR
    ============================================================================= */
-.PLRCT-mainbar {
-  background: var(--PLRCT-white);
+.plrct-mainbar {
+  background: var(--plrct-white);
   height: var(--navbar-height);
   display: flex;
   align-items: center;
@@ -173,12 +173,12 @@ a.PLRCT-topbar__item:focus-visible {
   z-index: 1000;
 }
 
-.PLRCT-header.is-scrolled .PLRCT-mainbar {
+.plrct-header.is-scrolled .plrct-mainbar {
   height: var(--navbar-height-shrunk);
   box-shadow: var(--shadow-elevated);
 }
 
-.PLRCT-mainbar__inner {
+.plrct-mainbar__inner {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -186,11 +186,11 @@ a.PLRCT-topbar__item:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: clamp(0.5rem, 1.2vw, 1.5rem);
 }
 
 /* ---- Brand lockup ---- */
-.PLRCT-brand {
+.plrct-brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -198,19 +198,19 @@ a.PLRCT-topbar__item:focus-visible {
   flex-shrink: 0;
 }
 
-.PLRCT-brand__crest {
+.plrct-brand__crest {
   flex-shrink: 0;
   width: clamp(42px, 4vw, 52px);
   height: clamp(42px, 4vw, 52px);
   transition: width var(--transition-medium), height var(--transition-medium);
 }
 
-.PLRCT-header.is-scrolled .PLRCT-brand__crest {
+.plrct-header.is-scrolled .plrct-brand__crest {
   width: 38px;
   height: 38px;
 }
 
-.PLRCT-brand__text {
+.plrct-brand__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,11 +218,11 @@ a.PLRCT-topbar__item:focus-visible {
   flex-shrink: 1;
 }
 
-.PLRCT-brand__name {
+.plrct-brand__name {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: clamp(1rem, 1.6vw, 1.3rem);
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
@@ -231,11 +231,11 @@ a.PLRCT-topbar__item:focus-visible {
   min-width: 0;
 }
 
-.PLRCT-brand__name span {
-  color: var(--PLRCT-red);
+.plrct-brand__name span {
+  color: var(--plrct-red);
 }
 
-.PLRCT-brand__tagline {
+.plrct-brand__tagline {
   font-family: var(--font-body);
   font-size: clamp(0.62rem, 0.75vw, 0.72rem);
   color: #6b7280;
@@ -246,14 +246,16 @@ a.PLRCT-topbar__item:focus-visible {
   max-width: 280px;
 }
 
-@media (max-width: 1200px) {
-  .PLRCT-brand__tagline {
+/* CHANGE: was max-width: 1200px — pushed to 1360px so the tagline gets out
+   of the way before the nav items start running out of room. */
+@media (max-width: 1360px) {
+  .plrct-brand__tagline {
     display: none;
   }
 }
 
 /* ---- Primary nav ---- */
-.PLRCT-nav {
+.plrct-nav {
   display: flex;
   align-items: center;
   height: 100%;
@@ -262,104 +264,107 @@ a.PLRCT-topbar__item:focus-visible {
   justify-content: center;
 }
 
-.PLRCT-nav__list {
+.plrct-nav__list {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: clamp(0.2rem, 0.6vw, 0.5rem);
+  gap: clamp(0rem, 0.25vw, 0.25rem);
   flex-wrap: nowrap;
 }
 
-.PLRCT-nav__item {
+.plrct-nav__item {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.PLRCT-nav__link {
+/* CHANGE: font-size + padding were fixed rem values before — now they
+   scale down smoothly with viewport width via clamp(), so items shrink
+   instead of overflowing on ~1200–1450px desktop/laptop widths. */
+.plrct-nav__link {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
   font-family: var(--font-nav);
   font-weight: 500;
-  font-size: 0.86rem;
-  color: var(--PLRCT-charcoal);
-  padding: 0.5rem 0.7rem;
+  font-size: clamp(0.72rem, 0.55vw + 0.45rem, 0.86rem);
+  color: var(--plrct-charcoal);
+  padding: clamp(0.35rem, 0.4vw, 0.5rem) clamp(0.25rem, 0.5vw, 0.7rem);
   border-radius: 8px;
   transition: color var(--transition-fast), background var(--transition-fast);
   white-space: nowrap;
 }
 
-.PLRCT-nav__link:hover,
-.PLRCT-nav__link:focus-visible,
-.PLRCT-nav__item.is-open .PLRCT-nav__link {
-  color: var(--PLRCT-red);
+.plrct-nav__link:hover,
+.plrct-nav__link:focus-visible,
+.plrct-nav__item.is-open .plrct-nav__link {
+  color: var(--plrct-red);
   background: rgba(200, 16, 46, 0.05);
 }
 
-.PLRCT-nav__link:focus-visible {
-  outline: 2px solid var(--PLRCT-gold);
+.plrct-nav__link:focus-visible {
+  outline: 2px solid var(--plrct-gold);
   outline-offset: 2px;
 }
 
 /* Underline hover / active-indicator animation */
-.PLRCT-nav__link::after {
+.plrct-nav__link::after {
   content: '';
   position: absolute;
   left: 0.7rem;
   right: 0.7rem;
   bottom: 0.15rem;
   height: 2px;
-  background: linear-gradient(90deg, var(--PLRCT-red), var(--PLRCT-gold));
+  background: linear-gradient(90deg, var(--plrct-red), var(--plrct-gold));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-fast);
   border-radius: 2px;
 }
 
-.PLRCT-nav__link:hover::after,
-.PLRCT-nav__link:focus-visible::after {
+.plrct-nav__link:hover::after,
+.plrct-nav__link:focus-visible::after {
   transform: scaleX(1);
 }
 
-.PLRCT-nav__item.is-active .PLRCT-nav__link {
-  color: var(--PLRCT-red);
+.plrct-nav__item.is-active .plrct-nav__link {
+  color: var(--plrct-red);
 }
 
-.PLRCT-nav__item.is-active .PLRCT-nav__link::after {
+.plrct-nav__item.is-active .plrct-nav__link::after {
   transform: scaleX(1);
 }
 
-.PLRCT-nav__chevron {
+.plrct-nav__chevron {
   width: 12px;
   height: 12px;
   transition: transform var(--transition-fast);
 }
 
-.PLRCT-nav__item.is-open .PLRCT-nav__chevron {
+.plrct-nav__item.is-open .plrct-nav__chevron {
   transform: rotate(180deg);
 }
 
 /* Notice board badge */
-.PLRCT-badge {
+.plrct-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-nav);
   font-size: 0.58rem;
   font-weight: 600;
-  color: var(--PLRCT-white);
-  background: var(--PLRCT-red);
+  color: var(--plrct-white);
+  background: var(--plrct-red);
   padding: 0.1rem 0.36rem;
   border-radius: var(--radius-pill);
   letter-spacing: 0.03em;
   line-height: 1.4;
-  animation: PLRCT-badge-pulse 2.4s ease-in-out infinite;
+  animation: plrct-badge-pulse 2.4s ease-in-out infinite;
 }
 
-@keyframes PLRCT-badge-pulse {
+@keyframes plrct-badge-pulse {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.45);
@@ -370,7 +375,7 @@ a.PLRCT-topbar__item:focus-visible {
 }
 
 @media (max-width: 1200px) {
-  .PLRCT-nav {
+  .plrct-nav {
     display: none;
   }
 }
@@ -378,7 +383,7 @@ a.PLRCT-topbar__item:focus-visible {
 /* =============================================================================
    MEGA MENUS (glassmorphism dropdown)
    ============================================================================= */
-.PLRCT-mega {
+.plrct-mega {
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
@@ -405,18 +410,18 @@ a.PLRCT-topbar__item:focus-visible {
   overscroll-behavior: contain;
 }
 
-.PLRCT-header.is-scrolled .PLRCT-mega {
+.plrct-header.is-scrolled .plrct-mega {
   max-height: calc(100vh - var(--navbar-height-shrunk) - 32px);
 }
 
-.PLRCT-mega.is-open {
+.plrct-mega.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translate(-50%, 0);
 }
 
-.PLRCT-mega::before {
+.plrct-mega::before {
   content: '';
   position: absolute;
   top: -6px;
@@ -429,13 +434,13 @@ a.PLRCT-topbar__item:focus-visible {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.PLRCT-mega__grid {
+.plrct-mega__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.4rem;
 }
 
-.PLRCT-mega__link {
+.plrct-mega__link {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -444,38 +449,38 @@ a.PLRCT-topbar__item:focus-visible {
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
 
-.PLRCT-mega__link:hover,
-.PLRCT-mega__link:focus-visible {
+.plrct-mega__link:hover,
+.plrct-mega__link:focus-visible {
   background: rgba(200, 16, 46, 0.06);
   transform: translateX(2px);
 }
 
-.PLRCT-mega__icon {
+.plrct-mega__icon {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
   border-radius: 9px;
-  background: linear-gradient(135deg, var(--PLRCT-red), var(--PLRCT-red-dark));
+  background: linear-gradient(135deg, var(--plrct-red), var(--plrct-red-dark));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--PLRCT-white);
+  color: var(--plrct-white);
 }
 
-.PLRCT-mega__icon svg {
+.plrct-mega__icon svg {
   width: 18px;
   height: 18px;
 }
 
-.PLRCT-mega__title {
+.plrct-mega__title {
   font-family: var(--font-nav);
   font-weight: 500;
   font-size: 0.86rem;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   margin: 0 0 0.15rem;
 }
 
-.PLRCT-mega__desc {
+.plrct-mega__desc {
   font-family: var(--font-body);
   font-size: 0.75rem;
   color: #6b7280;
@@ -483,7 +488,7 @@ a.PLRCT-topbar__item:focus-visible {
   margin: 0;
 }
 
-.PLRCT-mega__footer {
+.plrct-mega__footer {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid rgba(31, 41, 55, 0.08);
@@ -491,18 +496,18 @@ a.PLRCT-topbar__item:focus-visible {
   justify-content: flex-end;
 }
 
-.PLRCT-mega__cta {
+.plrct-mega__cta {
   font-family: var(--font-nav);
   font-weight: 500;
   font-size: 0.8rem;
-  color: var(--PLRCT-red);
+  color: var(--plrct-red);
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
 }
 
 @media (max-width: 1200px) {
-  .PLRCT-mega {
+  .plrct-mega {
     display: none;
   }
 }
@@ -510,36 +515,36 @@ a.PLRCT-topbar__item:focus-visible {
 /* =============================================================================
    RIGHT SIDE ACTIONS (search + buttons)
    ============================================================================= */
-.PLRCT-actions {
+.plrct-actions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
 }
 
-.PLRCT-icon-btn {
+.plrct-icon-btn {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-.PLRCT-icon-btn:hover,
-.PLRCT-icon-btn:focus-visible {
-  background: var(--PLRCT-light-gray);
-  color: var(--PLRCT-red);
+.plrct-icon-btn:hover,
+.plrct-icon-btn:focus-visible {
+  background: var(--plrct-light-gray);
+  color: var(--plrct-red);
 }
 
-.PLRCT-icon-btn svg {
+.plrct-icon-btn svg {
   width: 19px;
   height: 19px;
 }
 
-.PLRCT-btn {
+.plrct-btn {
   font-family: var(--font-button);
   font-weight: 600;
   font-size: 0.82rem;
@@ -553,66 +558,66 @@ a.PLRCT-topbar__item:focus-visible {
   white-space: nowrap;
 }
 
-.PLRCT-btn--primary {
-  background: var(--PLRCT-red);
-  color: var(--PLRCT-white);
+.plrct-btn--primary {
+  background: var(--plrct-red);
+  color: var(--plrct-white);
   box-shadow: 0 4px 14px rgba(200, 16, 46, 0.28);
 }
 
-.PLRCT-btn--primary:hover,
-.PLRCT-btn--primary:focus-visible {
-  background: var(--PLRCT-red-dark);
+.plrct-btn--primary:hover,
+.plrct-btn--primary:focus-visible {
+  background: var(--plrct-red-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(200, 16, 46, 0.36);
 }
 
-.PLRCT-btn--secondary {
-  background: var(--PLRCT-white);
-  color: var(--PLRCT-charcoal);
-  border: 1.5px solid var(--PLRCT-gold);
+.plrct-btn--secondary {
+  background: var(--plrct-white);
+  color: var(--plrct-charcoal);
+  border: 1.5px solid var(--plrct-gold);
 }
 
-.PLRCT-btn--secondary:hover,
-.PLRCT-btn--secondary:focus-visible {
-  background: var(--PLRCT-gold);
-  color: var(--PLRCT-white);
+.plrct-btn--secondary:hover,
+.plrct-btn--secondary:focus-visible {
+  background: var(--plrct-gold);
+  color: var(--plrct-white);
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(212, 175, 55, 0.3);
 }
 
-.PLRCT-btn:focus-visible {
-  outline: 2px solid var(--PLRCT-charcoal);
+.plrct-btn:focus-visible {
+  outline: 2px solid var(--plrct-charcoal);
   outline-offset: 2px;
 }
 
 @media (max-width: 1200px) {
-  .PLRCT-btn--secondary {
+  .plrct-btn--secondary {
     display: none;
   }
 }
 
 /* ---- Hamburger (mobile) ---- */
-.PLRCT-hamburger {
+.plrct-hamburger {
   display: none;
   width: 42px;
   height: 42px;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
 }
 
-.PLRCT-hamburger:hover {
-  background: var(--PLRCT-light-gray);
+.plrct-hamburger:hover {
+  background: var(--plrct-light-gray);
 }
 
-.PLRCT-hamburger svg {
+.plrct-hamburger svg {
   width: 24px;
   height: 24px;
 }
 
 @media (max-width: 1200px) {
-  .PLRCT-hamburger {
+  .plrct-hamburger {
     display: inline-flex;
   }
 }
@@ -620,7 +625,7 @@ a.PLRCT-topbar__item:focus-visible {
 /* =============================================================================
    SEARCH OVERLAY
    ============================================================================= */
-.PLRCT-search-overlay {
+.plrct-search-overlay {
   position: fixed;
   inset: 0;
   background: rgba(31, 41, 55, 0.55);
@@ -634,25 +639,25 @@ a.PLRCT-topbar__item:focus-visible {
   transition: opacity var(--transition-medium), visibility var(--transition-medium);
 }
 
-.PLRCT-search-overlay.is-open {
+.plrct-search-overlay.is-open {
   opacity: 1;
   visibility: visible;
 }
 
-.PLRCT-search-panel {
+.plrct-search-panel {
   width: 100%;
-  background: var(--PLRCT-white);
+  background: var(--plrct-white);
   padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 6vw, 4rem);
   transform: translateY(-24px);
   transition: transform var(--transition-medium);
   box-shadow: var(--shadow-elevated);
 }
 
-.PLRCT-search-overlay.is-open .PLRCT-search-panel {
+.plrct-search-overlay.is-open .plrct-search-panel {
   transform: translateY(0);
 }
 
-.PLRCT-search-panel__top {
+.plrct-search-panel__top {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -660,56 +665,56 @@ a.PLRCT-topbar__item:focus-visible {
   gap: 1rem;
 }
 
-.PLRCT-search-input {
+.plrct-search-input {
   flex: 1;
   font-family: var(--font-heading);
   font-size: clamp(1.3rem, 3vw, 2rem);
   font-weight: 600;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   border: none;
-  border-bottom: 2px solid var(--PLRCT-light-gray);
+  border-bottom: 2px solid var(--plrct-light-gray);
   padding: 0.5rem 0;
   background: transparent;
   transition: border-color var(--transition-fast);
 }
 
-.PLRCT-search-input:focus {
+.plrct-search-input:focus {
   outline: none;
-  border-bottom-color: var(--PLRCT-red);
+  border-bottom-color: var(--plrct-red);
 }
 
-.PLRCT-search-input::placeholder {
+.plrct-search-input::placeholder {
   color: #9ca3af;
 }
 
-.PLRCT-search-close {
+.plrct-search-close {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   flex-shrink: 0;
 }
 
-.PLRCT-search-close:hover,
-.PLRCT-search-close:focus-visible {
-  background: var(--PLRCT-light-gray);
-  color: var(--PLRCT-red);
+.plrct-search-close:hover,
+.plrct-search-close:focus-visible {
+  background: var(--plrct-light-gray);
+  color: var(--plrct-red);
 }
 
-.PLRCT-search-close svg {
+.plrct-search-close svg {
   width: 22px;
   height: 22px;
 }
 
-.PLRCT-search-popular {
+.plrct-search-popular {
   max-width: 900px;
   margin: 1.75rem auto 0;
 }
 
-.PLRCT-search-popular__label {
+.plrct-search-popular__label {
   font-family: var(--font-nav);
   font-size: 0.72rem;
   font-weight: 600;
@@ -719,32 +724,32 @@ a.PLRCT-topbar__item:focus-visible {
   margin: 0 0 0.75rem;
 }
 
-.PLRCT-search-popular__list {
+.plrct-search-popular__list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
 }
 
-.PLRCT-search-chip {
+.plrct-search-chip {
   font-family: var(--font-body);
   font-size: 0.82rem;
-  color: var(--PLRCT-charcoal);
-  background: var(--PLRCT-light-gray);
+  color: var(--plrct-charcoal);
+  background: var(--plrct-light-gray);
   padding: 0.5rem 0.9rem;
   border-radius: var(--radius-pill);
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-.PLRCT-search-chip:hover,
-.PLRCT-search-chip:focus-visible {
-  background: var(--PLRCT-red);
-  color: var(--PLRCT-white);
+.plrct-search-chip:hover,
+.plrct-search-chip:focus-visible {
+  background: var(--plrct-red);
+  color: var(--plrct-white);
 }
 
 /* =============================================================================
    MOBILE DRAWER
    ============================================================================= */
-.PLRCT-mobile-scrim {
+.plrct-mobile-scrim {
   position: fixed;
   inset: 0;
   background: rgba(31, 41, 55, 0.5);
@@ -754,18 +759,18 @@ a.PLRCT-topbar__item:focus-visible {
   transition: opacity var(--transition-medium), visibility var(--transition-medium);
 }
 
-.PLRCT-mobile-scrim.is-open {
+.plrct-mobile-scrim.is-open {
   opacity: 1;
   visibility: visible;
 }
 
-.PLRCT-mobile-drawer {
+.plrct-mobile-drawer {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   width: min(400px, 88vw);
-  background: var(--PLRCT-white);
+  background: var(--plrct-white);
   z-index: 1400;
   display: flex;
   flex-direction: column;
@@ -774,45 +779,45 @@ a.PLRCT-topbar__item:focus-visible {
   box-shadow: -8px 0 30px rgba(31, 41, 55, 0.2);
 }
 
-.PLRCT-mobile-drawer.is-open {
+.plrct-mobile-drawer.is-open {
   transform: translateX(0);
 }
 
-.PLRCT-mobile-drawer__header {
+.plrct-mobile-drawer__header {
   height: 72px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.25rem;
-  border-bottom: 1px solid var(--PLRCT-light-gray);
+  border-bottom: 1px solid var(--plrct-light-gray);
 }
 
-.PLRCT-mobile-drawer__brand {
+.plrct-mobile-drawer__brand {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.PLRCT-mobile-drawer__brand span {
+.plrct-mobile-drawer__brand span {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
 }
 
-.PLRCT-mobile-drawer__body {
+.plrct-mobile-drawer__body {
   flex: 1;
   overflow-y: auto;
   padding: 0.75rem 0;
   -webkit-overflow-scrolling: touch;
 }
 
-.PLRCT-mobile-item {
-  border-bottom: 1px solid var(--PLRCT-light-gray);
+.plrct-mobile-item {
+  border-bottom: 1px solid var(--plrct-light-gray);
 }
 
-.PLRCT-mobile-item__row {
+.plrct-mobile-item__row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -820,48 +825,48 @@ a.PLRCT-topbar__item:focus-visible {
   min-height: 52px;
 }
 
-.PLRCT-mobile-item__link {
+.plrct-mobile-item__link {
   font-family: var(--font-nav);
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex: 1;
 }
 
-.PLRCT-mobile-item__toggle {
+.plrct-mobile-item__toggle {
   width: 40px;
   height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
 }
 
-.PLRCT-mobile-item__toggle svg {
+.plrct-mobile-item__toggle svg {
   width: 18px;
   height: 18px;
   transition: transform var(--transition-fast);
 }
 
-.PLRCT-mobile-item.is-open .PLRCT-mobile-item__toggle svg {
+.plrct-mobile-item.is-open .plrct-mobile-item__toggle svg {
   transform: rotate(180deg);
 }
 
-.PLRCT-mobile-accordion {
+.plrct-mobile-accordion {
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--transition-medium) ease;
-  background: var(--PLRCT-light-gray);
+  background: var(--plrct-light-gray);
 }
 
-.PLRCT-mobile-item.is-open .PLRCT-mobile-accordion {
+.plrct-mobile-item.is-open .plrct-mobile-accordion {
   max-height: 900px;
 }
 
-.PLRCT-mobile-accordion__link {
+.plrct-mobile-accordion__link {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -869,28 +874,28 @@ a.PLRCT-topbar__item:focus-visible {
   font-family: var(--font-body);
 }
 
-.PLRCT-mobile-accordion__link strong {
+.plrct-mobile-accordion__link strong {
   font-family: var(--font-nav);
   font-weight: 500;
   font-size: 0.86rem;
-  color: var(--PLRCT-charcoal);
+  color: var(--plrct-charcoal);
 }
 
-.PLRCT-mobile-accordion__link small {
+.plrct-mobile-accordion__link small {
   font-size: 0.75rem;
   color: #6b7280;
 }
 
-.PLRCT-mobile-drawer__footer {
+.plrct-mobile-drawer__footer {
   flex-shrink: 0;
   padding: 1rem 1.25rem 1.5rem;
-  border-top: 1px solid var(--PLRCT-light-gray);
+  border-top: 1px solid var(--plrct-light-gray);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.PLRCT-mobile-drawer__footer .PLRCT-btn {
+.plrct-mobile-drawer__footer .plrct-btn {
   width: 100%;
   justify-content: center;
   padding: 0.85rem 1rem;
@@ -900,27 +905,27 @@ a.PLRCT-topbar__item:focus-visible {
 /* =============================================================================
    Accessibility
    ============================================================================= */
-.PLRCT-skip-link {
+.plrct-skip-link {
   position: absolute;
   left: -9999px;
   top: 0;
   z-index: 2000;
-  background: var(--PLRCT-red);
-  color: var(--PLRCT-white);
+  background: var(--plrct-red);
+  color: var(--plrct-white);
   padding: 0.75rem 1.25rem;
   border-radius: 0 0 8px 0;
   font-family: var(--font-nav);
   font-weight: 500;
 }
 
-.PLRCT-skip-link:focus {
+.plrct-skip-link:focus {
   left: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .PLRCT-header *,
-  .PLRCT-header *::before,
-  .PLRCT-header *::after {
+  .plrct-header *,
+  .plrct-header *::before,
+  .plrct-header *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
@@ -930,57 +935,57 @@ a.PLRCT-topbar__item:focus-visible {
 /* =========================================================================
    Append this block to your existing navbar.css.
    Adds the 4-column grouped layout used by the new "Academics" mega-menu
-   (MegaMenuGrouped in Navbar.jsx). Reuses your existing PLRCT-mega,
-   PLRCT-mega__link, PLRCT-mega__icon, PLRCT-mega__title, PLRCT-mega__desc,
-   PLRCT-mega__footer, PLRCT-mega__cta classes as-is — only new classes are
+   (MegaMenuGrouped in Navbar.jsx). Reuses your existing plrct-mega,
+   plrct-mega__link, plrct-mega__icon, plrct-mega__title, plrct-mega__desc,
+   plrct-mega__footer, plrct-mega__cta classes as-is — only new classes are
    defined here.
    ========================================================================= */
 
-.PLRCT-mega--grouped {
+.plrct-mega--grouped {
   min-width: 780px; /* wider than the flat mega-menus to fit 4 columns */
-  /* Height cap + scroll now live on the shared .PLRCT-mega rule above, so
+  /* Height cap + scroll now live on the shared .plrct-mega rule above, so
      both the flat and grouped mega-menus behave consistently. Only the
      scrollbar styling is kept here since it's specific to this menu. */
 }
 
 /* Thin, on-brand scrollbar so it doesn't look like a generic browser bar */
-.PLRCT-mega--grouped::-webkit-scrollbar {
+.plrct-mega--grouped::-webkit-scrollbar {
   width: 6px;
 }
-.PLRCT-mega--grouped::-webkit-scrollbar-track {
+.plrct-mega--grouped::-webkit-scrollbar-track {
   background: transparent;
 }
-.PLRCT-mega--grouped::-webkit-scrollbar-thumb {
+.plrct-mega--grouped::-webkit-scrollbar-thumb {
   background: rgba(200, 16, 46, 0.25);
   border-radius: 999px;
 }
-.PLRCT-mega--grouped::-webkit-scrollbar-thumb:hover {
+.plrct-mega--grouped::-webkit-scrollbar-thumb:hover {
   background: rgba(200, 16, 46, 0.45);
 }
-.PLRCT-mega--grouped {
+.plrct-mega--grouped {
   scrollbar-width: thin;
   scrollbar-color: rgba(200, 16, 46, 0.3) transparent;
 }
 
-.PLRCT-mega__grid--grouped {
+.plrct-mega__grid--grouped {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   align-items: start;
 }
 
-.PLRCT-mega__column {
+.plrct-mega__column {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.PLRCT-mega__column-title {
+.plrct-mega__column-title {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--PLRCT-maroon, #7A1626);
+  color: var(--plrct-maroon, #7A1626);
   margin: 0 0 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -988,17 +993,17 @@ a.PLRCT-topbar__item:focus-visible {
 
 /* Slightly denser link/icon variants so 8-item columns (Departments,
    Academic Resources) don't feel oversized next to the 1–2 item columns. */
-.PLRCT-mega__link--compact {
+.plrct-mega__link--compact {
   padding: 8px 6px;
   gap: 10px;
 }
 
-.PLRCT-mega__icon--sm {
+.plrct-mega__icon--sm {
   width: 30px;
   height: 30px;
   flex-shrink: 0;
 }
-.PLRCT-mega__icon--sm svg {
+.plrct-mega__icon--sm svg {
   width: 16px;
   height: 16px;
 }
@@ -1007,10 +1012,27 @@ a.PLRCT-topbar__item:focus-visible {
    are hidden below your existing mobile breakpoint anyway, but this keeps
    tablet-width desktop views usable). */
 @media (max-width: 1180px) {
-  .PLRCT-mega--grouped { min-width: 560px; }
-  .PLRCT-mega__grid--grouped { grid-template-columns: repeat(2, 1fr); }
+  .plrct-mega--grouped { min-width: 560px; }
+  .plrct-mega__grid--grouped { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* =============================================================================
+   CHANGE: NEW — medium-desktop tightening (1200–1400px laptop widths)
+   Shrinks gaps a bit further so the full nav + button always has room
+   without wrapping or overflowing, right above the hamburger breakpoint.
+   ============================================================================= */
+@media (max-width: 1400px) {
+  .plrct-mainbar__inner {
+    gap: 0.5rem;
+  }
+  .plrct-nav__list {
+    gap: 0;
+  }
+  .plrct-btn--primary {
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
+  }
+}
 
 /* =============================================================================
    480px RESPONSIVE FIX — brand name, tagline, buttons
@@ -1019,14 +1041,14 @@ a.PLRCT-topbar__item:focus-visible {
 @media (max-width: 480px) {
 
   /* Brand name — wrap allow karo, overflow mat karo */
-  .PLRCT-brand__name {
+  .plrct-brand__name {
     font-size: 0.88rem;
     white-space: normal;
     line-height: 1.25;
   }
 
   /* Tagline — 480px pe bhi dikhao (was hidden only at 1200px) */
-  .PLRCT-brand__tagline {
+  .plrct-brand__tagline {
     display: block;
     font-size: 0.6rem;
     max-width: 180px;
@@ -1036,67 +1058,67 @@ a.PLRCT-topbar__item:focus-visible {
   }
 
   /* Brand crest thoda chhota */
-  .PLRCT-brand__crest {
+  .plrct-brand__crest {
     width: 34px !important;
     height: 34px !important;
   }
 
   /* Brand gap tight karo */
-  .PLRCT-brand {
+  .plrct-brand {
     gap: 0.5rem;
   }
 
   /* Apply button — "Apply Now" → "Apply" on very small screens */
-  .PLRCT-btn--primary {
+  .plrct-btn--primary {
     font-size: 0.76rem;
     padding: 0.52rem 0.9rem;
   }
 
   /* Actions gap */
-  .PLRCT-actions {
+  .plrct-actions {
     gap: 0.4rem;
   }
 
   /* Icon button thoda chhota */
-  .PLRCT-icon-btn {
+  .plrct-icon-btn {
     width: 32px;
     height: 32px;
   }
 
   /* Mainbar padding tight */
-  .PLRCT-mainbar__inner {
+  .plrct-mainbar__inner {
     padding: 0 0.75rem;
     gap: 0.5rem;
   }
 
   /* Topbar bhi adjust */
-  .PLRCT-topbar__inner {
+  .plrct-topbar__inner {
     padding: 0 0.75rem;
     font-size: 0.65rem;
   }
 
   /* Search overlay input font size */
-  .PLRCT-search-input {
+  .plrct-search-input {
     font-size: 1.1rem;
   }
 
   /* Mobile drawer brand text */
-  .PLRCT-mobile-drawer__brand span {
+  .plrct-mobile-drawer__brand span {
     font-size: 0.88rem;
   }
 }
 
 /* Extra-small: 360px aur neeche */
 @media (max-width: 360px) {
-  .PLRCT-brand__name {
+  .plrct-brand__name {
     font-size: 0.8rem;
   }
 
-  .PLRCT-brand__tagline {
+  .plrct-brand__tagline {
     display: none;
   }
 
-  .PLRCT-btn--primary {
+  .plrct-btn--primary {
     font-size: 0.72rem;
     padding: 0.48rem 0.7rem;
   }
@@ -1108,10 +1130,10 @@ a.PLRCT-topbar__item:focus-visible {
 
 /* Tablet range — mainbar aur mega-menu thoda tight ho jaaye */
 @media (max-width: 992px) {
-  .PLRCT-mainbar__inner {
+  .plrct-mainbar__inner {
     padding: 0 1rem;
   }
-  .PLRCT-mega--grouped {
+  .plrct-mega--grouped {
     min-width: min(560px, 90vw);
   }
 }
@@ -1124,15 +1146,15 @@ a.PLRCT-topbar__item:focus-visible {
     --navbar-height: 72px;
     --navbar-height-shrunk: 60px;
   }
-  .PLRCT-mega,
-  .PLRCT-mega--grouped {
+  .plrct-mega,
+  .plrct-mega--grouped {
     max-height: calc(100vh - 90px);
   }
 }
 
 /* Chhoti-width mobile pe drawer full-width ho jaaye */
 @media (max-width: 380px) {
-  .PLRCT-mobile-drawer {
+  .plrct-mobile-drawer {
     width: 100vw;
   }
 }

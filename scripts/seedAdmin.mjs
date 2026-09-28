@@ -5,6 +5,9 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import readline from "readline";
 
+
+// Aapka baaki script code yahan se shuru hoga...
+
 const AdminSchema = new mongoose.Schema(
   {
     name: String,

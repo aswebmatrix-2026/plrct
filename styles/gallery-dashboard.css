@@ -1,19 +1,21 @@
 /* ==========================================================================
-   PLRCT Digital Gallery — gallery-dashboard.css
+   Pt. L.R. College of Technology Digital Gallery — gallery-dashboard.css
    Admin dashboard: overview cards, management table, login screen
    ========================================================================== */
 
 .admin-gallery-page {
-  --PLRCT-red: #c8102e;
-  --PLRCT-gold: #d4af37;
-  --PLRCT-dark: #1a1a1a;
-  --PLRCT-gray: #55575c;
-  --PLRCT-border: #e6e6e9;
+  --college-red: #c8102e;
+  --college-gold: #d4af37;
+  --college-dark: #1a1a1a;
+  --college-gray: #55575c;
+  --college-border: #e6e6e9;
+  --college-light-gray: #faf7f2;
+
   font-family: "Inter", "Poppins", sans-serif;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2.5rem 1.8rem 5rem;
-  color: var(--PLRCT-dark);
+  color: var(--college-dark);
 }
 
 .admin-page-header {
@@ -24,12 +26,17 @@
   gap: 1rem;
   margin-bottom: 2.2rem;
 }
+
 .admin-page-header h1 {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   margin: 0 0 0.3rem;
 }
-.admin-page-header p { color: var(--PLRCT-gray); margin: 0; }
+
+.admin-page-header p {
+  color: var(--college-gray);
+  margin: 0;
+}
 
 .btn {
   display: inline-flex;
@@ -45,91 +52,126 @@
   font-size: 0.92rem;
   transition: all 0.25s ease;
 }
+
 .btn-primary {
-  background: linear-gradient(135deg, var(--PLRCT-red), #970c22);
+  background: linear-gradient(135deg, var(--college-red), #970c22);
   color: white;
   box-shadow: 0 8px 20px rgba(200, 16, 46, 0.28);
 }
-.btn-primary:hover { transform: translateY(-2px); }
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
 .btn-outline {
   background: transparent;
-  border-color: var(--PLRCT-red);
-  color: var(--PLRCT-red);
+  border-color: var(--college-red);
+  color: var(--college-red);
 }
 
 /* ---------- Stat cards ---------- */
+
 .admin-stats-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
+
 .admin-stat-card {
   background: white;
-  border: 1px solid var(--PLRCT-border);
+  border: 1px solid var(--college-border);
   border-radius: 14px;
   padding: 1.4rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
 .admin-stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
-  border-color: var(--PLRCT-gold);
+  border-color: var(--college-gold);
 }
+
 .admin-stat-value {
   font-size: 1.9rem;
   font-weight: 800;
-  color: var(--PLRCT-red);
+  color: var(--college-red);
   font-family: "Playfair Display", serif;
 }
+
 .admin-stat-label {
   font-size: 0.82rem;
-  color: var(--PLRCT-gray);
+  color: var(--college-gray);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 /* ---------- Table ---------- */
+
 .admin-table-wrap {
   background: white;
-  border: 1px solid var(--PLRCT-border);
+  border: 1px solid var(--college-border);
   border-radius: 16px;
   overflow-x: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
+
 .admin-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
   min-width: 980px;
 }
+
 .admin-table thead {
-  background: var(--PLRCT-light-gray, #faf7f2);
-  border-bottom: 2px solid var(--PLRCT-border);
+  background: var(--college-light-gray);
+  border-bottom: 2px solid var(--college-border);
 }
+
 .admin-table th {
   text-align: left;
   padding: 0.9rem 1rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--PLRCT-gray);
+  color: var(--college-gray);
 }
+
 .admin-table td {
   padding: 0.9rem 1rem;
-  border-bottom: 1px solid var(--PLRCT-border);
+  border-bottom: 1px solid var(--college-border);
   vertical-align: middle;
 }
-.admin-table tr:last-child td { border-bottom: none; }
-.admin-table tr:hover { background: #fbf7f1; }
-.row-busy { opacity: 0.5; pointer-events: none; }
-.cell-title { font-weight: 700; }
-.empty-row { text-align: center; color: var(--PLRCT-gray); padding: 3rem 0 !important; }
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover {
+  background: #fbf7f1;
+}
+
+.row-busy {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cell-title {
+  font-weight: 700;
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--college-gray);
+  padding: 3rem 0 !important;
+}
 
 .status-pill {
   padding: 0.25rem 0.75rem;
@@ -138,40 +180,60 @@
   font-weight: 700;
   text-transform: capitalize;
 }
-.status-published { background: #e3f7e9; color: #1c7a3d; }
-.status-draft { background: #fdf1de; color: #9a6412; }
-.status-archived { background: #eee; color: #666; }
+
+.status-published {
+  background: #e3f7e9;
+  color: #1c7a3d;
+}
+
+.status-draft {
+  background: #fdf1de;
+  color: #9a6412;
+}
+
+.status-archived {
+  background: #eee;
+  color: #666;
+}
 
 .cell-actions {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
 }
+
 .cell-actions a,
 .cell-actions button {
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.35rem 0.7rem;
   border-radius: 8px;
-  border: 1px solid var(--PLRCT-border);
+  border: 1px solid var(--college-border);
   background: white;
   cursor: pointer;
-  color: var(--PLRCT-dark);
+  color: var(--college-dark);
   text-decoration: none;
   white-space: nowrap;
 }
+
 .cell-actions a:hover,
 .cell-actions button:hover {
-  border-color: var(--PLRCT-red);
-  color: var(--PLRCT-red);
+  border-color: var(--college-red);
+  color: var(--college-red);
 }
+
 .cell-actions button.danger {
   color: #b3261e;
   border-color: #f3d3d0;
 }
-.cell-actions button.danger:hover { background: #b3261e; color: white; }
+
+.cell-actions button.danger:hover {
+  background: #b3261e;
+  color: white;
+}
 
 /* ---------- Login ---------- */
+
 .admin-login-wrap {
   min-height: 90vh;
   display: flex;
@@ -180,6 +242,7 @@
   background: radial-gradient(circle at top, #fff 0%, #f4f0ea 100%);
   padding: 1.5rem;
 }
+
 .admin-login-card {
   width: 100%;
   max-width: 380px;
@@ -187,19 +250,48 @@
   border-radius: 18px;
   padding: 2.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid var(--PLRCT-red);
+  border-top: 4px solid var(--college-red);
 }
+
 .admin-login-card h1 {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
   margin: 0 0 0.3rem;
 }
-.admin-login-card p { color: var(--PLRCT-gray); margin: 0 0 1.5rem; font-size: 0.9rem; }
-.admin-login-card button { width: 100%; margin-top: 0.6rem; }
+
+.admin-login-card p {
+  color: var(--college-gray);
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.admin-login-card button {
+  width: 100%;
+  margin-top: 0.6rem;
+}
+
+/* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
-  .admin-stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .admin-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
 @media (max-width: 640px) {
-  .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-gallery-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .admin-login-card {
+    padding: 2rem 1.5rem;
+  }
 }

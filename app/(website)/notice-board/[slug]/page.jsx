@@ -68,15 +68,15 @@ export async function generateMetadata({ params }) {
 
   if (!notice) {
     return {
-      title: "Notice Not Found | PLRCT",
+      title: "Notice Not Found | Pt. L.R. College of Technology",
     };
   }
 
   return {
-    title: `${notice.title} | PLRCT Notice Board`,
+    title: `${notice.title} | Pt. L.R. College of Technology Notice Board`,
     description:
       notice.shortDescription ||
-      `Official notice from PLRCT, Faridabad.`,
+      `Official notice from Pt. L.R. College of Technology, Faridabad.`,
 
     alternates: {
       canonical: `/notice-board/${notice.slug || notice.id}`,
@@ -86,7 +86,7 @@ export async function generateMetadata({ params }) {
       title: notice.title,
       description:
         notice.shortDescription ||
-        `Official notice from PLRCT, Faridabad.`,
+        `Official notice from Pt. L.R. College of Technology, Faridabad.`,
       type: "article",
       publishedTime: notice.publishDate
         ? new Date(notice.publishDate).toISOString()
@@ -130,7 +130,7 @@ export default async function NoticeDetailPage({ params }) {
     dateModified: notice.updatedAt,
     publisher: {
       "@type": "CollegeOrUniversity",
-      name: "PLRCT (PLRCT), Faridabad",
+      name: "Pt. L.R. College of Technology (Pt. L.R. College of Technology), Faridabad",
     },
   };
 

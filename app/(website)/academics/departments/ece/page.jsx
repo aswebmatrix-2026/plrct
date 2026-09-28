@@ -4,24 +4,24 @@ import "./ece.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "Electronics & Communication Engineering Faridabad | Best ECE College PLRCT Haryana",
+  title: "Electronics & Communication Engineering Faridabad | Best ECE College Pt. L.R. College of Technology Haryana",
   description:
-    "Electronics and Communication Engineering (ECE) at PLRCT, Faridabad — AICTE approved engineering course with embedded systems, IoT, VLSI, wireless communication and semiconductor labs, industry collaboration and strong placement support. Serving Faridabad, Ballabgarh, Gurugram, Noida and Haryana.",
+    "Electronics and Communication Engineering (ECE) at Pt. L.R. College of Technology, Faridabad — AICTE approved engineering course with embedded systems, IoT, VLSI, wireless communication and semiconductor labs, industry collaboration and strong placement support. Serving Faridabad, Ballabgarh, Gurugram, Noida and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/departments/ece",
   },
   openGraph: {
-    title: "Electronics & Communication Engineering (ECE) at PLRCT Faridabad",
+    title: "Electronics & Communication Engineering (ECE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved ECE department at PLRCT, Faridabad, with dedicated embedded systems, VLSI, communication systems and IoT & robotics laboratories.",
+      "AICTE approved ECE department at Pt. L.R. College of Technology, Faridabad, with dedicated embedded systems, VLSI, communication systems and IoT & robotics laboratories.",
     url: "https://ptlrct.com/academics/departments/ece",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/ece-department.jpg",
         width: 1200,
         height: 630,
-        alt: "Electronics and Communication Engineering Department at PLRCT Faridabad",
+        alt: "Electronics and Communication Engineering Department at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Electronics & Communication Engineering (ECE) at PLRCT Faridabad",
+    title: "Electronics & Communication Engineering (ECE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved ECE department at PLRCT, Faridabad, with embedded systems, VLSI, wireless communication and IoT laboratories and strong placement support.",
+      "AICTE approved ECE department at Pt. L.R. College of Technology, Faridabad, with embedded systems, VLSI, wireless communication and IoT laboratories and strong placement support.",
     images: ["https://ptlrct.com/og/ece-department.jpg"],
   },
 };
@@ -56,10 +56,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Is Electronics and Communication Engineering available at PLRCT?",
+      name: "Is Electronics and Communication Engineering available at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. PLRCT offers an AICTE approved B.Tech in Electronics and Communication Engineering in Faridabad, covering embedded systems, VLSI, communication engineering, IoT and semiconductor technology, supported by six dedicated laboratories.",
+        text: "Yes. Pt. L.R. College of Technology offers an AICTE approved B.Tech in Electronics and Communication Engineering in Faridabad, covering embedded systems, VLSI, communication engineering, IoT and semiconductor technology, supported by six dedicated laboratories.",
       },
     },
     {
@@ -112,7 +112,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Are internships compulsory for ECE students at PLRCT?",
+      name: "Are internships compulsory for ECE students at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Industrial training and internships are a required part of the ECE curriculum, giving students structured exposure to electronics, telecom and embedded systems organisations before graduation.",
@@ -131,7 +131,7 @@ const faqSchema = {
       name: "Can ECE students pursue M.Tech after graduation?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, graduates can progress to PLRCT's M.Tech program or pursue postgraduate study, GATE-based admissions, professional certifications, MBA or Ph.D. research in electronics and communication related fields.",
+        text: "Yes, graduates can progress to Pt. L.R. College of Technology's M.Tech program or pursue postgraduate study, GATE-based admissions, professional certifications, MBA or Ph.D. research in electronics and communication related fields.",
       },
     },
   ],
@@ -140,8 +140,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -217,7 +217,7 @@ export default function ECEPage() {
                 </p>
                 <div className="ece-hero__cta">
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
-                  <a href="/downloads/PLRCT-brochure-ece.pdf" className="btn btn--ghost">Download Brochure</a>
+                  <a href="/downloads/Pt. L.R. College of Technology-brochure-ece.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
 
@@ -235,14 +235,14 @@ export default function ECEPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="Electronics Laboratory — PLRCT Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="Electronics Laboratory — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">DEPARTMENT OVERVIEW</p>
-            <h2 id="overview-h">What is Electronics and Communication Engineering at PLRCT?</h2>
+            <h2 id="overview-h">What is Electronics and Communication Engineering at Pt. L.R. College of Technology?</h2>
             <p>
               The Department of Electronics and Communication Engineering at Pt. L.R. College of
               Technology has grown alongside Faridabad's evolution into a manufacturing, electronics
@@ -259,7 +259,7 @@ export default function ECEPage() {
               amplifier behaves or how a microcontroller schedules interrupts; they build the circuit,
               flash the firmware and debug the result. This AICTE-oriented, industry-relevant approach
               is deliberate — as one of the recognised ECE colleges serving Faridabad, Ballabgarh,
-              Gurugram, Noida, Palwal and the wider Haryana region, PLRCT positions its ECE graduates
+              Gurugram, Noida, Palwal and the wider Haryana region, Pt. L.R. College of Technology positions its ECE graduates
               to move directly into electronics manufacturing, embedded systems, telecom and
               semiconductor roles across Delhi NCR.
             </p>
@@ -306,7 +306,7 @@ export default function ECEPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE ECE AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE ECE AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">Built for engineers who can design, build and debug hardware</h2>
             <div className="card-grid">
               {[
@@ -499,7 +499,7 @@ export default function ECEPage() {
                 Faculty-guided research spans embedded systems, IoT, wireless communication, 5G-related
                 technologies, VLSI and semiconductor research, robotics, AI-enabled hardware and smart
                 communication systems, with publication support for students who want to go further
-                through PLRCT's <a href="/academics/mtech">M.Tech program</a>.
+                through Pt. L.R. College of Technology's <a href="/academics/mtech">M.Tech program</a>.
               </p>
             </div>
             <div>
@@ -662,7 +662,7 @@ export default function ECEPage() {
         <section className="section section--tint" aria-labelledby="answers-h">
           <div className="container">
             <p className="eyebrow">QUICK ANSWERS</p>
-            <h2 id="answers-h">ECE at PLRCT, explained simply</h2>
+            <h2 id="answers-h">ECE at Pt. L.R. College of Technology, explained simply</h2>
             <div className="two-col">
               <div>
                 <h3>What is Electronics and Communication Engineering?</h3>
@@ -672,15 +672,15 @@ export default function ECEPage() {
                   semiconductor technology used across telecom, IoT, automation and consumer
                   electronics.
                 </p>
-                <h3>Why choose PLRCT for ECE?</h3>
+                <h3>Why choose Pt. L.R. College of Technology for ECE?</h3>
                 <p>
-                  PLRCT combines an AICTE approved curriculum with six dedicated laboratories, mandatory
+                  Pt. L.R. College of Technology combines an AICTE approved curriculum with six dedicated laboratories, mandatory
                   industrial training, faculty with industry experience and a placement cell focused
                   specifically on electronics and communication hiring.
                 </p>
               </div>
               <div>
-                <h3>Does PLRCT provide industrial training?</h3>
+                <h3>Does Pt. L.R. College of Technology provide industrial training?</h3>
                 <p>
                   Yes, industrial training and internships with electronics, telecom, semiconductor and
                   automation organisations are a required part of the ECE curriculum.
@@ -718,10 +718,10 @@ export default function ECEPage() {
         <section className="section section--tint" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">ECE at PLRCT — quick answers</h2>
+            <h2 id="faq-h">ECE at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>Is Electronics and Communication Engineering available at PLRCT?</summary>
+                <summary>Is Electronics and Communication Engineering available at Pt. L.R. College of Technology?</summary>
                 <p>Yes, an AICTE approved B.Tech in ECE is offered in Faridabad, covering embedded systems, VLSI, communication engineering, IoT and semiconductor technology.</p>
               </details>
               <details className="faq-item">
@@ -750,7 +750,7 @@ export default function ECEPage() {
               </details>
               <details className="faq-item">
                 <summary>Are internships compulsory?</summary>
-                <p>Yes, industrial training and internships are a required part of the ECE curriculum at PLRCT.</p>
+                <p>Yes, industrial training and internships are a required part of the ECE curriculum at Pt. L.R. College of Technology.</p>
               </details>
               <details className="faq-item">
                 <summary>What is the average placement support?</summary>
@@ -758,7 +758,7 @@ export default function ECEPage() {
               </details>
               <details className="faq-item">
                 <summary>Can students pursue M.Tech after graduation?</summary>
-                <p>Yes, through PLRCT's M.Tech program, GATE-based postgraduate admissions, or external research and professional certification pathways.</p>
+                <p>Yes, through Pt. L.R. College of Technology's M.Tech program, GATE-based postgraduate admissions, or external research and professional certification pathways.</p>
               </details>
             </div>
           </div>
@@ -773,7 +773,7 @@ export default function ECEPage() {
               <p>
                 Build a successful engineering career with advanced electronics laboratories, embedded
                 systems training, IoT and VLSI exposure, industry collaboration, research
-                opportunities, and excellent placement support at PLRCT.
+                opportunities, and excellent placement support at Pt. L.R. College of Technology.
               </p>
             </div>
             <div className="final-cta__actions">

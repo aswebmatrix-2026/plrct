@@ -121,15 +121,13 @@ export default function StudentIdCard({
       {/* Principal Signature & Application ID */}
       <div className="id-card__lower-section">
         <div className="id-card__signature">
-          {principalSignature ? (
+          
             <img
               className="id-card__signature-img"
-              src={principalSignature}
+              src="/images/sign.png"
               alt="Principal Signature"
             />
-          ) : (
-            <div className="id-card__signature-line" />
-          )}
+          
 
           <div className="id-card__signature-label">
             Principal

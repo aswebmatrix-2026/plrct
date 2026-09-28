@@ -6,10 +6,10 @@ import "@/styles/gallery-detail.css";
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const event = await getEventBySlug(slug);
-  if (!event) return { title: "Album Not Found | PLRCT Gallery" };
+  if (!event) return { title: "Album Not Found | Pt. L.R. College of Technology Gallery" };
 
   return {
-    title: event.metaTitle || `${event.eventName} | PLRCT Gallery`,
+    title: event.metaTitle || `${event.eventName} | Pt. L.R. College of Technology Gallery`,
     description: event.metaDescription || event.shortDescription,
     openGraph: {
       title: event.eventName,

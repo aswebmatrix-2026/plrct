@@ -5,22 +5,22 @@ import Reveal from '@/components/about/Reveal';
 import { LEADERSHIP, LEADERSHIP_VALUES, FAQ_LEADERSHIP, SITE } from '@/lib/aboutData';
 
 export const metadata = {
-  title: 'Leadership Messages | Chairman, Director & Principal — PLRCT Faridabad',
+  title: 'Leadership Messages | Chairman, Director & Principal — Pt. L.R. College of Technology, Faridabad',
   description:
-    'Read leadership messages from the Chairman, Director, and Principal of PLRCT, Ballabgarh, Faridabad — their vision, philosophy, and commitment to students.',
+    'Read leadership messages from the Chairman, Director, and Principal of Pt. L.R. College of Technology, Ballabgarh, Faridabad — their vision, philosophy, and commitment to students.',
   alternates: { canonical: 'https://ptlrct.com/about/messages' },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'Leadership Messages — PLRCT',
+  name: 'Leadership Messages — Pt. L.R. College of Technology',
   about: { '@type': 'CollegeOrUniversity', name: SITE.name },
 };
 
 export default function messages() {
   return (
-    <main className="PLRCT-about PLRCT-messages">
+    <main className="pt-about ptlrct-messages">
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -32,9 +32,9 @@ export default function messages() {
         ]}
       />
 
-      <section className="PLRCT-messages-hero">
-        <div className="PLRCT-messages-hero__inner">
-          <p className="PLRCT-eyebrow">Leadership Messages</p>
+      <section className="ptlrct-messages-hero">
+        <div className="ptlrct-messages-hero__inner">
+          <p className="ptlrct-eyebrow">Leadership Messages</p>
           <h1>Guiding the Future of Education</h1>
           <p>Three offices, one accountability chain — strategic direction, institutional execution, and academic governance.</p>
         </div>
@@ -42,36 +42,36 @@ export default function messages() {
 
       {/* ---- Leadership profiles ---- */}
       {LEADERSHIP.map((leader, i) => (
-        <section className={`PLRCT-message-block${i % 2 === 1 ? ' is-reversed' : ''}`} key={leader.role}>
-          <div className="PLRCT-about__inner PLRCT-message-block__grid">
-            <Reveal as="div" className="PLRCT-message-portrait">
-              <div className="PLRCT-message-portrait__frame" aria-hidden="true">
+        <section className={`ptlrct-message-block${i % 2 === 1 ? ' is-reversed' : ''}`} key={leader.role}>
+          <div className="ptlrct-about__inner ptlrct-message-block__grid">
+            <Reveal as="div" className="ptlrct-message-portrait">
+              <div className="ptlrct-message-portrait__frame" aria-hidden="true">
                 <span>{leader.role.slice(0, 2).toUpperCase()}</span>
               </div>
-              <p className="PLRCT-message-portrait__role">{leader.role}</p>
+              <p className="ptlrct-message-portrait__role">{leader.role}</p>
             </Reveal>
-            <Reveal as="article" className="PLRCT-message-content">
+            <Reveal as="article" className="ptlrct-message-content">
               <blockquote>&ldquo;{leader.quote}&rdquo;</blockquote>
-              <h2 className="PLRCT-section-title">{leader.name}</h2>
+              <h2 className="ptlrct-section-title">{leader.name}</h2>
               <p>{leader.bio}</p>
               <p><strong>Leadership philosophy —</strong> {leader.philosophy}</p>
               <p><strong>Educational commitment —</strong> {leader.commitment}</p>
-              <p className="PLRCT-message-signature">{leader.role}, PLRCT</p>
+              <p className="ptlrct-message-signature">{leader.role}, Pt. L.R. College of Technology</p>
             </Reveal>
           </div>
         </section>
       ))}
 
       {/* ---- Leadership values ---- */}
-      <section className="PLRCT-messages-values">
-        <div className="PLRCT-about__inner">
+      <section className="ptlrct-messages-values">
+        <div className="ptlrct-about__inner">
           <Reveal as="div">
-            <p className="PLRCT-eyebrow">What Ties the Three Offices Together</p>
-            <h2 className="PLRCT-section-title">Leadership values</h2>
+            <p className="ptlrct-eyebrow">What Ties the Three Offices Together</p>
+            <h2 className="ptlrct-section-title">Leadership values</h2>
           </Reveal>
-          <div className="PLRCT-messages-values__grid">
+          <div className="ptlrct-messages-values__grid">
             {LEADERSHIP_VALUES.map((v, i) => (
-              <Reveal as="div" delay={i * 90} className="PLRCT-messages-value" key={v.title}>
+              <Reveal as="div" delay={i * 90} className="ptlrct-messages-value" key={v.title}>
                 <h3>{v.title}</h3>
                 <p>{v.body}</p>
               </Reveal>

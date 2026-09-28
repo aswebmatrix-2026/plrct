@@ -5,9 +5,9 @@ import { FAQS, DEPARTMENTS } from './data';
  * SEO metadata (Next.js App Router)
  * ---------------------------------------------------------------------- */
 export const metadata = {
-  title: 'Engineering Courses in Faridabad | B.Tech, Diploma & M.Tech — PLRCT',
+  title: 'Engineering Courses in Faridabad | B.Tech, Diploma & M.Tech — Pt. L.R. College of Technology',
   description:
-    'Explore AICTE-approved B.Tech, Diploma Engineering and M.Tech programs at PLRCT, Faridabad. Computer Science, Electrical, Mechanical, Civil & ECE departments with advanced labs, research opportunities and placement support.',
+    'Explore AICTE-approved B.Tech, Diploma Engineering and M.Tech programs at Pt. L.R. College of Technology, Faridabad. Computer Science, Electrical, Mechanical, Civil & ECE departments with advanced labs, research opportunities and placement support.',
   keywords: [
     'Best Engineering College in Faridabad',
     'B.Tech Admission Faridabad',
@@ -22,11 +22,11 @@ export const metadata = {
   ],
   alternates: { canonical: 'https://ptlrct.com/academics' },
   openGraph: {
-    title: 'Engineering & Technical Education Programs — PLRCT, Faridabad',
+    title: 'Engineering & Technical Education Programs — Pt. L.R. College of Technology, Faridabad',
     description:
       'AICTE-approved B.Tech, Diploma and M.Tech engineering programs in Faridabad, Haryana, with advanced laboratories, experienced faculty and placement support.',
     url: 'https://ptlrct.com/academics',
-    siteName: 'PLRCT',
+    siteName: 'Pt. L.R. College of Technology',
     locale: 'en_IN',
     type: 'website',
   },
@@ -40,13 +40,13 @@ function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     itemListElement: [
-      { '@type': 'Course', name: 'B.Tech Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'PLRCT', address: 'Faridabad, Haryana, India' } },
-      { '@type': 'Course', name: 'Diploma Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'PLRCT', address: 'Faridabad, Haryana, India' } },
-      { '@type': 'Course', name: 'M.Tech Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'PLRCT', address: 'Faridabad, Haryana, India' } },
+      { '@type': 'Course', name: 'B.Tech Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'Pt. L.R. College of Technology', address: 'Faridabad, Haryana, India' } },
+      { '@type': 'Course', name: 'Diploma Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'Pt. L.R. College of Technology', address: 'Faridabad, Haryana, India' } },
+      { '@type': 'Course', name: 'M.Tech Engineering', provider: { '@type': 'CollegeOrUniversity', name: 'Pt. L.R. College of Technology', address: 'Faridabad, Haryana, India' } },
       ...DEPARTMENTS.map((d) => ({
         '@type': 'Course',
         name: `B.Tech ${d.name}`,
-        provider: { '@type': 'CollegeOrUniversity', name: 'PLRCT', address: 'Faridabad, Haryana, India' },
+        provider: { '@type': 'CollegeOrUniversity', name: 'Pt. L.R. College of Technology', address: 'Faridabad, Haryana, India' },
       })),
     ],
   };

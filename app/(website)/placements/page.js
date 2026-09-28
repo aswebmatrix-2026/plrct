@@ -6,7 +6,7 @@ import "@/styles/placements.css";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Placement Drives | PLRCT Faridabad",
+  title: "Placement Drives | Pt. L.R. College of Technology Faridabad",
   description: "Browse active, upcoming and past placement drives at Pt. L.R. College of Technology, Faridabad.",
 };
 
@@ -35,7 +35,7 @@ export default async function PlacementsPage({ searchParams }) {
       <section className="placements-hero">
         <div className="container">
           <h1>Placement Drives</h1>
-          <p>Explore recruitment opportunities from leading companies visiting PLRCT, Faridabad.</p>
+          <p>Explore recruitment opportunities from leading companies visiting Pt. L.R. College of Technology, Faridabad.</p>
         </div>
       </section>
 

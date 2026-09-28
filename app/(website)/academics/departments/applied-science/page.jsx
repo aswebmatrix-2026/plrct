@@ -6,22 +6,22 @@ import "./applied-science.css";
 export const metadata = {
   title: "Applied Science Department Faridabad | Best Engineering Foundation College Haryana",
   description:
-    "Department of Applied Science at PLRCT, Faridabad — AICTE approved engineering mathematics, physics, chemistry, environmental science and communication skills foundation with modern labs and research-oriented learning. Serving Faridabad, Ballabgarh and Haryana.",
+    "Department of Applied Science at Pt. L.R. College of Technology, Faridabad — AICTE approved engineering mathematics, physics, chemistry, environmental science and communication skills foundation with modern labs and research-oriented learning. Serving Faridabad, Ballabgarh and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/departments/applied-science",
   },
   openGraph: {
-    title: "Department of Applied Science at PLRCT Faridabad",
+    title: "Department of Applied Science at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved Applied Science department at PLRCT, Faridabad, with dedicated physics, chemistry, engineering mathematics, environmental science and language laboratories.",
+      "AICTE approved Applied Science department at Pt. L.R. College of Technology, Faridabad, with dedicated physics, chemistry, engineering mathematics, environmental science and language laboratories.",
     url: "https://ptlrct.com/academics/departments/applied-science",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/applied-science-department.jpg",
         width: 1200,
         height: 630,
-        alt: "Applied Science Department at PLRCT Faridabad",
+        alt: "Applied Science Department at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Department of Applied Science at PLRCT Faridabad",
+    title: "Department of Applied Science at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved Applied Science department at PLRCT, Faridabad, with physics, chemistry, mathematics, environmental science and language laboratories supporting every engineering branch.",
+      "AICTE approved Applied Science department at Pt. L.R. College of Technology, Faridabad, with physics, chemistry, mathematics, environmental science and language laboratories supporting every engineering branch.",
     images: ["https://ptlrct.com/og/applied-science-department.jpg"],
   },
 };
@@ -59,7 +59,7 @@ const faqSchema = {
       name: "What is the Department of Applied Science?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Department of Applied Science at PLRCT provides the academic foundation for every engineering branch, teaching engineering mathematics, physics, chemistry, communication skills and environmental science to all first-year students.",
+        text: "The Department of Applied Science at Pt. L.R. College of Technology provides the academic foundation for every engineering branch, teaching engineering mathematics, physics, chemistry, communication skills and environmental science to all first-year students.",
       },
     },
     {
@@ -140,8 +140,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -212,7 +212,7 @@ export default function AppliedSciencePage() {
                 </p>
                 <div className="appsci-hero__cta">
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
-                  <a href="/downloads/PLRCT-brochure-applied-science.pdf" className="btn btn--ghost">Download Brochure</a>
+                  <a href="/downloads/Pt. L.R. College of Technology-brochure-applied-science.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
 
@@ -230,16 +230,16 @@ export default function AppliedSciencePage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="Applied Science Department — PLRCT Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="Applied Science Department — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">DEPARTMENT OVERVIEW</p>
-            <h2 id="overview-h">What is the Department of Applied Science at PLRCT?</h2>
+            <h2 id="overview-h">What is the Department of Applied Science at Pt. L.R. College of Technology?</h2>
             <p>
-              The Department of Applied Science at PLRCT has stood as the academic foundation
+              The Department of Applied Science at Pt. L.R. College of Technology has stood as the academic foundation
               of engineering education at the college since its earliest years, teaching the
               mathematics, physics, chemistry and communication skills that every engineering
               branch is built on. What began as a basic first-year science curriculum has grown
@@ -254,7 +254,7 @@ export default function AppliedSciencePage() {
               scientific concepts become durable knowledge only when tested in a laboratory or
               worked through by hand. Students do not just learn what a numerical method
               computes; they compute one. This foundation is deliberate — as the department that
-              every incoming engineering student at PLRCT passes through, Applied Science shapes
+              every incoming engineering student at Pt. L.R. College of Technology passes through, Applied Science shapes
               the analytical and problem-solving capacity that Computer Science, Electrical,
               Mechanical, Civil and Electronics students carry into their branch-specific
               coursework, serving learners across Faridabad, Ballabgarh, Gurugram, Noida, Palwal
@@ -301,7 +301,7 @@ export default function AppliedSciencePage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE APPLIED SCIENCE AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE APPLIED SCIENCE AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">Built for the thinkers behind every engineer</h2>
             <div className="card-grid">
               {[
@@ -447,7 +447,7 @@ export default function AppliedSciencePage() {
                 Faculty-guided research spans applied physics, materials science, environmental
                 sustainability, computational mathematics, scientific instrumentation,
                 renewable energy research and interdisciplinary engineering research, with
-                pathways into publication or further study through PLRCT's{" "}
+                pathways into publication or further study through Pt. L.R. College of Technology's{" "}
                 <a href="/academics/mtech">M.Tech program</a>.
               </p>
             </div>
@@ -597,15 +597,15 @@ export default function AppliedSciencePage() {
         <section className="section" aria-labelledby="answers-h">
           <div className="container">
             <p className="eyebrow">QUICK ANSWERS</p>
-            <h2 id="answers-h">Applied Science at PLRCT — direct answers</h2>
+            <h2 id="answers-h">Applied Science at Pt. L.R. College of Technology — direct answers</h2>
             <div className="card-grid">
               <div className="card">
                 <h3>What is Applied Science in engineering?</h3>
                 <p>Applied Science is the foundation discipline covering mathematics, physics, chemistry and communication skills that every engineering branch relies on before moving into specialized coursework.</p>
               </div>
               <div className="card">
-                <h3>Why choose PLRCT for Applied Science?</h3>
-                <p>PLRCT offers a research-aware, AICTE approved curriculum, five dedicated laboratories, Ph.D. qualified faculty and structured academic support, positioned to prepare students for every B.Tech branch.</p>
+                <h3>Why choose Pt. L.R. College of Technology for Applied Science?</h3>
+                <p>Pt. L.R. College of Technology offers a research-aware, AICTE approved curriculum, five dedicated laboratories, Ph.D. qualified faculty and structured academic support, positioned to prepare students for every B.Tech branch.</p>
               </div>
               <div className="card">
                 <h3>What careers are available after Applied Science?</h3>
@@ -619,11 +619,11 @@ export default function AppliedSciencePage() {
         <section className="section section--tint" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">Applied Science at PLRCT — quick answers</h2>
+            <h2 id="faq-h">Applied Science at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
                 <summary>What is the Department of Applied Science?</summary>
-                <p>The department that builds the mathematics, physics, chemistry and communication foundation every PLRCT engineering student needs before specializing.</p>
+                <p>The department that builds the mathematics, physics, chemistry and communication foundation every Pt. L.R. College of Technology engineering student needs before specializing.</p>
               </details>
               <details className="faq-item">
                 <summary>Which subjects are taught in Applied Science?</summary>

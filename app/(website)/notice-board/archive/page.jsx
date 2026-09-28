@@ -6,7 +6,7 @@ import "@/styles/notice-board.css";
 
 export const metadata = {
   title: "Notice Archive",
-  description: "Browse past and expired notices from PLRCT, Faridabad, organized by year, month and category.",
+  description: "Browse past and expired notices from Pt. L.R. College of Technology, Faridabad, organized by year, month and category.",
   alternates: { canonical: "/notice-board/archive" },
 };
 
@@ -40,7 +40,7 @@ export default async function ArchivePage() {
       <section className="board-hero">
         <h1 className="board-hero__title">Notice Archive</h1>
         <p className="board-hero__subtitle">
-          Past notices from PLRCT, organized by year, month and category. Expired notices move
+          Past notices from Pt. L.R. College of Technology, organized by year, month and category. Expired notices move
           here automatically once their validity period ends.
         </p>
       </section>
@@ -53,7 +53,7 @@ export default async function ArchivePage() {
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", marginBottom: "var(--space-md)" }}>{year}</h2>
             {Object.keys(grouped[year]).map((month) => (
               <div key={month} style={{ marginBottom: "var(--space-lg)" }}>
-                <h3 style={{ fontFamily: "var(--font-utility)", fontSize: "0.95rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--PLRCT-gray-500)", marginBottom: "var(--space-sm)" }}>
+                <h3 style={{ fontFamily: "var(--font-utility)", fontSize: "0.95rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--Pt. L.R. College of Technology-gray-500)", marginBottom: "var(--space-sm)" }}>
                   {month}
                 </h3>
                 <div className="board-results__grid">

@@ -276,7 +276,7 @@ function BrandCrest({ className, style, size = 52 }) {
   return (
     <img
       src="/images/Pandit-L.R.-College-Logo.png"
-      alt="PLRCT logo"
+      alt="Pt. L.R. College of Technology logo"
       width={size}
       height={size}
       className={className}
@@ -288,23 +288,23 @@ function BrandCrest({ className, style, size = 52 }) {
 /* Flat mega-menu — used by About / Courses / Admissions / IQAC (single list). */
 function MegaMenu({ id, items, isOpen, ctaHref, ctaLabel }) {
   return (
-    <div id={id} role="menu" className={`PLRCT-mega${isOpen ? ' is-open' : ''}`} aria-hidden={!isOpen}>
-      <div className="PLRCT-mega__grid">
+    <div id={id} role="menu" className={`plrct-mega${isOpen ? ' is-open' : ''}`} aria-hidden={!isOpen}>
+      <div className="plrct-mega__grid">
         {items.map((item) => (
-          <Link key={item.title} href={item.href} role="menuitem" className="PLRCT-mega__link" tabIndex={isOpen ? 0 : -1}>
-            <span className="PLRCT-mega__icon">
+          <Link key={item.title} href={item.href} role="menuitem" className="plrct-mega__link" tabIndex={isOpen ? 0 : -1}>
+            <span className="plrct-mega__icon">
               <Icon name={item.icon} />
             </span>
             <span>
-              <p className="PLRCT-mega__title">{item.title}</p>
-              <p className="PLRCT-mega__desc">{item.description}</p>
+              <p className="plrct-mega__title">{item.title}</p>
+              <p className="plrct-mega__desc">{item.description}</p>
             </span>
           </Link>
         ))}
       </div>
       {ctaHref && (
-        <div className="PLRCT-mega__footer">
-          <Link href={ctaHref} className="PLRCT-mega__cta" tabIndex={isOpen ? 0 : -1}>
+        <div className="plrct-mega__footer">
+          <Link href={ctaHref} className="plrct-mega__cta" tabIndex={isOpen ? 0 : -1}>
             {ctaLabel}
             <Icon name="arrow" />
           </Link>
@@ -317,24 +317,24 @@ function MegaMenu({ id, items, isOpen, ctaHref, ctaLabel }) {
 /**
  * CHANGE: grouped mega-menu — used by Academics (4 columns: Undergraduate
  * Programs, Postgraduate Programs, Engineering Departments, Academic
- * Resources). Reuses the same `PLRCT-mega` shell/footer as MegaMenu, but
+ * Resources). Reuses the same `plrct-mega` shell/footer as MegaMenu, but
  * renders each group as its own column with a heading.
  */
 function MegaMenuGrouped({ id, groups, isOpen, ctaHref, ctaLabel }) {
   return (
-    <div id={id} role="menu" className={`PLRCT-mega PLRCT-mega--grouped${isOpen ? ' is-open' : ''}`} aria-hidden={!isOpen}>
-      <div className="PLRCT-mega__grid PLRCT-mega__grid--grouped">
+    <div id={id} role="menu" className={`plrct-mega plrct-mega--grouped${isOpen ? ' is-open' : ''}`} aria-hidden={!isOpen}>
+      <div className="plrct-mega__grid plrct-mega__grid--grouped">
         {groups.map((group) => (
-          <div key={group.group} className="PLRCT-mega__column">
-            <p className="PLRCT-mega__column-title">{group.group}</p>
+          <div key={group.group} className="plrct-mega__column">
+            <p className="plrct-mega__column-title">{group.group}</p>
             {group.items.map((item) => (
-              <Link key={item.title} href={item.href} role="menuitem" className="PLRCT-mega__link PLRCT-mega__link--compact" tabIndex={isOpen ? 0 : -1}>
-                <span className="PLRCT-mega__icon PLRCT-mega__icon--sm">
+              <Link key={item.title} href={item.href} role="menuitem" className="plrct-mega__link plrct-mega__link--compact" tabIndex={isOpen ? 0 : -1}>
+                <span className="plrct-mega__icon plrct-mega__icon--sm">
                   <Icon name={item.icon} />
                 </span>
                 <span>
-                  <p className="PLRCT-mega__title">{item.title}</p>
-                  <p className="PLRCT-mega__desc">{item.description}</p>
+                  <p className="plrct-mega__title">{item.title}</p>
+                  <p className="plrct-mega__desc">{item.description}</p>
                 </span>
               </Link>
             ))}
@@ -342,8 +342,8 @@ function MegaMenuGrouped({ id, groups, isOpen, ctaHref, ctaLabel }) {
         ))}
       </div>
       {ctaHref && (
-        <div className="PLRCT-mega__footer">
-          <Link href={ctaHref} className="PLRCT-mega__cta" tabIndex={isOpen ? 0 : -1}>
+        <div className="plrct-mega__footer">
+          <Link href={ctaHref} className="plrct-mega__cta" tabIndex={isOpen ? 0 : -1}>
             {ctaLabel}
             <Icon name="arrow" />
           </Link>
@@ -363,10 +363,10 @@ function NavItem({ item, activeHref }) {
 
   if (!item.mega) {
     return (
-      <li className={`PLRCT-nav__item${isActive ? ' is-active' : ''}`}>
-        <Link href={item.href} className="PLRCT-nav__link">
+      <li className={`plrct-nav__item${isActive ? ' is-active' : ''}`}>
+        <Link href={item.href} className="plrct-nav__link">
           {item.label}
-          {item.badge && <span className="PLRCT-badge">{item.badge}</span>}
+          {item.badge && <span className="plrct-badge">{item.badge}</span>}
         </Link>
       </li>
     );
@@ -377,20 +377,20 @@ function NavItem({ item, activeHref }) {
   return (
     <li
       ref={itemRef}
-      className={`PLRCT-nav__item${isActive ? ' is-active' : ''}${open ? ' is-open' : ''}`}
+      className={`plrct-nav__item${isActive ? ' is-active' : ''}${open ? ' is-open' : ''}`}
       onMouseEnter={openMenu}
       onMouseLeave={closeMenu}
     >
       <button
         type="button"
-        className="PLRCT-nav__link"
+        className="plrct-nav__link"
         aria-haspopup="true"
         aria-expanded={open}
         aria-controls={`mega-${item.mega}`}
         onClick={toggleMenu}
       >
         {item.label}
-        <Icon name="chevron" className="PLRCT-nav__chevron" />
+        <Icon name="chevron" className="plrct-nav__chevron" />
       </button>
       {grouped ? (
         <MegaMenuGrouped id={`mega-${item.mega}`} groups={menuItems} isOpen={open} ctaHref={ctaHref} ctaLabel={ctaLabel} />
@@ -412,11 +412,11 @@ function MobileNavItem({ item, activeHref, onNavigate }) {
 
   if (!item.mega) {
     return (
-      <div className="PLRCT-mobile-item">
-        <div className="PLRCT-mobile-item__row">
-          <Link href={item.href} className="PLRCT-mobile-item__link" onClick={onNavigate}>
+      <div className="plrct-mobile-item">
+        <div className="plrct-mobile-item__row">
+          <Link href={item.href} className="plrct-mobile-item__link" onClick={onNavigate}>
             {item.label}
-            {item.badge && <span className="PLRCT-badge">{item.badge}</span>}
+            {item.badge && <span className="plrct-badge">{item.badge}</span>}
           </Link>
         </div>
       </div>
@@ -426,14 +426,14 @@ function MobileNavItem({ item, activeHref, onNavigate }) {
   const { items: menuItems, grouped } = MEGA_MENUS[item.mega];
 
   return (
-    <div className={`PLRCT-mobile-item${open ? ' is-open' : ''}`}>
-      <div className="PLRCT-mobile-item__row">
-        <Link href={item.href} className="PLRCT-mobile-item__link" onClick={onNavigate}>
+    <div className={`plrct-mobile-item${open ? ' is-open' : ''}`}>
+      <div className="plrct-mobile-item__row">
+        <Link href={item.href} className="plrct-mobile-item__link" onClick={onNavigate}>
           {item.label}
         </Link>
         <button
           type="button"
-          className="PLRCT-mobile-item__toggle"
+          className="plrct-mobile-item__toggle"
           aria-expanded={open}
           aria-label={`${open ? 'Collapse' : 'Expand'} ${item.label} menu`}
           onClick={() => setOpen((prev) => !prev)}
@@ -441,13 +441,13 @@ function MobileNavItem({ item, activeHref, onNavigate }) {
           <Icon name="chevron" />
         </button>
       </div>
-      <div className="PLRCT-mobile-accordion">
+      <div className="plrct-mobile-accordion">
         {grouped
           ? menuItems.map((group) => (
-              <div key={group.group} className="PLRCT-mobile-accordion__group">
-                <p className="PLRCT-mobile-accordion__group-title">{group.group}</p>
+              <div key={group.group} className="plrct-mobile-accordion__group">
+                <p className="plrct-mobile-accordion__group-title">{group.group}</p>
                 {group.items.map((sub) => (
-                  <Link key={sub.title} href={sub.href} className="PLRCT-mobile-accordion__link" onClick={onNavigate}>
+                  <Link key={sub.title} href={sub.href} className="plrct-mobile-accordion__link" onClick={onNavigate}>
                     <strong>{sub.title}</strong>
                     <small>{sub.description}</small>
                   </Link>
@@ -455,7 +455,7 @@ function MobileNavItem({ item, activeHref, onNavigate }) {
               </div>
             ))
           : menuItems.map((sub) => (
-              <Link key={sub.title} href={sub.href} className="PLRCT-mobile-accordion__link" onClick={onNavigate}>
+              <Link key={sub.title} href={sub.href} className="plrct-mobile-accordion__link" onClick={onNavigate}>
                 <strong>{sub.title}</strong>
                 <small>{sub.description}</small>
               </Link>
@@ -472,24 +472,24 @@ function MobileDrawer({ open, onClose, activeHref }) {
 
   return (
     <>
-      <div className={`PLRCT-mobile-scrim${open ? ' is-open' : ''}`} onClick={onClose} aria-hidden="true" />
-      <div ref={drawerRef} className={`PLRCT-mobile-drawer${open ? ' is-open' : ''}`} role="dialog" aria-modal="true" aria-label="Mobile navigation">
-        <div className="PLRCT-mobile-drawer__header">
-          <div className="PLRCT-mobile-drawer__brand">
-            <BrandCrest className="PLRCT-brand__crest" size={34} />
-            <span>PLRCT</span>
+      <div className={`plrct-mobile-scrim${open ? ' is-open' : ''}`} onClick={onClose} aria-hidden="true" />
+      <div ref={drawerRef} className={`plrct-mobile-drawer${open ? ' is-open' : ''}`} role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div className="plrct-mobile-drawer__header">
+          <div className="plrct-mobile-drawer__brand">
+            <BrandCrest className="plrct-brand__crest" size={34} />
+            <span>Pt. L.R. College of Technology</span>
           </div>
-          <button type="button" className="PLRCT-icon-btn" aria-label="Close menu" onClick={onClose} tabIndex={open ? 0 : -1}>
+          <button type="button" className="plrct-icon-btn" aria-label="Close menu" onClick={onClose} tabIndex={open ? 0 : -1}>
             <Icon name="close" />
           </button>
         </div>
-        <nav className="PLRCT-mobile-drawer__body" aria-label="Mobile primary">
+        <nav className="plrct-mobile-drawer__body" aria-label="Mobile primary">
           {VISIBLE_NAV_ITEMS.map((item) => (
             <MobileNavItem key={item.label} item={item} activeHref={activeHref} onNavigate={onClose} />
           ))}
         </nav>
-        <div className="PLRCT-mobile-drawer__footer">
-          <Link href="/apply" className="PLRCT-btn PLRCT-btn--primary" onClick={onClose}>
+        <div className="plrct-mobile-drawer__footer">
+          <Link href="/apply" className="plrct-btn plrct-btn--primary" onClick={onClose}>
             Apply Now
           </Link>
         </div>
@@ -508,34 +508,34 @@ export default function Navbar() {
 
   return (
     <>
-      <a href="#main-content" className="PLRCT-skip-link">
+      <a href="#main-content" className="plrct-skip-link">
         Skip to main content
       </a>
 
-      <header className={`PLRCT-header${scrolled ? ' is-scrolled' : ''}`}>
-        <div className={`PLRCT-topbar${scrolled ? ' is-collapsed' : ''}`}>
-          <div className="PLRCT-topbar__inner">
-            <div className="PLRCT-topbar__left">
-              <span className="PLRCT-topbar__item">AICTE & HSBTE Approved</span>
-              <span className="PLRCT-topbar__divider" aria-hidden="true" />
-              <span className="PLRCT-topbar__item">
+      <header className={`plrct-header${scrolled ? ' is-scrolled' : ''}`}>
+        <div className={`plrct-topbar${scrolled ? ' is-collapsed' : ''}`}>
+          <div className="plrct-topbar__inner">
+            <div className="plrct-topbar__left">
+              <span className="plrct-topbar__item">AICTE & HSBTE Approved</span>
+              <span className="plrct-topbar__divider" aria-hidden="true" />
+              <span className="plrct-topbar__item">
                 <Icon name="pin" />
                 Faridabad, Haryana
               </span>
             </div>
 
-            <div className="PLRCT-topbar__center">
+            <div className="plrct-topbar__center">
               <Icon name="phone" />
               <span>Admission Helpline: +91-9540028828,+91-9540028827</span>
             </div>
 
-            <div className="PLRCT-topbar__right">
-              <a href="mailto:admissions@PLRCT.edu.in" className="PLRCT-topbar__item">
+            <div className="plrct-topbar__right">
+              <a href="mailto:admissions@plrct.edu.in" className="plrct-topbar__item">
                 <Icon name="mail" />
                 ptlr.admission@gmail.com
               </a>
-              <span className="PLRCT-topbar__divider" aria-hidden="true" />
-              <Link href="/admin/login" className="PLRCT-topbar__item">
+              <span className="plrct-topbar__divider" aria-hidden="true" />
+              <Link href="/admin/login" className="plrct-topbar__item">
                 <Icon name="login" />
                 Faculty Login
               </Link>
@@ -543,31 +543,31 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="PLRCT-mainbar">
-          <div className="PLRCT-mainbar__inner">
-            <Link href="/" className="PLRCT-brand" aria-label="PLRCT home">
-              <BrandCrest className="PLRCT-brand__crest" />
-              <span className="PLRCT-brand__text">
-                <span className="PLRCT-brand__name">
+        <div className="plrct-mainbar">
+          <div className="plrct-mainbar__inner">
+            <Link href="/" className="plrct-brand" aria-label="Pt. L.R. College of Technology home">
+              <BrandCrest className="plrct-brand__crest" />
+              <span className="plrct-brand__text">
+                <span className="plrct-brand__name">
                   Pt. L.R. <span>College of Technology</span>
                 </span>
-                <span className="PLRCT-brand__tagline">Excellence in Technical &amp; Professional Education</span>
+                <span className="plrct-brand__tagline">Excellence in Technical &amp; Professional Education</span>
               </span>
             </Link>
 
-            <nav className="PLRCT-nav" aria-label="Primary">
-              <ul className="PLRCT-nav__list">
+            <nav className="plrct-nav" aria-label="Primary">
+              <ul className="plrct-nav__list">
                 {VISIBLE_NAV_ITEMS.map((item) => (
                   <NavItem key={item.label} item={item} activeHref={activeHref} />
                 ))}
               </ul>
             </nav>
 
-            <div className="PLRCT-actions">
-              <Link href="/contact" className="PLRCT-btn PLRCT-btn--primary">
+            <div className="plrct-actions">
+              <Link href="/contact" className="plrct-btn plrct-btn--primary">
                 Enquiry Now
               </Link>
-              <button type="button" className="PLRCT-hamburger" aria-label="Open menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(true)}>
+              <button type="button" className="plrct-hamburger" aria-label="Open menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(true)}>
                 <Icon name="menu" />
               </button>
             </div>

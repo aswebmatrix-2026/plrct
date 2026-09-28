@@ -204,7 +204,7 @@ export const ADMISSIONS_MENU = [
   { title: 'Eligibility', href: '/admissions/eligibility', icon: 'check', description: 'Program-wise eligibility criteria' },
   { title: 'Fee Structure', href: '/admissions/fees', icon: 'rupee', description: 'Transparent, program-wise fee breakup' },
   { title: 'Scholarships', href: '/admissions/scholarships', icon: 'award', description: 'Merit and need-based scholarship schemes' },
-  { title: 'Download Prospectus', href: '/admissions/prospectus', icon: 'download', description: 'Full PLRCT prospectus, PDF format' },
+  { title: 'Download Prospectus', href: '/admissions/prospectus', icon: 'download', description: 'Full Pt. L.R. College of Technology prospectus, PDF format' },
   { title: 'Admission Helpline', href: 'tel:+919876543210', icon: 'phone', description: '+91-98765-43210 — 9 AM to 6 PM, all days' },
 ];
 

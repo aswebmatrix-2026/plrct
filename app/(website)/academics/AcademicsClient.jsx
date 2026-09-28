@@ -70,12 +70,12 @@ export default function AcademicsClient() {
       {/* ------------------------------------------------------------- Hero */}
       <section className="ac-hero" id="top">
         <div className="ac-hero__media ac-grid-bg">
-          <img src="/images/academics/hero-campus.jpg" alt="PLRCT engineering campus and laboratories" />
+          <img src="/images/academics/hero-campus.jpg" alt="Pt. L.R. College of Technology engineering campus and laboratories" />
         </div>
         <div className="ac-hero__scrim" />
         <div className="ac-hero__inner">
           <div className="ac-container">
-            <span className="ac-hero__eyebrow">Academics — PLRCT, Faridabad</span>
+            <span className="ac-hero__eyebrow">Academics — Pt. L.R. College of Technology, Faridabad</span>
             <h1>Engineering &amp; Technical Education Programs</h1>
             <p>
               Industry-focused B.Tech, Diploma Engineering and M.Tech programs with practical
@@ -202,7 +202,7 @@ export default function AcademicsClient() {
               <span className="ac-eyebrow">Diploma Engineering — {diploma.duration}</span>
               <h3>Practical training from day one</h3>
               <p>
-                Diploma Engineering at PLRCT is built for students who want hands-on,
+                Diploma Engineering at Pt. L.R. College of Technology is built for students who want hands-on,
                 workshop-first technical training. Heavy lab and workshop hours, direct
                 industry exposure and a clear lateral-entry pathway into B.Tech make this
                 route ideal for early specialisation.
@@ -220,7 +220,7 @@ export default function AcademicsClient() {
               <span className="ac-eyebrow">M.Tech Engineering — {mtech.duration}</span>
               <h3>Research-driven postgraduate specialisation</h3>
               <p>
-                M.Tech at PLRCT is built around thesis-driven research, specialisation-focused
+                M.Tech at Pt. L.R. College of Technology is built around thesis-driven research, specialisation-focused
                 coursework and industry collaboration, preparing graduates for R&amp;D, academic
                 and senior engineering careers.
               </p>
@@ -300,7 +300,7 @@ export default function AcademicsClient() {
         <div className="ac-container">
           <div className="ac-section-head">
             <span className="ac-eyebrow">Career Opportunities</span>
-            <h2 className="ac-heading-xl">Where PLRCT engineers go next</h2>
+            <h2 className="ac-heading-xl">Where Pt. L.R. College of Technology engineers go next</h2>
           </div>
           <div className="ac-career-grid">
             {CAREERS.map((c) => (
@@ -366,7 +366,7 @@ export default function AcademicsClient() {
         <div className="ac-container">
           <div className="ac-section-head">
             <span className="ac-eyebrow">Quick Answers</span>
-            <h2 className="ac-heading-lg">Common questions about PLRCT engineering programs</h2>
+            <h2 className="ac-heading-lg">Common questions about Pt. L.R. College of Technology engineering programs</h2>
           </div>
           <div className="ac-aeo-grid">
             {AEO_BLOCKS.map((b) => (
@@ -401,7 +401,7 @@ export default function AcademicsClient() {
       <section className="ac-cta ac-grid-bg">
         <div className="ac-container">
           <span className="ac-eyebrow">Admissions Open</span>
-          <h2 className="ac-heading-xl">Build Your Engineering Career with PLRCT</h2>
+          <h2 className="ac-heading-xl">Build Your Engineering Career with Pt. L.R. College of Technology</h2>
           <p>
             Join a leading engineering institution in Faridabad with industry-focused B.Tech,
             Diploma and M.Tech education, modern laboratories, experienced faculty, research

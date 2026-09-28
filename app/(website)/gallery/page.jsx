@@ -7,12 +7,12 @@ import { getPublishedEvents, getFeaturedEvent, getDistinctYears } from "@/lib/ga
 import "@/styles/gallery.css";
 
 export const metadata = {
-  title: "PLRCT Digital Gallery | PLRCT, Faridabad",
+  title: "Pt. L.R. College of Technology Digital Gallery | Pt. L.R. College of Technology, Faridabad",
   description:
-    "Explore campus life, academic events, laboratories, workshops, industrial visits, placements, cultural activities, sports, and memorable moments at PLRCT, Faridabad. Engineering College Gallery Faridabad, Campus Photos Haryana.",
+    "Explore campus life, academic events, laboratories, workshops, industrial visits, placements, cultural activities, sports, and memorable moments at Pt. L.R. College of Technology, Faridabad. Engineering College Gallery Faridabad, Campus Photos Haryana.",
   openGraph: {
-    title: "PLRCT Digital Gallery",
-    description: "Explore campus life and events at PLRCT, Faridabad.",
+    title: "Pt. L.R. College of Technology Digital Gallery",
+    description: "Explore campus life and events at Pt. L.R. College of Technology, Faridabad.",
     type: "website",
   },
 };
@@ -43,11 +43,11 @@ export default async function GalleryPage({ searchParams }) {
       <section className="gallery-hero">
         <div className="gallery-hero-overlay" />
         <div className="gallery-hero-content">
-          <span className="section-kicker light">PLRCT</span>
-          <h1>PLRCT Digital Gallery</h1>
+          <span className="section-kicker light">Pt. L.R. College of Technology</span>
+          <h1>Pt. L.R. College of Technology Digital Gallery</h1>
           <p>
             Explore campus life, academic events, laboratories, workshops, industrial visits, placements,
-            cultural activities, sports, and memorable moments at PLRCT.
+            cultural activities, sports, and memorable moments at Pt. L.R. College of Technology.
           </p>
           <div className="gallery-hero-actions">
             <a href="#latest" className="btn btn-primary">

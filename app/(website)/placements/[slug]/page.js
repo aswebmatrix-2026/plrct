@@ -11,8 +11,8 @@ export async function generateMetadata({ params }) {
   const p = await Placement.findOne({ slug, published: true }).lean();
   if (!p) return {};
   return {
-    title: `${p.companyName} - ${p.jobRole} | PLRCT Placements`,
-    description: p.description?.slice(0, 150) || `${p.companyName} placement drive at PLRCT`,
+    title: `${p.companyName} - ${p.jobRole} | Pt. L.R. College of Technology Placements`,
+    description: p.description?.slice(0, 150) || `${p.companyName} placement drive at Pt. L.R. College of Technology`,
   };
 }
 

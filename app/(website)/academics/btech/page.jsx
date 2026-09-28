@@ -4,24 +4,24 @@ import "./btech.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "B.Tech at PLRCT Faridabad | AICTE Approved Engineering Degree 2026",
+  title: "B.Tech at Pt. L.R. College of Technology Faridabad | AICTE Approved Engineering Degree 2026",
   description:
-    "B.Tech admissions open at PLRCT (PLRCT), Faridabad. AICTE approved 4-year engineering degree in CSE, ECE, ME, CE, EE, AI & ML, IT and Data Science. Modern labs, industry training, strong placements. Serving Faridabad, Ballabgarh, Palwal, Delhi NCR, Gurugram and Noida.",
+    "B.Tech admissions open at Pt. L.R. College of Technology (Pt. L.R. College of Technology), Faridabad. AICTE approved 4-year engineering degree in CSE, ECE, ME, CE, EE, AI & ML, IT and Data Science. Modern labs, industry training, strong placements. Serving Faridabad, Ballabgarh, Palwal, Delhi NCR, Gurugram and Noida.",
   alternates: {
     canonical: "https://ptlrct.com/academics/btech",
   },
   openGraph: {
-    title: "B.Tech at PLRCT Faridabad | AICTE Approved Engineering Degree",
+    title: "B.Tech at Pt. L.R. College of Technology Faridabad | AICTE Approved Engineering Degree",
     description:
-      "4-year AICTE approved B.Tech program at PLRCT, Faridabad. Eight specializations, modern laboratories, and dedicated placement support.",
+      "4-year AICTE approved B.Tech program at Pt. L.R. College of Technology, Faridabad. Eight specializations, modern laboratories, and dedicated placement support.",
     url: "https://ptlrct.com/academics/btech",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/btech-program.jpg",
         width: 1200,
         height: 630,
-        alt: "B.Tech Program at PLRCT Faridabad",
+        alt: "B.Tech Program at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "B.Tech at PLRCT Faridabad | AICTE Approved Engineering Degree",
+    title: "B.Tech at Pt. L.R. College of Technology Faridabad | AICTE Approved Engineering Degree",
     description:
-      "4-year AICTE approved B.Tech program at PLRCT, Faridabad. Eight specializations, modern laboratories, dedicated placement cell.",
+      "4-year AICTE approved B.Tech program at Pt. L.R. College of Technology, Faridabad. Eight specializations, modern laboratories, dedicated placement cell.",
     images: ["https://ptlrct.com/og/btech-program.jpg"],
   },
 };
@@ -55,15 +55,15 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is B.Tech at PLRCT?",
+      name: "What is B.Tech at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "B.Tech at PLRCT is a four-year, AICTE approved undergraduate engineering degree offered by PLRCT, Faridabad, across eight specializations including Computer Science, Electronics, Mechanical, Civil, Electrical, AI & ML, Data Science and Information Technology.",
+        text: "B.Tech at Pt. L.R. College of Technology is a four-year, AICTE approved undergraduate engineering degree offered by Pt. L.R. College of Technology, Faridabad, across eight specializations including Computer Science, Electronics, Mechanical, Civil, Electrical, AI & ML, Data Science and Information Technology.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the eligibility for B.Tech admission at PLRCT?",
+      name: "What is the eligibility for B.Tech admission at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Candidates must have passed 10+2 with Physics, Chemistry and Mathematics from a recognized board, meeting the minimum percentage set by the affiliating university, and qualify through JEE Main or the applicable state counseling process.",
@@ -71,26 +71,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is PLRCT AICTE approved for B.Tech?",
+      name: "Is Pt. L.R. College of Technology AICTE approved for B.Tech?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, PLRCT is an AICTE approved institution affiliated with the relevant state technical university, and its B.Tech programs meet all regulatory requirements for engineering education in Haryana.",
+        text: "Yes, Pt. L.R. College of Technology is an AICTE approved institution affiliated with the relevant state technical university, and its B.Tech programs meet all regulatory requirements for engineering education in Haryana.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the duration of the B.Tech program at PLRCT?",
+      name: "What is the duration of the B.Tech program at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The B.Tech program at PLRCT runs for four years, divided into eight semesters, with an option for direct second-year entry for diploma holders through lateral entry.",
+        text: "The B.Tech program at Pt. L.R. College of Technology runs for four years, divided into eight semesters, with an option for direct second-year entry for diploma holders through lateral entry.",
       },
     },
     {
       "@type": "Question",
-      name: "Which B.Tech specializations does PLRCT offer?",
+      name: "Which B.Tech specializations does Pt. L.R. College of Technology offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT offers B.Tech specializations in Computer Science Engineering, Electronics and Communication Engineering, Mechanical Engineering, Civil Engineering, Electrical Engineering, Artificial Intelligence and Machine Learning, Data Science, and Information Technology.",
+        text: "Pt. L.R. College of Technology offers B.Tech specializations in Computer Science Engineering, Electronics and Communication Engineering, Mechanical Engineering, Civil Engineering, Electrical Engineering, Artificial Intelligence and Machine Learning, Data Science, and Information Technology.",
       },
     },
     {
@@ -98,15 +98,15 @@ const faqSchema = {
       name: "How is placement support provided to B.Tech students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's Training and Placement Cell organizes pre-placement training, aptitude workshops, mock interviews, and on-campus recruitment drives with companies across Delhi NCR, connecting students in Faridabad, Ballabgarh and nearby regions with regional and national employers.",
+        text: "Pt. L.R. College of Technology's Training and Placement Cell organizes pre-placement training, aptitude workshops, mock interviews, and on-campus recruitment drives with companies across Delhi NCR, connecting students in Faridabad, Ballabgarh and nearby regions with regional and national employers.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT provide industrial training for B.Tech students?",
+      name: "Does Pt. L.R. College of Technology provide industrial training for B.Tech students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, B.Tech students at PLRCT complete mandatory industrial training and internships during their program, supported by tie-ups with manufacturing units and IT companies across the Faridabad-Ballabgarh industrial belt and greater Delhi NCR.",
+        text: "Yes, B.Tech students at Pt. L.R. College of Technology complete mandatory industrial training and internships during their program, supported by tie-ups with manufacturing units and IT companies across the Faridabad-Ballabgarh industrial belt and greater Delhi NCR.",
       },
     },
   ],
@@ -115,8 +115,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -198,7 +198,7 @@ export default function BTechPage() {
             <div className="btech-hero__content">
               <div className="btech-hero__text">
                 <p className="eyebrow">PROGRAM · UNDERGRADUATE ENGINEERING</p>
-                <h1>B.Tech at PLRCT, Faridabad</h1>
+                <h1>B.Tech at Pt. L.R. College of Technology, Faridabad</h1>
                 <p className="btech-hero__lede">
                   A four-year, AICTE approved Bachelor of Technology program built for students
                   across Faridabad, Ballabgarh, Palwal and Delhi NCR who want a rigorous
@@ -230,16 +230,16 @@ export default function BTechPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="PLRCT Campus — Academic Block, Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="Pt. L.R. College of Technology Campus — Academic Block, Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">OVERVIEW</p>
-            <h2 id="overview-h">What is B.Tech at PLRCT?</h2>
+            <h2 id="overview-h">What is B.Tech at Pt. L.R. College of Technology?</h2>
             <p>
-              B.Tech at PLRCT is a four-year undergraduate engineering
+              B.Tech at Pt. L.R. College of Technology is a four-year undergraduate engineering
               degree designed around a simple idea: engineers learn best by building things. The
               program combines a rigorous core curriculum in mathematics, applied sciences and
               engineering fundamentals with specialization tracks that let students go deep into
@@ -248,7 +248,7 @@ export default function BTechPage() {
             </p>
             <p>
               Located in Faridabad, on the doorstep of one of North India&apos;s densest
-              industrial and IT corridors, PLRCT is positioned to give students in Faridabad,
+              industrial and IT corridors, Pt. L.R. College of Technology is positioned to give students in Faridabad,
               Ballabgarh, Greater Faridabad, Palwal, Gurugram, Noida and the wider Delhi NCR region
               access to an engineering education that stays connected to real industry practice.
               Faculty mentorship, well-equipped laboratories, structured industrial training and a
@@ -267,7 +267,7 @@ export default function BTechPage() {
         <section className="section section--tint" aria-labelledby="highlights-h">
           <div className="container">
             <p className="eyebrow">KEY HIGHLIGHTS</p>
-            <h2 id="highlights-h">Why students choose the PLRCT B.Tech program</h2>
+            <h2 id="highlights-h">Why students choose the Pt. L.R. College of Technology B.Tech program</h2>
             <div className="card-grid">
               {[
                 {
@@ -309,7 +309,7 @@ export default function BTechPage() {
           <div className="container two-col">
             <div>
               <p className="eyebrow">ELIGIBILITY</p>
-              <h2 id="eligibility-h">Who can apply for B.Tech at PLRCT?</h2>
+              <h2 id="eligibility-h">Who can apply for B.Tech at Pt. L.R. College of Technology?</h2>
               <p>
                 Applicants should have completed 10+2 (or an equivalent qualification) with
                 Physics, Chemistry and Mathematics as core subjects from a recognized board,
@@ -371,7 +371,7 @@ export default function BTechPage() {
             <p className="eyebrow">LABORATORIES &amp; WORKSHOPS</p>
             <h2 id="labs-h">Facilities built for hands-on engineering</h2>
             <p>
-              Theory is only half of an engineering education. PLRCT&apos;s laboratory floors
+              Theory is only half of an engineering education. Pt. L.R. College of Technology&apos;s laboratory floors
               include computer programming and networking labs, electronics and communication
               labs, electrical machines and power systems labs, mechanical workshops with
               fabrication and CNC facilities, civil engineering material-testing and surveying
@@ -430,7 +430,7 @@ export default function BTechPage() {
             <p className="eyebrow">PLACEMENTS &amp; CAREER OPPORTUNITIES</p>
             <h2 id="placements-h">Where the B.Tech degree leads</h2>
             <p>
-              PLRCT&apos;s Training and Placement Cell runs a continuous cycle of aptitude
+              Pt. L.R. College of Technology&apos;s Training and Placement Cell runs a continuous cycle of aptitude
               training, communication workshops, resume clinics and mock interviews starting well
               before final semesters, so students are recruitment-ready when campus drives begin.
               Recruiters from IT services, manufacturing, core engineering and analytics sectors
@@ -443,7 +443,7 @@ export default function BTechPage() {
               analyst and machine learning engineer, production and quality engineer, and network
               and communications engineer — as well as further study through GATE-qualified
               M.Tech admissions, MBA programs, or government engineering services examinations.
-              Students considering postgraduate study can explore PLRCT&apos;s own{" "}
+              Students considering postgraduate study can explore Pt. L.R. College of Technology&apos;s own{" "}
               <a href="/academics/mtech">M.Tech program</a> for a direct continuation path.
             </p>
           </div>
@@ -467,7 +467,7 @@ export default function BTechPage() {
         <section className="section" aria-labelledby="branches-h">
           <div className="container">
             <p className="eyebrow">CHOOSE YOUR SPECIALIZATION</p>
-            <h2 id="branches-h">B.Tech departments at PLRCT</h2>
+            <h2 id="branches-h">B.Tech departments at Pt. L.R. College of Technology</h2>
             <div className="link-grid">
               <a href="/academics/departments/cse">Computer Science Engineering</a>
               <a href="/academics/departments/ece">Electronics &amp; Communication Engineering</a>
@@ -485,13 +485,13 @@ export default function BTechPage() {
         <section className="section section--tint" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">B.Tech at PLRCT — quick answers</h2>
+            <h2 id="faq-h">B.Tech at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>What is B.Tech at PLRCT?</summary>
+                <summary>What is B.Tech at Pt. L.R. College of Technology?</summary>
                 <p>
                   It is a four-year, AICTE approved undergraduate engineering degree offered
-                  across eight specializations at PLRCT, Faridabad.
+                  across eight specializations at Pt. L.R. College of Technology, Faridabad.
                 </p>
               </details>
               <details className="faq-item">
@@ -502,9 +502,9 @@ export default function BTechPage() {
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Is PLRCT AICTE approved?</summary>
+                <summary>Is Pt. L.R. College of Technology AICTE approved?</summary>
                 <p>
-                  Yes. PLRCT is AICTE approved and affiliated with the relevant state technical
+                  Yes. Pt. L.R. College of Technology is AICTE approved and affiliated with the relevant state technical
                   university for all its engineering programs.
                 </p>
               </details>
@@ -516,7 +516,7 @@ export default function BTechPage() {
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Which specializations does PLRCT offer?</summary>
+                <summary>Which specializations does Pt. L.R. College of Technology offer?</summary>
                 <p>
                   CSE, ECE, Mechanical, Civil, Electrical, AI &amp; ML, Data Science and
                   Information Technology.
@@ -531,7 +531,7 @@ export default function BTechPage() {
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Does PLRCT provide industrial training?</summary>
+                <summary>Does Pt. L.R. College of Technology provide industrial training?</summary>
                 <p>
                   Yes, mandatory internships and industrial visits are built into the curriculum,
                   supported by ties to the Faridabad-NCR industrial ecosystem.
@@ -546,7 +546,7 @@ export default function BTechPage() {
           <div className="container final-cta__inner">
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
-              <h2>Start your engineering degree at PLRCT, Faridabad</h2>
+              <h2>Start your engineering degree at Pt. L.R. College of Technology, Faridabad</h2>
               <p>
                 Seats for the upcoming academic year are limited across all eight B.Tech
                 specializations. Speak with our admissions team or begin your application today.

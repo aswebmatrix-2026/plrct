@@ -2,14 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-/**
- * Counter
- * ---------------------------------------------------------------------------
- * Scroll-triggered count-up. Isolated as its own tiny client component so the
- * pages that use it (Overview's stat strip) can otherwise stay server
- * components — only this leaf needs the browser IntersectionObserver.
- * ---------------------------------------------------------------------------
- */
+
+
 export default function Counter({ value, suffix = '', duration = 1400 }) {
   const [display, setDisplay] = useState(0);
   const ref = useRef(null);
@@ -43,7 +37,7 @@ export default function Counter({ value, suffix = '', duration = 1400 }) {
   }, [value, duration]);
 
   return (
-    <span ref={ref} className="PLRCT-counter">
+    <span ref={ref} className="Pt. L.R. College of Technology-counter">
       {display}
       {suffix}
     </span>

@@ -36,9 +36,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "PLRCT Faridabad | Best Engineering & Professional College in Faridabad, Haryana",
+  title: "Pt. L.R. College of Technology Faridabad | Best Engineering & Professional College in Faridabad, Haryana",
   description:
-    "PLRCT (PLRCT), Faridabad — AICTE approved engineering and professional college offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy with modern labs, experienced faculty and strong placement support across Faridabad, Haryana & Delhi NCR.",
+    "Pt. L.R. College of Technology (Pt. L.R. College of Technology), Faridabad — AICTE approved engineering and professional college offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy with modern labs, experienced faculty and strong placement support across Faridabad, Haryana & Delhi NCR.",
   keywords: [
     "Best Engineering College in Faridabad",
     "Top Engineering College in Haryana",
@@ -66,9 +66,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollegeOrUniversity",
-              name: "PLRCT (PLRCT)",
-              alternateName: "PLRCT Faridabad",
-              url: "https://www.PLRCT.ac.in",
+              name: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
+              alternateName: "Pt. L.R. College of Technology Faridabad",
+              url: "https://www.Pt. L.R. College of Technology.ac.in",
               foundingDate: "2011",
               address: {
                 "@type": "PostalAddress",

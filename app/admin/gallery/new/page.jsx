@@ -4,7 +4,7 @@ import { authOptions } from "@/lib/authOptions";
 import AlbumForm from "@/components/gallery/AlbumForm";
 import "@/styles/gallery-dashboard.css";
 
-export const metadata = { title: "Create Gallery Event | PLRCT Admin" };
+export const metadata = { title: "Create Gallery Event | Pt. L.R. College of Technology Admin" };
 
 export default async function NewGalleryEventPage() {
   const session = await getServerSession(authOptions);

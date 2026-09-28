@@ -1,14 +1,10 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/aboutData';
 
-/* -----------------------------------------------------------------------
- * Breadcrumb — visible trail + BreadcrumbList JSON-LD in one place, so
- * every About page gets identical schema without hand-rolling it per file.
- * Rendered server-side only (no client state), so there's no hydration
- * mismatch risk with the raw <script> tag.
- * -------------------------------------------------------------------- */
 export function AboutBreadcrumb({ trail }) {
-  // trail: [{ label, href }] — last item has no href (current page)
+ 
+
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -21,7 +17,7 @@ export function AboutBreadcrumb({ trail }) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="PLRCT-about-crumb">
+    <nav aria-label="Breadcrumb" className="plrct-about-crumb">
       <ol>
         {trail.map((item, i) => (
           <li key={item.label}>
@@ -53,13 +49,13 @@ export function AeoBlock({ items, heading = 'Quick Answers' }) {
   };
 
   return (
-    <section className="PLRCT-about-aeo" aria-label={heading}>
-      <p className="PLRCT-about-aeo__eyebrow">{heading}</p>
-      <div className="PLRCT-about-aeo__grid">
+    <section className="plrct-about-aeo" aria-label={heading}>
+      <p className="plrct-about-aeo__eyebrow">{heading}</p>
+      <div className="plrct-about-aeo__grid">
         {items.map((item) => (
-          <div className="PLRCT-about-aeo__item" key={item.q}>
-            <p className="PLRCT-about-aeo__q">{item.q}</p>
-            <p className="PLRCT-about-aeo__a">{item.a}</p>
+          <div className="plrct-about-aeo__item" key={item.q}>
+            <p className="plrct-about-aeo__q">{item.q}</p>
+            <p className="plrct-about-aeo__a">{item.a}</p>
           </div>
         ))}
       </div>
@@ -69,19 +65,17 @@ export function AeoBlock({ items, heading = 'Quick Answers' }) {
   );
 }
 
-/* -----------------------------------------------------------------------
- * CTA band — identical closing section across all five pages, per brief.
- * -------------------------------------------------------------------- */
+
 export function AboutCta() {
   return (
-    <section className="PLRCT-about-cta">
-      <div className="PLRCT-about-cta__inner">
-        <h2>Begin Your Academic Journey with PLRCT</h2>
+    <section className="plrct-about-cta">
+      <div className="plrct-about-cta__inner">
+        <h2>Begin Your Academic Journey with Pt. L.R. College of Technology</h2>
         <p>Admissions for the upcoming session are open across B.Tech, Diploma, BCA, BBA, MBA, and Pharmacy programs.</p>
-        <div className="PLRCT-about-cta__actions">
-          <Link href="/apply" className="PLRCT-btn PLRCT-btn--primary">Apply Now</Link>
-          <Link href="/admissions/prospectus" className="PLRCT-btn PLRCT-btn--secondary">Download Brochure</Link>
-          <Link href="/contact" className="PLRCT-btn PLRCT-btn--ghost">Contact Admissions</Link>
+        <div className="plrct-about-cta__actions">
+          <Link href="/apply" className="plrct-btn plrct-btn--primary">Apply Now</Link>
+          <Link href="/admissions/prospectus" className="plrct-btn plrct-btn--secondary">Download Brochure</Link>
+          <Link href="/contact" className="plrct-btn plrct-btn--ghost">Contact Admissions</Link>
         </div>
       </div>
     </section>
@@ -94,20 +88,20 @@ export function AboutCta() {
  * -------------------------------------------------------------------- */
 export function AboutFooterPreview() {
   return (
-    <footer className="PLRCT-about-footer">
-      <div className="PLRCT-about-footer__inner">
+    <footer className="plrct-about-footer">
+      <div className="plrct-about-footer__inner">
         <div>
-          <p className="PLRCT-about-footer__name">{SITE.name}</p>
+          <p className="plrct-about-footer__name">{SITE.name}</p>
           <p>{SITE.locality}, {SITE.city}, {SITE.region} — {SITE.metro}</p>
         </div>
-        <nav aria-label="About section links" className="PLRCT-about-footer__links">
+        <nav aria-label="About section links" className="plrct-about-footer__links">
           <Link href="/about/overview">Overview</Link>
           <Link href="/about/infrastructure">Infrastructure</Link>
           <Link href="/about/messages">Messages</Link>
           <Link href="/about/affiliations">Affiliations</Link>
           <Link href="/about/vision-mission">Vision &amp; Mission</Link>
         </nav>
-        <div className="PLRCT-about-footer__contact">
+        <div className="plrct-about-footer__contact">
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`}>{SITE.phone}</a>
         </div>

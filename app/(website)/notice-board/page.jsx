@@ -5,11 +5,11 @@ import "@/styles/notice-board.css";
 export const metadata = {
   title: "Notice Board",
   description:
-    "Official digital notice board of PLRCT, Faridabad. Browse admission notices, examination schedules, academic announcements, placement drives, scholarships, circulars, tenders and recruitment notices.",
+    "Official digital notice board of Pt. L.R. College of Technology, Faridabad. Browse admission notices, examination schedules, academic announcements, placement drives, scholarships, circulars, tenders and recruitment notices.",
   openGraph: {
-    title: "PLRCT Notice Board — PLRCT, Faridabad",
+    title: "Pt. L.R. College of Technology Notice Board — Pt. L.R. College of Technology, Faridabad",
     description:
-      "Stay updated with the latest admission, examination, academic, placement and scholarship notices from PLRCT.",
+      "Stay updated with the latest admission, examination, academic, placement and scholarship notices from Pt. L.R. College of Technology.",
     type: "website",
   },
   alternates: { canonical: "/notice-board" },
@@ -37,7 +37,7 @@ export default function NoticeBoardPage() {
         <p className="board-hero__subtitle">
           Stay updated with admission notifications, examination schedules, academic
           announcements, placement drives, scholarships, workshops, and official circulars
-          from PLRCT, Faridabad.
+          from Pt. L.R. College of Technology, Faridabad.
         </p>
       </section>
 

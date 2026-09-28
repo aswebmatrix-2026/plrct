@@ -3,7 +3,7 @@ import NoticeTable from "@/components/admin/NoticeTable";
 import "@/styles/notice-dashboard.css";
 
 export const metadata = {
-  title: "Notice Management | PLRCT Admin",
+  title: "Notice Management | Pt. L.R. College of Technology Admin",
   robots: { index: false, follow: false },
 };
 
@@ -13,7 +13,7 @@ export default function AdminNoticesPage() {
       <div className="dashboard__header">
         <div>
           <h1 className="dashboard__title">Notice Management</h1>
-          <p className="dashboard__subtitle">Create, publish, and track every notice on the PLRCT digital notice board.</p>
+          <p className="dashboard__subtitle">Create, publish, and track every notice on the Pt. L.R. College of Technology digital notice board.</p>
         </div>
       </div>
 

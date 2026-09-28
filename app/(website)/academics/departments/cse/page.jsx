@@ -4,24 +4,24 @@ import "./cse.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "Computer Science Engineering Faridabad | Best CSE College PLRCT Haryana",
+  title: "Computer Science Engineering Faridabad | Best CSE College Pt. L.R. College of Technology Haryana",
   description:
-    "Computer Science Engineering (CSE) at PLRCT, Faridabad — AICTE approved software engineering course with programming, AI, cloud and cybersecurity labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
+    "Computer Science Engineering (CSE) at Pt. L.R. College of Technology, Faridabad — AICTE approved software engineering course with programming, AI, cloud and cybersecurity labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/departments/cse",
   },
   openGraph: {
-    title: "Computer Science Engineering (CSE) at PLRCT Faridabad",
+    title: "Computer Science Engineering (CSE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved CSE department at PLRCT, Faridabad, with dedicated programming, database, AI, cloud and cybersecurity laboratories.",
+      "AICTE approved CSE department at Pt. L.R. College of Technology, Faridabad, with dedicated programming, database, AI, cloud and cybersecurity laboratories.",
     url: "https://ptlrct.com/academics/departments/cse",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/cse-department.jpg",
         width: 1200,
         height: 630,
-        alt: "Computer Science Engineering Department at PLRCT Faridabad",
+        alt: "Computer Science Engineering Department at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Computer Science Engineering (CSE) at PLRCT Faridabad",
+    title: "Computer Science Engineering (CSE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved CSE department at PLRCT, Faridabad, with programming, database, AI, cloud and cybersecurity laboratories and strong placement support.",
+      "AICTE approved CSE department at Pt. L.R. College of Technology, Faridabad, with programming, database, AI, cloud and cybersecurity laboratories and strong placement support.",
     images: ["https://ptlrct.com/og/cse-department.jpg"],
   },
 };
@@ -56,26 +56,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is CSE at PLRCT?",
+      name: "What is CSE at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Computer Science Engineering at PLRCT is an AICTE approved B.Tech department in Faridabad covering programming, data structures, databases, artificial intelligence, cloud computing and cybersecurity, supported by dedicated laboratories and industry mentoring.",
+        text: "Computer Science Engineering at Pt. L.R. College of Technology is an AICTE approved B.Tech department in Faridabad covering programming, data structures, databases, artificial intelligence, cloud computing and cybersecurity, supported by dedicated laboratories and industry mentoring.",
       },
     },
     {
       "@type": "Question",
-      name: "Is PLRCT a good CSE college in Haryana?",
+      name: "Is Pt. L.R. College of Technology a good CSE college in Haryana?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's CSE department combines an AICTE approved curriculum, five dedicated laboratories, structured industry collaboration and a focused Training and Placement Cell, making it a strong option among CSE colleges in Faridabad and the wider Haryana region.",
+        text: "Pt. L.R. College of Technology's CSE department combines an AICTE approved curriculum, five dedicated laboratories, structured industry collaboration and a focused Training and Placement Cell, making it a strong option among CSE colleges in Faridabad and the wider Haryana region.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the eligibility for CSE admission at PLRCT?",
+      name: "What is the eligibility for CSE admission at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Admission to the CSE department follows PLRCT's B.Tech eligibility: 10+2 with Physics, Chemistry and Mathematics at the required percentage, along with a valid JEE Main score or the applicable state counseling process.",
+        text: "Admission to the CSE department follows Pt. L.R. College of Technology's B.Tech eligibility: 10+2 with Physics, Chemistry and Mathematics at the required percentage, along with a valid JEE Main score or the applicable state counseling process.",
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "What laboratories does the CSE department have?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The CSE department at PLRCT operates a Programming Lab, Database Lab, AI Lab, Cloud Computing Lab and Cybersecurity Lab, giving students hands-on practice across the discipline's major areas.",
+        text: "The CSE department at Pt. L.R. College of Technology operates a Programming Lab, Database Lab, AI Lab, Cloud Computing Lab and Cybersecurity Lab, giving students hands-on practice across the discipline's major areas.",
       },
     },
     {
@@ -91,12 +91,12 @@ const faqSchema = {
       name: "What career opportunities are available after CSE?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "CSE graduates from PLRCT can pursue roles such as software engineer, AI engineer, data scientist, cloud engineer and cybersecurity analyst, along with government exams, PSU opportunities, higher studies or entrepreneurship.",
+        text: "CSE graduates from Pt. L.R. College of Technology can pursue roles such as software engineer, AI engineer, data scientist, cloud engineer and cybersecurity analyst, along with government exams, PSU opportunities, higher studies or entrepreneurship.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT's CSE department offer industry collaboration?",
+      name: "Does Pt. L.R. College of Technology's CSE department offer industry collaboration?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, the CSE department maintains collaboration with IT and software companies across Faridabad, Gurugram, Noida and Delhi NCR for internships, guest sessions and placement drives.",
@@ -104,7 +104,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What software course is taught in CSE at PLRCT?",
+      name: "What software course is taught in CSE at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "The CSE curriculum covers a full software engineering course including programming languages, data structures, algorithms, database management, operating systems, software engineering practices, AI and machine learning, and cloud computing.",
@@ -115,7 +115,7 @@ const faqSchema = {
       name: "What is the placement support for CSE students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's Training and Placement Cell provides CSE students with aptitude training, technical interview preparation, resume building support and coordinated on-campus recruitment drives with IT and product companies.",
+        text: "Pt. L.R. College of Technology's Training and Placement Cell provides CSE students with aptitude training, technical interview preparation, resume building support and coordinated on-campus recruitment drives with IT and product companies.",
       },
     },
   ],
@@ -124,8 +124,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -197,7 +197,7 @@ export default function CSEPage() {
                 </p>
                 <div className="cse-hero__cta">
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
-                  <a href="/downloads/PLRCT-brochure-cse.pdf" className="btn btn--ghost">Download Brochure</a>
+                  <a href="/downloads/Pt. L.R. College of Technology-brochure-cse.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
 
@@ -215,16 +215,16 @@ export default function CSEPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="CSE Department Building — PLRCT Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="CSE Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">DEPARTMENT OVERVIEW</p>
-            <h2 id="overview-h">What is CSE at PLRCT?</h2>
+            <h2 id="overview-h">What is CSE at Pt. L.R. College of Technology?</h2>
             <p>
-              The Computer Science Engineering department at PLRCT has
+              The Computer Science Engineering department at Pt. L.R. College of Technology has
               grown alongside Faridabad's own transformation into a technology and software hub
               within Delhi NCR. What began as a foundational programming curriculum has expanded
               into a full software engineering course covering data structures, databases,
@@ -236,7 +236,7 @@ export default function CSEPage() {
               taught in a classroom is reinforced in a lab. Students don't just learn what a
               database index is; they build one. This industry relevance is deliberate — as one
               of the AICTE approved CSE colleges serving Faridabad, Ballabgarh, Gurugram, Noida
-              and the wider Haryana region, PLRCT's CSE department is positioned to place graduates
+              and the wider Haryana region, Pt. L.R. College of Technology's CSE department is positioned to place graduates
               directly into the software and IT ecosystem that surrounds the campus.
             </p>
             <p>
@@ -275,7 +275,7 @@ export default function CSEPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE CSE AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE CSE AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">Built for graduates who can actually ship code</h2>
             <div className="card-grid">
               {[
@@ -392,7 +392,7 @@ export default function CSEPage() {
               <p>
                 Student projects range from web and mobile applications to machine learning
                 models and security tools, many developed under faculty guidance with an eye
-                toward publication or further research through PLRCT's{" "}
+                toward publication or further research through Pt. L.R. College of Technology's{" "}
                 <a href="/academics/mtech">M.Tech program</a>.
               </p>
             </div>
@@ -485,14 +485,14 @@ export default function CSEPage() {
         <section className="section" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">CSE at PLRCT — quick answers</h2>
+            <h2 id="faq-h">CSE at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>What is CSE at PLRCT?</summary>
+                <summary>What is CSE at Pt. L.R. College of Technology?</summary>
                 <p>An AICTE approved B.Tech department in Faridabad covering programming, databases, AI, cloud computing and cybersecurity.</p>
               </details>
               <details className="faq-item">
-                <summary>Is PLRCT a good CSE college in Haryana?</summary>
+                <summary>Is Pt. L.R. College of Technology a good CSE college in Haryana?</summary>
                 <p>Yes — an AICTE approved curriculum, five dedicated labs, industry collaboration and a focused placement cell support strong outcomes.</p>
               </details>
               <details className="faq-item">
@@ -512,7 +512,7 @@ export default function CSEPage() {
                 <p>Yes, with IT and software companies across Faridabad, Gurugram, Noida and Delhi NCR for internships and placements.</p>
               </details>
               <details className="faq-item">
-                <summary>What software engineering course does PLRCT teach?</summary>
+                <summary>What software engineering course does Pt. L.R. College of Technology teach?</summary>
                 <p>Programming, data structures, algorithms, databases, operating systems, software engineering, AI/ML and cloud computing.</p>
               </details>
               <details className="faq-item">
@@ -521,7 +521,7 @@ export default function CSEPage() {
               </details>
               <details className="faq-item">
                 <summary>Can CSE students pursue higher studies?</summary>
-                <p>Yes, through PLRCT's M.Tech program or external postgraduate and research programs.</p>
+                <p>Yes, through Pt. L.R. College of Technology's M.Tech program or external postgraduate and research programs.</p>
               </details>
               <details className="faq-item">
                 <summary>Does the department support student research?</summary>
@@ -536,12 +536,12 @@ export default function CSEPage() {
           <div className="container final-cta__inner">
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
-              <h2>Start your Computer Science Engineering journey at PLRCT</h2>
+              <h2>Start your Computer Science Engineering journey at Pt. L.R. College of Technology</h2>
               <p>Seats in the CSE department are limited for the upcoming academic year. Apply now or download the department brochure.</p>
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">Apply Now</a>
-              <a href="/downloads/PLRCT-brochure-cse.pdf" className="btn btn--outline-light">Download Brochure</a>
+              <a href="/downloads/Pt. L.R. College of Technology-brochure-cse.pdf" className="btn btn--outline-light">Download Brochure</a>
             </div>
           </div>
         </section>

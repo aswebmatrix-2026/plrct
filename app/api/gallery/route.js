@@ -126,7 +126,7 @@ export async function POST(request) {
     featured: !!body.featured,
     showOnHomepage: !!body.showOnHomepage,
     status: body.status === "published" ? "published" : "draft",
-    metaTitle: body.metaTitle || `${body.eventName} | PLRCT Gallery`,
+    metaTitle: body.metaTitle || `${body.eventName} | Pt. L.R. College of Technology Gallery`,
     metaDescription: body.metaDescription || body.shortDescription,
     createdBy: session.user.email || session.user.name || "admin",
   });

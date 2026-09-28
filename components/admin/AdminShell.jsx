@@ -29,7 +29,7 @@ export default function AdminShell({ children }) {
               P
             </div>
             <div>
-              <p className="font-display font-bold leading-tight">PLRCT</p>
+              <p className="font-display font-bold leading-tight">Pt. L.R. College of Technology</p>
               <p className="text-xs text-gray-500 leading-tight">Admin Panel</p>
             </div>
           </div>

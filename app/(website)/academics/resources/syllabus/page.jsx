@@ -8,41 +8,41 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.plrct.edu.in";
 const PAGE_URL = `${SITE_URL}/academics/resources/syllabus`;
 
 export const metadata = {
-  title: "PLRCT Syllabus — B.Tech, Diploma & M.Tech Engineering Syllabus | Pt. L.R. College of Technology",
+  title: "Pt. L.R. College of Technology Syllabus — B.Tech, Diploma & M.Tech Engineering Syllabus | Pt. L.R. College of Technology",
   description:
-    "Download the latest B.Tech, Diploma and M.Tech engineering syllabus from Pt. L.R. College of Technology (PLRCT), Faridabad. Semester-wise syllabus for CSE, EE, ME, CE, ECE, AIML and more.",
+    "Download the latest B.Tech, Diploma and M.Tech engineering syllabus from Pt. L.R. College of Technology (Pt. L.R. College of Technology), Faridabad. Semester-wise syllabus for CSE, EE, ME, CE, ECE, AIML and more.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "PLRCT Academic Syllabus — B.Tech, Diploma & M.Tech Engineering",
+    title: "Pt. L.R. College of Technology Academic Syllabus — B.Tech, Diploma & M.Tech Engineering",
     description:
-      "Explore and download semester-wise engineering syllabus for all PLRCT programs in Faridabad, Haryana.",
+      "Explore and download semester-wise engineering syllabus for all Pt. L.R. College of Technology programs in Faridabad, Haryana.",
     url: PAGE_URL,
     siteName: "Pt. L.R. College of Technology",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PLRCT Academic Syllabus",
+    title: "Pt. L.R. College of Technology Academic Syllabus",
     description:
-      "Download semester-wise B.Tech, Diploma and M.Tech engineering syllabus from PLRCT, Faridabad.",
+      "Download semester-wise B.Tech, Diploma and M.Tech engineering syllabus from Pt. L.R. College of Technology, Faridabad.",
   },
 };
 
 const FAQ_ITEMS = [
   {
-    q: "Where can I find the PLRCT syllabus?",
-    a: "The complete PLRCT syllabus for all engineering programs is available on this page. Use the program cards or the search and filter tools below to find the syllabus for your specific department and semester.",
+    q: "Where can I find the Pt. L.R. College of Technology syllabus?",
+    a: "The complete Pt. L.R. College of Technology syllabus for all engineering programs is available on this page. Use the program cards or the search and filter tools below to find the syllabus for your specific department and semester.",
   },
   {
     q: "How can I download the B.Tech syllabus?",
     a: "Select B.Tech Engineering from the program cards or filters, find your department and semester, then click \"Download\" on the syllabus card to save the PDF directly.",
   },
   {
-    q: "Does PLRCT provide Diploma Engineering syllabus?",
-    a: "Yes. PLRCT publishes semester-wise Diploma Engineering syllabus for all its diploma departments, available for viewing and download on this page.",
+    q: "Does Pt. L.R. College of Technology provide Diploma Engineering syllabus?",
+    a: "Yes. Pt. L.R. College of Technology publishes semester-wise Diploma Engineering syllabus for all its diploma departments, available for viewing and download on this page.",
   },
   {
-    q: "Does PLRCT offer M.Tech syllabus?",
+    q: "Does Pt. L.R. College of Technology offer M.Tech syllabus?",
     a: "Yes. Postgraduate M.Tech syllabus documents, including specialisations, are published here and can be filtered by department and semester.",
   },
   {
@@ -70,7 +70,7 @@ function StructuredData() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "Pt. L.R. College of Technology",
-    alternateName: "PLRCT",
+    alternateName: "Pt. L.R. College of Technology",
     url: SITE_URL,
     address: {
       "@type": "PostalAddress",
@@ -115,7 +115,7 @@ export default function SyllabusPage() {
           Explore the latest syllabus and academic curriculum for B.Tech, Diploma and M.Tech
           engineering programs at Pt. L.R. College of Technology.
         </p>
-        <div className="syllabus-hero__image" role="img" aria-label="PLRCT campus and academics illustration">
+        <div className="syllabus-hero__image" role="img" aria-label="Pt. L.R. College of Technology campus and academics illustration">
           Hero image placeholder
         </div>
         <a href="#syllabus-search" className="syllabus-hero__cta">Explore Syllabus</a>
@@ -144,7 +144,7 @@ export default function SyllabusPage() {
       <p className="syllabus-geo-note">
         Students searching for B.Tech and Diploma Engineering syllabus in Faridabad and the Delhi
         NCR region — including nearby areas like Ballabgarh and Greater Faridabad — can access the
-        latest academic documents through the PLRCT syllabus portal.
+        latest academic documents through the Pt. L.R. College of Technology syllabus portal.
       </p>
 
       <section className="syllabus-faq" aria-label="Frequently asked questions">

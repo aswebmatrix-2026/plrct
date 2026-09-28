@@ -4,24 +4,24 @@ import "./ee.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "Electrical Engineering Faridabad | Best EE College PLRCT Haryana",
+  title: "Electrical Engineering Faridabad | Best EE College Pt. L.R. College of Technology Haryana",
   description:
-    "Electrical Engineering (EE) at PLRCT, Faridabad — AICTE approved power engineering course with electrical machines, power systems, control systems, power electronics and renewable energy labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
+    "Electrical Engineering (EE) at Pt. L.R. College of Technology, Faridabad — AICTE approved power engineering course with electrical machines, power systems, control systems, power electronics and renewable energy labs, industry mentoring and strong placement support. Serving Faridabad, Ballabgarh and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/departments/ee",
   },
   openGraph: {
-    title: "Electrical Engineering (EE) at PLRCT Faridabad",
+    title: "Electrical Engineering (EE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved EE department at PLRCT, Faridabad, with dedicated electrical machines, power systems, control systems, power electronics and renewable energy laboratories.",
+      "AICTE approved EE department at Pt. L.R. College of Technology, Faridabad, with dedicated electrical machines, power systems, control systems, power electronics and renewable energy laboratories.",
     url: "https://ptlrct.com/academics/departments/ee",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/ee-department.jpg",
         width: 1200,
         height: 630,
-        alt: "Electrical Engineering Department at PLRCT Faridabad",
+        alt: "Electrical Engineering Department at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Electrical Engineering (EE) at PLRCT Faridabad",
+    title: "Electrical Engineering (EE) at Pt. L.R. College of Technology Faridabad",
     description:
-      "AICTE approved EE department at PLRCT, Faridabad, with power systems, electrical machines, control systems and renewable energy laboratories and strong placement support.",
+      "AICTE approved EE department at Pt. L.R. College of Technology, Faridabad, with power systems, electrical machines, control systems and renewable energy laboratories and strong placement support.",
     images: ["https://ptlrct.com/og/ee-department.jpg"],
   },
 };
@@ -56,26 +56,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Electrical Engineering at PLRCT?",
+      name: "What is Electrical Engineering at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Electrical Engineering at PLRCT is an AICTE approved B.Tech department in Faridabad covering electrical circuits, machines, power systems, control systems, power electronics and renewable energy, supported by dedicated laboratories and industry mentoring.",
+        text: "Electrical Engineering at Pt. L.R. College of Technology is an AICTE approved B.Tech department in Faridabad covering electrical circuits, machines, power systems, control systems, power electronics and renewable energy, supported by dedicated laboratories and industry mentoring.",
       },
     },
     {
       "@type": "Question",
-      name: "Is PLRCT a good Electrical Engineering college in Haryana?",
+      name: "Is Pt. L.R. College of Technology a good Electrical Engineering college in Haryana?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's EE department combines an AICTE approved curriculum, five dedicated laboratories, structured industry collaboration and a focused Training and Placement Cell, making it a strong option among Electrical Engineering colleges in Faridabad and the wider Haryana region.",
+        text: "Pt. L.R. College of Technology's EE department combines an AICTE approved curriculum, five dedicated laboratories, structured industry collaboration and a focused Training and Placement Cell, making it a strong option among Electrical Engineering colleges in Faridabad and the wider Haryana region.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the eligibility for Electrical Engineering admission at PLRCT?",
+      name: "What is the eligibility for Electrical Engineering admission at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Admission to the EE department follows PLRCT's B.Tech eligibility: 10+2 with Physics, Chemistry and Mathematics at the required percentage, along with a valid JEE Main score or the applicable state counseling process.",
+        text: "Admission to the EE department follows Pt. L.R. College of Technology's B.Tech eligibility: 10+2 with Physics, Chemistry and Mathematics at the required percentage, along with a valid JEE Main score or the applicable state counseling process.",
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "What laboratories does the Electrical Engineering department have?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The EE department at PLRCT operates an Electrical Machines Lab, Power Systems Lab, Control Systems Lab, Power Electronics Lab and Renewable Energy Lab, giving students hands-on practice across the discipline's major areas.",
+        text: "The EE department at Pt. L.R. College of Technology operates an Electrical Machines Lab, Power Systems Lab, Control Systems Lab, Power Electronics Lab and Renewable Energy Lab, giving students hands-on practice across the discipline's major areas.",
       },
     },
     {
@@ -91,12 +91,12 @@ const faqSchema = {
       name: "What career opportunities are available after Electrical Engineering?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "EE graduates from PLRCT can pursue roles such as electrical design engineer, power systems engineer, control engineer, automation engineer and renewable energy engineer, along with government exams, PSU opportunities, higher studies or entrepreneurship.",
+        text: "EE graduates from Pt. L.R. College of Technology can pursue roles such as electrical design engineer, power systems engineer, control engineer, automation engineer and renewable energy engineer, along with government exams, PSU opportunities, higher studies or entrepreneurship.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT's Electrical Engineering department offer industry collaboration?",
+      name: "Does Pt. L.R. College of Technology's Electrical Engineering department offer industry collaboration?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, the EE department maintains collaboration with power and electrical companies across Faridabad, Gurugram, Noida and Delhi NCR for internships, guest sessions and placement drives.",
@@ -104,7 +104,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What core course does PLRCT teach in Electrical Engineering?",
+      name: "What core course does Pt. L.R. College of Technology teach in Electrical Engineering?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "The EE curriculum covers a full power engineering course including electrical circuits, network theory, electrical machines, power systems, control systems, power electronics, renewable energy systems and industrial automation.",
@@ -115,7 +115,7 @@ const faqSchema = {
       name: "What is the placement support for Electrical Engineering students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT's Training and Placement Cell provides EE students with aptitude training, technical interview preparation, resume building support and coordinated on-campus recruitment drives with power and electrical companies.",
+        text: "Pt. L.R. College of Technology's Training and Placement Cell provides EE students with aptitude training, technical interview preparation, resume building support and coordinated on-campus recruitment drives with power and electrical companies.",
       },
     },
   ],
@@ -124,8 +124,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -197,7 +197,7 @@ export default function EEPage() {
                 </p>
                 <div className="ee-hero__cta">
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
-                  <a href="/downloads/PLRCT-brochure-ee.pdf" className="btn btn--ghost">Download Brochure</a>
+                  <a href="/downloads/Pt. L.R. College of Technology-brochure-ee.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
 
@@ -215,16 +215,16 @@ export default function EEPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="EE Department Building — PLRCT Faridabad" ratio="21/9" />
+          <ImgPlaceholder label="EE Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">DEPARTMENT OVERVIEW</p>
-            <h2 id="overview-h">What is Electrical Engineering at PLRCT?</h2>
+            <h2 id="overview-h">What is Electrical Engineering at Pt. L.R. College of Technology?</h2>
             <p>
-              The Electrical Engineering department at PLRCT has grown
+              The Electrical Engineering department at Pt. L.R. College of Technology has grown
               alongside Faridabad's own standing as an industrial and power-equipment hub within
               Delhi NCR. What began as a foundational circuits and machines curriculum has
               expanded into a full power engineering course covering network theory, electrical
@@ -236,7 +236,7 @@ export default function EEPage() {
               taught in a classroom is reinforced in a lab. Students don't just learn what a
               transformer does; they test one. This industry relevance is deliberate — as one of
               the AICTE approved Electrical Engineering colleges serving Faridabad, Ballabgarh,
-              Gurugram, Noida and the wider Haryana region, PLRCT's EE department is positioned to
+              Gurugram, Noida and the wider Haryana region, Pt. L.R. College of Technology's EE department is positioned to
               place graduates directly into the power and electrical ecosystem that surrounds the
               campus.
             </p>
@@ -276,7 +276,7 @@ export default function EEPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE EE AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE EE AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">Built for graduates who can actually run the grid</h2>
             <div className="card-grid">
               {[
@@ -392,7 +392,7 @@ export default function EEPage() {
               <p>
                 Student projects range from smart energy meters and solar monitoring systems to
                 EV charging setups and industrial motor control, many developed under faculty
-                guidance with an eye toward publication or further research through PLRCT's{" "}
+                guidance with an eye toward publication or further research through Pt. L.R. College of Technology's{" "}
                 <a href="/academics/mtech">M.Tech program</a>.
               </p>
             </div>
@@ -485,14 +485,14 @@ export default function EEPage() {
         <section className="section" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">EE at PLRCT — quick answers</h2>
+            <h2 id="faq-h">EE at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>What is Electrical Engineering at PLRCT?</summary>
+                <summary>What is Electrical Engineering at Pt. L.R. College of Technology?</summary>
                 <p>An AICTE approved B.Tech department in Faridabad covering circuits, machines, power systems, control systems and renewable energy.</p>
               </details>
               <details className="faq-item">
-                <summary>Is PLRCT a good Electrical Engineering college in Haryana?</summary>
+                <summary>Is Pt. L.R. College of Technology a good Electrical Engineering college in Haryana?</summary>
                 <p>Yes — an AICTE approved curriculum, five dedicated labs, industry collaboration and a focused placement cell support strong outcomes.</p>
               </details>
               <details className="faq-item">
@@ -512,7 +512,7 @@ export default function EEPage() {
                 <p>Yes, with power and electrical companies across Faridabad, Gurugram, Noida and Delhi NCR for internships and placements.</p>
               </details>
               <details className="faq-item">
-                <summary>What core course does PLRCT teach in EE?</summary>
+                <summary>What core course does Pt. L.R. College of Technology teach in EE?</summary>
                 <p>Electrical circuits, network theory, electrical machines, power systems, control systems, power electronics and renewable energy systems.</p>
               </details>
               <details className="faq-item">
@@ -521,7 +521,7 @@ export default function EEPage() {
               </details>
               <details className="faq-item">
                 <summary>Can EE students pursue higher studies?</summary>
-                <p>Yes, through PLRCT's M.Tech program or external postgraduate and research programs.</p>
+                <p>Yes, through Pt. L.R. College of Technology's M.Tech program or external postgraduate and research programs.</p>
               </details>
               <details className="faq-item">
                 <summary>Does the department support student research?</summary>
@@ -536,12 +536,12 @@ export default function EEPage() {
           <div className="container final-cta__inner">
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
-              <h2>Start your Electrical Engineering journey at PLRCT</h2>
+              <h2>Start your Electrical Engineering journey at Pt. L.R. College of Technology</h2>
               <p>Seats in the EE department are limited for the upcoming academic year. Apply now or download the department brochure.</p>
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">Apply Now</a>
-              <a href="/downloads/PLRCT-brochure-ee.pdf" className="btn btn--outline-light">Download Brochure</a>
+              <a href="/downloads/Pt. L.R. College of Technology-brochure-ee.pdf" className="btn btn--outline-light">Download Brochure</a>
             </div>
           </div>
         </section>

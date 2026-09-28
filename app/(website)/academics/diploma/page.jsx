@@ -4,24 +4,24 @@ import "./diploma.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "Diploma Engineering College Faridabad | PLRCT Polytechnic Admission 2026",
+  title: "Diploma Engineering College Faridabad | Pt. L.R. College of Technology Polytechnic Admission 2026",
   description:
-    "AICTE approved Diploma Engineering (Polytechnic) admission at PLRCT, Faridabad. Diploma programs in Computer Science, Mechanical, Civil, Electrical and ECE with workshops, industrial training, and lateral entry to B.Tech. Serving Faridabad, Ballabgarh, Palwal and Haryana.",
+    "AICTE approved Diploma Engineering (Polytechnic) admission at Pt. L.R. College of Technology, Faridabad. Diploma programs in Computer Science, Mechanical, Civil, Electrical and ECE with workshops, industrial training, and lateral entry to B.Tech. Serving Faridabad, Ballabgarh, Palwal and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/diploma",
   },
   openGraph: {
-    title: "Diploma Engineering at PLRCT Faridabad | AICTE Approved Polytechnic",
+    title: "Diploma Engineering at Pt. L.R. College of Technology Faridabad | AICTE Approved Polytechnic",
     description:
-      "Practical, industry-oriented Diploma Engineering programs at PLRCT, Faridabad — with lateral entry to B.Tech and strong placement support.",
+      "Practical, industry-oriented Diploma Engineering programs at Pt. L.R. College of Technology, Faridabad — with lateral entry to B.Tech and strong placement support.",
     url: "https://ptlrct.com/academics/diploma",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/diploma-program.jpg",
         width: 1200,
         height: 630,
-        alt: "Diploma Engineering Program at PLRCT Faridabad",
+        alt: "Diploma Engineering Program at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diploma Engineering at PLRCT Faridabad | AICTE Approved Polytechnic",
+    title: "Diploma Engineering at Pt. L.R. College of Technology Faridabad | AICTE Approved Polytechnic",
     description:
-      "Practical, industry-oriented Diploma Engineering programs at PLRCT, Faridabad, with lateral entry to B.Tech and dedicated placement support.",
+      "Practical, industry-oriented Diploma Engineering programs at Pt. L.R. College of Technology, Faridabad, with lateral entry to B.Tech and dedicated placement support.",
     images: ["https://ptlrct.com/og/diploma-program.jpg"],
   },
 };
@@ -55,10 +55,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Diploma Engineering at PLRCT?",
+      name: "What is Diploma Engineering at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Diploma Engineering at PLRCT is an AICTE approved, three-year polytechnic program in Faridabad focused on practical, workshop-based engineering education across Computer Science, Mechanical, Civil, Electrical and Electronics & Communication disciplines.",
+        text: "Diploma Engineering at Pt. L.R. College of Technology is an AICTE approved, three-year polytechnic program in Faridabad focused on practical, workshop-based engineering education across Computer Science, Mechanical, Civil, Electrical and Electronics & Communication disciplines.",
       },
     },
     {
@@ -71,10 +71,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is PLRCT's Diploma Engineering program AICTE approved?",
+      name: "Is Pt. L.R. College of Technology's Diploma Engineering program AICTE approved?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, PLRCT's Diploma Engineering programs are AICTE approved and affiliated with the Haryana State Board of Technical Education, meeting all regulatory requirements for polytechnic education.",
+        text: "Yes, Pt. L.R. College of Technology's Diploma Engineering programs are AICTE approved and affiliated with the Haryana State Board of Technical Education, meeting all regulatory requirements for polytechnic education.",
       },
     },
     {
@@ -82,15 +82,15 @@ const faqSchema = {
       name: "What is the duration of the Diploma Engineering program?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Diploma Engineering program at PLRCT runs for three years, divided into six semesters, combining core subjects, laboratory practicals and industrial training.",
+        text: "The Diploma Engineering program at Pt. L.R. College of Technology runs for three years, divided into six semesters, combining core subjects, laboratory practicals and industrial training.",
       },
     },
     {
       "@type": "Question",
-      name: "Which Diploma Engineering branches does PLRCT offer?",
+      name: "Which Diploma Engineering branches does Pt. L.R. College of Technology offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT offers Diploma programs in Computer Science Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Electronics & Communication Engineering, and Information Technology.",
+        text: "Pt. L.R. College of Technology offers Diploma programs in Computer Science Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, Electronics & Communication Engineering, and Information Technology.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: "Can Diploma students get lateral entry into B.Tech?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, Diploma holders from a relevant engineering discipline are eligible for lateral entry directly into the second year of PLRCT's B.Tech program, subject to seat availability and university norms.",
+        text: "Yes, Diploma holders from a relevant engineering discipline are eligible for lateral entry directly into the second year of Pt. L.R. College of Technology's B.Tech program, subject to seat availability and university norms.",
       },
     },
     {
@@ -111,10 +111,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Does PLRCT provide placement support for Diploma students?",
+      name: "Does Pt. L.R. College of Technology provide placement support for Diploma students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, the Training and Placement Cell at PLRCT supports Diploma students with aptitude training, technical interview preparation and recruitment drives with employers across Faridabad and Delhi NCR.",
+        text: "Yes, the Training and Placement Cell at Pt. L.R. College of Technology supports Diploma students with aptitude training, technical interview preparation and recruitment drives with employers across Faridabad and Delhi NCR.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqSchema = {
       name: "What laboratories and workshops are available for Diploma students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Diploma students at PLRCT use dedicated mechanical workshops, electrical machines labs, computer labs, civil material-testing labs and electronics labs designed for hands-on, practical skill-building.",
+        text: "Diploma students at Pt. L.R. College of Technology use dedicated mechanical workshops, electrical machines labs, computer labs, civil material-testing labs and electronics labs designed for hands-on, practical skill-building.",
       },
     },
   ],
@@ -139,8 +139,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -231,7 +231,7 @@ export default function DiplomaPage() {
                   <a href="/admissions" className="btn btn--primary">
                     Apply Now
                   </a>
-                  <a href="/downloads/PLRCT-prospectus.pdf" className="btn btn--ghost">
+                  <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--ghost">
                     Download Prospectus
                   </a>
                 </div>
@@ -252,27 +252,27 @@ export default function DiplomaPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="PLRCT Mechanical Workshop — Diploma Engineering" ratio="21/9" />
+          <ImgPlaceholder label="Pt. L.R. College of Technology Mechanical Workshop — Diploma Engineering" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">PROGRAM OVERVIEW</p>
-            <h2 id="overview-h">What is Diploma Engineering at PLRCT?</h2>
+            <h2 id="overview-h">What is Diploma Engineering at Pt. L.R. College of Technology?</h2>
             <p>
-              Diploma Engineering at PLRCT is a three-year, AICTE
+              Diploma Engineering at Pt. L.R. College of Technology is a three-year, AICTE
               approved polytechnic program built for students who want to enter the engineering
               workforce quickly, or build a practical foundation before progressing to a full
               B.Tech degree. As one of the recognized diploma engineering colleges in Faridabad,
-              PLRCT structures the program around workshop time, laboratory practicals and
+              Pt. L.R. College of Technology structures the program around workshop time, laboratory practicals and
               industrial exposure rather than classroom theory alone, so graduates leave with
               skills employers can use from day one.
             </p>
             <p>
               The diploma is open to students immediately after Class 10, making it a faster route
               into a technical career than the two-year wait required before a B.Tech application.
-              For students and parents researching a diploma admission in Haryana, PLRCT&apos;s
+              For students and parents researching a diploma admission in Haryana, Pt. L.R. College of Technology&apos;s
               polytechnic wing offers a straightforward, counseling-based admission process, a
               campus close to Faridabad, Ballabgarh and Greater Faridabad, and strong connectivity
               to the industrial and manufacturing corridor that runs through the Delhi NCR region.
@@ -289,7 +289,7 @@ export default function DiplomaPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section section--tint" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE DIPLOMA AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE DIPLOMA AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">A polytechnic built around practical skill</h2>
             <div className="card-grid">
               {[
@@ -303,7 +303,7 @@ export default function DiplomaPage() {
                 },
                 {
                   t: "Direct Path to B.Tech",
-                  d: "Lateral entry into the second year of PLRCT's B.Tech program for diploma holders who want to continue toward a full engineering degree.",
+                  d: "Lateral entry into the second year of Pt. L.R. College of Technology's B.Tech program for diploma holders who want to continue toward a full engineering degree.",
                 },
                 {
                   t: "Industrial Training Built In",
@@ -417,7 +417,7 @@ export default function DiplomaPage() {
             <p className="eyebrow">LABORATORIES, WORKSHOPS &amp; PRACTICAL LEARNING</p>
             <h2 id="labs-h">Where diploma students spend their time</h2>
             <p>
-              Practical learning is the core of a diploma education, and PLRCT's polytechnic wing
+              Practical learning is the core of a diploma education, and Pt. L.R. College of Technology's polytechnic wing
               is built around it. Mechanical diploma students work in a fully equipped workshop
               with lathes, fabrication tools and CNC stations. Electrical diploma students train
               in a dedicated machines and wiring lab. Computer Science and IT diploma students use
@@ -460,7 +460,7 @@ export default function DiplomaPage() {
             <h2 id="lateral-h">Continue straight into a B.Tech degree</h2>
             <p>
               Diploma holders in a relevant discipline can apply for lateral entry directly into
-              the second year of PLRCT's <a href="/academics/btech">B.Tech program</a>, skipping
+              the second year of Pt. L.R. College of Technology's <a href="/academics/btech">B.Tech program</a>, skipping
               the first year entirely. This is one of the most direct routes from a diploma
               engineering college in Faridabad to a full four-year engineering degree, letting
               students who started with a polytechnic qualification finish with a B.Tech in just
@@ -504,7 +504,7 @@ export default function DiplomaPage() {
               <p className="eyebrow">HIGHER EDUCATION OPPORTUNITIES</p>
               <h2 id="higher-h">Beyond the diploma</h2>
               <p>
-                Students who want to keep studying can move into PLRCT's B.Tech program through
+                Students who want to keep studying can move into Pt. L.R. College of Technology's B.Tech program through
                 lateral entry, and later consider an{" "}
                 <a href="/academics/mtech">M.Tech program</a> for postgraduate specialization,
                 turning a three-year diploma into the first step of a much longer engineering
@@ -515,7 +515,7 @@ export default function DiplomaPage() {
               <p className="eyebrow">PLACEMENT SUPPORT</p>
               <h2>Guided from classroom to career</h2>
               <p>
-                PLRCT's Training and Placement Cell extends its aptitude training, communication
+                Pt. L.R. College of Technology's Training and Placement Cell extends its aptitude training, communication
                 workshops and mock interview sessions to diploma students as well, and coordinates
                 recruitment drives with employers looking specifically for diploma-qualified
                 technical talent.
@@ -530,7 +530,7 @@ export default function DiplomaPage() {
             <p className="eyebrow">CAMPUS FACILITIES &amp; STUDENT PROJECTS</p>
             <h2 id="facilities-h">Supporting diploma life on campus</h2>
             <p>
-              Diploma students share the full PLRCT campus — library, smart classrooms, sports and
+              Diploma students share the full Pt. L.R. College of Technology campus — library, smart classrooms, sports and
               activity areas — and take part in the same project culture as B.Tech students,
               building small applied projects from the second year onward under faculty guidance,
               many of which are showcased at the college's annual technical exhibition.
@@ -566,10 +566,10 @@ export default function DiplomaPage() {
         <section className="section section--tint" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">Diploma Engineering at PLRCT — quick answers</h2>
+            <h2 id="faq-h">Diploma Engineering at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>What is Diploma Engineering at PLRCT?</summary>
+                <summary>What is Diploma Engineering at Pt. L.R. College of Technology?</summary>
                 <p>
                   A three-year, AICTE approved polytechnic program in Faridabad offered across six
                   engineering disciplines, built around practical, workshop-based learning.
@@ -585,7 +585,7 @@ export default function DiplomaPage() {
               <details className="faq-item">
                 <summary>Is the Diploma program AICTE approved?</summary>
                 <p>
-                  Yes. PLRCT's Diploma Engineering programs are AICTE approved and affiliated with
+                  Yes. Pt. L.R. College of Technology's Diploma Engineering programs are AICTE approved and affiliated with
                   the Haryana State Board of Technical Education.
                 </p>
               </details>
@@ -603,7 +603,7 @@ export default function DiplomaPage() {
               <details className="faq-item">
                 <summary>Can I move from Diploma to B.Tech?</summary>
                 <p>
-                  Yes, through lateral entry directly into the second year of PLRCT's B.Tech
+                  Yes, through lateral entry directly into the second year of Pt. L.R. College of Technology's B.Tech
                   program, subject to seat availability and university norms.
                 </p>
               </details>
@@ -622,7 +622,7 @@ export default function DiplomaPage() {
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Does PLRCT provide placement support for Diploma students?</summary>
+                <summary>Does Pt. L.R. College of Technology provide placement support for Diploma students?</summary>
                 <p>
                   Yes, the Training and Placement Cell supports diploma students with aptitude
                   training, interview preparation and dedicated recruitment drives.
@@ -644,7 +644,7 @@ export default function DiplomaPage() {
           <div className="container final-cta__inner">
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
-              <h2>Start your Diploma Engineering journey at PLRCT</h2>
+              <h2>Start your Diploma Engineering journey at Pt. L.R. College of Technology</h2>
               <p>
                 Seats for the upcoming academic year are limited across all six diploma
                 disciplines. Apply now or download the prospectus to learn more.
@@ -654,7 +654,7 @@ export default function DiplomaPage() {
               <a href="/admissions" className="btn btn--gold">
                 Apply Now
               </a>
-              <a href="/downloads/PLRCT-prospectus.pdf" className="btn btn--outline-light">
+              <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--outline-light">
                 Download Prospectus
               </a>
             </div>

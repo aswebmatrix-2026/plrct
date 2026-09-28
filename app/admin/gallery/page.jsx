@@ -7,7 +7,7 @@ import GalleryEvent from "@/models/GalleryEvent";
 import GalleryTable from "./GalleryTable";
 import "@/styles/gallery-dashboard.css";
 
-export const metadata = { title: "Gallery Management | PLRCT Admin" };
+export const metadata = { title: "Gallery Management | Pt. L.R. College of Technology Admin" };
 
 export default async function AdminGalleryPage() {
   const session = await getServerSession(authOptions);
@@ -39,7 +39,7 @@ export default async function AdminGalleryPage() {
       <div className="admin-page-header">
         <div>
           <h1>Gallery Management</h1>
-          <p>Create and manage PLRCT event albums.</p>
+          <p>Create and manage Pt. L.R. College of Technology event albums.</p>
         </div>
         <Link href="/admin/gallery/new" className="btn btn-primary">
           + Create Gallery Event

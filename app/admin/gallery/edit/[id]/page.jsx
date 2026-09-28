@@ -6,7 +6,7 @@ import GalleryEvent from "@/models/GalleryEvent";
 import AlbumForm from "@/components/gallery/AlbumForm";
 import "@/styles/gallery-dashboard.css";
 
-export const metadata = { title: "Edit Gallery Event | PLRCT Admin" };
+export const metadata = { title: "Edit Gallery Event | Pt. L.R. College of Technology Admin" };
 
 export default async function EditGalleryEventPage({ params }) {
   const { id } = await params;

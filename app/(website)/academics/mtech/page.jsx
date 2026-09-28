@@ -4,24 +4,24 @@ import "./mtech.css";
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
 export const metadata = {
-  title: "M.Tech Engineering Faridabad | PLRCT AICTE Approved Postgraduate College",
+  title: "M.Tech Engineering Faridabad | Pt. L.R. College of Technology AICTE Approved Postgraduate College",
   description:
-    "AICTE approved M.Tech admission at PLRCT, Faridabad. Postgraduate engineering programs in Computer Science, Mechanical, Civil, Electrical and ECE with research labs, faculty-guided thesis work and industry collaboration. Serving Faridabad and Haryana.",
+    "AICTE approved M.Tech admission at Pt. L.R. College of Technology, Faridabad. Postgraduate engineering programs in Computer Science, Mechanical, Civil, Electrical and ECE with research labs, faculty-guided thesis work and industry collaboration. Serving Faridabad and Haryana.",
   alternates: {
     canonical: "https://ptlrct.com/academics/mtech",
   },
   openGraph: {
-    title: "M.Tech Engineering at PLRCT Faridabad | AICTE Approved Postgraduate Programs",
+    title: "M.Tech Engineering at Pt. L.R. College of Technology Faridabad | AICTE Approved Postgraduate Programs",
     description:
-      "Advanced postgraduate engineering education with research, innovation and industry collaboration at PLRCT, Faridabad.",
+      "Advanced postgraduate engineering education with research, innovation and industry collaboration at Pt. L.R. College of Technology, Faridabad.",
     url: "https://ptlrct.com/academics/mtech",
-    siteName: "PLRCT (PLRCT)",
+    siteName: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
     images: [
       {
         url: "https://ptlrct.com/og/mtech-program.jpg",
         width: 1200,
         height: 630,
-        alt: "M.Tech Engineering Program at PLRCT Faridabad",
+        alt: "M.Tech Engineering Program at Pt. L.R. College of Technology Faridabad",
       },
     ],
     locale: "en_IN",
@@ -29,9 +29,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "M.Tech Engineering at PLRCT Faridabad | AICTE Approved Postgraduate Programs",
+    title: "M.Tech Engineering at Pt. L.R. College of Technology Faridabad | AICTE Approved Postgraduate Programs",
     description:
-      "Advanced postgraduate engineering education with research, innovation and industry collaboration at PLRCT, Faridabad.",
+      "Advanced postgraduate engineering education with research, innovation and industry collaboration at Pt. L.R. College of Technology, Faridabad.",
     images: ["https://ptlrct.com/og/mtech-program.jpg"],
   },
 };
@@ -55,23 +55,23 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is M.Tech at PLRCT?",
+      name: "What is M.Tech at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "M.Tech at PLRCT is a two-year, AICTE approved postgraduate engineering degree in Faridabad focused on advanced coursework, research methodology and a faculty-guided thesis across Computer Science, Mechanical, Civil, Electrical and Electronics & Communication specializations.",
+        text: "M.Tech at Pt. L.R. College of Technology is a two-year, AICTE approved postgraduate engineering degree in Faridabad focused on advanced coursework, research methodology and a faculty-guided thesis across Computer Science, Mechanical, Civil, Electrical and Electronics & Communication specializations.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT offer M.Tech?",
+      name: "Does Pt. L.R. College of Technology offer M.Tech?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, PLRCT offers AICTE approved M.Tech programs across five engineering specializations, combining research laboratories, faculty mentorship and industry collaboration for postgraduate engineering study in Faridabad, Haryana.",
+        text: "Yes, Pt. L.R. College of Technology offers AICTE approved M.Tech programs across five engineering specializations, combining research laboratories, faculty mentorship and industry collaboration for postgraduate engineering study in Faridabad, Haryana.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the eligibility for M.Tech admission at PLRCT?",
+      name: "What is the eligibility for M.Tech admission at Pt. L.R. College of Technology?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Candidates must hold a B.Tech or equivalent engineering degree in a relevant discipline with the minimum aggregate percentage prescribed by the affiliating university, and admission is typically based on GATE score or the applicable state-level entrance and counseling process.",
@@ -79,10 +79,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is PLRCT's M.Tech program AICTE approved?",
+      name: "Is Pt. L.R. College of Technology's M.Tech program AICTE approved?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, PLRCT's M.Tech programs are AICTE approved and affiliated with the relevant state technical university, meeting all regulatory requirements for postgraduate engineering education.",
+        text: "Yes, Pt. L.R. College of Technology's M.Tech programs are AICTE approved and affiliated with the relevant state technical university, meeting all regulatory requirements for postgraduate engineering education.",
       },
     },
     {
@@ -90,15 +90,15 @@ const faqSchema = {
       name: "What is the duration of the M.Tech program?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The M.Tech program at PLRCT runs for two years, divided into four semesters, with the later semesters focused heavily on research work and a dissertation.",
+        text: "The M.Tech program at Pt. L.R. College of Technology runs for two years, divided into four semesters, with the later semesters focused heavily on research work and a dissertation.",
       },
     },
     {
       "@type": "Question",
-      name: "Which M.Tech specializations does PLRCT offer?",
+      name: "Which M.Tech specializations does Pt. L.R. College of Technology offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PLRCT offers M.Tech specializations in Computer Science Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, and Electronics & Communication Engineering.",
+        text: "Pt. L.R. College of Technology offers M.Tech specializations in Computer Science Engineering, Electrical Engineering, Mechanical Engineering, Civil Engineering, and Electronics & Communication Engineering.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "Does the M.Tech program include a thesis or dissertation?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, every M.Tech student at PLRCT completes a faculty-guided dissertation spanning the final two semesters, following a structured research methodology and defended before an academic panel.",
+        text: "Yes, every M.Tech student at Pt. L.R. College of Technology completes a faculty-guided dissertation spanning the final two semesters, following a structured research methodology and defended before an academic panel.",
       },
     },
     {
@@ -114,23 +114,23 @@ const faqSchema = {
       name: "What career opportunities are available after M.Tech?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "M.Tech graduates from PLRCT can pursue R&D roles in industry, positions in public sector undertakings, academic and teaching careers, or continue into a Ph.D. program for further research specialization.",
+        text: "M.Tech graduates from Pt. L.R. College of Technology can pursue R&D roles in industry, positions in public sector undertakings, academic and teaching careers, or continue into a Ph.D. program for further research specialization.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT support Ph.D. pathways after M.Tech?",
+      name: "Does Pt. L.R. College of Technology support Ph.D. pathways after M.Tech?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, PLRCT's research culture and faculty publication support prepare M.Tech graduates well for Ph.D. admission at PLRCT or other research universities, building on the dissertation work completed during the program.",
+        text: "Yes, Pt. L.R. College of Technology's research culture and faculty publication support prepare M.Tech graduates well for Ph.D. admission at Pt. L.R. College of Technology or other research universities, building on the dissertation work completed during the program.",
       },
     },
     {
       "@type": "Question",
-      name: "Does PLRCT provide research laboratories for M.Tech students?",
+      name: "Does Pt. L.R. College of Technology provide research laboratories for M.Tech students?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, M.Tech students at PLRCT have access to dedicated research laboratories, an advanced computing lab, and an innovation center supporting faculty-guided research projects and dissertation work.",
+        text: "Yes, M.Tech students at Pt. L.R. College of Technology have access to dedicated research laboratories, an advanced computing lab, and an innovation center supporting faculty-guided research projects and dissertation work.",
       },
     },
   ],
@@ -139,8 +139,8 @@ const faqSchema = {
 const eduOrgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "PLRCT",
-  alternateName: "PLRCT",
+  name: "Pt. L.R. College of Technology",
+  alternateName: "Pt. L.R. College of Technology",
   url: "https://ptlrct.com",
   sameAs: ["https://ptlrct.com"],
   address: {
@@ -230,7 +230,7 @@ export default function MTechPage() {
                   <a href="/admissions" className="btn btn--primary">
                     Apply Now
                   </a>
-                  <a href="/downloads/PLRCT-prospectus.pdf" className="btn btn--ghost">
+                  <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--ghost">
                     Download Prospectus
                   </a>
                 </div>
@@ -251,26 +251,26 @@ export default function MTechPage() {
         </header>
 
         <div className="container">
-          <ImgPlaceholder label="PLRCT Research Laboratory — M.Tech Engineering" ratio="21/9" />
+          <ImgPlaceholder label="Pt. L.R. College of Technology Research Laboratory — M.Tech Engineering" ratio="21/9" />
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
         <section className="section" aria-labelledby="overview-h">
           <div className="container">
             <p className="eyebrow">PROGRAM OVERVIEW</p>
-            <h2 id="overview-h">What is M.Tech Engineering at PLRCT?</h2>
+            <h2 id="overview-h">What is M.Tech Engineering at Pt. L.R. College of Technology?</h2>
             <p>
-              M.Tech at PLRCT is a two-year, AICTE approved postgraduate
+              M.Tech at Pt. L.R. College of Technology is a two-year, AICTE approved postgraduate
               engineering degree designed for graduate engineers who want to move from applying
               known techniques to developing new ones. Where a B.Tech builds broad engineering
-              competence, the M.Tech program at PLRCT narrows focus toward a single discipline —
+              competence, the M.Tech program at Pt. L.R. College of Technology narrows focus toward a single discipline —
               Computer Science, Mechanical, Civil, Electrical or Electronics &amp; Communication
               Engineering — and trains students to conduct independent, faculty-guided research
               within it.
             </p>
             <p>
               As one of the AICTE approved M.Tech colleges in the Faridabad and greater Haryana
-              region, PLRCT structures the program around advanced coursework in the first two
+              region, Pt. L.R. College of Technology structures the program around advanced coursework in the first two
               semesters, followed by a research methodology component and a substantial
               dissertation in the final two semesters. This mirrors how postgraduate engineering
               education works at established research universities, while staying closely
@@ -278,7 +278,7 @@ export default function MTechPage() {
               industry-relevant research questions.
             </p>
             <p>
-              Admission to the M.Tech program at PLRCT typically follows a GATE score or the
+              Admission to the M.Tech program at Pt. L.R. College of Technology typically follows a GATE score or the
               applicable state-level postgraduate entrance and counseling process, in keeping with
               AICTE norms for M.Tech admission in Haryana.
             </p>
@@ -288,7 +288,7 @@ export default function MTechPage() {
         {/* ---------------- WHY CHOOSE ---------------- */}
         <section className="section section--tint" aria-labelledby="why-h">
           <div className="container">
-            <p className="eyebrow">WHY CHOOSE M.TECH AT PLRCT</p>
+            <p className="eyebrow">WHY CHOOSE M.TECH AT Pt. L.R. College of Technology</p>
             <h2 id="why-h">A postgraduate program built around research, not repetition</h2>
             <div className="card-grid">
               {[
@@ -335,7 +335,7 @@ export default function MTechPage() {
               <article className="dept-card">
                 <h3>Computer Science Engineering</h3>
                 <p>
-                  An M.Tech in Computer Science at PLRCT for students in Faridabad pursuing
+                  An M.Tech in Computer Science at Pt. L.R. College of Technology for students in Faridabad pursuing
                   advanced research in algorithms, machine learning, data systems or network
                   security, supported by an advanced computing lab.
                 </p>
@@ -407,7 +407,7 @@ export default function MTechPage() {
             <p className="eyebrow">THESIS &amp; DISSERTATION</p>
             <h2 id="thesis-h">Two semesters, one substantial piece of research</h2>
             <p>
-              Every M.Tech student at PLRCT completes a faculty-guided dissertation spanning the
+              Every M.Tech student at Pt. L.R. College of Technology completes a faculty-guided dissertation spanning the
               third and fourth semesters. The process begins with a formal proposal defense,
               proceeds through supervised experimentation or analysis, and concludes with a
               written dissertation and a final defense before an academic panel — the same
@@ -423,7 +423,7 @@ export default function MTechPage() {
             <p className="eyebrow">RESEARCH LABORATORIES &amp; INNOVATION</p>
             <h2 id="labs-h">Where M.Tech research actually happens</h2>
             <p>
-              PLRCT's postgraduate research infrastructure includes specialization-specific
+              Pt. L.R. College of Technology's postgraduate research infrastructure includes specialization-specific
               research laboratories, an advanced computing lab for computational and data-driven
               research, and a dedicated innovation center where students can prototype ideas that
               extend beyond a single dissertation. Full laboratory details are available on the{" "}
@@ -448,7 +448,7 @@ export default function MTechPage() {
               <p className="eyebrow">INDUSTRY COLLABORATION</p>
               <h2 id="industry-h">Research questions with real-world relevance</h2>
               <p>
-                PLRCT's proximity to the Faridabad-Ballabgarh industrial belt and the wider Delhi
+                Pt. L.R. College of Technology's proximity to the Faridabad-Ballabgarh industrial belt and the wider Delhi
                 NCR technology and manufacturing ecosystem gives M.Tech students access to
                 applied, industry-relevant research problems, and in some cases direct
                 collaboration with employers on dissertation topics with practical outcomes.
@@ -488,7 +488,7 @@ export default function MTechPage() {
                 },
                 {
                   t: "Ph.D. Pathways",
-                  d: "A dissertation-tested research foundation that prepares graduates well for doctoral admission at PLRCT or other research universities.",
+                  d: "A dissertation-tested research foundation that prepares graduates well for doctoral admission at Pt. L.R. College of Technology or other research universities.",
                 },
               ].map((c) => (
                 <div className="card" key={c.t}>
@@ -515,7 +515,7 @@ export default function MTechPage() {
             </div>
             <div>
               <p className="eyebrow">CAMPUS FACILITIES</p>
-              <h2>Research life on the PLRCT campus</h2>
+              <h2>Research life on the Pt. L.R. College of Technology campus</h2>
               <p>
                 M.Tech students share full access to the campus library, research center and
                 seminar halls used for technical presentations, alongside the specialized research
@@ -553,17 +553,17 @@ export default function MTechPage() {
         <section className="section" aria-labelledby="faq-h">
           <div className="container">
             <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2 id="faq-h">M.Tech at PLRCT — quick answers</h2>
+            <h2 id="faq-h">M.Tech at Pt. L.R. College of Technology — quick answers</h2>
             <div className="faq-list">
               <details className="faq-item">
-                <summary>What is M.Tech at PLRCT?</summary>
+                <summary>What is M.Tech at Pt. L.R. College of Technology?</summary>
                 <p>
                   A two-year, AICTE approved postgraduate engineering degree in Faridabad focused
                   on advanced coursework, research methodology and a faculty-guided dissertation.
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Does PLRCT offer M.Tech?</summary>
+                <summary>Does Pt. L.R. College of Technology offer M.Tech?</summary>
                 <p>
                   Yes, across five specializations: Computer Science, Electrical, Mechanical,
                   Civil, and Electronics &amp; Communication Engineering.
@@ -580,7 +580,7 @@ export default function MTechPage() {
               <details className="faq-item">
                 <summary>Is the M.Tech program AICTE approved?</summary>
                 <p>
-                  Yes. PLRCT's M.Tech programs are AICTE approved and affiliated with the relevant
+                  Yes. Pt. L.R. College of Technology's M.Tech programs are AICTE approved and affiliated with the relevant
                   state technical university.
                 </p>
               </details>
@@ -613,10 +613,10 @@ export default function MTechPage() {
                 </p>
               </details>
               <details className="faq-item">
-                <summary>Does PLRCT support Ph.D. pathways after M.Tech?</summary>
+                <summary>Does Pt. L.R. College of Technology support Ph.D. pathways after M.Tech?</summary>
                 <p>
                   Yes, the dissertation-focused training and faculty research culture prepare
-                  graduates well for doctoral admission at PLRCT or other universities.
+                  graduates well for doctoral admission at Pt. L.R. College of Technology or other universities.
                 </p>
               </details>
               <details className="faq-item">
@@ -635,7 +635,7 @@ export default function MTechPage() {
           <div className="container final-cta__inner">
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
-              <h2>Begin your postgraduate research journey at PLRCT</h2>
+              <h2>Begin your postgraduate research journey at Pt. L.R. College of Technology</h2>
               <p>
                 Seats for the upcoming academic year are limited across all five M.Tech
                 specializations. Apply now or download the prospectus to learn more.
@@ -645,7 +645,7 @@ export default function MTechPage() {
               <a href="/admissions" className="btn btn--gold">
                 Apply Now
               </a>
-              <a href="/downloads/PLRCT-prospectus.pdf" className="btn btn--outline-light">
+              <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--outline-light">
                 Download Prospectus
               </a>
             </div>

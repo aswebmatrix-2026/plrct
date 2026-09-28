@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="plrf-footer-col">
             <h3 className="plrf-footer-col__title">Our Institutions</h3>
             <ul className="plrf-footer-links">
-              <li><a href="#PLRCT">Pt. L.R. College of Technology</a></li>
+              <li><a href="#Pt. L.R. College of Technology">Pt. L.R. College of Technology</a></li>
               <li><a href="#plrcp">Pt. L.R. College of Pharmacy</a></li>
               <li><a href="#plrcm">Pt. L.R. College of Management</a></li>
               <li><a href="#plrsp">Pt. L.R. School of Pharmacy</a></li>
@@ -104,7 +104,7 @@ export default function Footer() {
 
               <li>
                 <span className="plrf-contact-list__icon" aria-hidden="true">✉️</span>
-                <a href="mailto:admissions@PLRCT.edu.in">ptlr.admission@gmail.com
+                <a href="mailto:admissions@Pt. L.R. College of Technology.edu.in">ptlr.admission@gmail.com
 </a>
               </li>
               <li>

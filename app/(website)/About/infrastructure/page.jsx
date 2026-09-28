@@ -5,16 +5,16 @@ import Reveal from '@/components/about/Reveal';
 import { INFRASTRUCTURE_FACILITIES, FAQ_FACILITIES, FAQ_WHY_CHOOSE, SITE } from '@/lib/aboutData';
 
 export const metadata = {
-  title: 'Campus Infrastructure | PLRCT, Faridabad',
+  title: 'Campus Infrastructure | Pt. L.R. College of Technology, Faridabad',
   description:
-    'Explore PLRCT\'s campus infrastructure in Ballabgarh, Faridabad — smart classrooms, engineering laboratories, a central digital library, hostel, sports complex, and transport serving Faridabad, Delhi NCR, and Palwal.',
+    'Explore Pt. L.R. College of Technology\'s campus infrastructure in Ballabgarh, Faridabad — smart classrooms, engineering laboratories, a central digital library, hostel, sports complex, and transport serving Faridabad, Delhi NCR, and Palwal.',
   alternates: { canonical: 'https://ptlrct.com/about/infrastructure' },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'Campus Infrastructure — PLRCT',
+  name: 'Campus Infrastructure — Pt. L.R. College of Technology',
   about: { '@type': 'CollegeOrUniversity', name: SITE.name },
 };
 
@@ -44,7 +44,7 @@ const ZONES = [
 
 export default function InfrastructurePage() {
   return (
-    <main className="PLRCT-about PLRCT-infra">
+    <main className="plrct-about plrct-infra">
       {/* eslint-disable-next-line react/no-danger */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -56,28 +56,28 @@ export default function InfrastructurePage() {
         ]}
       />
 
-      <section className="PLRCT-infra-hero">
-        <div className="PLRCT-infra-hero__inner">
-          <p className="PLRCT-eyebrow" style={{ color: 'var(--PLRCT-gold-soft)' }}>Campus Infrastructure</p>
+      <section className="plrct-infra-hero">
+        <div className="plrct-infra-hero__inner">
+          <p className="plrct-eyebrow" style={{ color: 'var(--plrct-gold-soft)' }}>Campus Infrastructure</p>
           <h1>World-Class Campus Infrastructure</h1>
           <p>
-            Every facility on PLRCT&rsquo;s Ballabgarh campus is built to a working standard, not a
+            Every facility on Pt. L.R. College of Technology&rsquo;s Ballabgarh campus is built to a working standard, not a
             showcase one — labs, library, and hostel alike are sized and equipped for daily academic use.
           </p>
         </div>
       </section>
 
       {/* ---- Facility grid ---- */}
-      <section className="PLRCT-infra-grid-section">
-        <div className="PLRCT-about__inner">
+      <section className="plrct-infra-grid-section">
+        <div className="plrct-about__inner">
           <Reveal as="div">
-            <p className="PLRCT-eyebrow">Twelve Core Facilities</p>
-            <h2 className="PLRCT-section-title">Everything a working technical campus needs</h2>
+            <p className="plrct-eyebrow">Twelve Core Facilities</p>
+            <h2 className="plrct-section-title">Everything a working technical campus needs</h2>
           </Reveal>
-          <div className="PLRCT-infra-grid">
+          <div className="plrct-infra-grid">
             {INFRASTRUCTURE_FACILITIES.map((f, i) => (
-              <Reveal as="article" delay={(i % 3) * 90} className="PLRCT-infra-card" key={f.title}>
-                <span className="PLRCT-infra-card__icon" aria-hidden="true">
+              <Reveal as="article" delay={(i % 3) * 90} className="plrct-infra-card" key={f.title}>
+                <span className="plrct-infra-card__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     {ICONS[f.icon]}
                   </svg>
@@ -91,31 +91,31 @@ export default function InfrastructurePage() {
       </section>
 
       {/* ---- Illustrative campus zone map (signature element) ---- */}
-      <section className="PLRCT-infra-map-section">
-        <div className="PLRCT-about__inner">
+      <section className="plrct-infra-map-section">
+        <div className="plrct-about__inner">
           <Reveal as="div">
-            <p className="PLRCT-eyebrow">Getting Around</p>
-            <h2 className="PLRCT-section-title">An at-a-glance campus map</h2>
-            <p className="PLRCT-section-lede">
+            <p className="plrct-eyebrow">Getting Around</p>
+            <h2 className="plrct-section-title">An at-a-glance campus map</h2>
+            <p className="plrct-section-lede">
               A simplified, illustrative layout of the Ballabgarh campus — swap in a to-scale site
               plan once one is available for production.
             </p>
           </Reveal>
-          <div className="PLRCT-infra-map">
-            <svg viewBox="0 0 100 100" className="PLRCT-infra-map__svg" role="img" aria-label="Illustrative campus zone map">
-              <rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="var(--PLRCT-hairline)" strokeWidth="0.6" />
-              <path d="M10 40 H90 M50 10 V90" stroke="var(--PLRCT-hairline)" strokeWidth="0.5" strokeDasharray="1 2" />
+          <div className="plrct-infra-map">
+            <svg viewBox="0 0 100 100" className="plrct-infra-map__svg" role="img" aria-label="Illustrative campus zone map">
+              <rect x="4" y="4" width="92" height="92" rx="6" fill="none" stroke="var(--plrct-hairline)" strokeWidth="0.6" />
+              <path d="M10 40 H90 M50 10 V90" stroke="var(--plrct-hairline)" strokeWidth="0.5" strokeDasharray="1 2" />
               {ZONES.map((zone) => (
                 <g key={zone.label} transform={`translate(${zone.x} ${zone.y})`}>
-                  <circle r="3.2" fill="var(--PLRCT-red)" opacity="0.9" />
-                  <circle r="6" fill="none" stroke="var(--PLRCT-gold)" strokeWidth="0.4" />
+                  <circle r="3.2" fill="var(--plrct-red)" opacity="0.9" />
+                  <circle r="6" fill="none" stroke="var(--plrct-gold)" strokeWidth="0.4" />
                 </g>
               ))}
             </svg>
-            <ul className="PLRCT-infra-map__legend">
+            <ul className="plrct-infra-map__legend">
               {ZONES.map((zone) => (
                 <li key={zone.label}>
-                  <span className="PLRCT-infra-map__dot" aria-hidden="true" />
+                  <span className="plrct-infra-map__dot" aria-hidden="true" />
                   {zone.label}
                 </li>
               ))}
