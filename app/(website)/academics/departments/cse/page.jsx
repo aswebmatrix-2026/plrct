@@ -1,9 +1,5 @@
 import "./cse.css";
-<<<<<<< HEAD
-import Image from "next/image";
-=======
 
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
@@ -200,11 +196,7 @@ export default function CSEPage() {
                   placement support.
                 </p>
                 <div className="cse-hero__cta">
-<<<<<<< HEAD
-                  <a href="/contact" className="btn btn--primary">Enquiry Now</a>
-=======
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-cse.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -223,18 +215,7 @@ export default function CSEPage() {
         </header>
 
         <div className="container">
-<<<<<<< HEAD
-          <Image
-  src="/images/Busy Modern College Computer Lab.webp"
-  alt="Students working in the programming lab at Pt. L.R. College of Technology"
-  width={1200}
-  height={600}
-  priority
-  style={{ width: "100%", height: "auto", marginTop: "35px", borderRadius: "15px" }}
-/>
-=======
           <ImgPlaceholder label="CSE Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -370,30 +351,11 @@ export default function CSEPage() {
                 <p>Security fundamentals, vulnerability analysis and secure system design practice.</p>
               </article>
             </div>
-<<<<<<< HEAD
-            <div className="img-grid" style={{marginTop:"25px",borderRadius: "50%"}}>
-           <img
-            src="/images/computerlab.webp"
-             alt="Programming Lab"
-            />
-
-          <img
-           src="/images/student.webp"
-            alt="Students in Lab Session"
-            />
-
-          <img
-          src="/images/auditorium.webp"
-          alt="Faculty Guiding a Project"
-           />
-          </div>
-=======
             <div className="img-grid">
               <ImgPlaceholder label="Programming Lab" />
               <ImgPlaceholder label="Students in Lab Session" />
               <ImgPlaceholder label="Faculty Guiding a Project" />
             </div>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </section>
 
@@ -446,9 +408,6 @@ export default function CSEPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-      
-=======
         <div className="container">
           <div className="img-grid">
             <ImgPlaceholder label="Industrial Visit — IT Company" />
@@ -457,7 +416,6 @@ export default function CSEPage() {
           </div>
         </div>
 
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         {/* ---------------- CAREERS ---------------- */}
         <section className="section section--tint" aria-labelledby="career-h">
           <div className="container">
@@ -505,29 +463,13 @@ export default function CSEPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* ---------------- INTERNAL LINKS ---------------- */}
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         <section className="section section--tint" aria-labelledby="explore-h">
           <div className="container">
             <p className="eyebrow">EXPLORE FURTHER</p>
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
-<<<<<<< HEAD
-              <a href="/academics/departments/me">Mechanical Engineering</a>
-              <a href="/academics/departments/ee">Electronics Engineering</a>
-              <a href="/academics/departments/cse">Computer Science Engineering</a>
-              <a href="/academics/departments/applied-science">Applied Science</a>
-              <a href="/academics/departments/ce">Civil Engineering</a>
-              <a href="/academics/mtech">M.Tech Programs</a>
-              <a href="/academics/diploma">Diploma Programs</a>
-            </div>
-          </div>
-        </section>
-        
-=======
               <a href="/academics/departments/aiml">AI &amp; Machine Learning</a>
               <a href="/academics/departments/data-science">Data Science</a>
               <a href="/academics/departments/it">Information Technology</a>
@@ -538,7 +480,6 @@ export default function CSEPage() {
             </div>
           </div>
         </section>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
         {/* ---------------- FAQ (10 QUESTIONS) ---------------- */}
         <section className="section" aria-labelledby="faq-h">
@@ -596,17 +537,10 @@ export default function CSEPage() {
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
               <h2>Start your Computer Science Engineering journey at Pt. L.R. College of Technology</h2>
-<<<<<<< HEAD
-              <p>Seats in the CSE department are limited for the upcoming academic year. Enquiry Now or download the department brochure.</p>
-            </div>
-            <div className="final-cta__actions">
-              <a href="/contact" className="btn btn--gold">Enquiry Now</a>
-=======
               <p>Seats in the CSE department are limited for the upcoming academic year. Apply now or download the department brochure.</p>
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">Apply Now</a>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               <a href="/downloads/Pt. L.R. College of Technology-brochure-cse.pdf" className="btn btn--outline-light">Download Brochure</a>
             </div>
           </div>

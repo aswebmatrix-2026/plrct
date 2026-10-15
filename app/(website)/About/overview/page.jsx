@@ -30,13 +30,8 @@ const jsonLd = {
 
 const GALLERY = [
   {
-<<<<<<< HEAD
-    label: 'Class Rooms',
-    image: '/images/student.webp',
-=======
     label: 'Academic Block',
     image: '/images/about/academic-block.webp',
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   },
   {
     label: 'Central Library',
@@ -44,21 +39,6 @@ const GALLERY = [
   },
   {
     label: 'Engineering Labs',
-<<<<<<< HEAD
-    image: '/images/computerlab.webp',
-  },
-  {
-    label: 'Workshops',
-    image: '/images/workshop.webp',
-  },
-  {
-    label: 'Auditorium',
-    image: '/images/auditorium.webp',
-  },
-  {
-    label: 'Campus Grounds',
-    image: '/images/imageslider.webp',
-=======
     image: '/images/about/engineering-lab.webp',
   },
   {
@@ -72,7 +52,6 @@ const GALLERY = [
   {
     label: 'Campus Grounds',
     image: '/images/about/campus.webp',
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   },
 ];
 

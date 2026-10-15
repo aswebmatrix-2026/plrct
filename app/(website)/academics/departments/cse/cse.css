@@ -226,18 +226,4 @@
   .cse .link-grid { grid-template-columns: 1fr; }
   .cse .btn { width: 100%; }
   .cse-hero__cta { flex-direction: column; }
-<<<<<<< HEAD
-}
-.cse .dept-image-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.cse .department-image {
-  object-fit: cover;
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 }

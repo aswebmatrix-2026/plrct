@@ -29,10 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-<<<<<<< HEAD
-, "components/Navbar/page.jsx", "app/page.jsx"  ],
-=======
 , "components/Navbar/page.jsx", "app/page.jsx", "app/(website)/IQAC(NAAC)/about-iqac/page.jsx", "app/api/admin/student-applications/route.js", "app/api/admin/student-applications/[id]/route.js", "app/api/admin/student-applications/[id]/assign-roll/route.js", "app/api/admin/student-applications/[id]/resend-email/route.js", "app/api/admin/student-applications/[id]/reject/route.js", "app/api/admin/student-applications/[id]/verify/route.js", "app/api/student-application/send-otp/route.js", "app/api/student-application/submit/route.js", "app/api/student-application/upload-photo/route.js", "app/api/student-application/verify-otp/route.js"  ],
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   "exclude": ["node_modules"]
 }

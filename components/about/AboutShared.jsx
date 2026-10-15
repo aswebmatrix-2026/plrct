@@ -73,11 +73,7 @@ export function AboutCta() {
         <h2>Begin Your Academic Journey with Pt. L.R. College of Technology</h2>
         <p>Admissions for the upcoming session are open across B.Tech, Diploma, BCA, BBA, MBA, and Pharmacy programs.</p>
         <div className="plrct-about-cta__actions">
-<<<<<<< HEAD
-          <Link href="/apply" className="plrct-btn plrct-btn--primary">Enquiry Now</Link>
-=======
           <Link href="/apply" className="plrct-btn plrct-btn--primary">Apply Now</Link>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <Link href="/admissions/prospectus" className="plrct-btn plrct-btn--secondary">Download Brochure</Link>
           <Link href="/contact" className="plrct-btn plrct-btn--ghost">Contact Admissions</Link>
         </div>

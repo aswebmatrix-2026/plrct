@@ -139,29 +139,4 @@
 
 @media (max-width: 900px) {
   .ptlrct-messages-values__grid { grid-template-columns: repeat(2, 1fr); }
-<<<<<<< HEAD
-}
-
-.ptlrct-message-portrait__frame {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius-card);
-  background: var(--ptlrct-light-gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-elevated);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-}
-
-.ptlrct-message-portrait__image {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center top;
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 }

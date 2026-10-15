@@ -86,11 +86,7 @@ export default function AcademicsClient() {
               {/* CHANGE: these two now scroll to the on-page Admission Process
                   section instead of linking to /admissions/apply and
                   /admissions/prospectus, which don't exist yet. */}
-<<<<<<< HEAD
-              <Link href="#admission-process" className="ac-btn ac-btn--primary">Enquiry Now <Icon name="arrow" /></Link>
-=======
               <Link href="#admission-process" className="ac-btn ac-btn--primary">Apply Now <Icon name="arrow" /></Link>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               <Link href="#admission-process" className="ac-btn ac-btn--ghost">Download Prospectus</Link>
             </div>
           </div>

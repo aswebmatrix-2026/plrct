@@ -1,14 +1,5 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
-import {
-  Playfair_Display,
-  Poppins,
-  Inter,
-  Space_Grotesk,
-} from "next/font/google";
-=======
 import { Playfair_Display, Poppins, Inter, Space_Grotesk } from "next/font/google";
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
 import "./globals.css";
 import Navbar from "@/components/Navbar/page.jsx";
@@ -39,26 +30,15 @@ const inter = Inter({
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-<<<<<<< HEAD
-  weight: ["400", "500", "600", "700"],
-=======
   weight: ["500", "600", "700"],
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   variable: "--font-stat",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title:
-    "Pt. L.R. College of Technology Faridabad | Best Engineering & Professional College in Faridabad, Haryana",
-  description:
-    "Pt. L.R. College of Technology, Faridabad — AICTE approved engineering and professional college offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy with modern labs, experienced faculty and placement support across Faridabad, Haryana and Delhi NCR.",
-=======
   title: "Pt. L.R. College of Technology Faridabad | Best Engineering & Professional College in Faridabad, Haryana",
   description:
     "Pt. L.R. College of Technology (Pt. L.R. College of Technology), Faridabad — AICTE approved engineering and professional college offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy with modern labs, experienced faculty and strong placement support across Faridabad, Haryana & Delhi NCR.",
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   keywords: [
     "Best Engineering College in Faridabad",
     "Top Engineering College in Haryana",
@@ -86,11 +66,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollegeOrUniversity",
-<<<<<<< HEAD
-              name: "Pt. L.R. College of Technology",
-=======
               name: "Pt. L.R. College of Technology (Pt. L.R. College of Technology)",
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               alternateName: "Pt. L.R. College of Technology Faridabad",
               url: "https://www.Pt. L.R. College of Technology.ac.in",
               foundingDate: "2011",
@@ -115,10 +91,7 @@ export default function RootLayout({
         />
 
         <Navbar />
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         <main id="main-content">{children}</main>
         <ToastProvider />
         <Footer />

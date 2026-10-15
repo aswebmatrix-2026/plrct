@@ -1,9 +1,5 @@
 import "./me.css";
-<<<<<<< HEAD
-import Image from "next/image";
-=======
 
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
@@ -166,24 +162,6 @@ function SpecRow({ k, v }) {
   );
 }
 
-<<<<<<< HEAD
-// Reusable responsive image card (uses fill + aspect-ratio wrapper)
-function ImgCard({ src, alt, ratio = "16 / 9" }) {
-  return (
-    <div className="img-card" style={{ aspectRatio: ratio }}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="img-card__img"
-      />
-    </div>
-  );
-}
-
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 // ============================================================================
 // PAGE
 // ============================================================================
@@ -218,11 +196,7 @@ export default function MEPage() {
                   dedicated placement support.
                 </p>
                 <div className="me-hero__cta">
-<<<<<<< HEAD
-                  <a href="/contact" className="btn btn--primary">Enquiry Now</a>
-=======
                   <a href="/admissions" className="btn btn--primary">Apply Now</a>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-me.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -240,23 +214,8 @@ export default function MEPage() {
           </div>
         </header>
 
-<<<<<<< HEAD
-        {/* ---------------- BANNER IMAGE (21:6) ---------------- */}
-        <div className="container">
-          <div className="me-banner">
-            <Image
-              src="/images/Hands-On Lathe Training Workshop.webp"
-              alt="Students practising lathe machine training in the Mechanical Engineering workshop at Pt. L.R. College of Technology"
-              fill
-              priority
-              sizes="(max-width: 1200px) 100vw, 1500px"
-              className="me-banner__img"
-            />
-          </div>
-=======
         <div className="container">
           <ImgPlaceholder label="ME Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -393,29 +352,10 @@ export default function MEPage() {
                 <p>Applied practice with robotic arms, sensors and automated mechanical systems.</p>
               </article>
             </div>
-<<<<<<< HEAD
-
-            {/* Lab images — 3 responsive cards.
-                Har image ka alag src daal sakte ho (abhi teeno mein same file hai). */}
-            <div className="img-grid">
-              <ImgCard
-                src="/images/Mechanical Lab_ Learn, Practice, Build.png"
-                alt="Mechanical Engineering lab at Pt. L.R. College of Technology where students learn, practice and build"
-              />
-              <ImgCard
-                src="/images/Engineering Workshop Training Session.png"
-                alt="Students working on equipment in the Mechanical Engineering laboratorys"
-              />
-              <ImgCard
-                src="/images/student.webp"
-                alt="Hands-on practical session in the Mechanical Engineering lab"
-              />
-=======
             <div className="img-grid">
               <ImgPlaceholder label="Manufacturing & Machine Shop" />
               <ImgPlaceholder label="Students in Lab Session" />
               <ImgPlaceholder label="Faculty Guiding a Project" />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -471,34 +411,9 @@ export default function MEPage() {
 
         <div className="container">
           <div className="img-grid">
-<<<<<<< HEAD
-            <Image
-                        src="/images/Technical Training Workshop Panel.webp"
-                        alt="Mechanical Engineering Lab practical session"
-                         width={400}
-                         height={250}
-                        className="lab-img"
-                         />
-              
-             <Image
-                  src="/images/Engineering Workshop Safety Briefing.png"
-                  alt="Students doing hands-on engineering practical"
-                  width={400}
-                  height={250}
-                  className="lab-img"
-                />
-          <Image
-                src="/images/Faculty Group Photo at Modern Entrance.webp"
-                alt="Mechanical Engineering Lab practical session"
-                width={400}
-                height={250}
-                className="lab-img"
-              />
-=======
             <ImgPlaceholder label="Industrial Visit — Manufacturing Plant" />
             <ImgPlaceholder label="Technical Event / Project Expo" />
             <ImgPlaceholder label="Student Project Showcase" />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </div>
 
@@ -550,25 +465,12 @@ export default function MEPage() {
         </section>
 
         {/* ---------------- INTERNAL LINKS ---------------- */}
-<<<<<<< HEAD
-         <section className="section section--tint" aria-labelledby="explore-h">
-=======
         <section className="section section--tint" aria-labelledby="explore-h">
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <div className="container">
             <p className="eyebrow">EXPLORE FURTHER</p>
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
-<<<<<<< HEAD
-              <a href="/academics/departments/me">Mechanical Engineering</a>
-              <a href="/academics/departments/ee">Electronics Engineering</a>
-              <a href="/academics/departments/cse">Computer Science Engineering</a>
-              <a href="/academics/departments/applied-science">Applied Science</a>
-              <a href="/academics/departments/ce">Civil Engineering</a>
-              <a href="/academics/mtech">M.Tech Programs</a>
-              <a href="/academics/diploma">Diploma Programs</a>
-=======
               <a href="/academics/departments/ee">Electrical Engineering</a>
               <a href="/academics/departments/electronics">Electronics Engineering</a>
               <a href="/academics/departments/cse">Computer Science Engineering</a>
@@ -576,7 +478,6 @@ export default function MEPage() {
               <a href="/academics/resources/curriculum">Curriculum</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/admissions">Admissions</a>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -637,17 +538,10 @@ export default function MEPage() {
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
               <h2>Start your Mechanical Engineering journey at Pt. L.R. College of Technology</h2>
-<<<<<<< HEAD
-              <p>Seats in the ME department are limited for the upcoming academic year. Enquiry Now or download the department brochure.</p>
-            </div>
-            <div className="final-cta__actions">
-              <a href="/contact" className="btn btn--gold">Enquiry Now</a>
-=======
               <p>Seats in the ME department are limited for the upcoming academic year. Apply now or download the department brochure.</p>
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">Apply Now</a>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               <a href="/downloads/Pt. L.R. College of Technology-brochure-me.pdf" className="btn btn--outline-light">Download Brochure</a>
             </div>
           </div>

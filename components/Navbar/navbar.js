@@ -157,11 +157,6 @@ export const ACADEMICS_MENU = [
     items: [
       { title: 'B.Tech Engineering', href: '/academics/btech', icon: 'engineering', description: '4-year flagship engineering degree, 8 departments' },
       { title: 'Diploma Engineering', href: '/academics/diploma', icon: 'diploma', description: '3-year practical diploma with lateral entry to B.Tech' },
-<<<<<<< HEAD
-       { title: 'BCA', href: '/academics/bca', icon: 'code', description: 'Bachelor of Computer Applications' },
-        { title: 'BBA', href: '/academics/bba', icon: 'briefcase', description: 'Bachelor of Business Administration' },
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
     ],
   },
   {
@@ -184,15 +179,6 @@ export const ACADEMICS_MENU = [
   {
     group: 'Academic Resources',
     items: [
-<<<<<<< HEAD
-      { title: 'Syllabus', href: '/syllabus', icon: 'doc', description: 'Department-wise semester syllabus' },
-      { title: 'Curriculum', href: '/curriculum', icon: 'curriculum', description: 'Outcome-based curriculum structure' },
-      { title: 'Academic Calendar', href: '/academic-calendar', icon: 'calendar', description: 'Semester dates, holidays & exam schedule' },
-      { title: 'Examination Cell', href: '/examination-cell', icon: 'exam', description: 'Exam forms, results & re-evaluation' },
-      { title: 'Laboratories', href: '/laboratories', icon: 'lab', description: 'Department laboratories & equipment' },
-      { title: 'Workshops', href: '/workshop', icon: 'workshop', description: 'Manufacturing & practical workshops' },
-      { title: 'Industrial Training', href: '/industrial-training', icon: 'training', description: 'Internships & industrial exposure' },
-=======
       { title: 'Syllabus', href: '/admin/syllabus', icon: 'doc', description: 'Department-wise semester syllabus' },
       { title: 'Curriculum', href: '/academics/resources/curriculum', icon: 'curriculum', description: 'Outcome-based curriculum structure' },
       { title: 'Academic Calendar', href: '/academic-calendar', icon: 'calendar', description: 'Semester dates, holidays & exam schedule' },
@@ -200,31 +186,19 @@ export const ACADEMICS_MENU = [
       { title: 'Laboratories', href: '/academics/resources/laboratories', icon: 'lab', description: 'Department laboratories & equipment' },
       { title: 'Workshops', href: '/academics/resources/workshops', icon: 'workshop', description: 'Manufacturing & practical workshops' },
       { title: 'Industrial Training', href: '/academics/resources/industrial-training', icon: 'training', description: 'Internships & industrial exposure' },
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
     ],
   },
 ];
 
 
 export const COURSES_MENU = [
-<<<<<<< HEAD
- 
-=======
   { title: 'BCA', href: '/courses/bca', icon: 'code', description: 'Bachelor of Computer Applications' },
   { title: 'BBA', href: '/courses/bba', icon: 'briefcase', description: 'Bachelor of Business Administration' },
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   { title: 'MBA', href: '/courses/mba', icon: 'chart', description: 'Postgraduate management program' },
   { title: 'Pharmacy', href: '/courses/pharmacy', icon: 'pharmacy', description: 'D.Pharm & B.Pharm — AICTE/PCI approved' },
 ];
 
 export const ADMISSIONS_MENU = [
-<<<<<<< HEAD
-  { title: 'Admission Process', href: '/Admission/admission-process', icon: 'flow', description: 'Step-by-step guide from enquiry to enrolment' },
-  { title: 'Eligibility', href: '/Admission/eligibility', icon: 'check', description: 'Program-wise eligibility criteria' },
-  { title: 'Scholarships', href: '/Admission/scholarships', icon: 'award', description: 'Merit and need-based scholarship schemes' },
-  { title: 'Download Prospectus', href: '#', icon: 'download', description: 'Full Pt. L.R. College of Technology prospectus, PDF format' },
- 
-=======
   { title: 'Apply Online', href: '/admissions/apply', icon: 'edit', description: 'Start your application in under 10 minutes' },
   { title: 'Admission Process', href: '/admissions/process', icon: 'flow', description: 'Step-by-step guide from enquiry to enrolment' },
   { title: 'Eligibility', href: '/admissions/eligibility', icon: 'check', description: 'Program-wise eligibility criteria' },
@@ -232,7 +206,6 @@ export const ADMISSIONS_MENU = [
   { title: 'Scholarships', href: '/admissions/scholarships', icon: 'award', description: 'Merit and need-based scholarship schemes' },
   { title: 'Download Prospectus', href: '/admissions/prospectus', icon: 'download', description: 'Full Pt. L.R. College of Technology prospectus, PDF format' },
   { title: 'Admission Helpline', href: 'tel:+919876543210', icon: 'phone', description: '+91-98765-43210 — 9 AM to 6 PM, all days' },
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 ];
 
 /* -------------------------------------------------------------------------
@@ -252,29 +225,14 @@ export const IQAC = [
     description: 'A summary of IQAC activities and outcomes',
   },
   {
-<<<<<<< HEAD
-    title: 'Profile of the College NAAC 2A',
-    href: '/IQAC(NAAC)/Profile/naac2A',
-    icon: 'overview',
-    description: 'Institutional profile submitted for NAAC assessment',
-  },
-  {
-    title: 'Profile of the College NAAC 2B',
-    href: '/IQAC(NAAC)/Profile/naac2b',
-=======
     title: 'Profile of the College',
     href: '/IQAC(NAAC)/profile-of-the-college',
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
     icon: 'overview',
     description: 'Institutional profile submitted for NAAC assessment',
   },
   {
     title: 'Activity Report/Form',
-<<<<<<< HEAD
-    href: '/IQAC(NAAC)/report',
-=======
     href: '/IQAC(NAAC)/activity-report',
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
     icon: 'flow',
     description: 'IQAC activity reports and downloadable forms',
   },
@@ -296,8 +254,5 @@ export const NAV_ITEMS = [
   { label: 'IQAC (NAAC)', href: '/naac', mega: 'iqac' },
   { label: 'Campus Life', href: '/campus-life' },
   { label: 'Notice Board', href: '/notice-board', badge: 'NEW' },
-<<<<<<< HEAD
-=======
   
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 ];

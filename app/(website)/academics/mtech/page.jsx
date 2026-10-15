@@ -228,11 +228,7 @@ export default function MTechPage() {
                 </p>
                 <div className="mtech-hero__cta">
                   <a href="/admissions" className="btn btn--primary">
-<<<<<<< HEAD
-                    Enquiry Now
-=======
                     Apply Now
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   </a>
                   <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--ghost">
                     Download Prospectus
@@ -642,20 +638,12 @@ export default function MTechPage() {
               <h2>Begin your postgraduate research journey at Pt. L.R. College of Technology</h2>
               <p>
                 Seats for the upcoming academic year are limited across all five M.Tech
-<<<<<<< HEAD
-                specializations. Enquiry Now or download the prospectus to learn more.
-=======
                 specializations. Apply now or download the prospectus to learn more.
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               </p>
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">
-<<<<<<< HEAD
-                Enquiry Now
-=======
                 Apply Now
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               </a>
               <a href="/downloads/Pt. L.R. College of Technology-prospectus.pdf" className="btn btn--outline-light">
                 Download Prospectus

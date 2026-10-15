@@ -18,36 +18,11 @@ const jsonLd = {
   about: { '@type': 'CollegeOrUniversity', name: SITE.name },
 };
 
-<<<<<<< HEAD
-// href     = path of the PDF inside /public (spelling & case must match exactly)
-// filename = clean name the visitor gets when the file downloads
-const DOCS = [
-  {
-    label: 'HSBTE Approval Letter',
-    note: 'Current academic year',
-    href: '/affilations/EOA HSBTE 2025-26 (1).pdf',
-    filename: 'PLRCT-HSBTE-Approval-2025-26.pdf',
-  },
-  {
-    label: 'Management Approval Letter',
-    note: 'Pharmacy programs',
-    href: '/affilations/EOA Report Management 26-27 (2).PDF',
-    filename: 'PLRCT-Management-Approval-2026-27.pdf',
-  },
-  {
-    label: 'Technology Approval Letter',
-    note: 'State technical university',
-    href: '/affilations/EOA Report Technology 26-27 (1)-compressed.pdf',
-    filename: 'PLRCT-Technology-Approval-2026-27.pdf',
-  },
-  
-=======
 const DOCS = [
   { label: 'AICTE Approval Letter', note: 'Current academic year' },
   { label: 'PCI Recognition Certificate', note: 'Pharmacy programs' },
   { label: 'University Affiliation Order', note: 'State technical university' },
   { label: 'Mandatory Disclosure', note: 'AICTE format' },
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 ];
 
 export default function AffiliationsPage() {
@@ -112,27 +87,13 @@ export default function AffiliationsPage() {
             <p className="plrct-eyebrow">Verify for Yourself</p>
             <h2 className="plrct-section-title">Download official documents</h2>
             <p className="plrct-section-lede">
-<<<<<<< HEAD
-              Download the signed approval letters and disclosures on file for the current academic year.
-=======
               Link these cards to the actual signed PDFs on file — placeholders shown here so the
               layout is ready the moment scanned documents are available.
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </p>
           </Reveal>
           <div className="plrct-affil-docs__grid">
             {DOCS.map((doc) => (
-<<<<<<< HEAD
-              <a
-                href={encodeURI(doc.href)}
-                download={doc.filename}
-                className="plrct-affil-doc"
-                key={doc.label}
-                aria-label={`Download ${doc.label} (PDF)`}
-              >
-=======
               <a href="#" className="plrct-affil-doc" key={doc.label} aria-disabled="true">
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                 <span className="plrct-affil-doc__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -142,12 +103,6 @@ export default function AffiliationsPage() {
                 <span>
                   <p className="plrct-affil-doc__label">{doc.label}</p>
                   <p className="plrct-affil-doc__note">{doc.note}</p>
-<<<<<<< HEAD
-                  <p className="plrct-affil-doc__cta" style={{ marginTop: 6, fontSize: 13, fontWeight: 600 }}>
-                    ⬇ Download PDF
-                  </p>
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                 </span>
               </a>
             ))}

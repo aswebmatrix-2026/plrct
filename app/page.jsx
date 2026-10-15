@@ -3,59 +3,6 @@
 import { useState } from "react";
 import AdmissionModal from "@/components/admission/AdmissionModal";
 import NoticeTicker from "@/components/NoticeTicker";
-<<<<<<< HEAD
-import "./globals.css";
-
-const COLLEGE = "Pt. L.R. College of Technology";
-
-const programs = [
-  { icon: "⚙️", title: "B.Tech", duration: "4 Years", eligibility: "10+2 with PCM", text: "CSE, Mechanical & Civil streams with strong core-engineering demand across NCR industry.", href: "#btech" },
-  { icon: "🛠️", title: "Diploma Engineering", duration: "3 Years", eligibility: "10th Pass", text: "Hands-on technical training with lateral-entry pathway into B.Tech second year.", href: "#diploma" },
-  { icon: "💻", title: "BCA", duration: "3 Years", eligibility: "10+2 Any Stream", text: "Software development, cloud & data foundations for a career in IT services and product teams.", href: "#bca" },
-  { icon: "📊", title: "BBA", duration: "3 Years", eligibility: "10+2 Any Stream", text: "Management fundamentals with live-project exposure to marketing, finance & operations.", href: "#bba" },
-  { icon: "📈", title: "MBA", duration: "2 Years", eligibility: "Bachelor's Degree", text: "Industry-mentored specializations built for mid-management roles across NCR.", href: "#mba" },
-  { icon: "💊", title: "Pharmacy", duration: "4 Years", eligibility: "10+2 with PCB/PCM", text: "Pharmaceutical sciences with hospital & industry internship placement.", href: "#pharmacy" },
-];
-
-const why = [
-  ["🖥️", "Smart Classrooms", "Interactive, tech-enabled lecture spaces built for active learning."],
-  ["🔬", "Advanced Laboratories", "Fully equipped labs mirroring current industry tools and standards."],
-  ["🧑‍🏫", "Experienced Faculty", "PhD-qualified and industry-seasoned mentors across every department."],
-  ["🏭", "Industry Training", "Structured internships and live-project partnerships with NCR companies."],
-  ["🎯", "Placement Assistance", "Dedicated placement cell with resume, aptitude & interview coaching."],
-  ["📚", "Skill Development", "Certification tracks in coding, data & communication beyond the syllabus."],
-];
-
-const facilities = [
-  ["/images/library_image.webp", "Central Library", true],
-  ["/images/computerlab.webp", "Computer Laboratories"],
-  ["/images/workshop.webp", "Engineering Workshops"],
-  ["/images/student.webp", "Classrooms"],
-  ["/images/auditorium.webp", "Auditorium"],
-  ["/images/hostel.webp", "Hostel"],
-  ["/images/cafetria.webp", "Cafeteria"],
-  ["/images/imageslider.png", "Campus"],
-  ["/images/transport.jpeg", "Transportation"],
-];
-
-const faqs = [
-  [`Is ${COLLEGE} AICTE approved?`, `Yes. ${COLLEGE} is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.`],
-  [`What courses are offered at ${COLLEGE}?`, `${COLLEGE} offers B.Tech (CSE, Mechanical, Civil), Diploma Engineering, BCA, BBA, MBA and Pharmacy, each designed around current industry hiring needs in Delhi NCR.`],
-  ["How can I apply for admission?", "Apply online through the admissions portal, upload your academic documents, complete counseling and verification, then confirm your seat with fee payment."],
-  [`What are the placement opportunities at ${COLLEGE}?`, "The placement cell runs year-round drives with recruiters across IT, manufacturing and core engineering, alongside resume building, mock interviews and career counseling."],
-  ["Are internships available for students?", "Yes, structured summer and semester internships are arranged with industry partners across Faridabad, Gurugram, Noida and South Delhi."],
-  ["Is hostel accommodation provided?", "On-campus hostel accommodation is available with mess facilities, security and access to sports and medical facilities."],
-  ["Does the college offer practical, hands-on training?", "Every program includes lab-based and project-based learning, supplemented by industry workshops, live projects and corporate mentoring."],
-  [`Why choose ${COLLEGE} in Faridabad?`, "AICTE-approved academics, modern smart-campus infrastructure, experienced faculty and a strong placement track record, serving students across Faridabad, Ballabgarh, Palwal and the wider Delhi NCR region."],
-];
-
-const testimonials = [
-  ["Ritika Sharma", "B.Tech CSE, 2025", "The lab access and faculty support gave me real project experience before I even graduated.", 1],
-  ["Aman Verma", "BBA, 2024", "The placement cell prepared me thoroughly — mock interviews made the real ones far less nerve-wracking.", 2],
-  ["Sneha Yadav", "MBA, 2023", "Small class sizes meant every professor actually knew my work. That mentorship made all the difference.", 3],
-];
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,13 +13,6 @@ export default function Home() {
   };
 
   return (
-<<<<<<< HEAD
-    <main className="home">
-      {/* ============ HERO ============ */}
-      <section className="hero" id="hero" aria-label="Introduction">
-        <div className="hero__media" aria-hidden="true">
-          <img className="hero__img" loading="eager" src="/images/college.webp" alt="" />
-=======
     <main>
       {/* ============ HERO ============ */}
       <section className="hero" id="hero" aria-label="Introduction">
@@ -83,7 +23,6 @@ export default function Home() {
             src="/images/college.webp"
             alt=""
           />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <div className="hero__overlay"></div>
         </div>
 
@@ -98,39 +37,26 @@ export default function Home() {
               in Faridabad
             </h1>
             <p className="hero__sub">
-<<<<<<< HEAD
-              {COLLEGE} provides industry-focused B.Tech, Diploma, BCA, BBA, MBA, and professional
-=======
               Pt. L.R. College of Technology provides industry-focused B.Tech, Diploma, BCA, BBA, MBA, and professional
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               education with modern infrastructure, experienced faculty, practical learning,
               research opportunities, and career-oriented placement support across Faridabad,
               Haryana, and Delhi NCR.
             </p>
             <div className="hero__ctas">
-<<<<<<< HEAD
-              <button type="button" onClick={openModal} className="btn btn--primary">Online Admissions</button>
-=======
               <button type="button" onClick={openModal} className="btn btn--primary">
                 Online Admissions
               </button>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               <a href="#brochure" className="btn btn--ghost">Download Brochure</a>
               <a href="/student-application" className="btn btn--text">ID Card Registration &rarr;</a>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <aside className="hero__plaque" aria-label={`${COLLEGE} at a glance`}>
-            <div className="plaque__seal">AICTE<br />Approved</div>
-=======
           <aside className="hero__plaque" aria-label="Pt. L.R. College of Technology at a glance">
             <div className="plaque__seal">
               AICTE
               <br />
               Approved
             </div>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             <ul className="plaque__list">
               <li><span className="plaque__num">2011</span><span className="plaque__label">Established</span></li>
               <li><span className="plaque__num">15+</span><span className="plaque__label">Academic Programs</span></li>
@@ -142,28 +68,6 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* ============ NOTICE BOARD ============ */}
-      <section className="notices" aria-label="Latest notices">
-        <div className="notices__head">
-          <div>
-            <p className="eyebrow eyebrow--dark">Notice Board</p>
-            <h2 className="h2">What&apos;s happening at {COLLEGE}</h2>
-          </div>
-          <div className="notices__tools">
-            <label className="notices__search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <circle cx="11" cy="11" r="7" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-              <input type="text" placeholder="Search notices" aria-label="Search notices" />
-            </label>
-            <a href="/notice-board" className="btn btn--outline-sm">View all notices</a>
-          </div>
-        </div>
-        <NoticeTicker />
-      </section>
-=======
 
       {/* ============ NOTICE BOARD ============ */}
 <section className="notices" aria-label="Latest notices">
@@ -186,7 +90,6 @@ export default function Home() {
 
   <NoticeTicker />
 </section>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
       {/* ============ QUICK ACTIONS ============ */}
       <section className="quick-actions" aria-label="Quick actions">
@@ -205,76 +108,17 @@ export default function Home() {
             <h3>Admission Enquiry</h3>
             <p>Talk to our counsellors about programs &amp; eligibility.</p>
           </a>
-<<<<<<< HEAD
-=======
         
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <a className="qa-card" href="#prospectus">
             <span className="qa-card__icon" aria-hidden="true">📘</span>
             <h3>Download Prospectus</h3>
             <p>Full course catalogue, faculty &amp; facilities in one PDF.</p>
           </a>
-<<<<<<< HEAD
-=======
           
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
       {/* ============ ABOUT ============ */}
-<<<<<<< HEAD
-      <section className="about" id="about" aria-label={`About ${COLLEGE}`}>
-        <div className="about__gallery" aria-hidden="true">
-          <figure className="about__img about__img--a">
-            <img loading="lazy" src="/images/chairman%20sir.webp" alt="" />
-          </figure>
-          <figure className="about__img about__img--b">
-            <img loading="lazy" src="/images/library_image.webp" alt="" />
-          </figure>
-          <figure className="about__img about__img--c">
-            <img loading="lazy" src="/images/auditorium.webp" alt="" />
-          </figure>
-        </div>
-
-        <div className="about__content">
-          <p className="eyebrow eyebrow--dark">About {COLLEGE}</p>
-          <h2 className="h2">Fifteen Years of Excellence in Technical Education</h2>
-          <p className="about__intro">
-            {COLLEGE} has grown into one of Faridabad&apos;s trusted names in technical education by
-            combining academic excellence, practical learning, and an industry-focused approach.
-          </p>
-          <p>
-            Our B.Tech, Diploma, BCA, BBA, MBA, and Pharmacy programs are designed to help students
-            build the technical knowledge, professional skills, and practical experience required to
-            succeed in today&apos;s competitive workplace. We continuously focus on modern learning
-            methods and industry-relevant education to prepare students for opportunities across
-            Delhi NCR and beyond.
-          </p>
-          <p>
-            Our experienced faculty bring together academic knowledge, research expertise, and
-            practical industry experience. Through project-based learning, laboratory sessions,
-            technical activities, research initiatives, and mentorship, students get opportunities
-            to apply classroom concepts to real-world challenges.
-          </p>
-          <p>
-            Beyond academics, we encourage students to develop leadership, communication, creativity,
-            and entrepreneurial skills through technical societies, hackathons, workshops,
-            entrepreneurship activities, and structured soft-skills training.
-          </p>
-
-          <ul className="about__stats" aria-label="College highlights">
-            <li><strong>15+</strong><span>Academic Programs</span></li>
-            <li><strong>2011</strong><span>AICTE Approved Since</span></li>
-            <li><strong>92%</strong><span>Placement Support Rate</span></li>
-          </ul>
-
-          <div className="about__actions">
-            <a href="#more" className="btn btn--primary">Discover Our College <span aria-hidden="true">→</span></a>
-            <a href="#contact" className="about__link">Talk to Admissions <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-=======
      {/* ============ ABOUT ============ */}
 <section className="about" id="about" aria-label="About Pt. L.R. College of Technology">
 
@@ -389,7 +233,6 @@ export default function Home() {
   </div>
 
 </section>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
       {/* ============ ACADEMIC PROGRAMS ============ */}
       <section className="programs" id="programs" aria-label="Academic programs">
@@ -398,37 +241,6 @@ export default function Home() {
           <h2 className="h2">Programs built around Delhi NCR&apos;s job market</h2>
         </div>
         <div className="programs-grid">
-<<<<<<< HEAD
-          {programs.map((p) => (
-            <article className="program-card" key={p.title}>
-              <span className="program-card__icon" aria-hidden="true">{p.icon}</span>
-              <h3>{p.title}</h3>
-              <dl className="program-card__meta">
-                <div><dt>Duration</dt><dd>{p.duration}</dd></div>
-                <div><dt>Eligibility</dt><dd>{p.eligibility}</dd></div>
-              </dl>
-              <p>{p.text}</p>
-              <a href={p.href} className="card-link">Learn More &rarr;</a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* ============ WHY CHOOSE ============ */}
-      <section className="why" aria-label={`Why choose ${COLLEGE}`}>
-        <div className="section-head section-head--center">
-          <p className="eyebrow">Why Choose {COLLEGE}</p>
-          <h2 className="h2 h2--light">Six reasons students choose us</h2>
-        </div>
-        <div className="why-grid">
-          {why.map(([icon, title, text]) => (
-            <article className="why-card" key={title}>
-              <span className="why-card__icon" aria-hidden="true">{icon}</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-=======
           <article className="program-card">
             <span className="program-card__icon" aria-hidden="true">⚙️</span>
             <h3>B.Tech</h3>
@@ -534,7 +346,6 @@ export default function Home() {
             <h3>Skill Development</h3>
             <p>Certification tracks in coding, data &amp; communication beyond the syllabus.</p>
           </article>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -553,10 +364,6 @@ export default function Home() {
           </ul>
           <a href="#placement-report" className="btn btn--primary">View Placement Report</a>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         <div className="placements__right">
           <div className="placement-stats">
             <div className="placement-stat"><span className="placement-stat__num">₹12 LPA</span><span className="placement-stat__label">Highest Package</span></div>
@@ -569,11 +376,7 @@ export default function Home() {
           </div>
           <svg className="career-chart" viewBox="0 0 320 140" role="img" aria-label="Placement rate trending upward over five years">
             <polyline points="0,110 60,95 120,80 180,55 240,35 320,15" fill="none" stroke="#D4AF37" strokeWidth="3" strokeLinecap="round" />
-<<<<<<< HEAD
-            <circle cx="316" cy="15" r="5" fill="#C8102E" />
-=======
             <circle cx="320" cy="15" r="5" fill="#C8102E" />
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </svg>
         </div>
       </section>
@@ -585,19 +388,6 @@ export default function Home() {
           <h2 className="h2">Learning that reaches past the campus gate</h2>
         </div>
         <ol className="timeline timeline--h">
-<<<<<<< HEAD
-          {[
-            ["Industry Partnerships", "MoUs with NCR manufacturing & IT companies."],
-            ["Live Projects", "Real briefs from partner companies, credit-linked."],
-            ["Guest Lectures", "Practitioners teaching current industry practice."],
-            ["Corporate Mentoring", "1:1 mentorship for final-year project teams."],
-            ["Innovation Workshops", "Hands-on sessions on emerging tools & platforms."],
-            ["Startup Incubation", "Seed support for student-founded ventures."],
-            ["Technical Competitions", "Inter-college hackathons and case challenges."],
-          ].map(([t, d]) => (
-            <li key={t}><span className="timeline__dot"></span><h3>{t}</h3><p>{d}</p></li>
-          ))}
-=======
           <li><span className="timeline__dot"></span><h3>Industry Partnerships</h3><p>MoUs with NCR manufacturing &amp; IT companies.</p></li>
           <li><span className="timeline__dot"></span><h3>Live Projects</h3><p>Real briefs from partner companies, credit-linked.</p></li>
           <li><span className="timeline__dot"></span><h3>Guest Lectures</h3><p>Practitioners teaching current industry practice.</p></li>
@@ -605,7 +395,6 @@ export default function Home() {
           <li><span className="timeline__dot"></span><h3>Innovation Workshops</h3><p>Hands-on sessions on emerging tools &amp; platforms.</p></li>
           <li><span className="timeline__dot"></span><h3>Startup Incubation</h3><p>Seed support for student-founded ventures.</p></li>
           <li><span className="timeline__dot"></span><h3>Technical Competitions</h3><p>Inter-college hackathons and case challenges.</p></li>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </ol>
       </section>
 
@@ -616,14 +405,6 @@ export default function Home() {
           <h2 className="h2">A campus designed for the whole day, not just the timetable</h2>
         </div>
         <div className="facilities-grid">
-<<<<<<< HEAD
-          {facilities.map(([src, label, large]) => (
-            <figure className={`facility-tile${large ? " facility-tile--lg" : ""}`} key={label}>
-              <img loading="lazy" src={src} alt={`${label} at ${COLLEGE}`} />
-              <figcaption>{label}</figcaption>
-            </figure>
-          ))}
-=======
           <figure className="facility-tile facility-tile--lg">
             <img loading="lazy" src="/images/library_image.webp" alt="Central Library at Pt. L.R. College of Technology" />
             <figcaption>Central Library</figcaption>
@@ -662,7 +443,6 @@ export default function Home() {
             <img loading="lazy" src="https://picsum.photos/seed/Pt. L.R. College of Technology-transport/700/560" alt="Transportation at Pt. L.R. College of Technology" />
             <figcaption>Transportation</figcaption>
           </figure>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -673,20 +453,6 @@ export default function Home() {
           <h2 className="h2">Beyond the classroom</h2>
         </div>
         <div className="life-grid">
-<<<<<<< HEAD
-          {[
-            ["Coding Clubs", "Weekly builds, code reviews & competitive programming."],
-            ["Technical Societies", "Department-run societies driving projects & events."],
-            ["Cultural Events", "Annual fests, music, art & performance showcases."],
-            ["Sports Activities", "Inter-college tournaments across a dozen disciplines."],
-            ["Innovation Competitions", "Idea-to-prototype challenges judged by industry mentors."],
-            ["Hackathons", "24-48 hour builds with cross-department teams."],
-            ["Annual Festivals", "Flagship techno-cultural festival drawing regional colleges."],
-            ["Leadership Programs", "Structured student-council & mentorship pathways."],
-          ].map(([t, d]) => (
-            <article className="life-card" key={t}><h3>{t}</h3><p>{d}</p></article>
-          ))}
-=======
           <article className="life-card"><h3>Coding Clubs</h3><p>Weekly builds, code reviews &amp; competitive programming.</p></article>
           <article className="life-card"><h3>Technical Societies</h3><p>Department-run societies driving projects &amp; events.</p></article>
           <article className="life-card"><h3>Cultural Events</h3><p>Annual fests, music, art &amp; performance showcases.</p></article>
@@ -695,7 +461,6 @@ export default function Home() {
           <article className="life-card"><h3>Hackathons</h3><p>24-48 hour builds with cross-department teams.</p></article>
           <article className="life-card"><h3>Annual Festivals</h3><p>Flagship techno-cultural festival drawing regional colleges.</p></article>
           <article className="life-card"><h3>Leadership Programs</h3><p>Structured student-council &amp; mentorship pathways.</p></article>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -703,11 +468,7 @@ export default function Home() {
       <section className="admission" id="admissions" aria-label="Admission process">
         <div className="section-head section-head--center">
           <p className="eyebrow eyebrow--dark">Admission Process</p>
-<<<<<<< HEAD
-          <h2 className="h2">Four steps to your seat at {COLLEGE}</h2>
-=======
           <h2 className="h2">Four steps to your seat at Pt. L.R. College of Technology</h2>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
         <ol className="timeline timeline--h timeline--steps">
           <li><span className="timeline__num">1</span><h3>Apply Online</h3><p>Complete the application form with basic academic details.</p></li>
@@ -726,20 +487,6 @@ export default function Home() {
       <section className="scholarships" aria-label="Scholarships">
         <div className="section-head section-head--center">
           <p className="eyebrow eyebrow--dark">Scholarships &amp; Financial Support</p>
-<<<<<<< HEAD
-          <h2 className="h2">Making {COLLEGE} possible for every serious student</h2>
-        </div>
-        <div className="scholarship-grid">
-          {[
-            ["Merit Scholarships", "Tuition support for top-scoring entrants each academic year."],
-            ["Academic Excellence Awards", "Ongoing recognition for sustained top academic performance."],
-            ["Financial Assistance", "Need-based support assessed case by case with our finance office."],
-            ["Government Scholarship Support", "Guided applications for state & central scholarship schemes."],
-            ["Education Loan Guidance", "Bank partnerships and paperwork support for education loans."],
-          ].map(([t, d]) => (
-            <article className="scholarship-card" key={t}><h3>{t}</h3><p>{d}</p></article>
-          ))}
-=======
           <h2 className="h2">Making Pt. L.R. College of Technology possible for every serious student</h2>
         </div>
         <div className="scholarship-grid">
@@ -748,7 +495,6 @@ export default function Home() {
           <article className="scholarship-card"><h3>Financial Assistance</h3><p>Need-based support assessed case by case with our finance office.</p></article>
           <article className="scholarship-card"><h3>Government Scholarship Support</h3><p>Guided applications for state &amp; central scholarship schemes.</p></article>
           <article className="scholarship-card"><h3>Education Loan Guidance</h3><p>Bank partnerships and paperwork support for education loans.</p></article>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -759,21 +505,6 @@ export default function Home() {
           <h2 className="h2">In their own words</h2>
         </div>
         <div className="testimonial-grid">
-<<<<<<< HEAD
-          {testimonials.map(([name, course, quote, n]) => (
-            <article className="testimonial-card" key={name}>
-              <img
-                loading="lazy"
-                className="testimonial-card__photo"
-                src={`https://picsum.photos/seed/plrct-student${n}/160/160`}
-                alt={`Photo of ${name}`}
-              />
-              <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-              <p>&quot;{quote}&quot;</p>
-              <p className="testimonial-card__name">{name} <span>&middot; {course}</span></p>
-            </article>
-          ))}
-=======
           <article className="testimonial-card">
             <img loading="lazy" className="testimonial-card__photo" src="https://picsum.photos/seed/Pt. L.R. College of Technology-student1/160/160" alt="Photo of Ritika Sharma" />
             <div className="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -792,7 +523,6 @@ export default function Home() {
             <p>&quot;Small class sizes meant every professor actually knew my work. That mentorship made all the difference.&quot;</p>
             <p className="testimonial-card__name">Sneha Yadav <span>&middot; MBA, 2023</span></p>
           </article>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -803,14 +533,6 @@ export default function Home() {
           <h2 className="h2">Everything applicants ask us</h2>
         </div>
         <div className="faq-list">
-<<<<<<< HEAD
-          {faqs.map(([q, a]) => (
-            <details className="faq-item" key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
-=======
           <details className="faq-item">
             <summary>Is Pt. L.R. College of Technology AICTE approved?</summary>
             <p>Yes. Pt. L.R. College of Technology is an AICTE-approved institution offering B.Tech, Diploma, BCA, BBA, MBA and Pharmacy programs in Faridabad, Haryana.</p>
@@ -843,7 +565,6 @@ export default function Home() {
             <summary>Why choose Pt. L.R. College of Technology in Faridabad?</summary>
             <p>Pt. L.R. College of Technology combines AICTE-approved academics, modern smart-campus infrastructure, experienced faculty and a strong placement track record, serving students across Faridabad, Ballabgarh, Palwal and the wider Delhi NCR region.</p>
           </details>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
       </section>
 
@@ -851,22 +572,14 @@ export default function Home() {
       <section className="final-cta" aria-label="Start your admission journey">
         <div className="final-cta__shapes" aria-hidden="true"></div>
         <div className="final-cta__inner">
-<<<<<<< HEAD
-          <h2 className="h2 h2--light">Start Your Journey with {COLLEGE}</h2>
-=======
           <h2 className="h2 h2--light">Start Your Journey with Pt. L.R. College of Technology</h2>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <p>
             Join one of the leading engineering and professional colleges in Faridabad and build a
             successful career with industry-focused education, modern infrastructure, experienced
             faculty, and strong placement support.
           </p>
           <div className="final-cta__ctas">
-<<<<<<< HEAD
-            <button type="button" onClick={openModal} className="btn btn--white">Enquiry Now</button>
-=======
             <button type="button" onClick={openModal} className="btn btn--white">Apply Now</button>
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             <a href="#contact" className="btn btn--ghost-light">Contact Admissions</a>
             <a href="#brochure" className="btn btn--text-light">Download Brochure &rarr;</a>
           </div>
@@ -876,8 +589,4 @@ export default function Home() {
       <AdmissionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
-<<<<<<< HEAD
-}
-=======
 }     
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88

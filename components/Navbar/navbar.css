@@ -1068,11 +1068,7 @@ a.plrct-topbar__item:focus-visible {
     gap: 0.5rem;
   }
 
-<<<<<<< HEAD
-  /* Apply button — "Enquiry Now" → "Apply" on very small screens */
-=======
   /* Apply button — "Apply Now" → "Apply" on very small screens */
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   .plrct-btn--primary {
     font-size: 0.76rem;
     padding: 0.52rem 0.9rem;
@@ -1161,9 +1157,4 @@ a.plrct-topbar__item:focus-visible {
   .plrct-mobile-drawer {
     width: 100vw;
   }
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
