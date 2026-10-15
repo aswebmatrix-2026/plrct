@@ -1,198 +1,312 @@
+
 /* ==========================================================================
-   Pt. L.R. College of Technology Digital Gallery — gallery-form.css
-   Album create/edit form, drag-and-drop multi-image uploader
+   Pt. L.R. College of Technology Digital Gallery
+   Album create/edit form and multi-image uploader
    ========================================================================== */
 
-.album-form {
-  --Pt. L.R. College of Technology-red: #c8102e;
-  --Pt. L.R. College of Technology-gold: #d4af37;
-  --Pt. L.R. College of Technology-dark: #1a1a1a;
-  --Pt. L.R. College of Technology-gray: #55575c;
-  --Pt. L.R. College of Technology-border: #e2e2e6;
-  font-family: "Inter", "Poppins", sans-serif;
-  max-width: 980px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.form-error-banner {
-  background: #fdecea;
-  border: 1px solid #f3c2bc;
-  color: #b3261e;
-  padding: 0.9rem 1.1rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
-}
-
-.form-section {
-  background: white;
-  border: 1px solid var(--Pt. L.R. College of Technology-border);
-  border-radius: 16px;
-  padding: 1.8rem 2rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-}
-.form-section legend {
-  font-family: "Playfair Display", serif;
-  font-size: 1.15rem;
-  padding: 0 0.6rem;
-  color: var(--Pt. L.R. College of Technology-red);
-  font-weight: 700;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 1.1rem;
-}
-.form-field label,
-.form-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--Pt. L.R. College of Technology-dark);
-}
-.form-field input,
-.form-field select,
-.form-field textarea {
-  padding: 0.7rem 0.9rem;
-  border-radius: 10px;
-  border: 1px solid var(--Pt. L.R. College of Technology-border);
-  font-family: inherit;
-  font-size: 0.92rem;
-  background: #fcfcfd;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  outline: none;
-  border-color: var(--Pt. L.R. College of Technology-gold);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
-}
-
-.cover-preview {
-  margin-top: 0.8rem;
-  width: 220px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.form-toggle-row {
-  display: flex;
-  gap: 2rem;
-  margin: 1.2rem 0;
-}
-.toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.toggle input { width: 18px; height: 18px; accent-color: var(--Pt. L.R. College of Technology-red); }
-
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
-.form-actions .btn {
-  padding: 0.85rem 2rem;
-  border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
-  border: 2px solid transparent;
-  font-family: inherit;
-}
-.btn-primary {
-  background: linear-gradient(135deg, var(--Pt. L.R. College of Technology-red), #970c22);
-  color: white;
-  box-shadow: 0 10px 24px rgba(200, 16, 46, 0.3);
-}
-.btn-outline {
-  background: transparent;
-  border-color: var(--Pt. L.R. College of Technology-red);
-  color: var(--Pt. L.R. College of Technology-red);
-}
-.btn-primary:disabled,
-.btn-outline:disabled { opacity: 0.6; cursor: not-allowed; }
-
-/* ---------- Image uploader ---------- */
-.image-uploader { margin-top: 1.4rem; }
-.upload-dropzone {
-  border: 2px dashed var(--Pt. L.R. College of Technology-border);
-  border-radius: 14px;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  background: #fbfaf8;
-  transition: border-color 0.25s ease, background 0.25s ease;
-}
-.upload-dropzone.dragging {
-  border-color: var(--Pt. L.R. College of Technology-gold);
-  background: rgba(212, 175, 55, 0.08);
-}
-.upload-dropzone p { margin: 0 0 0.3rem; font-weight: 600; color: var(--Pt. L.R. College of Technology-dark); }
-.upload-hint { font-size: 0.78rem; color: var(--Pt. L.R. College of Technology-gray); }
-.upload-error { color: #b3261e; font-size: 0.85rem; margin-top: 0.5rem; }
-
-.upload-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1.2rem;
-}
-.upload-preview-item {
-  border: 1px solid var(--Pt. L.R. College of Technology-border);
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-  display: flex;
-  flex-direction: column;
-}
-.upload-preview-item img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-.upload-preview-controls {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.4rem 0.5rem;
-  background: #f7f5f2;
-}
-.upload-preview-controls button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 0.9rem;
-  padding: 0.2rem 0.4rem;
-  border-radius: 6px;
-}
-.upload-preview-controls button:hover { background: #eee; }
-.upload-preview-controls button.danger { color: #b3261e; }
-.upload-preview-item input {
-  border: none;
-  border-top: 1px solid var(--Pt. L.R. College of Technology-border);
-  padding: 0.4rem 0.6rem;
-  font-size: 0.78rem;
-}
-
-@media (max-width: 700px) {
-  .form-grid { grid-template-columns: 1fr; }
-  .form-section { padding: 1.4rem; }
-  .form-toggle-row { flex-direction: column; gap: 0.8rem; }
-  .form-actions { flex-direction: column-reverse; }
-  .form-actions .btn { width: 100%; }
-}
+   .gallery-album-form {
+    --gallery-red: #c8102e;
+    --gallery-gold: #d4af37;
+    --gallery-dark: #1a1a1a;
+    --gallery-gray: #55575c;
+    --gallery-border: #e2e2e6;
+  
+    font-family: "Inter", "Poppins", sans-serif;
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    min-width: 0;
+  }
+  
+  .gallery-form-error-banner {
+    background: #fdecea;
+    border: 1px solid #f3c2bc;
+    color: #b3261e;
+    padding: 0.9rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+  
+  .gallery-form-section {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid var(--gallery-border);
+    border-radius: 16px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  }
+  
+  .gallery-form-section legend {
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    padding: 0 0.6rem;
+    color: var(--gallery-red);
+    font-weight: 700;
+  }
+  
+  .gallery-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .gallery-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+    min-width: 0;
+  }
+  
+  .gallery-form-field label,
+  .gallery-form-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gallery-dark);
+  }
+  
+  .gallery-form-field input,
+  .gallery-form-field select,
+  .gallery-form-field textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--gallery-border);
+    font-family: inherit;
+    font-size: 0.92rem;
+    background: #fcfcfd;
+    color: var(--gallery-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .gallery-form-field textarea {
+    resize: vertical;
+  }
+  
+  .gallery-form-field input:focus,
+  .gallery-form-field select:focus,
+  .gallery-form-field textarea:focus {
+    outline: none;
+    border-color: var(--gallery-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+  }
+  
+  .gallery-cover-preview {
+    display: block;
+    margin-top: 0.8rem;
+    width: 220px;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  
+  .gallery-form-toggle-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin: 1.2rem 0;
+  }
+  
+  .gallery-form-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .gallery-form-toggle input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--gallery-red);
+  }
+  
+  .gallery-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .gallery-form-actions .gallery-btn {
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-family: inherit;
+    font-size: 0.92rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .gallery-form-actions .gallery-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+  
+  .gallery-btn-primary {
+    background: linear-gradient(135deg, var(--gallery-red), #970c22);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(200, 16, 46, 0.2);
+  }
+  
+  .gallery-btn-outline {
+    background: transparent;
+    border-color: var(--gallery-red) !important;
+    color: var(--gallery-red);
+  }
+  
+  .gallery-btn-primary:disabled,
+  .gallery-btn-outline:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Image uploader */
+  
+  .gallery-image-uploader {
+    margin-top: 1.4rem;
+    min-width: 0;
+  }
+  
+  .gallery-upload-dropzone {
+    border: 2px dashed var(--gallery-border);
+    border-radius: 14px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: #fbfaf8;
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  
+  .gallery-upload-dropzone.dragging {
+    border-color: var(--gallery-gold);
+    background: rgba(212, 175, 55, 0.08);
+  }
+  
+  .gallery-upload-dropzone p {
+    margin: 0 0 0.3rem;
+    font-weight: 600;
+    color: var(--gallery-dark);
+  }
+  
+  .gallery-upload-hint {
+    font-size: 0.78rem;
+    color: var(--gallery-gray);
+  }
+  
+  .gallery-upload-error {
+    color: #b3261e;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  
+  .gallery-upload-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  
+  .gallery-upload-preview-item {
+    min-width: 0;
+    border: 1px solid var(--gallery-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gallery-upload-preview-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .gallery-upload-preview-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
+    background: #f7f5f2;
+  }
+  
+  .gallery-upload-preview-controls button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 6px;
+  }
+  
+  .gallery-upload-preview-controls button:hover {
+    background: #eee;
+  }
+  
+  .gallery-upload-preview-controls button.danger {
+    color: #b3261e;
+  }
+  
+  .gallery-upload-preview-item input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border: none;
+    border-top: 1px solid var(--gallery-border);
+    padding: 0.5rem 0.6rem;
+    font-size: 0.78rem;
+  }
+  
+  @media (max-width: 700px) {
+    .gallery-form-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  
+    .gallery-form-section {
+      padding: 1.2rem;
+    }
+  
+    .gallery-form-toggle-row {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  
+    .gallery-form-actions {
+      flex-direction: column-reverse;
+    }
+  
+    .gallery-form-actions .gallery-btn {
+      width: 100%;
+    }
+  
+    .gallery-upload-preview-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .gallery-form-section {
+      padding: 1rem;
+    }
+  
+    .gallery-upload-dropzone {
+      padding: 1.5rem 0.8rem;
+    }
+  
+    .gallery-upload-preview-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  

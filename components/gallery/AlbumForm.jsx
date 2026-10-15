@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -22,25 +23,30 @@ const emptyForm = {
   metaDescription: "",
 };
 
-/**
- * Props:
- *   mode: "create" | "edit"
- *   initialEvent?: existing event object (edit mode)
- */
-export default function AlbumForm({ mode = "create", initialEvent = null }) {
+export default function AlbumForm({
+  mode = "create",
+  initialEvent = null,
+}) {
   const router = useRouter();
+
   const [form, setForm] = useState(
     initialEvent
       ? {
           ...emptyForm,
           ...initialEvent,
-          eventDate: initialEvent.eventDate ? initialEvent.eventDate.slice(0, 10) : "",
+          eventDate: initialEvent.eventDate
+            ? initialEvent.eventDate.slice(0, 10)
+            : "",
         }
       : emptyForm
   );
-  const [coverImage, setCoverImage] = useState(initialEvent?.coverImage || null);
+
+  const [coverImage, setCoverImage] = useState(
+    initialEvent?.coverImage || null
+  );
   const [images, setImages] = useState(initialEvent?.images || []);
   const [saving, setSaving] = useState(false);
+  const [uploadingCover, setUploadingCover] = useState(false);
   const [error, setError] = useState("");
 
   function updateField(field, value) {
@@ -50,31 +56,62 @@ export default function AlbumForm({ mode = "create", initialEvent = null }) {
   async function handleCoverUpload(e) {
     const file = e.target.files?.[0];
     if (!file) return;
-    const formData = new FormData();
-    formData.append("files", file);
-    const res = await fetch("/api/gallery/upload", { method: "POST", body: formData });
-    const data = await res.json();
-    if (!res.ok) {
-      setError(data.error || "Cover upload failed");
-      return;
+
+    setError("");
+    setUploadingCover(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("files", file);
+
+      const res = await fetch("/api/gallery/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Cover upload failed");
+      }
+
+      setCoverImage({
+        url: data.images[0].url,
+        publicId: data.images[0].publicId,
+      });
+    } catch (err) {
+      setError(err.message || "Cover upload failed");
+    } finally {
+      setUploadingCover(false);
+      e.target.value = "";
     }
-    setCoverImage({ url: data.images[0].url, publicId: data.images[0].publicId });
   }
 
   async function handleSubmit(e, publishOverride) {
     e.preventDefault();
+
+    if (saving || uploadingCover) return;
+
     setError("");
 
     if (!coverImage) {
       setError("Please upload a cover image.");
       return;
     }
-    if (!form.eventName || !form.shortDescription || !form.eventDate) {
-      setError("Please fill in Event Name, Event Date, and Short Description.");
+
+    if (
+      !form.eventName.trim() ||
+      !form.shortDescription.trim() ||
+      !form.eventDate
+    ) {
+      setError(
+        "Please fill in Event Name, Event Date, and Short Description."
+      );
       return;
     }
 
     setSaving(true);
+
     const payload = {
       ...form,
       status: publishOverride || form.status,
@@ -83,146 +120,257 @@ export default function AlbumForm({ mode = "create", initialEvent = null }) {
     };
 
     try {
-      const url = mode === "create" ? "/api/gallery" : `/api/gallery/${initialEvent.slug}`;
+      const url =
+        mode === "create"
+          ? "/api/gallery"
+          : `/api/gallery/${initialEvent.slug}`;
+
       const method = mode === "create" ? "POST" : "PUT";
+
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Save failed");
+
+      if (!res.ok) {
+        throw new Error(data.error || "Save failed");
+      }
 
       router.push("/admin/gallery");
       router.refresh();
     } catch (err) {
-      setError(err.message);
+      setError(err.message || "Something went wrong");
     } finally {
       setSaving(false);
     }
   }
 
   return (
-    <form className="album-form" onSubmit={(e) => handleSubmit(e)}>
-      {error ? <div className="form-error-banner">{error}</div> : null}
+    <form
+      className="gallery-album-form"
+      onSubmit={(e) => handleSubmit(e)}
+    >
+      {error && (
+        <div className="gallery-form-error-banner" role="alert">
+          {error}
+        </div>
+      )}
 
-      <fieldset className="form-section">
+      <fieldset className="gallery-form-section">
         <legend>Event Information</legend>
 
-        <div className="form-grid">
-          <div className="form-field">
-            <label>Event Name *</label>
-            <input value={form.eventName} onChange={(e) => updateField("eventName", e.target.value)} required />
-          </div>
-          <div className="form-field">
-            <label>Event Slug</label>
+        <div className="gallery-form-grid">
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-name">Event Name *</label>
             <input
-              value={form.slug}
-              placeholder="auto-generated if left blank"
-              onChange={(e) => updateField("slug", e.target.value)}
-            />
-          </div>
-          <div className="form-field">
-            <label>Event Year *</label>
-            <input
-              type="number"
-              value={form.year}
-              onChange={(e) => updateField("year", Number(e.target.value))}
+              id="gallery-event-name"
+              value={form.eventName}
+              onChange={(e) => updateField("eventName", e.target.value)}
               required
             />
           </div>
-          <div className="form-field">
-            <label>Event Date *</label>
-            <input type="date" value={form.eventDate} onChange={(e) => updateField("eventDate", e.target.value)} required />
+
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-slug">Event Slug</label>
+            <input
+              id="gallery-event-slug"
+              value={form.slug}
+              placeholder="Auto-generated if left blank"
+              onChange={(e) => updateField("slug", e.target.value)}
+            />
           </div>
-          <div className="form-field">
-            <label>Category *</label>
-            <select value={form.category} onChange={(e) => updateField("category", e.target.value)}>
-              {GALLERY_CATEGORIES_CLIENT.map((c) => (
-                <option key={c} value={c}>
-                  {c}
+
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-year">Event Year *</label>
+            <input
+              id="gallery-event-year"
+              type="number"
+              value={form.year}
+              onChange={(e) =>
+                updateField("year", Number(e.target.value))
+              }
+              required
+            />
+          </div>
+
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-date">Event Date *</label>
+            <input
+              id="gallery-event-date"
+              type="date"
+              value={form.eventDate}
+              onChange={(e) => updateField("eventDate", e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-category">Category *</label>
+            <select
+              id="gallery-event-category"
+              value={form.category}
+              onChange={(e) => updateField("category", e.target.value)}
+            >
+              {GALLERY_CATEGORIES_CLIENT.map((category) => (
+                <option key={category} value={category}>
+                  {category}
                 </option>
               ))}
             </select>
           </div>
-          <div className="form-field">
-            <label>Location</label>
-            <input value={form.location} onChange={(e) => updateField("location", e.target.value)} />
+
+          <div className="gallery-form-field">
+            <label htmlFor="gallery-event-location">Location</label>
+            <input
+              id="gallery-event-location"
+              value={form.location}
+              onChange={(e) => updateField("location", e.target.value)}
+            />
           </div>
         </div>
 
-        <div className="form-field">
-          <label>Short Description * (max 240 chars)</label>
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-short-description">
+            Short Description * (max 240 chars)
+          </label>
           <textarea
+            id="gallery-short-description"
             maxLength={240}
             rows={2}
             value={form.shortDescription}
-            onChange={(e) => updateField("shortDescription", e.target.value)}
+            onChange={(e) =>
+              updateField("shortDescription", e.target.value)
+            }
             required
           />
         </div>
 
-        <div className="form-field">
-          <label>Full Description</label>
-          <textarea rows={6} value={form.description} onChange={(e) => updateField("description", e.target.value)} />
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-full-description">
+            Full Description
+          </label>
+          <textarea
+            id="gallery-full-description"
+            rows={6}
+            value={form.description}
+            onChange={(e) => updateField("description", e.target.value)}
+          />
         </div>
       </fieldset>
 
-      <fieldset className="form-section">
+      <fieldset className="gallery-form-section">
         <legend>Album Settings</legend>
 
-        <div className="form-field">
-          <label>Cover Image *</label>
-          <input type="file" accept="image/*" onChange={handleCoverUpload} />
-          {coverImage ? (
-            /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={coverImage.url} alt="Cover preview" className="cover-preview" />
-          ) : null}
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-cover-image">Cover Image *</label>
+          <input
+            id="gallery-cover-image"
+            type="file"
+            accept="image/*"
+            onChange={handleCoverUpload}
+            disabled={uploadingCover || saving}
+          />
+
+          {uploadingCover && <p>Uploading cover image...</p>}
+
+          {coverImage && (
+            <img
+              src={coverImage.url}
+              alt="Cover preview"
+              className="gallery-cover-preview"
+            />
+          )}
         </div>
 
-        <ImageUploader images={images} onChange={setImages} label="Multiple Gallery Images" />
+        <ImageUploader
+          images={images}
+          onChange={setImages}
+          label="Multiple Gallery Images"
+        />
 
-        <div className="form-toggle-row">
-          <label className="toggle">
-            <input type="checkbox" checked={form.featured} onChange={(e) => updateField("featured", e.target.checked)} />
+        <div className="gallery-form-toggle-row">
+          <label className="gallery-form-toggle">
+            <input
+              type="checkbox"
+              checked={form.featured}
+              onChange={(e) =>
+                updateField("featured", e.target.checked)
+              }
+            />
             Featured Album
           </label>
-          <label className="toggle">
+
+          <label className="gallery-form-toggle">
             <input
               type="checkbox"
               checked={form.showOnHomepage}
-              onChange={(e) => updateField("showOnHomepage", e.target.checked)}
+              onChange={(e) =>
+                updateField("showOnHomepage", e.target.checked)
+              }
             />
             Show on Homepage
           </label>
         </div>
 
-        <div className="form-field">
-          <label>Status</label>
-          <select value={form.status} onChange={(e) => updateField("status", e.target.value)}>
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-album-status">Status</label>
+          <select
+            id="gallery-album-status"
+            value={form.status}
+            onChange={(e) => updateField("status", e.target.value)}
+          >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
           </select>
         </div>
       </fieldset>
 
-      <fieldset className="form-section">
+      <fieldset className="gallery-form-section">
         <legend>SEO</legend>
-        <div className="form-field">
-          <label>Meta Title</label>
-          <input value={form.metaTitle} onChange={(e) => updateField("metaTitle", e.target.value)} />
+
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-meta-title">Meta Title</label>
+          <input
+            id="gallery-meta-title"
+            value={form.metaTitle}
+            onChange={(e) => updateField("metaTitle", e.target.value)}
+          />
         </div>
-        <div className="form-field">
-          <label>Meta Description</label>
-          <textarea rows={2} value={form.metaDescription} onChange={(e) => updateField("metaDescription", e.target.value)} />
+
+        <div className="gallery-form-field">
+          <label htmlFor="gallery-meta-description">
+            Meta Description
+          </label>
+          <textarea
+            id="gallery-meta-description"
+            rows={2}
+            value={form.metaDescription}
+            onChange={(e) =>
+              updateField("metaDescription", e.target.value)
+            }
+          />
         </div>
       </fieldset>
 
-      <div className="form-actions">
-        <button type="button" className="btn btn-outline" disabled={saving} onClick={(e) => handleSubmit(e, "draft")}>
-          Save as Draft
+      <div className="gallery-form-actions">
+        <button
+          type="button"
+          className="gallery-btn gallery-btn-outline"
+          disabled={saving || uploadingCover}
+          onClick={(e) => handleSubmit(e, "draft")}
+        >
+          {saving ? "Saving..." : "Save as Draft"}
         </button>
-        <button type="button" className="btn btn-primary" disabled={saving} onClick={(e) => handleSubmit(e, "published")}>
+
+        <button
+          type="button"
+          className="gallery-btn gallery-btn-primary"
+          disabled={saving || uploadingCover}
+          onClick={(e) => handleSubmit(e, "published")}
+        >
           {saving ? "Saving..." : "Publish Album"}
         </button>
       </div>
