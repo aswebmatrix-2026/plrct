@@ -490,7 +490,11 @@ function MobileDrawer({ open, onClose, activeHref }) {
         </nav>
         <div className="plrct-mobile-drawer__footer">
           <Link href="/apply" className="plrct-btn plrct-btn--primary" onClick={onClose}>
+<<<<<<< HEAD
             Enquiry Now
+=======
+            Apply Now
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </Link>
         </div>
       </div>

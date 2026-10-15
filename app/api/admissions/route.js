@@ -8,7 +8,11 @@ import { generateApplicationNumber } from "@/lib/generateApplicationNumber";
 import { checkRateLimit, getClientIp } from "@/lib/rateLimit";
 import { sendConfirmationEmail } from "@/lib/mail";
 
+<<<<<<< HEAD
 // POST /api/admissions — public submission endpoint (called from the Enquiry Now modal)
+=======
+// POST /api/admissions — public submission endpoint (called from the Apply Now modal)
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 export async function POST(request) {
   const ip = getClientIp(request);
   const { allowed } = await checkRateLimit(`submit:${ip}`);

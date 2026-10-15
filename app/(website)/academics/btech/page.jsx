@@ -464,6 +464,7 @@ export default function BTechPage() {
         </section>
 
         {/* ---------------- BRANCHES / INTERNAL LINKS ---------------- */}
+<<<<<<< HEAD
         
         <section className="section section--tint" aria-labelledby="explore-h">
           <div className="container">
@@ -478,6 +479,21 @@ export default function BTechPage() {
               <a href="/academics/departments/ce">Civil Engineering</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/academics/diploma">Diploma Programs</a>
+=======
+        <section className="section" aria-labelledby="branches-h">
+          <div className="container">
+            <p className="eyebrow">CHOOSE YOUR SPECIALIZATION</p>
+            <h2 id="branches-h">B.Tech departments at Pt. L.R. College of Technology</h2>
+            <div className="link-grid">
+              <a href="/academics/departments/cse">Computer Science Engineering</a>
+              <a href="/academics/departments/ece">Electronics &amp; Communication Engineering</a>
+              <a href="/academics/departments/me">Mechanical Engineering</a>
+              <a href="/academics/departments/ce">Civil Engineering</a>
+              <a href="/academics/departments/ee">Electrical Engineering</a>
+              <a href="/academics/departments/aiml">Artificial Intelligence &amp; Machine Learning</a>
+              <a href="/academics/departments/data-science">Data Science</a>
+              <a href="/academics/departments/it">Information Technology</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -555,7 +571,11 @@ export default function BTechPage() {
             </div>
             <div className="final-cta__actions">
               <a href="/admissions" className="btn btn--gold">
+<<<<<<< HEAD
                 Enquiry Now
+=======
+                Apply Now
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               </a>
               <a href="/contact" className="btn btn--outline-light">
                 Contact Admissions

@@ -1,5 +1,8 @@
 import "./ece.css";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
@@ -217,7 +220,11 @@ export default function ECEPage() {
                   laboratories and industry-oriented education in Faridabad.
                 </p>
                 <div className="ece-hero__cta">
+<<<<<<< HEAD
                   <a href="/contact" className="btn btn--primary">Enquiry Now</a>
+=======
+                  <a href="/admissions" className="btn btn--primary">Apply Now</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-ece.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -236,6 +243,7 @@ export default function ECEPage() {
         </header>
 
         <div className="container">
+<<<<<<< HEAD
            <Image
             src="/images/ece.webp"
             alt="Students working in the programming lab at Pt. L.R. College of Technology"
@@ -244,6 +252,9 @@ export default function ECEPage() {
             priority
             style={{ width: "100%", height: "auto", marginTop: "35px", borderRadius: "15px" }}
           />
+=======
+          <ImgPlaceholder label="Electronics Laboratory — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -338,6 +349,26 @@ export default function ECEPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* ---------------- PROGRAM HIGHLIGHTS ---------------- */}
+        <section className="section section--tint" aria-labelledby="highlights-h">
+          <div className="container">
+            <p className="eyebrow">PROGRAM HIGHLIGHTS</p>
+            <h2 id="highlights-h">B.Tech ECE at a glance</h2>
+            <aside className="spec-panel" style={{ background: "var(--color-white)", border: "1px solid #e5e9f0" }}>
+              <p className="spec-panel__title" style={{ color: "var(--color-primary)" }}>PROGRAM DATASHEET</p>
+              <SpecRow k="Duration" v="4 Years / 8 Semesters" />
+              <SpecRow k="Eligibility" v="10+2 with PCM, valid JEE Main / state counseling" />
+              <SpecRow k="Curriculum" v="AICTE approved" />
+              <SpecRow k="Laboratory Training" v="Practical, semester-wise" />
+              <SpecRow k="Industrial Exposure" v="Mandatory internship" />
+              <SpecRow k="Project Work" v="Minor + major final-year project" />
+              <SpecRow k="Placement Guidance" v="Dedicated T&P Cell" />
+            </aside>
+          </div>
+        </section>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
         {/* ---------------- CURRICULUM ---------------- */}
         <section className="section" aria-labelledby="curriculum-h">
@@ -447,6 +478,7 @@ export default function ECEPage() {
                 </ul>
               </article>
             </div>
+<<<<<<< HEAD
             <div className="img-grid" style={{marginTop:"25px",borderRadius: "50%"}}>
               <img
             src="/images/workshop.webp"
@@ -462,6 +494,12 @@ export default function ECEPage() {
           src="/images/electrical.webp"
           alt="Faculty Guiding a Project"
            />
+=======
+            <div className="img-grid">
+              <ImgPlaceholder label="Embedded Systems Lab" />
+              <ImgPlaceholder label="VLSI &amp; Semiconductor Lab" />
+              <ImgPlaceholder label="IoT &amp; Robotics Lab" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -528,7 +566,15 @@ export default function ECEPage() {
               applications and AI-enabled embedded systems — many developed under faculty guidance
               with an eye toward inter-college competitions or further research.
             </p>
+<<<<<<< HEAD
             
+=======
+            <div className="img-grid">
+              <ImgPlaceholder label="Students Working with Electronic Circuits" />
+              <ImgPlaceholder label="Communication Systems Project" />
+              <ImgPlaceholder label="Industrial Training Visit" />
+            </div>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </section>
 
@@ -695,12 +741,17 @@ export default function ECEPage() {
         </section>
 
         {/* ---------------- INTERNAL LINKS ---------------- */}
+<<<<<<< HEAD
         <section className="section section--tint" aria-labelledby="explore-h">
+=======
+        <section className="section" aria-labelledby="explore-h">
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           <div className="container">
             <p className="eyebrow">EXPLORE FURTHER</p>
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
+<<<<<<< HEAD
               <a href="/academics/departments/me">Mechanical Engineering</a>
               <a href="/academics/departments/ee">Electronics Engineering</a>
               <a href="/academics/departments/cse">Computer Science Engineering</a>
@@ -708,6 +759,15 @@ export default function ECEPage() {
               <a href="/academics/departments/ce">Civil Engineering</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/academics/diploma">Diploma Programs</a>
+=======
+              <a href="/academics/departments/cse">Computer Science Engineering</a>
+              <a href="/academics/departments/aiml">AI &amp; Machine Learning</a>
+              <a href="/academics/departments/it">Information Technology</a>
+              <a href="/academics/resources/laboratories">Laboratories</a>
+              <a href="/academics/resources/curriculum">Curriculum</a>
+              <a href="/academics/mtech">M.Tech Programs</a>
+              <a href="/admissions">Admissions</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>

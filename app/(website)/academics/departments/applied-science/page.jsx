@@ -1,5 +1,9 @@
 import "./applied-science.css";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
 // ============================================================================
@@ -159,6 +163,7 @@ const eduOrgSchema = {
 // ============================================================================
 // SMALL COMPONENTS
 // ============================================================================
+<<<<<<< HEAD
 function LabImage({ src, alt }) {
   return (
     <div className="media-frame">
@@ -168,6 +173,14 @@ function LabImage({ src, alt }) {
         fill
         sizes="(max-width: 480px) 100vw, (max-width: 992px) 50vw, 400px"
       />
+=======
+function ImgPlaceholder({ label, ratio = "16/9" }) {
+  return (
+    <div className="img-placeholder" style={{ aspectRatio: ratio }} role="img" aria-label={label}>
+      <span className="img-placeholder__corner img-placeholder__corner--tl" />
+      <span className="img-placeholder__corner img-placeholder__corner--br" />
+      <span className="img-placeholder__label">{label}</span>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
     </div>
   );
 }
@@ -214,7 +227,11 @@ export default function AppliedSciencePage() {
                   experience, analytical learning, and interdisciplinary academic excellence.
                 </p>
                 <div className="appsci-hero__cta">
+<<<<<<< HEAD
                   <a href="/contact" className="btn btn--primary">Enquiry Now</a>
+=======
+                  <a href="/admissions" className="btn btn--primary">Apply Now</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-applied-science.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -233,6 +250,7 @@ export default function AppliedSciencePage() {
         </header>
 
         <div className="container">
+<<<<<<< HEAD
           <div className="media-frame media-frame--hero">
             <Image
               src="/images/applied.webp"
@@ -242,6 +260,9 @@ export default function AppliedSciencePage() {
               sizes="(max-width: 1200px) 100vw, 1200px"
             />
           </div>
+=======
+          <ImgPlaceholder label="Applied Science Department — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -415,9 +436,15 @@ export default function AppliedSciencePage() {
               </article>
             </div>
             <div className="img-grid">
+<<<<<<< HEAD
               <LabImage src="/images/physics.webp" alt="Physics Laboratory at Pt. L.R. College of Technology" />
               <LabImage src="/images/Technical Training Workshop Panel.webp" alt="Students performing experiments in the Applied Science laboratory" />
               <LabImage src="/images/student.webp" alt="Chemistry Laboratory at Pt. L.R. College of Technology" />
+=======
+              <ImgPlaceholder label="Physics Laboratory" />
+              <ImgPlaceholder label="Students Performing Experiments" />
+              <ImgPlaceholder label="Chemistry Laboratory" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -501,9 +528,15 @@ export default function AppliedSciencePage() {
 
         <div className="container">
           <div className="img-grid">
+<<<<<<< HEAD
             <LabImage src="/images/principal.webp" alt="Engineering Mathematics Laboratory" />
             <LabImage src="/images/lab.webp" alt="Environmental Science Laboratory" />
             <LabImage src="/images/chemistry.webp" alt="Faculty interacting with Applied Science students" />
+=======
+            <ImgPlaceholder label="Mathematics Laboratory" />
+            <ImgPlaceholder label="Environmental Science Laboratory" />
+            <ImgPlaceholder label="Faculty Interaction with Students" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </div>
 
@@ -593,6 +626,7 @@ export default function AppliedSciencePage() {
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
+<<<<<<< HEAD
               <a href="/academics/departments/me">Mechanical Engineering</a>
               <a href="/academics/departments/ee">Electronics Engineering</a>
               <a href="/academics/departments/cse">Computer Science Engineering</a>
@@ -600,6 +634,15 @@ export default function AppliedSciencePage() {
               <a href="/academics/departments/ce">Civil Engineering</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/academics/diploma">Diploma Programs</a>
+=======
+              <a href="/academics/departments/cse">Computer Science Engineering</a>
+              <a href="/academics/departments/ce">Civil Engineering</a>
+              <a href="/academics/departments/mechanical">Mechanical Engineering</a>
+              <a href="/academics/resources/laboratories">Laboratories</a>
+              <a href="/academics/resources/curriculum">Curriculum</a>
+              <a href="/academics/mtech">M.Tech Programs</a>
+              <a href="/admissions">Admissions</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>

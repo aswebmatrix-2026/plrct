@@ -1,5 +1,8 @@
 import "./ce.css";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
@@ -213,7 +216,11 @@ export default function CEPage() {
                   advanced laboratories, and industry-oriented education.
                 </p>
                 <div className="ce-hero__cta">
+<<<<<<< HEAD
                   <a href="/contact" className="btn btn--primary">Enquiry Now</a>
+=======
+                  <a href="/admissions" className="btn btn--primary">Apply Now</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-ce.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -232,6 +239,7 @@ export default function CEPage() {
         </header>
 
         <div className="container">
+<<<<<<< HEAD
            <Image
     src="/images/Architectural.webp"
     alt="Civil Engineering students reviewing an architectural model at Pt. L.R. College of Technology, Faridabad"
@@ -240,6 +248,9 @@ export default function CEPage() {
     priority
     style={{ width: "100%", height: "auto", borderRadius: "12px",marginTop:"50px",}}
   />
+=======
+          <ImgPlaceholder label="Civil Engineering Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -414,6 +425,7 @@ export default function CEPage() {
                 <p>Water quality analysis, wastewater treatment study, air quality testing and environmental monitoring.</p>
               </article>
             </div>
+<<<<<<< HEAD
             <div className="img-grid" style={{marginTop:"25px",borderRadius:"50px"}}>
                <Image
                 src="/images/civil.webp"
@@ -437,6 +449,12 @@ export default function CEPage() {
                   height={250}
                    className="lab-img"
                  />
+=======
+            <div className="img-grid">
+              <ImgPlaceholder label="Structural Engineering Laboratory" />
+              <ImgPlaceholder label="Students Performing Surveying" />
+              <ImgPlaceholder label="Concrete Technology Lab" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -520,6 +538,7 @@ export default function CEPage() {
 
         <div className="container">
           <div className="img-grid">
+<<<<<<< HEAD
             <Image
                 src="/images/Engineering Workshop Safety Briefing.png"
                 alt="Mechanical Engineering Lab practical session"
@@ -542,6 +561,11 @@ export default function CEPage() {
                   height={250}
                    className="lab-img"
                  />
+=======
+            <ImgPlaceholder label="Construction Site Training" />
+            <ImgPlaceholder label="Infrastructure Project Visit" />
+            <ImgPlaceholder label="Faculty Interaction with Students" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </div>
 
@@ -647,6 +671,7 @@ export default function CEPage() {
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
+<<<<<<< HEAD
               <a href="/academics/departments/me">Mechanical Engineering</a>
               <a href="/academics/departments/ee">Electronics Engineering</a>
               <a href="/academics/departments/cse">Computer Science Engineering</a>
@@ -654,6 +679,15 @@ export default function CEPage() {
               <a href="/academics/departments/ce">Civil Engineering</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/academics/diploma">Diploma Programs</a>
+=======
+              <a href="/academics/departments/mechanical">Mechanical Engineering</a>
+              <a href="/academics/departments/electrical">Electrical Engineering</a>
+              <a href="/academics/departments/cse">Computer Science Engineering</a>
+              <a href="/academics/resources/laboratories">Laboratories</a>
+              <a href="/academics/resources/curriculum">Curriculum</a>
+              <a href="/academics/mtech">M.Tech Programs</a>
+              <a href="/admissions">Admissions</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>

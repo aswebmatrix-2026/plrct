@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "PLRCT",
+=======
+  "name": "Pt. L.R. College of Technology",
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
   "version": "0.1.0",
   "private": true,
   "scripts": {

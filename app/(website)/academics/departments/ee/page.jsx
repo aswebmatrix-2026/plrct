@@ -1,6 +1,9 @@
 import "./ee.css";
+<<<<<<< HEAD
 import Image from "next/image";
 
+=======
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 
 // ============================================================================
 // SEO METADATA — Next.js 15 App Router
@@ -198,7 +201,11 @@ export default function EEPage() {
                   energy coursework, backed by dedicated placement support.
                 </p>
                 <div className="ee-hero__cta">
+<<<<<<< HEAD
                   <a href="/contact" className="btn btn--primary">Enquiry Now</a>
+=======
+                  <a href="/admissions" className="btn btn--primary">Apply Now</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
                   <a href="/downloads/Pt. L.R. College of Technology-brochure-ee.pdf" className="btn btn--ghost">Download Brochure</a>
                 </div>
               </div>
@@ -217,6 +224,7 @@ export default function EEPage() {
         </header>
 
         <div className="container">
+<<<<<<< HEAD
           <img
   src="/images/electrical.webp"
   alt="Programming Lab"
@@ -226,6 +234,9 @@ export default function EEPage() {
     borderRadius:"15px"
   }}
 />
+=======
+          <ImgPlaceholder label="EE Department Building — Pt. L.R. College of Technology Faridabad" ratio="21/9" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
         </div>
 
         {/* ---------------- OVERVIEW ---------------- */}
@@ -361,6 +372,7 @@ export default function EEPage() {
                 <p>Solar power, wind energy, battery storage and hybrid energy system experimentation.</p>
               </article>
             </div>
+<<<<<<< HEAD
            <div className="img-grid" style={{marginTop:"35px"}}>
   <div className="lab-image">
     <Image
@@ -392,6 +404,13 @@ export default function EEPage() {
     />
   </div>
 </div>
+=======
+            <div className="img-grid">
+              <ImgPlaceholder label="Electrical Machines Lab" />
+              <ImgPlaceholder label="Students in Lab Session" />
+              <ImgPlaceholder label="Faculty Guiding a Project" />
+            </div>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </section>
 
@@ -446,6 +465,7 @@ export default function EEPage() {
 
         <div className="container">
           <div className="img-grid">
+<<<<<<< HEAD
             <div className="lab-image">
              <Image
               src="/images/Technical Training Workshop Panel.webp"
@@ -477,6 +497,11 @@ export default function EEPage() {
   </div>
             
            
+=======
+            <ImgPlaceholder label="Industrial Visit — Power Substation" />
+            <ImgPlaceholder label="Technical Event / Project Expo" />
+            <ImgPlaceholder label="Student Project Showcase" />
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
           </div>
         </div>
 
@@ -534,6 +559,7 @@ export default function EEPage() {
             <h2 id="explore-h">Related programs &amp; departments</h2>
             <div className="link-grid">
               <a href="/academics/btech">B.Tech Programs</a>
+<<<<<<< HEAD
               <a href="/academics/departments/me">Mechanical Engineering</a>
               <a href="/academics/departments/ee">Electronics Engineering</a>
               <a href="/academics/departments/cse">Computer Science Engineering</a>
@@ -541,6 +567,15 @@ export default function EEPage() {
               <a href="/academics/departments/ce">Civil Engineering</a>
               <a href="/academics/mtech">M.Tech Programs</a>
               <a href="/academics/diploma">Diploma Programs</a>
+=======
+              <a href="/academics/departments/mechanical">Mechanical Engineering</a>
+              <a href="/academics/departments/electronics">Electronics Engineering</a>
+              <a href="/academics/departments/cse">Computer Science Engineering</a>
+              <a href="/academics/resources/laboratories">Laboratories</a>
+              <a href="/academics/resources/curriculum">Curriculum</a>
+              <a href="/academics/mtech">M.Tech Programs</a>
+              <a href="/admissions">Admissions</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
             </div>
           </div>
         </section>
@@ -601,10 +636,17 @@ export default function EEPage() {
             <div>
               <p className="eyebrow eyebrow--light">ADMISSIONS OPEN</p>
               <h2>Start your Electrical Engineering journey at Pt. L.R. College of Technology</h2>
+<<<<<<< HEAD
               <p>Seats in the EE department are limited for the upcoming academic year. Enquiry Now or download the department brochure.</p>
             </div>
             <div className="final-cta__actions">
               <a href="/contact" className="btn btn--gold">Enquiry Now</a>
+=======
+              <p>Seats in the EE department are limited for the upcoming academic year. Apply now or download the department brochure.</p>
+            </div>
+            <div className="final-cta__actions">
+              <a href="/admissions" className="btn btn--gold">Apply Now</a>
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               <a href="/downloads/Pt. L.R. College of Technology-brochure-ee.pdf" className="btn btn--outline-light">Download Brochure</a>
             </div>
           </div>

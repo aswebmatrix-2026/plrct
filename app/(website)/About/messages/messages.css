@@ -139,6 +139,7 @@
 
 @media (max-width: 900px) {
   .ptlrct-messages-values__grid { grid-template-columns: repeat(2, 1fr); }
+<<<<<<< HEAD
 }
 
 .ptlrct-message-portrait__frame {
@@ -161,4 +162,6 @@
   display: block;
   object-fit: cover;
   object-position: center top;
+=======
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 }

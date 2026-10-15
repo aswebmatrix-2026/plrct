@@ -66,7 +66,11 @@ export default async function PlacementDetail({ params }) {
             {p.driveDate && <p><strong>Drive Date:</strong> {new Date(p.driveDate).toLocaleDateString()} {p.driveTime}</p>}
             {p.documents && <p><strong>Documents Required:</strong> {p.documents}</p>}
             <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
+<<<<<<< HEAD
               {p.applyLink && <a className="btn btn-primary" href={p.applyLink} target="_blank" rel="noreferrer">Enquiry Now</a>}
+=======
+              {p.applyLink && <a className="btn btn-primary" href={p.applyLink} target="_blank" rel="noreferrer">Apply Now</a>}
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
               {p.pdfFile && <a className="btn btn-outline" href={p.pdfFile} target="_blank" rel="noreferrer">Download PDF</a>}
               <a className="btn btn-ghost" href={`https://wa.me/?text=Check%20this%20placement%20drive:%20${encodeURIComponent(p.companyName)}`} target="_blank" rel="noreferrer">Share</a>
             </div>

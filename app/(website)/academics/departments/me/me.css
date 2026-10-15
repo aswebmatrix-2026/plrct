@@ -226,6 +226,7 @@
   .me .link-grid { grid-template-columns: 1fr; }
   .me .btn { width: 100%; }
   .me-hero__cta { flex-direction: column; }
+<<<<<<< HEAD
 }
 .me-banner {
   position: relative;
@@ -297,4 +298,6 @@
   .me-banner {
     aspect-ratio: 16 / 9;
   }
+=======
+>>>>>>> 4e3406f2a4599a0e45bbfba063bc28c0dad0fe88
 }
