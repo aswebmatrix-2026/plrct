@@ -1,0 +1,880 @@
+/* ==========================================================================
+   Pt. L.R. College of Technology — Industrial Training Page Stylesheet
+   Design language: "Engineering Datasheet" (shared with the B.Tech page).
+   Every selector is scoped under .industrial-training and every class uses
+   the "it-" prefix, so nothing collides with other page stylesheets.
+   ========================================================================== */
+
+.industrial-training {
+  --it-primary: #c8102e;
+  --it-primary-dark: #9c0c23;
+  --it-white: #ffffff;
+  --it-bg: #f8fafc;
+  --it-dark: #111827;
+  --it-gold: #d4af37;
+
+  --it-font-display: "Playfair Display", Georgia, serif;
+  --it-font-heading: "Poppins", "Segoe UI", sans-serif;
+  --it-font-body: "Inter", "Segoe UI", sans-serif;
+
+  --it-radius-sm: 8px;
+  --it-radius-md: 14px;
+  --it-radius-lg: 22px;
+
+  --it-shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
+  --it-shadow-md: 0 12px 32px rgba(17, 24, 39, 0.1);
+  --it-shadow-lg: 0 24px 60px rgba(17, 24, 39, 0.16);
+
+  --it-space-1: 0.5rem;
+  --it-space-2: 1rem;
+  --it-space-3: 1.5rem;
+  --it-space-4: 2.5rem;
+  --it-space-5: 4rem;
+  --it-space-6: 6rem;
+
+  --it-border: #e5e9f0;
+
+  background: var(--it-bg);
+  color: var(--it-dark);
+  font-family: var(--it-font-body);
+  line-height: 1.7;
+}
+
+.industrial-training *,
+.industrial-training *::before,
+.industrial-training *::after {
+  box-sizing: border-box;
+}
+
+.industrial-training .it-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--it-space-3);
+}
+
+/* ---------------- Typography ---------------- */
+.industrial-training h1,
+.industrial-training h2,
+.industrial-training h3 {
+  font-family: var(--it-font-display);
+  font-weight: 700;
+  color: var(--it-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.industrial-training h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: var(--it-space-2) 0;
+}
+
+.industrial-training h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  margin-bottom: var(--it-space-2);
+}
+
+.industrial-training h3 {
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: var(--it-space-1);
+}
+
+.industrial-training h4 {
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--it-dark);
+  line-height: 1.3;
+  margin: 0 0 var(--it-space-1);
+}
+
+.industrial-training p {
+  margin: 0 0 var(--it-space-2);
+  color: #374151;
+  max-width: 74ch;
+}
+
+.industrial-training ul,
+.industrial-training ol,
+.industrial-training dl,
+.industrial-training dd {
+  margin: 0;
+  padding: 0;
+}
+
+.industrial-training .it-eyebrow {
+  font-family: var(--it-font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--it-primary);
+  border-left: 3px solid var(--it-gold);
+  padding-left: 0.6rem;
+  margin-bottom: var(--it-space-2);
+  display: inline-block;
+}
+
+.industrial-training .it-eyebrow--light {
+  color: var(--it-gold);
+  border-left-color: var(--it-white);
+}
+
+.industrial-training .it-group-title {
+  font-size: 1.05rem;
+  margin: var(--it-space-4) 0 var(--it-space-2);
+  padding-bottom: var(--it-space-1);
+  border-bottom: 1px solid var(--it-border);
+  position: relative;
+}
+.industrial-training .it-group-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 48px;
+  height: 3px;
+  background: var(--it-gold);
+}
+
+/* ---------------- Links & focus ---------------- */
+.industrial-training a {
+  color: var(--it-primary);
+}
+.industrial-training a:hover {
+  color: var(--it-primary-dark);
+}
+
+.industrial-training a:focus-visible,
+.industrial-training summary:focus-visible {
+  outline: 3px solid var(--it-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.industrial-training .it-hero a:focus-visible,
+.industrial-training .it-final-cta a:focus-visible {
+  outline-color: var(--it-gold);
+}
+
+.industrial-training .it-inline-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------------- Buttons ---------------- */
+.industrial-training .it-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--it-radius-sm);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.industrial-training .it-btn--primary {
+  background: var(--it-primary);
+  color: var(--it-white);
+  box-shadow: var(--it-shadow-sm);
+}
+.industrial-training .it-btn--primary:hover {
+  background: var(--it-primary-dark);
+  color: var(--it-white);
+  transform: translateY(-2px);
+  box-shadow: var(--it-shadow-md);
+}
+.industrial-training .it-btn--gold {
+  background: var(--it-gold);
+  color: var(--it-dark);
+}
+.industrial-training .it-btn--gold:hover {
+  color: var(--it-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--it-shadow-md);
+}
+.industrial-training .it-btn--outline-light {
+  border-color: var(--it-white);
+  color: var(--it-white);
+}
+.industrial-training .it-btn--outline-light:hover {
+  background: var(--it-white);
+  color: var(--it-dark);
+}
+
+/* ---------------- Breadcrumbs ---------------- */
+.industrial-training .it-breadcrumbs {
+  padding-top: var(--it-space-3);
+}
+.industrial-training .it-breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: var(--it-font-heading);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.industrial-training .it-breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 0.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.industrial-training .it-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+.industrial-training .it-breadcrumbs a:hover {
+  color: var(--it-gold);
+}
+.industrial-training .it-breadcrumbs [aria-current="page"] {
+  color: var(--it-gold);
+}
+
+/* ---------------- Hero ---------------- */
+.industrial-training .it-hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--it-dark) 0%, #1c2333 100%);
+  color: var(--it-white);
+  overflow: hidden;
+  padding-bottom: var(--it-space-6);
+}
+.industrial-training .it-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(212, 175, 55, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.09) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(ellipse at top right, black 10%, transparent 70%);
+  mask-image: radial-gradient(ellipse at top right, black 10%, transparent 70%);
+}
+.industrial-training .it-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.industrial-training .it-hero__content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--it-space-5);
+  align-items: start;
+  padding-top: var(--it-space-4);
+}
+.industrial-training .it-hero__text h1 {
+  color: var(--it-white);
+}
+.industrial-training .it-hero__lede {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  max-width: 56ch;
+}
+.industrial-training .it-hero__cta {
+  display: flex;
+  gap: var(--it-space-2);
+  margin-top: var(--it-space-3);
+  flex-wrap: wrap;
+}
+
+/* ---------------- Spec panel (gold information panel) ---------------- */
+.industrial-training .it-spec-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--it-radius-md);
+  padding: var(--it-space-3);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  position: relative;
+}
+.industrial-training .it-spec-panel::before,
+.industrial-training .it-spec-panel::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--it-gold);
+}
+.industrial-training .it-spec-panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.industrial-training .it-spec-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+.industrial-training .it-spec-panel .it-spec-panel__title {
+  font-family: var(--it-font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--it-gold);
+  margin-bottom: var(--it-space-2);
+}
+.industrial-training .it-spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--it-space-2);
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.14);
+  font-size: 0.88rem;
+}
+.industrial-training .it-spec-row:last-child {
+  border-bottom: none;
+}
+.industrial-training .it-spec-row__key {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--it-font-heading);
+  flex-shrink: 0;
+}
+.industrial-training .it-spec-row__value {
+  color: var(--it-white);
+  font-weight: 600;
+  text-align: right;
+}
+.industrial-training .it-spec-link {
+  color: var(--it-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.industrial-training .it-spec-link:hover {
+  color: var(--it-white);
+}
+
+/* ---------------- Media & placeholders ---------------- */
+.industrial-training .it-media {
+  position: relative;
+  width: 100%;
+  margin: var(--it-space-3) 0;
+  border-radius: var(--it-radius-md);
+  overflow: hidden;
+  background: #e5e9f0;
+}
+.industrial-training .it-media__img {
+  object-fit: cover;
+}
+.industrial-training .it-media__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--it-space-2);
+  background: repeating-linear-gradient(135deg, #e5e9f0, #e5e9f0 10px, #eef1f6 10px, #eef1f6 20px);
+  border: 1px solid #d8dee8;
+  border-radius: var(--it-radius-md);
+}
+.industrial-training .it-media__label {
+  font-family: var(--it-font-heading);
+  font-size: 0.8rem;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  text-align: center;
+  line-height: 1.4;
+}
+.industrial-training .it-media__corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--it-primary);
+  opacity: 0.6;
+}
+.industrial-training .it-media__corner--tl {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+.industrial-training .it-media__corner--br {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ---------------- Gallery ---------------- */
+.industrial-training .it-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--it-space-3);
+}
+.industrial-training .it-gallery__item {
+  margin: 0;
+}
+.industrial-training .it-gallery__item .it-media {
+  margin: 0 0 var(--it-space-1);
+  box-shadow: var(--it-shadow-sm);
+}
+.industrial-training .it-gallery__item figcaption {
+  font-family: var(--it-font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+  border-left: 3px solid var(--it-gold);
+  padding-left: 0.6rem;
+}
+
+/* ---------------- Sections ---------------- */
+.industrial-training .it-section {
+  padding: var(--it-space-6) 0;
+}
+.industrial-training .it-section--tint {
+  background: var(--it-white);
+  border-top: 1px solid var(--it-border);
+  border-bottom: 1px solid var(--it-border);
+}
+.industrial-training .it-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--it-space-5);
+}
+.industrial-training .it-section .it-two-col {
+  align-items: start;
+}
+
+/* ---------------- Cards ---------------- */
+.industrial-training .it-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--it-space-3);
+  margin-top: var(--it-space-3);
+}
+.industrial-training .it-card {
+  background: var(--it-white);
+  border: 1px solid var(--it-border);
+  border-radius: var(--it-radius-md);
+  padding: var(--it-space-3);
+  box-shadow: var(--it-shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+.industrial-training .it-section--tint .it-card {
+  background: var(--it-bg);
+}
+.industrial-training .it-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--it-space-3);
+  width: 34px;
+  height: 3px;
+  background: var(--it-gold);
+}
+.industrial-training .it-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--it-shadow-md);
+}
+.industrial-training .it-card p:last-child {
+  margin-bottom: 0;
+}
+.industrial-training .it-card__num {
+  display: block;
+  font-family: var(--it-font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--it-primary);
+  margin-bottom: 0.4rem;
+}
+.industrial-training .it-card--panel {
+  background: var(--it-dark);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: var(--it-shadow-md);
+}
+.industrial-training .it-section--tint .it-card--panel {
+  background: var(--it-dark);
+}
+.industrial-training .it-card--panel h3 {
+  color: var(--it-white);
+}
+.industrial-training .it-card--panel p,
+.industrial-training .it-card--panel li,
+.industrial-training .it-card--panel dd {
+  color: rgba(255, 255, 255, 0.85);
+}
+.industrial-training .it-card--panel dt {
+  color: var(--it-gold);
+}
+.industrial-training .it-card--panel .it-inline-link {
+  color: var(--it-gold);
+}
+.industrial-training .it-card--panel:hover {
+  transform: none;
+}
+
+/* ---------------- Notice ---------------- */
+.industrial-training .it-notice {
+  background: #fffbeb;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  border-left: 4px solid var(--it-gold);
+  border-radius: var(--it-radius-sm);
+  padding: var(--it-space-2) var(--it-space-3);
+  font-size: 0.92rem;
+  color: #374151;
+}
+
+/* ---------------- Lists ---------------- */
+.industrial-training .it-checklist {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+.industrial-training .it-checklist li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: #374151;
+}
+.industrial-training .it-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  background: var(--it-gold);
+  transform: rotate(45deg);
+}
+.industrial-training .it-numbered {
+  list-style: none;
+  counter-reset: it-num;
+  display: grid;
+  gap: 0.6rem;
+}
+.industrial-training .it-numbered li {
+  counter-increment: it-num;
+  position: relative;
+  padding-left: 2.6rem;
+  color: #374151;
+}
+.industrial-training .it-numbered li::before {
+  content: counter(it-num, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--it-primary);
+}
+.industrial-training .it-plain-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+/* ---------------- Timeline ---------------- */
+.industrial-training .it-timeline {
+  list-style: none;
+  position: relative;
+  margin-top: var(--it-space-4);
+  display: grid;
+  gap: var(--it-space-3);
+}
+.industrial-training .it-timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 21px;
+  width: 2px;
+  background: linear-gradient(var(--it-gold), rgba(212, 175, 55, 0.2));
+}
+.industrial-training .it-timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--it-space-3);
+  align-items: start;
+}
+.industrial-training .it-timeline__marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--it-primary);
+  color: var(--it-white);
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--it-white);
+  box-shadow: 0 0 0 2px var(--it-gold);
+  position: relative;
+  z-index: 1;
+}
+.industrial-training .it-timeline__body {
+  background: var(--it-bg);
+  border: 1px solid var(--it-border);
+  border-radius: var(--it-radius-md);
+  padding: var(--it-space-2) var(--it-space-3);
+  box-shadow: var(--it-shadow-sm);
+}
+.industrial-training .it-timeline__body p {
+  margin-bottom: 0;
+}
+
+/* ---------------- Skill cards ---------------- */
+.industrial-training .it-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--it-space-2);
+}
+.industrial-training .it-skill-card {
+  background: var(--it-bg);
+  border: 1px solid var(--it-border);
+  border-top: 3px solid var(--it-primary);
+  border-radius: var(--it-radius-sm);
+  padding: var(--it-space-3) var(--it-space-2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.industrial-training .it-skill-card--alt {
+  border-top-color: var(--it-gold);
+}
+.industrial-training .it-skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--it-shadow-md);
+}
+.industrial-training .it-skill-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ---------------- Definition lists & contact ---------------- */
+.industrial-training .it-dl {
+  display: grid;
+  gap: var(--it-space-2);
+}
+.industrial-training .it-dl dt,
+.industrial-training .it-contact__list dt {
+  font-family: var(--it-font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.industrial-training .it-contact {
+  margin-top: var(--it-space-4);
+  background: var(--it-white);
+  border: 1px solid var(--it-border);
+  border-left: 4px solid var(--it-gold);
+  border-radius: var(--it-radius-md);
+  padding: var(--it-space-3);
+  box-shadow: var(--it-shadow-sm);
+}
+.industrial-training .it-contact__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--it-space-3);
+}
+.industrial-training .it-contact__list dt {
+  color: var(--it-primary);
+}
+.industrial-training .it-contact__list dd {
+  color: #374151;
+}
+.industrial-training .it-apply {
+  margin-top: var(--it-space-4);
+}
+.industrial-training .it-apply__note {
+  font-family: var(--it-font-heading);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ---------------- Link grid ---------------- */
+.industrial-training .it-link-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--it-space-2);
+}
+.industrial-training .it-link-grid a {
+  display: block;
+  background: var(--it-white);
+  border: 1px solid var(--it-border);
+  border-left: 3px solid var(--it-primary);
+  border-radius: var(--it-radius-sm);
+  padding: var(--it-space-2);
+  color: var(--it-dark);
+  font-family: var(--it-font-heading);
+  font-weight: 500;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.industrial-training .it-link-grid a:hover {
+  background: #fff5f5;
+  color: var(--it-primary-dark);
+  transform: translateX(4px);
+}
+
+/* ---------------- FAQ ---------------- */
+.industrial-training .it-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--it-space-2);
+}
+.industrial-training .it-faq-item {
+  background: var(--it-bg);
+  border: 1px solid var(--it-border);
+  border-radius: var(--it-radius-sm);
+  padding: var(--it-space-2) var(--it-space-3);
+}
+.industrial-training .it-faq-item summary {
+  cursor: pointer;
+  font-family: var(--it-font-heading);
+  font-weight: 600;
+  list-style: none;
+}
+.industrial-training .it-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.industrial-training .it-faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--it-primary);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.industrial-training .it-faq-item[open] summary::after {
+  content: "\2212";
+}
+.industrial-training .it-faq-item p {
+  margin-top: var(--it-space-2);
+  margin-bottom: 0;
+}
+
+/* ---------------- Final CTA ---------------- */
+.industrial-training .it-final-cta {
+  background: linear-gradient(135deg, var(--it-primary) 0%, var(--it-primary-dark) 100%);
+  color: var(--it-white);
+  padding: var(--it-space-5) 0;
+}
+.industrial-training .it-final-cta h2 {
+  color: var(--it-white);
+}
+.industrial-training .it-final-cta p {
+  color: rgba(255, 255, 255, 0.92);
+}
+.industrial-training .it-final-cta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--it-space-4);
+  flex-wrap: wrap;
+}
+.industrial-training .it-final-cta__actions {
+  display: flex;
+  gap: var(--it-space-2);
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS — 1200 / 992 / 768 / 480
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .industrial-training .it-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industrial-training .it-skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industrial-training .it-link-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .industrial-training .it-hero__content {
+    grid-template-columns: 1fr;
+  }
+  .industrial-training .it-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--it-space-3);
+  }
+  .industrial-training .it-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industrial-training .it-contact__list {
+    grid-template-columns: 1fr;
+    gap: var(--it-space-2);
+  }
+}
+
+@media (max-width: 768px) {
+  .industrial-training .it-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .industrial-training .it-link-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industrial-training .it-final-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .industrial-training .it-section {
+    padding: var(--it-space-4) 0;
+  }
+  .industrial-training .it-hero {
+    padding-bottom: var(--it-space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .industrial-training .it-gallery,
+  .industrial-training .it-skill-grid,
+  .industrial-training .it-link-grid {
+    grid-template-columns: 1fr;
+  }
+  .industrial-training .it-btn {
+    width: 100%;
+  }
+  .industrial-training .it-hero__cta,
+  .industrial-training .it-final-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .industrial-training .it-spec-row {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .industrial-training .it-spec-row__value {
+    text-align: left;
+  }
+  .industrial-training .it-timeline__item {
+    grid-template-columns: 36px 1fr;
+    gap: var(--it-space-2);
+  }
+  .industrial-training .it-timeline__marker {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  .industrial-training .it-timeline::before {
+    left: 17px;
+  }
+}
+
+/* ---------------- Reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .industrial-training *,
+  .industrial-training *::before,
+  .industrial-training *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .industrial-training .it-card:hover,
+  .industrial-training .it-skill-card:hover,
+  .industrial-training .it-btn--primary:hover,
+  .industrial-training .it-btn--gold:hover,
+  .industrial-training .it-link-grid a:hover {
+    transform: none;
+  }
+}

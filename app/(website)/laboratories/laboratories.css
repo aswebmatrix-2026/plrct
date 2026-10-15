@@ -1,0 +1,831 @@
+/* ==========================================================================
+   Pt. L.R. College of Technology — Laboratories Page Stylesheet
+   Design language: "Engineering Datasheet" (shared with the B.Tech page).
+   Every selector is scoped under .laboratories-page and every class uses
+   the "laboratories-" prefix, so nothing leaks into the rest of the site.
+   ========================================================================== */
+
+.laboratories-page {
+  --laboratories-primary: #c8102e;
+  --laboratories-primary-dark: #9c0c23;
+  --laboratories-white: #ffffff;
+  --laboratories-bg: #f8fafc;
+  --laboratories-dark: #111827;
+  --laboratories-gold: #d4af37;
+
+  --laboratories-font-display: "Playfair Display", Georgia, serif;
+  --laboratories-font-heading: "Poppins", "Segoe UI", sans-serif;
+  --laboratories-font-body: "Inter", "Segoe UI", sans-serif;
+
+  --laboratories-radius-sm: 8px;
+  --laboratories-radius-md: 14px;
+
+  --laboratories-shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
+  --laboratories-shadow-md: 0 12px 32px rgba(17, 24, 39, 0.1);
+
+  --laboratories-space-1: 0.5rem;
+  --laboratories-space-2: 1rem;
+  --laboratories-space-3: 1.5rem;
+  --laboratories-space-4: 2.5rem;
+  --laboratories-space-5: 4rem;
+  --laboratories-space-6: 6rem;
+
+  --laboratories-border: #e5e9f0;
+
+  background: var(--laboratories-bg);
+  color: var(--laboratories-dark);
+  font-family: var(--laboratories-font-body);
+  line-height: 1.7;
+  overflow-x: clip;
+}
+
+.laboratories-page *,
+.laboratories-page *::before,
+.laboratories-page *::after {
+  box-sizing: border-box;
+}
+
+.laboratories-page [id] {
+  scroll-margin-top: 90px;
+}
+
+.laboratories-page .laboratories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--laboratories-space-3);
+}
+
+/* ---------------- Typography ---------------- */
+.laboratories-page h1,
+.laboratories-page h2,
+.laboratories-page h3 {
+  font-family: var(--laboratories-font-display);
+  font-weight: 700;
+  color: var(--laboratories-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+.laboratories-page h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: var(--laboratories-space-2) 0;
+}
+.laboratories-page h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  margin-bottom: var(--laboratories-space-2);
+}
+.laboratories-page h3 {
+  font-family: var(--laboratories-font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: var(--laboratories-space-1);
+}
+.laboratories-page p {
+  margin: 0 0 var(--laboratories-space-2);
+  color: #374151;
+  max-width: 74ch;
+}
+.laboratories-page ul,
+.laboratories-page ol,
+.laboratories-page dl {
+  margin: 0;
+  padding: 0;
+}
+
+.laboratories-page .laboratories-eyebrow {
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laboratories-primary);
+  border-left: 3px solid var(--laboratories-gold);
+  padding-left: 0.6rem;
+  margin-bottom: var(--laboratories-space-2);
+  display: inline-block;
+}
+.laboratories-page .laboratories-eyebrow--light {
+  color: var(--laboratories-gold);
+  border-left-color: var(--laboratories-white);
+}
+
+/* ---------------- Links & focus ---------------- */
+.laboratories-page a {
+  color: var(--laboratories-primary);
+}
+.laboratories-page a:hover {
+  color: var(--laboratories-primary-dark);
+}
+.laboratories-page a:focus-visible {
+  outline: 3px solid var(--laboratories-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.laboratories-page .laboratories-hero a:focus-visible,
+.laboratories-page .laboratories-final-cta a:focus-visible,
+.laboratories-page .laboratories-panel a:focus-visible,
+.laboratories-page .laboratories-card--panel a:focus-visible {
+  outline-color: var(--laboratories-gold);
+}
+.laboratories-page .laboratories-inline-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.laboratories-page .laboratories-is-disabled {
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* ---------------- Buttons ---------------- */
+.laboratories-page .laboratories-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--laboratories-font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--laboratories-radius-sm);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.laboratories-page .laboratories-btn--primary {
+  background: var(--laboratories-primary);
+  color: var(--laboratories-white);
+  box-shadow: var(--laboratories-shadow-sm);
+}
+.laboratories-page .laboratories-btn--primary:hover {
+  background: var(--laboratories-primary-dark);
+  color: var(--laboratories-white);
+  transform: translateY(-2px);
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-btn--gold {
+  background: var(--laboratories-gold);
+  color: var(--laboratories-dark);
+}
+.laboratories-page .laboratories-btn--gold:hover {
+  color: var(--laboratories-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-btn--outline-light {
+  border-color: var(--laboratories-white);
+  color: var(--laboratories-white);
+}
+.laboratories-page .laboratories-btn--outline-light:hover {
+  background: var(--laboratories-white);
+  color: var(--laboratories-dark);
+}
+.laboratories-page .laboratories-btn.laboratories-is-disabled {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------------- Breadcrumbs ---------------- */
+.laboratories-page .laboratories-breadcrumbs {
+  padding-top: var(--laboratories-space-3);
+}
+.laboratories-page .laboratories-breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.laboratories-page .laboratories-breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 0.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.laboratories-page .laboratories-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+.laboratories-page .laboratories-breadcrumbs a:hover {
+  color: var(--laboratories-gold);
+}
+.laboratories-page .laboratories-breadcrumbs [aria-current="page"] {
+  color: var(--laboratories-gold);
+}
+.laboratories-page .laboratories-breadcrumbs .laboratories-is-disabled {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------------- Hero ---------------- */
+.laboratories-page .laboratories-hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--laboratories-dark) 0%, #1c2333 100%);
+  color: var(--laboratories-white);
+  overflow: hidden;
+  padding-bottom: var(--laboratories-space-6);
+}
+.laboratories-page .laboratories-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(212, 175, 55, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.09) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(ellipse at top right, black 10%, transparent 70%);
+  mask-image: radial-gradient(ellipse at top right, black 10%, transparent 70%);
+}
+.laboratories-page .laboratories-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.laboratories-page .laboratories-hero__content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--laboratories-space-5);
+  align-items: start;
+  padding-top: var(--laboratories-space-4);
+}
+.laboratories-page .laboratories-hero__text h1 {
+  color: var(--laboratories-white);
+}
+.laboratories-page .laboratories-hero__lede {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  max-width: 56ch;
+}
+.laboratories-page .laboratories-hero__cta {
+  display: flex;
+  gap: var(--laboratories-space-2);
+  margin-top: var(--laboratories-space-3);
+  flex-wrap: wrap;
+}
+
+/* ---------------- Spec panel (gold-corner datasheet) ---------------- */
+.laboratories-page .laboratories-spec-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--laboratories-radius-md);
+  padding: var(--laboratories-space-3);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  position: relative;
+}
+.laboratories-page .laboratories-spec-panel::before,
+.laboratories-page .laboratories-spec-panel::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--laboratories-gold);
+}
+.laboratories-page .laboratories-spec-panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.laboratories-page .laboratories-spec-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+.laboratories-page .laboratories-spec-panel .laboratories-spec-panel__title {
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--laboratories-gold);
+  margin-bottom: var(--laboratories-space-2);
+}
+.laboratories-page .laboratories-spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--laboratories-space-2);
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.14);
+  font-size: 0.88rem;
+}
+.laboratories-page .laboratories-spec-row:last-child {
+  border-bottom: none;
+}
+.laboratories-page .laboratories-spec-row__key {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--laboratories-font-heading);
+  flex-shrink: 0;
+}
+.laboratories-page .laboratories-spec-row__value {
+  color: var(--laboratories-white);
+  font-weight: 600;
+  text-align: right;
+}
+.laboratories-page .laboratories-spec-link {
+  color: var(--laboratories-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.laboratories-page .laboratories-spec-link:hover {
+  color: var(--laboratories-white);
+}
+
+/* ---------------- Notice ---------------- */
+.laboratories-page .laboratories-notice {
+  background: #fffbeb;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  border-left: 4px solid var(--laboratories-gold);
+  border-radius: var(--laboratories-radius-sm);
+  padding: var(--laboratories-space-2) var(--laboratories-space-3);
+  font-size: 0.92rem;
+  color: #374151;
+}
+.laboratories-page .laboratories-notice--float {
+  margin-top: calc(var(--laboratories-space-4) * -1);
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--laboratories-shadow-md);
+}
+
+/* ---------------- Sections ---------------- */
+.laboratories-page .laboratories-section {
+  padding: var(--laboratories-space-6) 0;
+}
+.laboratories-page .laboratories-section--tint {
+  background: var(--laboratories-white);
+  border-top: 1px solid var(--laboratories-border);
+  border-bottom: 1px solid var(--laboratories-border);
+}
+.laboratories-page .laboratories-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--laboratories-space-5);
+  align-items: start;
+}
+.laboratories-page .laboratories-two-col--tight {
+  gap: var(--laboratories-space-3);
+  margin-top: var(--laboratories-space-3);
+}
+
+/* ---------------- Media & placeholders ---------------- */
+.laboratories-page .laboratories-media {
+  position: relative;
+  width: 100%;
+  border-radius: var(--laboratories-radius-md);
+  overflow: hidden;
+  background: #e5e9f0;
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-media__img {
+  object-fit: cover;
+}
+.laboratories-page .laboratories-media__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--laboratories-space-2);
+  background: repeating-linear-gradient(135deg, #e5e9f0, #e5e9f0 10px, #eef1f6 10px, #eef1f6 20px);
+  border: 1px solid #d8dee8;
+  border-radius: var(--laboratories-radius-md);
+}
+.laboratories-page .laboratories-media__label {
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.8rem;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  text-align: center;
+  line-height: 1.4;
+}
+.laboratories-page .laboratories-media__corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--laboratories-primary);
+  opacity: 0.6;
+}
+.laboratories-page .laboratories-media__corner--tl {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+.laboratories-page .laboratories-media__corner--br {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ---------------- Cards ---------------- */
+.laboratories-page .laboratories-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--laboratories-space-3);
+  margin-top: var(--laboratories-space-3);
+}
+.laboratories-page .laboratories-card {
+  background: var(--laboratories-white);
+  border: 1px solid var(--laboratories-border);
+  border-radius: var(--laboratories-radius-md);
+  padding: var(--laboratories-space-3);
+  box-shadow: var(--laboratories-shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+.laboratories-page .laboratories-section--tint .laboratories-card {
+  background: var(--laboratories-bg);
+}
+.laboratories-page .laboratories-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--laboratories-space-3);
+  width: 34px;
+  height: 3px;
+  background: var(--laboratories-gold);
+}
+.laboratories-page .laboratories-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-card p:last-child {
+  margin-bottom: 0;
+}
+.laboratories-page .laboratories-card__num {
+  display: block;
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--laboratories-primary);
+  margin-bottom: 0.4rem;
+}
+.laboratories-page .laboratories-card--panel,
+.laboratories-page .laboratories-section--tint .laboratories-card--panel {
+  background: var(--laboratories-dark);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-card--panel h3 {
+  color: var(--laboratories-white);
+}
+.laboratories-page .laboratories-card--panel p,
+.laboratories-page .laboratories-card--panel li {
+  color: rgba(255, 255, 255, 0.86);
+}
+.laboratories-page .laboratories-card--panel:hover {
+  transform: none;
+}
+
+/* Facility cards */
+.laboratories-page .laboratories-facility {
+  display: flex;
+  flex-direction: column;
+}
+.laboratories-page .laboratories-facility .laboratories-media {
+  margin-bottom: var(--laboratories-space-2);
+  box-shadow: none;
+}
+.laboratories-page .laboratories-facility__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--laboratories-space-1);
+  margin-bottom: var(--laboratories-space-2);
+}
+.laboratories-page .laboratories-facility__label {
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--laboratories-primary);
+  margin: var(--laboratories-space-1) 0;
+  border-top: 1px dashed var(--laboratories-border);
+  padding-top: var(--laboratories-space-2);
+}
+.laboratories-page .laboratories-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--laboratories-radius-sm);
+  background: var(--laboratories-dark);
+  color: var(--laboratories-gold);
+  flex-shrink: 0;
+}
+.laboratories-page .laboratories-icon-badge--sm {
+  width: 42px;
+  height: 42px;
+  margin-bottom: var(--laboratories-space-2);
+}
+.laboratories-page .laboratories-tag {
+  font-family: var(--laboratories-font-heading);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: right;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+}
+.laboratories-page .laboratories-tag--site {
+  background: #f0fdf4;
+  border-color: #86efac;
+  color: #14532d;
+}
+.laboratories-page .laboratories-tag--confirm {
+  background: #fffbeb;
+  border-color: var(--laboratories-gold);
+  color: #7c5e00;
+}
+
+/* ---------------- Lists ---------------- */
+.laboratories-page .laboratories-checklist {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+.laboratories-page .laboratories-checklist li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: #374151;
+}
+.laboratories-page .laboratories-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  background: var(--laboratories-gold);
+  transform: rotate(45deg);
+}
+
+/* ---------------- Intro mini-grid ---------------- */
+.laboratories-page .laboratories-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--laboratories-space-2);
+  margin-top: var(--laboratories-space-3);
+}
+.laboratories-page .laboratories-mini {
+  background: var(--laboratories-white);
+  border: 1px solid var(--laboratories-border);
+  border-left: 3px solid var(--laboratories-primary);
+  border-radius: var(--laboratories-radius-sm);
+  padding: var(--laboratories-space-2);
+}
+.laboratories-page .laboratories-mini h3 {
+  font-size: 0.95rem;
+}
+.laboratories-page .laboratories-mini p {
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}
+
+/* ---------------- Skill cards ---------------- */
+.laboratories-page .laboratories-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--laboratories-space-2);
+  margin-top: var(--laboratories-space-3);
+}
+.laboratories-page .laboratories-skill-card {
+  background: var(--laboratories-white);
+  border: 1px solid var(--laboratories-border);
+  border-top: 3px solid var(--laboratories-primary);
+  border-radius: var(--laboratories-radius-sm);
+  padding: var(--laboratories-space-3) var(--laboratories-space-2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.laboratories-page .laboratories-skill-card:nth-child(even) {
+  border-top-color: var(--laboratories-gold);
+}
+.laboratories-page .laboratories-skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-skill-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ---------------- Process steps ---------------- */
+.laboratories-page .laboratories-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--laboratories-space-3);
+  margin-top: var(--laboratories-space-4);
+  position: relative;
+}
+.laboratories-page .laboratories-steps::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laboratories-gold), rgba(212, 175, 55, 0.25));
+}
+.laboratories-page .laboratories-step {
+  position: relative;
+  background: var(--laboratories-white);
+  border: 1px solid var(--laboratories-border);
+  border-radius: var(--laboratories-radius-md);
+  padding: calc(var(--laboratories-space-3) + 22px) var(--laboratories-space-3) var(--laboratories-space-3);
+  box-shadow: var(--laboratories-shadow-sm);
+  margin-top: 22px;
+}
+.laboratories-page .laboratories-step__marker {
+  position: absolute;
+  top: -22px;
+  left: var(--laboratories-space-3);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--laboratories-primary);
+  color: var(--laboratories-white);
+  font-family: var(--laboratories-font-heading);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--laboratories-white);
+  box-shadow: 0 0 0 2px var(--laboratories-gold);
+  z-index: 1;
+}
+.laboratories-page .laboratories-step p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* ---------------- Programmes panel ---------------- */
+.laboratories-page .laboratories-panel {
+  background: linear-gradient(160deg, var(--laboratories-dark) 0%, #1c2333 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--laboratories-radius-md);
+  padding: var(--laboratories-space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--laboratories-space-4);
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: var(--laboratories-shadow-md);
+}
+.laboratories-page .laboratories-panel::before,
+.laboratories-page .laboratories-panel::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--laboratories-gold);
+}
+.laboratories-page .laboratories-panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+.laboratories-page .laboratories-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+.laboratories-page .laboratories-panel h2 {
+  color: var(--laboratories-white);
+}
+.laboratories-page .laboratories-panel p {
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 0;
+}
+.laboratories-page .laboratories-panel__actions {
+  display: flex;
+  gap: var(--laboratories-space-2);
+  flex-wrap: wrap;
+}
+
+/* ---------------- Final CTA ---------------- */
+.laboratories-page .laboratories-final-cta {
+  background: linear-gradient(135deg, var(--laboratories-primary) 0%, var(--laboratories-primary-dark) 100%);
+  color: var(--laboratories-white);
+  padding: var(--laboratories-space-5) 0;
+}
+.laboratories-page .laboratories-final-cta h2 {
+  color: var(--laboratories-white);
+}
+.laboratories-page .laboratories-final-cta p {
+  color: rgba(255, 255, 255, 0.92);
+}
+.laboratories-page .laboratories-final-cta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--laboratories-space-4);
+  flex-wrap: wrap;
+}
+.laboratories-page .laboratories-final-cta__actions {
+  display: flex;
+  gap: var(--laboratories-space-2);
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS — 1200 / 992 / 768 / 480
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .laboratories-page .laboratories-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .laboratories-page .laboratories-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--laboratories-space-4);
+  }
+  .laboratories-page .laboratories-steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .laboratories-page .laboratories-hero__content {
+    grid-template-columns: 1fr;
+  }
+  .laboratories-page .laboratories-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--laboratories-space-3);
+  }
+  .laboratories-page .laboratories-skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .laboratories-page .laboratories-card-grid,
+  .laboratories-page .laboratories-skill-grid,
+  .laboratories-page .laboratories-mini-grid,
+  .laboratories-page .laboratories-steps {
+    grid-template-columns: 1fr;
+  }
+  .laboratories-page .laboratories-section {
+    padding: var(--laboratories-space-4) 0;
+  }
+  .laboratories-page .laboratories-hero {
+    padding-bottom: var(--laboratories-space-4);
+  }
+  .laboratories-page .laboratories-panel {
+    padding: var(--laboratories-space-3);
+  }
+  .laboratories-page .laboratories-final-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .laboratories-page .laboratories-btn {
+    width: 100%;
+  }
+  .laboratories-page .laboratories-hero__cta,
+  .laboratories-page .laboratories-final-cta__actions,
+  .laboratories-page .laboratories-panel__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .laboratories-page .laboratories-spec-row {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .laboratories-page .laboratories-spec-row__value {
+    text-align: left;
+  }
+  .laboratories-page .laboratories-facility__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .laboratories-page .laboratories-tag {
+    text-align: left;
+  }
+}
+
+/* ---------------- Reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .laboratories-page *,
+  .laboratories-page *::before,
+  .laboratories-page *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .laboratories-page .laboratories-card:hover,
+  .laboratories-page .laboratories-skill-card:hover,
+  .laboratories-page .laboratories-btn--primary:hover,
+  .laboratories-page .laboratories-btn--gold:hover {
+    transform: none;
+  }
+}

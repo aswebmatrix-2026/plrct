@@ -1,0 +1,130 @@
+/* =============================================================================
+   infrastructure.css — signature element: icon-grid cards + dotted SVG
+   campus zone map. Deliberately more "systems/grid" than Overview's ledger.
+   ============================================================================= */
+
+.plrct-infra-hero {
+  background: linear-gradient(135deg, #1f2937 0%, #0f1720 100%);
+  padding: clamp(3.5rem, 9vw, 5.5rem) clamp(1.25rem, 5vw, 3rem) !important;
+}
+.plrct-infra-hero__inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.plrct-infra-hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--plrct-white);
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  margin: 0 0 1rem;
+}
+.plrct-infra-hero p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.plrct-infra-grid-section { background: var(--plrct-white); }
+
+.plrct-infra-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.plrct-infra-card {
+  background: var(--plrct-light-gray);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+.plrct-infra-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevated);
+  background: var(--plrct-white);
+}
+
+.plrct-infra-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--plrct-red), var(--plrct-red-dark));
+  color: var(--plrct-white);
+  margin-bottom: 1.1rem;
+}
+.plrct-infra-card__icon svg { width: 22px; height: 22px; }
+
+.plrct-infra-card h3 {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--plrct-ink);
+  margin: 0 0 0.5rem;
+}
+.plrct-infra-card p {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--plrct-slate);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .plrct-infra-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .plrct-infra-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Campus map ---- */
+.plrct-infra-map-section { background: var(--plrct-light-gray); }
+
+.plrct-infra-map {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--plrct-white);
+  border-radius: var(--radius-card);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow-soft);
+}
+
+.plrct-infra-map__svg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background:
+    linear-gradient(135deg, #fbfbfd, #f1f3f7);
+  border-radius: 16px;
+}
+
+.plrct-infra-map__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+.plrct-infra-map__legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--plrct-charcoal);
+}
+.plrct-infra-map__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--plrct-red);
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .plrct-infra-map { grid-template-columns: 1fr; }
+}

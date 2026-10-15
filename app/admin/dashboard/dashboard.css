@@ -1,0 +1,186 @@
+/* dashboard.css
+   Imported directly by DashboardPage.jsx via `import "./dashboard.css"`.
+
+   ⚠️ IMPORTANT — read this first:
+   Your screenshot shows zero grid columns, zero card boundaries, zero
+   spacing — that means Tailwind's own utility classes (grid, flex, p-8,
+   gap-4, bg-white, md:grid-cols-4...) are not being generated/loaded at
+   all in your project. Only classes defined in THIS file were rendering.
+
+   The real fix is making sure Tailwind is actually wired up (globals.css
+   has `@tailwind base; @tailwind components; @tailwind utilities;`, it's
+   imported once in app/layout, and tailwind.config's `content` array
+   includes this file's path). Do that when you can.
+
+   Until then, the "utility fallback" block at the bottom of this file
+   defines plain-CSS versions of every Tailwind class this exact page
+   uses, so the layout won't collapse. Once Tailwind is confirmed working,
+   feel free to delete that block — it's redundant, not harmful.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #171a23;          /* near-black navy — primary text */
+  --paper: #f5f5f7;         /* cool off-white page background */
+  --brand: #c8102e;         /* crimson — primary accent */
+  --brand-dark: #8b0f24;
+  --gold: #b8902e;          /* brass/gold — secondary accent, academic pairing with crimson */
+  --gold-light: #e8d5a8;
+  --success: #1f7a4d;
+  --rejected: #a8321f;
+  --pending: #b8730b;
+  --border: rgba(23, 26, 35, 0.08);
+  --shadow-sm: 0 1px 2px rgba(23, 26, 35, 0.04), 0 4px 14px rgba(23, 26, 35, 0.05);
+  --shadow-lg: 0 8px 20px rgba(23, 26, 35, 0.06), 0 24px 48px -12px rgba(23, 26, 35, 0.14);
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Typography ---------- */
+
+/* Page heading + StatCard values + rate numbers */
+.font-display {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-variant-numeric: oldstyle-nums;
+  letter-spacing: -0.01em;
+}
+
+.text-brand { color: var(--brand); }
+.bg-brand { background-color: var(--brand); }
+.text-success { color: var(--success); }
+.text-rejected { color: var(--rejected); }
+.text-pending { color: var(--pending); }
+
+/* ---------- Cards ---------- */
+
+.glass-card {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* signature: a thin crimson-to-gold rule along the top edge of every card */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--gold) 100%);
+  opacity: 0.9;
+}
+
+.glass-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card { transition: none; }
+  .glass-card:hover { transform: none; }
+}
+
+/* StatCard label — small caps eyebrow treatment for a more editorial feel */
+.glass-card p.text-sm.text-gray-500 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8a8f9c;
+}
+
+/* StatCard icon gets a soft tinted chip instead of floating bare */
+.glass-card svg.text-brand {
+  padding: 6px;
+  box-sizing: content-box;
+  background: color-mix(in srgb, var(--brand) 10%, transparent);
+  border-radius: 8px;
+  color: var(--brand);
+}
+
+/* ---------- Charts ---------- */
+
+.recharts-default-tooltip {
+  border-radius: 10px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-lg) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 12.5px !important;
+  padding: 8px 12px !important;
+}
+
+.recharts-cartesian-axis-tick text {
+  fill: #8a8f9c;
+  font-family: "Inter", sans-serif;
+}
+
+.recharts-cartesian-grid line {
+  stroke: #eef0f3;
+}
+
+.recharts-bar-rectangle path,
+.recharts-line-curve {
+  filter: drop-shadow(0 2px 4px rgba(23, 26, 35, 0.06));
+}
+
+/* chart card sub-headings ("Daily Application Trend" etc.) */
+.glass-card h3.font-medium.text-gray-700 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+/* ============================================================
+   UTILITY FALLBACK
+   Plain-CSS equivalents of every Tailwind class DashboardPage.jsx
+   uses. Safe to delete once Tailwind's own utility generation is
+   confirmed working in your build.
+   ============================================================ */
+
+.p-8 { padding: 2rem; }
+.p-5 { padding: 1.25rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-10 { gap: 2.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+.space-y-8 > * + * { margin-top: 2rem; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+
+.grid { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 768px) {
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-gray-900 { color: #111827; }
+.text-gray-700 { color: #374151; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-400 { color: #9ca3af; }
+.bg-white { background-color: #ffffff; }

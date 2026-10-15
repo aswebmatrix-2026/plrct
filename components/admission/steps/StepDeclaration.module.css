@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summaryCard {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+}
+
+.summaryTitle {
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 0.5rem;
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.15rem);
+}
+
+.summaryText {
+  line-height: 1.6;
+}
+
+.mutedLabel {
+  color: #6b7280; /* gray-500 */
+}
+
+.declarationLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.declarationLabel:hover {
+  border-color: #d1d5db; /* gray-300 */
+  background-color: #fafafa;
+}
+
+.checkbox {
+  margin-top: 0.25rem;
+  height: 1rem;
+  width: 1rem;
+  accent-color: var(--brand, #2563eb);
+}
+
+.declarationText {
+  color: #374151; /* gray-700 */
+  font-size: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+  line-height: 1.6;
+}
+
+.errorText {
+  color: var(--rejected, #dc2626);
+  font-size: clamp(0.7rem, 0.65rem + 0.2vw, 0.8rem);
+}
+
+/* Responsive fine-tuning */
+@media (max-width: 480px) {
+  .summaryCard {
+    padding: 1rem;
+    font-size: 0.78rem;
+  }
+
+  .summaryTitle {
+    font-size: 1rem;
+  }
+
+  .declarationLabel {
+    padding: 0.85rem;
+  }
+
+  .declarationText {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .summaryCard {
+    font-size: 0.92rem;
+  }
+
+  .summaryTitle {
+    font-size: 1.2rem;
+  }
+
+  .declarationText {
+    font-size: 0.92rem;
+  }
+}

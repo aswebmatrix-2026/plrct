@@ -1,0 +1,813 @@
+
+/* app/admin/syllabus/admin-syllabus.css */
+
+/* ========================================
+   PLRCT SYLLABUS DESIGN SYSTEM
+======================================== */
+
+.syl-admin {
+  --plrct-primary: #c8102e;
+  --plrct-primary-dark: #9f1028;
+  --plrct-primary-light: #fff1f3;
+  --plrct-white: #ffffff;
+  --plrct-bg: #f5f7fb;
+  --plrct-dark: #111827;
+  --plrct-text-muted: #64748b;
+  --plrct-gold: #d4af37;
+  --plrct-border: #e5eaf1;
+  --plrct-shadow: 0 4px 20px rgba(15, 23, 42, 0.045);
+
+  box-sizing: border-box;
+  min-height: 70vh;
+  padding: 32px;
+  background: var(--plrct-bg);
+  color: var(--plrct-dark);
+  font-family: "Inter", "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.syl-admin *,
+.syl-admin *::before,
+.syl-admin *::after {
+  box-sizing: border-box;
+}
+
+.syl-admin button,
+.syl-admin input,
+.syl-admin select {
+  font: inherit;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.syl-admin__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.syl-admin__title {
+  margin: 0 0 8px;
+  color: var(--plrct-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+}
+
+.syl-admin__subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: var(--plrct-text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.syl-admin__add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid var(--plrct-primary);
+  border-radius: 10px;
+  background: var(--plrct-primary);
+  color: var(--plrct-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(200, 16, 46, 0.14);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.syl-admin__add-btn:hover {
+  background: var(--plrct-primary-dark);
+  border-color: var(--plrct-primary-dark);
+  box-shadow: 0 6px 16px rgba(200, 16, 46, 0.2);
+  transform: translateY(-1px);
+}
+
+.syl-admin__add-btn:active {
+  transform: translateY(0);
+}
+
+.syl-admin__add-btn:focus-visible {
+  outline: 3px solid var(--plrct-gold);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   STAT CARDS
+======================================== */
+
+.syl-admin__stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.syl-stat-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 20px 18px;
+  border: 1px solid var(--plrct-border);
+  border-top: 3px solid var(--plrct-primary);
+  border-radius: 14px;
+  background: var(--plrct-white);
+  box-shadow: var(--plrct-shadow);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.syl-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.syl-stat-card__value {
+  overflow-wrap: anywhere;
+  color: var(--plrct-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 2vw, 29px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.syl-stat-card__label {
+  margin-top: 7px;
+  color: var(--plrct-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ========================================
+   SEARCH AND FILTERS
+======================================== */
+
+.syl-admin__toolbar {
+  margin-bottom: 24px;
+  padding: 20px;
+  border: 1px solid var(--plrct-border);
+  border-radius: 15px;
+  background: var(--plrct-white);
+  box-shadow: var(--plrct-shadow);
+}
+
+.syl-admin__search {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  margin: 0 0 15px;
+  padding: 12px 15px;
+  border: 1px solid var(--plrct-border);
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcfe;
+  color: var(--plrct-dark);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.syl-admin__search::placeholder {
+  color: #94a3b8;
+}
+
+.syl-admin__search:focus {
+  border-color: var(--plrct-primary);
+  background: var(--plrct-white);
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.08);
+}
+
+.syl-admin__filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.syl-admin__filters select {
+  width: auto;
+  min-width: 155px;
+  min-height: 42px;
+  padding: 9px 34px 9px 12px;
+  border: 1px solid var(--plrct-border);
+  border-radius: 9px;
+  outline: none;
+  background-color: var(--plrct-white);
+  color: #334155;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.syl-admin__filters select:focus-visible,
+.syl-admin select:focus-visible {
+  outline: 2px solid var(--plrct-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   TABLE CONTAINER
+======================================== */
+
+.syl-admin__table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--plrct-border);
+  border-radius: 15px;
+  background: var(--plrct-white);
+  box-shadow: var(--plrct-shadow);
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.syl-admin__table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.syl-admin__table thead {
+  background: #f8fafc;
+}
+
+.syl-admin__table th {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--plrct-border);
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.65px;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.syl-admin__table th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.syl-admin__table th:last-child {
+  border-top-right-radius: 14px;
+}
+
+.syl-admin__table td {
+  padding: 17px 18px;
+  border-bottom: 1px solid #edf1f6;
+  color: #475569;
+  font-size: 13px;
+  vertical-align: middle;
+  line-height: 1.7;
+}
+
+.syl-admin__table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.syl-admin__table tbody tr:hover {
+  background: #fff8f9;
+}
+
+.syl-admin__table tbody tr:hover td {
+  background: transparent;
+}
+
+.syl-admin__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.syl-admin__table td strong {
+  color: var(--plrct-dark);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* ========================================
+   STATUS BADGES
+======================================== */
+
+.syl-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.syl-badge--published {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.syl-badge--draft {
+  border-color: #e2e8f0;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.syl-badge--program {
+  border-color: #f8d1d8;
+  background: var(--plrct-primary-light);
+  color: var(--plrct-primary);
+}
+
+.syl-badge--featured {
+  border-color: #f5df9c;
+  background: #fffbeb;
+  color: #926c08;
+}
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.syl-admin__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.syl-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid #dfe5ed;
+  border-radius: 8px;
+  background: var(--plrct-white);
+  color: #334155;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.syl-icon-btn:hover {
+  border-color: #f0b6c1;
+  background: var(--plrct-primary-light);
+  color: var(--plrct-primary);
+}
+
+.syl-icon-btn:active {
+  transform: translateY(1px);
+}
+
+.syl-icon-btn:focus-visible {
+  outline: 2px solid var(--plrct-primary);
+  outline-offset: 3px;
+}
+
+.syl-icon-btn--danger:hover {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* ========================================
+   MOBILE SYLLABUS CARDS
+======================================== */
+
+.syl-admin__cards {
+  display: none;
+  width: 100%;
+}
+
+.syl-admin-card {
+  min-width: 0;
+  margin-bottom: 14px;
+  padding: 20px;
+  border: 1px solid var(--plrct-border);
+  border-left: 3px solid var(--plrct-primary);
+  border-radius: 13px;
+  background: var(--plrct-white);
+  box-shadow: var(--plrct-shadow);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.syl-admin-card:hover {
+  border-color: #e9b5bf;
+  box-shadow: 0 7px 22px rgba(15, 23, 42, 0.07);
+}
+
+.syl-admin-card__title {
+  margin-bottom: 10px;
+  color: var(--plrct-dark);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.syl-admin-card__title .syl-badge {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.syl-admin-card__meta {
+  margin-bottom: 9px;
+  color: var(--plrct-text-muted);
+  font-size: 12.5px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.syl-admin-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.syl-admin-card .syl-public-actions,
+.syl-admin-card .syl-admin__actions {
+  margin-top: 15px;
+}
+
+/* ========================================
+   PUBLIC SYLLABUS PAGE
+======================================== */
+
+.syllabus-public {
+  min-height: 70vh;
+  padding: 36px;
+}
+
+.syllabus-public .syl-admin__header {
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.syllabus-public .syl-admin__title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.syllabus-public .syl-admin__title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--plrct-primary);
+  content: "";
+}
+
+.syllabus-public .syl-admin__subtitle {
+  max-width: 680px;
+}
+
+.syl-public-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+  padding: 7px 12px;
+  border: 1px solid #f3d0d7;
+  border-radius: 8px;
+  background: #fff6f7;
+  color: var(--plrct-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.syllabus-public .syl-admin__table-wrap {
+  margin-bottom: 20px;
+}
+
+.syllabus-public .syl-admin__table {
+  min-width: 850px;
+}
+
+.syllabus-public .syl-admin__table th {
+  background: #f8fafc;
+}
+
+.syllabus-public .syl-admin__table td strong {
+  line-height: 1.7;
+}
+
+.syllabus-public .syl-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.syllabus-public .syl-icon-btn:hover {
+  color: var(--plrct-primary);
+}
+
+.syl-public-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ========================================
+   LOADING / EMPTY / ERROR STATES
+======================================== */
+
+.syl-admin__empty {
+  padding: 55px 20px;
+  color: var(--plrct-text-muted);
+  text-align: center;
+}
+
+.syl-admin__empty h2 {
+  margin: 0 0 10px;
+  color: var(--plrct-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.syl-admin__empty p {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.syl-admin__empty .syl-admin__add-btn {
+  margin-top: 8px;
+}
+
+.syl-skeleton-row {
+  display: flex;
+  gap: 16px;
+  padding: 14px 18px;
+}
+
+.syl-skeleton {
+  min-height: 16px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #eef1f5 25%,
+    #f8fafc 45%,
+    #eef1f5 65%
+  );
+  background-size: 200% 100%;
+  animation: syl-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes syl-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: LAPTOP
+======================================== */
+
+@media (max-width: 1400px) {
+  .syl-admin__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .syl-admin {
+    padding: 26px;
+  }
+
+  .syllabus-public {
+    padding: 28px;
+  }
+
+  .syl-admin__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .syl-admin__toolbar {
+    padding: 16px;
+  }
+
+  .syl-admin__filters select {
+    flex: 1 1 150px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: TABLET AND MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .syl-admin {
+    padding: 20px 16px;
+  }
+
+  .syllabus-public {
+    padding: 24px 16px;
+  }
+
+  .syl-admin__header {
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .syl-admin__title {
+    font-size: 27px;
+  }
+
+  .syl-admin__subtitle {
+    font-size: 13px;
+  }
+
+  .syl-admin__add-btn {
+    min-height: 43px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .syl-admin__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .syl-stat-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .syl-stat-card__value {
+    font-size: 24px;
+  }
+
+  .syl-stat-card__label {
+    font-size: 11.5px;
+  }
+
+  .syl-admin__toolbar {
+    margin-bottom: 18px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .syl-admin__search {
+    min-height: 44px;
+    font-size: 13px;
+  }
+
+  .syl-admin__filters {
+    gap: 9px;
+  }
+
+  .syl-admin__filters select {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .syl-admin__table-wrap {
+    display: none;
+  }
+
+  .syl-admin__cards {
+    display: block;
+  }
+
+  .syl-admin__empty {
+    padding: 40px 16px;
+    border: 1px solid var(--plrct-border);
+    border-radius: 12px;
+    background: var(--plrct-white);
+  }
+
+  .syllabus-public .syl-admin__header {
+    margin-bottom: 22px;
+  }
+
+  .syllabus-public .syl-admin__title {
+    font-size: 27px;
+  }
+
+  .syl-public-count {
+    margin-bottom: 14px;
+  }
+
+  .syl-public-actions {
+    margin-top: 14px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+  .syl-admin {
+    padding: 18px 12px;
+  }
+
+  .syllabus-public {
+    padding: 20px 12px;
+  }
+
+  .syl-admin__title,
+  .syllabus-public .syl-admin__title {
+    font-size: 24px;
+  }
+
+  .syl-admin__stats {
+    gap: 9px;
+  }
+
+  .syl-stat-card {
+    padding: 14px 11px;
+  }
+
+  .syl-stat-card__value {
+    font-size: 21px;
+  }
+
+  .syl-stat-card__label {
+    font-size: 11px;
+  }
+
+  .syl-admin-card {
+    padding: 16px;
+  }
+
+  .syl-icon-btn {
+    padding: 8px 10px;
+    font-size: 11.5px;
+  }
+
+  .syl-public-actions {
+    gap: 7px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY & REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .syl-admin *,
+  .syl-admin *::before,
+  .syl-admin *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

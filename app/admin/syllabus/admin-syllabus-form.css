@@ -1,0 +1,211 @@
+/* app/admin/syllabus/admin-syllabus-form.css
+   Shared by add/page.jsx and edit/[id]/page.jsx */
+
+.syl-form-page {
+  --plrct-primary: #c8102e;
+  --plrct-primary-dark: #8b0f24;
+  --plrct-white: #ffffff;
+  --plrct-bg: #f8fafc;
+  --plrct-dark: #111827;
+  --plrct-text-muted: #64748b;
+  --plrct-gold: #d4af37;
+
+  font-family: "Inter", sans-serif;
+  background: var(--plrct-bg);
+  padding: 32px;
+  color: var(--plrct-dark);
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.syl-form-page__title {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+.syl-form-page__subtitle {
+  color: var(--plrct-text-muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.syl-form-card {
+  background: var(--plrct-white);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(17, 24, 39, 0.07);
+}
+
+.syl-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.syl-form-grid--full { grid-column: 1 / -1; }
+
+.syl-field { display: flex; flex-direction: column; gap: 6px; }
+.syl-field label {
+  font-family: "Poppins", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--plrct-dark);
+}
+.syl-field label .required { color: var(--plrct-primary); }
+
+.syl-field input[type="text"],
+.syl-field input[type="number"],
+.syl-field select,
+.syl-field textarea {
+  padding: 11px 13px;
+  border-radius: 9px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  background: var(--plrct-white);
+}
+.syl-field textarea { resize: vertical; min-height: 90px; }
+
+.syl-field input:focus-visible,
+.syl-field select:focus-visible,
+.syl-field textarea:focus-visible {
+  outline: 2px solid var(--plrct-primary);
+  outline-offset: 1px;
+}
+
+.syl-field-error { color: #b91c1c; font-size: 12.5px; }
+
+/* Toggle switches */
+.syl-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.syl-toggle {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.syl-toggle[aria-checked="true"] { background: var(--plrct-primary); }
+.syl-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--plrct-white);
+  transition: transform 0.2s ease;
+}
+.syl-toggle[aria-checked="true"]::after { transform: translateX(20px); }
+.syl-toggle:focus-visible { outline: 2px solid var(--plrct-gold); outline-offset: 2px; }
+
+/* Upload zone */
+.syl-upload {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  background: var(--plrct-bg);
+}
+.syl-upload:hover,
+.syl-upload--dragging {
+  border-color: var(--plrct-primary);
+  background: rgba(200, 16, 46, 0.04);
+}
+.syl-upload input[type="file"] { display: none; }
+.syl-upload__hint { font-size: 13px; color: var(--plrct-text-muted); margin-top: 6px; }
+
+.syl-upload-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 12px;
+  background: var(--plrct-white);
+}
+.syl-upload-file__name { font-size: 13.5px; font-weight: 500; }
+.syl-upload-file__size { font-size: 12px; color: var(--plrct-text-muted); }
+.syl-upload-file__remove {
+  border: none;
+  background: none;
+  color: #b91c1c;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.syl-progress-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.syl-progress-bar__fill {
+  height: 100%;
+  background: var(--plrct-primary);
+  transition: width 0.2s ease;
+}
+
+.syl-current-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: var(--plrct-bg);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.syl-current-pdf__actions { display: flex; gap: 8px; }
+.syl-btn-secondary {
+  border: 1px solid #e2e8f0;
+  background: var(--plrct-white);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--plrct-dark);
+}
+.syl-btn-secondary:hover { background: #f1f5f9; }
+
+.syl-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+.syl-btn-primary {
+  font-family: "Poppins", sans-serif;
+  background: var(--plrct-primary);
+  color: var(--plrct-white);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.syl-btn-primary:hover { background: var(--plrct-primary-dark); }
+.syl-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.syl-btn-primary:focus-visible,
+.syl-btn-secondary:focus-visible { outline: 2px solid var(--plrct-gold); outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .syl-form-page { padding: 18px; }
+  .syl-form-grid { grid-template-columns: 1fr; }
+  .syl-form-card { padding: 18px; }
+}

@@ -1,0 +1,461 @@
+.id-card {
+  --card-width: 280px;
+  --card-blue: #0785bd;
+  --card-yellow: #ffc400;
+  --card-red: #b84b4b;
+  --card-cream: #f1e4c8;
+
+  width: var(--card-width);
+  height: 470px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #fff;
+
+  border: 1px solid #777;
+  border-radius: 0;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+
+  font-family: "Times New Roman", serif;
+}
+
+
+
+
+.id-card__header {
+  position: relative;
+  z-index: 5;
+
+  height: 95px;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding: 10px 8px;
+
+  background: var(--card-blue);
+  color: white;
+}
+
+
+/* LOGO */
+
+.id-card__logo {
+  width: 40px !important;
+  height: 40px !important;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin-top: 2px;
+}
+
+
+/* COLLEGE NAME */
+
+.id-card__college-name {
+  position: relative;
+
+  margin-left: 4px;
+  margin-top: 10px;
+
+  max-width: 290px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  white-space: normal;
+
+  color: white;
+}
+
+
+/* COLLEGE SMALL TEXT */
+
+.id-card__header::after {
+  content:"APPROVED BY:- AICTE, DTE HARYANA|Affiliated to M.D.U University & HSBTE";
+
+  position: absolute;
+
+  left: 52px;
+  top: 40px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 6px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  color: white;
+}
+
+
+/* =========================================
+   YELLOW CURVE
+========================================= */
+
+.id-card__yellow-band {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 72px;
+  left: -30px;
+
+  width: 340px;
+  height: 115px;
+
+  background: var(--card-yellow);
+
+  border-radius: 0 0 50% 50%;
+
+  transform: rotate(-7deg);
+}
+
+
+/* BLUE CURVE ABOVE YELLOW */
+
+.id-card__yellow-band::before {
+  content: "";
+
+  position: absolute;
+
+  top: -20px;
+  left: -10px;
+
+  width: 370px;
+  height: 110px;
+
+  background: var(--card-blue);
+
+  border-radius: 0 0 55% 50%;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.id-card__photo-section {
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: -32px;
+}
+
+
+.id-card__photo-frame {
+  width: 76px;
+  height: 96px;
+
+  padding: 2px;
+
+  background: white;
+
+  border: 2px solid #333;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,.35);
+}
+
+
+.id-card__photo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+.id-card__photo--placeholder {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #eee;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+
+/* =========================================
+   STUDENT NAME
+========================================= */
+
+.id-card__name {
+  position: relative;
+  z-index: 10;
+
+  margin-top: 4px;
+
+  padding: 0 10px;
+
+  text-align: center;
+
+  font-family: "Times New Roman", serif;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #006db3;
+
+  min-height: 19px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   STUDENT DETAILS
+========================================= */
+
+.id-card__info {
+  position: relative;
+
+  z-index: 10;
+
+  margin-top: 4px;
+
+  padding: 0 20px;
+}
+
+
+.id-card__info-row {
+  display: grid;
+
+  grid-template-columns: 88px 10px 1fr;
+
+  align-items: start;
+
+  font-size: 12px;
+
+  line-height: 1.35;
+
+  color: var(--card-red);
+
+  min-height: 16px;
+}
+
+
+/* LABEL */
+
+.id-card__label {
+  font-weight: bold;
+
+  color: var(--card-red);
+
+  white-space: nowrap;
+}
+
+
+/* ADD COLON */
+
+.id-card__label::after {
+  content: ":";
+}
+
+
+/* VALUE */
+
+.id-card__value {
+  grid-column: 3;
+
+  color: var(--card-red);
+
+  font-weight: bold;
+
+  word-break: break-word;
+}
+
+
+/* Hide default gap issue */
+
+.id-card__info-row {
+  column-gap: 0;
+}
+
+
+/* =========================================
+   LOWER CREAM SECTION
+========================================= */
+
+.id-card__lower-section {
+  position: absolute;
+
+  z-index: 4;
+
+  left: -25px;
+  bottom: 48px;
+
+  width: 330px;
+  height: 72px;
+
+  padding: 0 30px;
+
+  background: var(--card-cream);
+
+  border-radius: 50% 50% 0 0 / 55% 55% 0 0;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: flex-end;
+}
+
+
+/* WHITE WAVE */
+
+.id-card__lower-section::before {
+  content: "";
+
+  position: absolute;
+
+  left: -10px;
+  top: -22px;
+
+  width: 350px;
+  height: 45px;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.id-card__signature {
+  position: relative;
+
+  z-index: 10;
+
+  width: 80px;
+
+  margin-right: 8px;
+  margin-bottom: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.id-card__signature-img {
+  width: 60px;
+  height: 25px;
+
+  object-fit: contain;
+}
+
+
+.id-card__signature-line {
+  width: 65px;
+
+  height: 20px;
+
+  border-bottom: 1px solid #333;
+}
+
+
+.id-card__signature-label {
+  font-size: 9px;
+
+  font-weight: bold;
+
+  color: #333;
+
+  margin-top: 2px;
+}
+
+
+/* APPLICATION ID HIDE */
+
+.id-card__app-id {
+  display: none;
+}
+
+
+/* =========================================
+   YELLOW LINE
+========================================= */
+
+.id-card__yellow-separator {
+  position: absolute;
+
+  z-index: 20;
+
+  bottom: 43px;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: var(--card-yellow);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.id-card__footer {
+  position: absolute;
+
+  z-index: 20;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  padding: 4px 8px;
+
+  background: var(--card-blue);
+
+  color: white;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: bold;
+
+  line-height: 1.35;
+
+  overflow: hidden;
+}

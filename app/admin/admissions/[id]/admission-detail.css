@@ -1,0 +1,260 @@
+/* admission-detail.css
+   Imported directly by AdmissionDetailPage.jsx via
+   `import "./admission-detail.css"`.
+
+   Shares the same design tokens as dashboard.css and admissions-list.css
+   (crimson + academic gold, Fraunces + Inter, no blue anywhere) so all
+   three pages feel like one product. Long-term, move this shared block
+   into globals.css once and delete it from individual page files.
+
+   ⚠️ Same note as the other two files: if grid/flex/spacing utilities
+   aren't rendering, Tailwind isn't compiling in this project. The
+   "utility fallback" block at the bottom covers every Tailwind class
+   this exact page uses — delete it once Tailwind is confirmed working.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #171a23;
+  --paper: #f5f5f7;
+  --brand: #c8102e;
+  --brand-dark: #8b0f24;
+  --brand-light: #fdeaec;
+  --gold: #b8902e;
+  --success: #1f7a4d;
+  --rejected: #a8321f;
+  --pending: #b8730b;
+  --border: rgba(23, 26, 35, 0.08);
+  --shadow-sm: 0 1px 2px rgba(23, 26, 35, 0.04), 0 4px 14px rgba(23, 26, 35, 0.05);
+  --shadow-lg: 0 8px 20px rgba(23, 26, 35, 0.06), 0 24px 48px -12px rgba(23, 26, 35, 0.14);
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Typography ---------- */
+
+.font-display {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+.text-brand { color: var(--brand); }
+.text-brand:hover { color: var(--brand-dark); }
+
+/* ---------- Cards ---------- */
+
+.glass-card {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--gold) 100%);
+  opacity: 0.9;
+}
+
+.glass-card h3.font-medium.text-gray-700 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+/* ---------- Row (label / value pairs) ---------- */
+
+.flex.justify-between.py-1\.5 {
+  transition: background-color 0.12s ease;
+}
+.flex.justify-between.py-1\.5:hover {
+  background-color: #fbfaf8;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: #faf8f4;
+  border-color: var(--gold);
+  color: var(--brand-dark);
+}
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Form inputs ---------- */
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e1de;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  color: var(--ink);
+  background-color: #fcfbf9;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.input-field:focus {
+  border-color: var(--brand);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px var(--brand-light);
+}
+
+/* ---------- Status badges — leading dot instead of flat fill ---------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.25rem 0.7rem 0.25rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+  background-color: #f1f1f0;
+  color: #52525b;
+}
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.status-new { background-color: #f1f1f0; color: #52525b; }
+.status-under_review { background-color: #fdf3e2; color: var(--pending); }
+.status-documents_pending { background-color: #fbe9e5; color: #c0532f; }
+.status-approved { background-color: #e7f3ec; color: var(--success); }
+.status-rejected { background-color: #f8e6e3; color: var(--rejected); }
+.status-admission_confirmed { background-color: #fdeaec; color: var(--brand); }
+
+/* ---------- Remarks list ---------- */
+
+.text-xs.bg-gray-50.rounded-lg {
+  background-color: #faf9f7 !important;
+  border: 1px solid var(--border);
+}
+
+/* ============================================================
+   UTILITY FALLBACK
+   Plain-CSS equivalents of every Tailwind class this page uses.
+   Safe to delete once Tailwind's own utility generation is
+   confirmed working in your build.
+   ============================================================ */
+
+.p-8 { padding: 2rem; }
+.p-5 { padding: 1.25rem; }
+.p-2 { padding: 0.5rem; }
+.pt-2 { padding-top: 0.5rem; }
+.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mt-1 { margin-top: 0.25rem; }
+
+.max-w-5xl { max-width: 64rem; }
+.max-h-40 { max-height: 10rem; }
+
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-6 { gap: 1.5rem; }
+
+.grid { display: grid; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:col-span-2 { grid-column: span 2 / span 2; }
+}
+
+.w-full { width: 100%; }
+.overflow-y-auto { overflow-y: auto; }
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.underline { text-decoration: underline; }
+.rounded-lg { border-radius: 0.5rem; }
+
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+
+.text-gray-400 { color: #9ca3af; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-700 { color: #374151; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-900 { color: #111827; }
+.bg-white { background-color: #ffffff; }
+.bg-gray-50 { background-color: #f9fafb; }
+
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-gray-50 { border-color: #f9fafb; }
