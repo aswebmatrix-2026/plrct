@@ -1,12 +1,17 @@
+
 @import "./variables.css";
 
-.dashboard {
+/* Main Notice Dashboard */
+.notice-dashboard {
+  width: 100%;
   max-width: 1320px;
+  min-width: 0;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  box-sizing: border-box;
 }
 
-.dashboard__header {
+.notice-dashboard__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,53 +20,89 @@
   margin-bottom: var(--space-lg);
 }
 
-.dashboard__title {
+.notice-dashboard__intro {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.notice-dashboard__title {
+  margin: 0;
   font-family: var(--font-display);
   font-size: 1.9rem;
-  color: var(--Pt. L.R. College of Technology-ink);
+  line-height: 1.3;
+  color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
-.dashboard__subtitle {
+.notice-dashboard__subtitle {
+  max-width: 760px;
+  margin: 0.4rem 0 0;
   font-family: var(--font-body);
-  color: var(--Pt. L.R. College of Technology-gray-500);
-  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--gray-500);
 }
 
-/* --- Stat cards --- */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-sm);
+.notice-dashboard__stats,
+.notice-dashboard__content {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.notice-dashboard__stats {
   margin-bottom: var(--space-lg);
 }
 
-.stat-card {
+/* Stat Cards */
+.notice-dashboard__stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  width: 100%;
+}
+
+.notice-dashboard__stat-card {
+  min-width: 0;
   padding: var(--space-md);
+  box-sizing: border-box;
+  border: 1px solid var(--gray-300);
   border-radius: var(--radius-md);
-  background: var(--Pt. L.R. College of Technology-white);
-  border: 1px solid var(--Pt. L.R. College of Technology-gray-300);
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notice-dashboard__stat-card:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
 }
 
-.stat-card__label {
+.notice-dashboard__stat-label {
   font-family: var(--font-utility);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--Pt. L.R. College of Technology-gray-500);
+  color: var(--gray-500);
 }
 
-.stat-card__value {
+.notice-dashboard__stat-value {
+  margin-top: var(--space-3xs);
   font-family: var(--font-display);
   font-size: 2rem;
-  color: var(--Pt. L.R. College of Technology-ink);
-  margin-top: var(--space-3xs);
+  line-height: 1.3;
+  color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
-.stat-card--accent .stat-card__value { color: var(--Pt. L.R. College of Technology-red); }
+.notice-dashboard__stat-card--accent
+  .notice-dashboard__stat-value {
+  color: var(--red);
+}
 
-/* --- Table toolbar --- */
-.table-toolbar {
+/* Table Toolbar */
+.notice-dashboard__table-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,103 +111,246 @@
   margin-bottom: var(--space-sm);
 }
 
-.table-toolbar__filters {
+.notice-dashboard__table-filters {
   display: flex;
-  gap: var(--space-2xs);
+  align-items: center;
   flex-wrap: wrap;
+  gap: var(--space-2xs);
+  min-width: 0;
 }
 
-.table-toolbar__filters select,
-.table-toolbar__filters input {
-  padding: 0.5rem 0.75rem;
+.notice-dashboard__table-filters select,
+.notice-dashboard__table-filters input {
+  max-width: 100%;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-300);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--Pt. L.R. College of Technology-gray-300);
   font-family: var(--font-body);
   font-size: 0.85rem;
 }
 
-/* --- Notice table --- */
-.notice-table-wrap {
-  overflow-x: auto;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--Pt. L.R. College of Technology-gray-300);
-  box-shadow: var(--shadow-soft);
+.notice-dashboard__table-filters select:focus,
+.notice-dashboard__table-filters input:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
 
-.notice-table {
+/* Notice Table */
+.notice-dashboard__table-wrap {
   width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  -webkit-overflow-scrolling: touch;
+}
+
+.notice-dashboard__table {
+  width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
-  background: var(--Pt. L.R. College of Technology-white);
+  background: var(--white);
   font-family: var(--font-body);
   font-size: 0.88rem;
 }
 
-.notice-table th {
-  text-align: left;
+.notice-dashboard__table th {
   padding: 0.85rem 1rem;
-  background: var(--Pt. L.R. College of Technology-gray-900);
-  color: var(--Pt. L.R. College of Technology-white);
+  text-align: left;
+  white-space: nowrap;
+  background: var(--gray-900);
+  color: var(--white);
   font-family: var(--font-utility);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
-.notice-table td {
+.notice-dashboard__table td {
   padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--Pt. L.R. College of Technology-gray-100);
+  border-bottom: 1px solid var(--gray-100);
   vertical-align: middle;
+  overflow-wrap: anywhere;
 }
 
-.notice-table tr:last-child td { border-bottom: none; }
-.notice-table tr:hover td { background: var(--Pt. L.R. College of Technology-gray-50); }
+.notice-dashboard__table tbody tr:last-child td {
+  border-bottom: none;
+}
 
-.status-pill {
+.notice-dashboard__table tbody tr:hover td {
+  background: var(--gray-50);
+}
+
+/* Notice Status */
+.notice-dashboard__status-pill {
   display: inline-block;
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
   font-family: var(--font-utility);
   font-size: 0.7rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-.status-pill--published { background: rgba(46,163,90,0.12); color: #2ea35a; }
-.status-pill--draft { background: var(--Pt. L.R. College of Technology-gray-100); color: var(--Pt. L.R. College of Technology-gray-500); }
-.status-pill--scheduled { background: rgba(122,79,181,0.12); color: var(--priority-featured); }
-.status-pill--archived { background: rgba(200,16,46,0.08); color: var(--Pt. L.R. College of Technology-gray-500); }
 
-.table-actions {
+.notice-dashboard__status-pill--published {
+  background: rgba(46, 163, 90, 0.12);
+  color: #2ea35a;
+}
+
+.notice-dashboard__status-pill--draft {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+
+.notice-dashboard__status-pill--scheduled {
+  background: rgba(122, 79, 181, 0.12);
+  color: var(--priority-featured);
+}
+
+.notice-dashboard__status-pill--archived {
+  background: rgba(200, 16, 46, 0.08);
+  color: var(--gray-500);
+}
+
+/* Table Actions */
+.notice-dashboard__table-actions {
   display: flex;
-  gap: 0.4rem;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
-.table-actions button,
-.table-actions a {
-  padding: 0.35rem 0.65rem;
+.notice-dashboard__table-actions button,
+.notice-dashboard__table-actions a {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--gray-300);
   border-radius: 6px;
-  border: 1px solid var(--Pt. L.R. College of Technology-gray-300);
-  background: var(--Pt. L.R. College of Technology-white);
+  background: var(--white);
+  color: var(--gray-900);
   font-family: var(--font-utility);
   font-size: 0.72rem;
-  cursor: pointer;
   text-decoration: none;
-  color: var(--Pt. L.R. College of Technology-gray-900);
-  transition: border-color var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease,
+    background 0.2s ease;
 }
-.table-actions button:hover,
-.table-actions a:hover { border-color: var(--Pt. L.R. College of Technology-red); color: var(--Pt. L.R. College of Technology-red); }
-.table-actions .danger:hover { border-color: var(--priority-urgent); color: var(--priority-urgent); }
 
-.dashboard-empty {
+.notice-dashboard__table-actions button:hover,
+.notice-dashboard__table-actions a:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.notice-dashboard__table-actions .danger:hover {
+  border-color: var(--priority-urgent);
+  color: var(--priority-urgent);
+}
+
+/* Empty State */
+.notice-dashboard__empty {
   padding: var(--space-xl);
   text-align: center;
-  color: var(--Pt. L.R. College of Technology-gray-500);
+  color: var(--gray-500);
   font-family: var(--font-body);
 }
 
+/* Desktop / Laptop */
+@media (min-width: 1025px) {
+  .notice-dashboard {
+    padding-right: clamp(1rem, 2vw, 2rem);
+    padding-left: clamp(1rem, 2vw, 2rem);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .notice-dashboard {
+    padding: var(--space-md);
+  }
+
+  .notice-dashboard__stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
 @media (max-width: 640px) {
-  .dashboard__header { flex-direction: column; align-items: flex-start; }
+  .notice-dashboard {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .notice-dashboard__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .notice-dashboard__title {
+    font-size: 1.55rem;
+  }
+
+  .notice-dashboard__subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .notice-dashboard__stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .notice-dashboard__stat-card {
+    padding: 0.85rem;
+  }
+
+  .notice-dashboard__stat-value {
+    font-size: 1.6rem;
+  }
+
+  .notice-dashboard__table-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .notice-dashboard__table-filters {
+    width: 100%;
+  }
+
+  .notice-dashboard__table-filters select,
+  .notice-dashboard__table-filters input {
+    flex: 1 1 140px;
+  }
+
+  .notice-dashboard__table th,
+  .notice-dashboard__table td {
+    padding: 0.7rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .notice-dashboard__stat-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .notice-dashboard__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .notice-dashboard__stat-card,
+  .notice-dashboard__table-actions button,
+  .notice-dashboard__table-actions a {
+    transition: none;
+  }
+
+  .notice-dashboard__stat-card:hover {
+    transform: none;
+  }
 }
