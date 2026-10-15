@@ -7,10 +7,15 @@ import "@/styles/notice-form.css";
 const CATEGORIES = ["Admission", "Examination", "Academic", "Placement", "Scholarship", "Circular", "Tender", "Recruitment"];
 const PRIORITIES = ["Normal", "Important", "Urgent", "Featured"];
 const STATUSES = ["Draft", "Scheduled", "Published", "Archived"];
+const MAX_PDF_SIZE = 15 * 1024 * 1024; // 15MB
 
+// Local-date based (toISOString uses UTC and can show the wrong day in IST)
 function toInputDate(value) {
   if (!value) return "";
-  return new Date(value).toISOString().slice(0, 10);
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return "";
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
 export default function NoticeForm({ initialNotice, noticeId }) {
@@ -46,10 +51,19 @@ export default function NoticeForm({ initialNotice, noticeId }) {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
+  function showError(message) {
+    setError(message);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   async function handleFile(file) {
     if (!file) return;
     if (file.type !== "application/pdf") {
-      setError("Only PDF files are accepted.");
+      showError("Only PDF files are accepted.");
+      return;
+    }
+    if (file.size > MAX_PDF_SIZE) {
+      showError("PDF must be 15MB or smaller.");
       return;
     }
     setError("");
@@ -60,19 +74,34 @@ export default function NoticeForm({ initialNotice, noticeId }) {
       const res = await fetch("/api/notices/upload", { method: "POST", body: fd });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Upload failed.");
-      update("pdfUrl", data.pdfUrl);
-      update("pdfPublicId", data.pdfPublicId);
-      update("pdfFileName", data.pdfFileName);
+      setForm((prev) => ({
+        ...prev,
+        pdfUrl: data.pdfUrl,
+        pdfPublicId: data.pdfPublicId,
+        pdfFileName: data.pdfFileName,
+      }));
     } catch (err) {
-      setError(err.message);
+      showError(err.message);
     } finally {
       setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
     }
+  }
+
+  function removePdf() {
+    setForm((prev) => ({ ...prev, pdfUrl: "", pdfPublicId: "", pdfFileName: "" }));
+    if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");
+
+    if (form.expiryDate && form.publishDate && form.expiryDate < form.publishDate) {
+      showError("Expiry date cannot be before the publish date.");
+      return;
+    }
+
     setSaving(true);
     try {
       const res = await fetch(isEdit ? `/api/notices/${noticeId}` : "/api/notices", {
@@ -85,29 +114,29 @@ export default function NoticeForm({ initialNotice, noticeId }) {
       router.push("/admin/notices");
       router.refresh();
     } catch (err) {
-      setError(err.message);
+      showError(err.message);
     } finally {
       setSaving(false);
     }
   }
 
   return (
-    <form className="notice-form" onSubmit={handleSubmit}>
-      <div className="notice-form__header">
-        <h1 className="notice-form__title">{isEdit ? "Edit Notice" : "Create Notice"}</h1>
+    <form className="nf" onSubmit={handleSubmit}>
+      <div className="nf__header">
+        <h1 className="nf__title">{isEdit ? "Edit Notice" : "Create Notice"}</h1>
       </div>
 
-      {error && <div className="form-error">{error}</div>}
+      {error && <div className="nf-error" role="alert">{error}</div>}
 
-      <section className="form-section">
-        <h2 className="form-section__title">Notice Information</h2>
-        <div className="form-grid">
-          <div className="form-field form-field--full">
+      <section className="nf-section">
+        <h2 className="nf-section__title">Notice Information</h2>
+        <div className="nf-grid">
+          <div className="nf-field nf-field--full">
             <label htmlFor="title">Notice Title</label>
             <input id="title" type="text" required value={form.title} onChange={(e) => update("title", e.target.value)} />
           </div>
 
-          <div className="form-field">
+          <div className="nf-field">
             <label htmlFor="id">Notice id</label>
             <input
               id="id"
@@ -116,10 +145,10 @@ export default function NoticeForm({ initialNotice, noticeId }) {
               value={form.id}
               onChange={(e) => update("id", e.target.value)}
             />
-            <span className="form-field__hint">Used in the URL: /notice-board/your-id</span>
+            <span className="nf-field__hint">Used in the URL: /notice-board/your-id</span>
           </div>
 
-          <div className="form-field">
+          <div className="nf-field">
             <label htmlFor="category">Category</label>
             <select id="category" value={form.category} onChange={(e) => update("category", e.target.value)}>
               {CATEGORIES.map((c) => (
@@ -128,7 +157,7 @@ export default function NoticeForm({ initialNotice, noticeId }) {
             </select>
           </div>
 
-          <div className="form-field form-field--full">
+          <div className="nf-field nf-field--full">
             <label htmlFor="shortDescription">Short Description</label>
             <textarea
               id="shortDescription"
@@ -138,9 +167,10 @@ export default function NoticeForm({ initialNotice, noticeId }) {
               onChange={(e) => update("shortDescription", e.target.value)}
               placeholder="Shown on notice cards and the homepage (max 400 characters)"
             />
+            <span className="nf-field__hint">{form.shortDescription.length}/400</span>
           </div>
 
-          <div className="form-field form-field--full">
+          <div className="nf-field nf-field--full">
             <label htmlFor="content">Full Notice Content</label>
             <textarea
               id="content"
@@ -154,26 +184,32 @@ export default function NoticeForm({ initialNotice, noticeId }) {
         </div>
       </section>
 
-      <section className="form-section">
-        <h2 className="form-section__title">Dates</h2>
-        <div className="form-grid">
-          <div className="form-field">
+      <section className="nf-section">
+        <h2 className="nf-section__title">Dates</h2>
+        <div className="nf-grid">
+          <div className="nf-field">
             <label htmlFor="publishDate">Publish Date</label>
             <input id="publishDate" type="date" value={form.publishDate} onChange={(e) => update("publishDate", e.target.value)} />
-            <span className="form-field__hint">A future date schedules the notice automatically.</span>
+            <span className="nf-field__hint">A future date schedules the notice automatically.</span>
           </div>
-          <div className="form-field">
+          <div className="nf-field">
             <label htmlFor="expiryDate">Expiry Date</label>
-            <input id="expiryDate" type="date" value={form.expiryDate} onChange={(e) => update("expiryDate", e.target.value)} />
-            <span className="form-field__hint">Notice moves to the archive automatically after this date.</span>
+            <input
+              id="expiryDate"
+              type="date"
+              min={form.publishDate || undefined}
+              value={form.expiryDate}
+              onChange={(e) => update("expiryDate", e.target.value)}
+            />
+            <span className="nf-field__hint">Notice moves to the archive automatically after this date.</span>
           </div>
         </div>
       </section>
 
-      <section className="form-section">
-        <h2 className="form-section__title">Priority &amp; Status</h2>
-        <div className="form-grid">
-          <div className="form-field">
+      <section className="nf-section">
+        <h2 className="nf-section__title">Priority &amp; Status</h2>
+        <div className="nf-grid">
+          <div className="nf-field">
             <label htmlFor="priority">Priority</label>
             <select id="priority" value={form.priority} onChange={(e) => update("priority", e.target.value)}>
               {PRIORITIES.map((p) => (
@@ -181,7 +217,7 @@ export default function NoticeForm({ initialNotice, noticeId }) {
               ))}
             </select>
           </div>
-          <div className="form-field">
+          <div className="nf-field">
             <label htmlFor="status">Status</label>
             <select id="status" value={form.status} onChange={(e) => update("status", e.target.value)}>
               {STATUSES.map((s) => (
@@ -192,34 +228,53 @@ export default function NoticeForm({ initialNotice, noticeId }) {
         </div>
       </section>
 
-      <section className="form-section">
-        <h2 className="form-section__title">Display Options</h2>
-        <div className="form-toggles">
-          <label className="form-toggle">
+      <section className="nf-section">
+        <h2 className="nf-section__title">Display Options</h2>
+        <div className="nf-toggles">
+          <label className="nf-toggle">
             <input type="checkbox" checked={form.showOnHomepage} onChange={(e) => update("showOnHomepage", e.target.checked)} />
             <span>Show on Homepage</span>
           </label>
-          <label className="form-toggle">
+          <label className="nf-toggle">
             <input type="checkbox" checked={form.showInTicker} onChange={(e) => update("showInTicker", e.target.checked)} />
             <span>Show in Scrolling Ticker</span>
           </label>
-          <label className="form-toggle">
+          <label className="nf-toggle">
             <input type="checkbox" checked={form.pinned} onChange={(e) => update("pinned", e.target.checked)} />
             <span>Pin to Top</span>
           </label>
-          <label className="form-toggle">
+          <label className="nf-toggle">
             <input type="checkbox" checked={form.featured} onChange={(e) => update("featured", e.target.checked)} />
             <span>Featured Notice</span>
           </label>
         </div>
       </section>
 
-      <section className="form-section">
-        <h2 className="form-section__title">PDF Upload</h2>
+      <section className="nf-section">
+        <h2 className="nf-section__title">PDF Upload</h2>
+
+        {/* Hidden input always mounted so the ref works in both states */}
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="application/pdf"
+          hidden
+          onChange={(e) => handleFile(e.target.files?.[0])}
+        />
+
         {!form.pdfUrl ? (
           <div
-            className={`pdf-dropzone${dragActive ? " pdf-dropzone--active" : ""}`}
+            className={`nf-dropzone${dragActive ? " nf-dropzone--active" : ""}${uploading ? " nf-dropzone--busy" : ""}`}
+            role="button"
+            tabIndex={0}
+            aria-label="Upload PDF"
             onClick={() => fileInputRef.current?.click()}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                fileInputRef.current?.click();
+              }
+            }}
             onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
             onDragLeave={() => setDragActive(false)}
             onDrop={(e) => {
@@ -228,39 +283,24 @@ export default function NoticeForm({ initialNotice, noticeId }) {
               handleFile(e.dataTransfer.files?.[0]);
             }}
           >
-            <svg className="pdf-dropzone__icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <svg className="nf-dropzone__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" strokeWidth="1.6" />
               <path d="M15 2v5h5" stroke="currentColor" strokeWidth="1.6" />
             </svg>
-            <span className="pdf-dropzone__label">{uploading ? "Uploading..." : "Click or drag a PDF here"}</span>
-            <span className="pdf-dropzone__hint">Notice, circular, examination schedule, admission notice, or scholarship document — up to 15MB</span>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="application/pdf"
-              hidden
-              onChange={(e) => handleFile(e.target.files?.[0])}
-            />
+            <span className="nf-dropzone__label">{uploading ? "Uploading..." : "Click or drag a PDF here"}</span>
+            <span className="nf-dropzone__hint">Notice, circular, examination schedule, admission notice, or scholarship document — up to 15MB</span>
           </div>
         ) : (
-          <div className="pdf-preview">
-            <span className="pdf-preview__name">{form.pdfFileName || "Notice.pdf"}</span>
-            <button
-              type="button"
-              className="btn btn--ghost"
-              onClick={() => {
-                update("pdfUrl", "");
-                update("pdfPublicId", "");
-                update("pdfFileName", "");
-              }}
-            >
+          <div className="nf-preview">
+            <span className="nf-preview__name">{form.pdfFileName || "Notice.pdf"}</span>
+            <button type="button" className="btn btn--ghost" onClick={removePdf}>
               Remove
             </button>
           </div>
         )}
       </section>
 
-      <div className="notice-form__footer">
+      <div className="nf__footer">
         <button type="button" className="btn btn--ghost" onClick={() => router.push("/admin/notices")}>
           Cancel
         </button>
